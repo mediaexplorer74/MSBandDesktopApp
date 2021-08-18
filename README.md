@@ -1,2 +1,2 @@
 # sync-app-decompiled
-This is the Band Sync App decompiled.
+The official Microsoft Band desktop app, decompiled.
