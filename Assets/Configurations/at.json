@@ -1,0 +1,71 @@
+{
+  "$schema": "http://microsoft.com/health/app/v1/configuration",
+  "version": "3.0",
+  "name": "at",
+  "configuration": {
+    "oobe": {
+      "defaults": {
+        "distanceUnit": "metric",
+        "weightUnit": "metric",
+        "temperatureUnit": "celsius",
+        "marketingOptIn": false,
+        "minimumAge": 13
+      }
+    },
+    "maps": {
+      "serviceUrl": "http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0&mkt=de-DE",
+      "token": "AlSydTySPNsUkTvrNpbnWbsVWKfufb0b-1Ri-vqCaAixRgNh3qmbb_5a7uihXupa",
+      "roadUriFormat": "http://ak.dynamic.t{subdomain}.tiles.virtualearth.net/comp/ch/{quadkey}?mkt=de-DE&it=G,VE,L&shading=hill&og=40&n=z&cstl=rd&dpi=d1"
+    },
+    "features": {
+      "summaryEmail": {
+        "enabled": false
+      },
+      "starbucks": {
+        "enabled": false,
+        "displayUrl": "",
+        "displayUrlString": "",
+        "cardFrontUrl": "",
+        "cardBackUrl": ""
+      },
+      "facebook": {
+        "enabled": true
+      },
+      "facebookMessenger": {
+        "enabled": true
+      },
+      "twitter": {
+        "enabled": true
+      },
+      "finance": {
+        "enabled": true,
+        "serviceUrl": "http://finance.services.appex.bing.com",
+        "defaultStockList": [
+          {
+            "id": "136.10.000001.136.!HSCHX",
+            "symbol": "SHANGHAI COMPOSITE"
+          },
+          {
+            "id": "146.10.XGD",
+            "symbol": "SHENZHEN COMPOSITE"
+          },
+          {
+            "id": "29.10.@CCO.29.COMP",
+            "symbol": "NASDAQ"
+          },
+          {
+            "id": "134.10.HSI",
+            "symbol": "HANG SENG"
+          },
+          {
+            "id": "146.10.XTL",
+            "symbol": "NIKKEI 225"
+          }
+        ]
+      },
+      "hike": {
+        "enabled": true
+      }
+    }
+  }
+}

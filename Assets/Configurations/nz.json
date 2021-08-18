@@ -1,0 +1,71 @@
+{
+  "$schema": "http://microsoft.com/health/app/v1/configuration",
+  "version": "3.0",
+  "name": "nz",
+  "configuration": {
+    "oobe": {
+      "defaults": {
+        "distanceUnit": "metric",
+        "weightUnit": "metric",
+        "temperatureUnit": "celsius",
+        "marketingOptIn": false,
+        "minimumAge": 13
+      }
+    },
+    "maps": {
+      "serviceUrl": "http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0&mkt=en-AU",
+      "token": "AlSydTySPNsUkTvrNpbnWbsVWKfufb0b-1Ri-vqCaAixRgNh3qmbb_5a7uihXupa",
+      "roadUriFormat": "http://ak.dynamic.t{subdomain}.tiles.virtualearth.net/comp/ch/{quadkey}?mkt=en-AU&it=G,VE,L&shading=hill&og=40&n=z&cstl=rd&dpi=d1"
+    },
+    "features": {
+      "summaryEmail": {
+        "enabled": false
+      },
+      "starbucks": {
+        "enabled": false,
+        "displayUrl": "",
+        "displayUrlString": "",
+        "cardFrontUrl": "",
+        "cardBackUrl": ""
+      },
+      "facebook": {
+        "enabled": true
+      },
+      "facebookMessenger": {
+        "enabled": true
+      },
+      "twitter": {
+        "enabled": true
+      },
+      "finance": {
+        "enabled": true,
+        "serviceUrl": "http://finance.services.appex.bing.com",
+        "defaultStockList": [
+          {
+            "id": "147.10.NZ50",
+            "symbol": "NZSE 50"
+          },
+          {
+            "id": "146.10.XJO",
+            "symbol": "S&P/ASX 200"
+          },
+          {
+            "id": "147.10.T10/C",
+            "symbol": "NZX 10"
+          },
+          {
+            "id": "147.10.ZXV",
+            "symbol": "NZX 15"
+          },
+          {
+            "id": "147.10.ALL/C",
+            "symbol": "NZX All"
+          }
+        ]
+      },
+      "hike": {
+        "enabled": true
+      }
+    }
+  }
+}

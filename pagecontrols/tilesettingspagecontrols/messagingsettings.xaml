@@ -1,0 +1,83 @@
+<local:SyncAppPageControl x:Class="DesktopSyncApp.MessagingSettings"
+                          xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                          xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                          xmlns:BindingConverters="clr-namespace:DesktopSyncApp.BindingConverters"
+                          xmlns:System="clr-namespace:System;assembly=mscorlib"
+                          xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                          xmlns:local="clr-namespace:DesktopSyncApp"
+                          xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006">
+  <Grid>
+    <Grid Background="#000000" Opacity=".9"/>
+    <Grid Margin="73,44,73,43" Background="{StaticResource BackgroundBrushDark}">
+      <TextBlock Name="Title" Margin="32,16,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="28"
+                 Style="{StaticResource BaseTextBlock}" Text="{x:Static local:Strings.Settings_SMS_Title}"/>
+      <TextBlock Name="NotificationsText" Width="226" Margin="35,68,0,0" HorizontalAlignment="Left"
+                 VerticalAlignment="Top" FontSize="15" Style="{StaticResource BaseTextBlock}"
+                 Text="{x:Static local:Strings.Settings_SMS_SubHeading1}" TextWrapping="Wrap"/>
+      <CheckBox Name="NotificationsOn" Width="291" Margin="372,70,0,0" HorizontalAlignment="Left"
+                VerticalAlignment="Top" FontFamily="Segoe UI Light" FontSize="30" IsTabStop="false"
+                Style="{StaticResource CheckBoxNoContent}" BorderBrush="{x:Null}"/>
+      <Rectangle Width="616" Margin="33,131,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Stroke="#A7A7AA"/>
+      <TextBlock Name="QuickResponse" Margin="33,148,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
+                 FontSize="15" Style="{StaticResource BaseTextBlock}"
+                 Text="{x:Static local:Strings.Settings_SMS_SubHeading2}" TextWrapping="Wrap"/>
+      <TextBlock Margin="33,181,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15"
+                 Foreground="#A7A7AA" Style="{StaticResource BaseTextBlock}"
+                 Text="{x:Static local:Strings.Settings_Reply1}" TextWrapping="Wrap"/>
+      <TextBlock Margin="372,181,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15"
+                 Foreground="#A7A7AA" Style="{StaticResource BaseTextBlock}"
+                 Text="{x:Static local:Strings.Settings_Reply2}" TextWrapping="Wrap"/>
+      <TextBlock Margin="33,245,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15"
+                 Foreground="#A7A7AA" Style="{StaticResource BaseTextBlock}"
+                 Text="{x:Static local:Strings.Settings_Reply3}" TextWrapping="Wrap"/>
+      <TextBlock Margin="372,245,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15"
+                 Foreground="#A7A7AA" Style="{StaticResource BaseTextBlock}"
+                 Text="{x:Static local:Strings.Settings_Reply4}" TextWrapping="Wrap"/>
+      <TextBox GotKeyboardFocus="TextBox_GotKeyboardFocus" Name="Reply1" Width="277" Margin="33,209,0,0"
+               HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15"
+               MaxLength="{x:Static local:Globals.MaxQuickResponseLength}"
+               Style="{DynamicResource MessagingTextBox}"
+               Text="{Binding LoginInfo.UserProfileEdit.FirstName, Converter={StaticResource CookedLimitedStringConverter}, ConverterParameter={x:Static local:Globals.MaxQuickResponseLength}, FallbackValue=Reply1}"/>
+      <TextBox GotKeyboardFocus="TextBox_GotKeyboardFocus" Name="Reply2" Width="277" Margin="372,209,0,0"
+               HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15"
+               MaxLength="{x:Static local:Globals.MaxQuickResponseLength}"
+               Style="{DynamicResource MessagingTextBox}"
+               Text="{Binding LoginInfo.UserProfileEdit.FirstName, Converter={StaticResource CookedLimitedStringConverter}, ConverterParameter={x:Static local:Globals.MaxQuickResponseLength}, FallbackValue=Reply2}"/>
+      <TextBox GotKeyboardFocus="TextBox_GotKeyboardFocus" Name="Reply3" Width="277" Margin="33,273,0,0"
+               HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15"
+               MaxLength="{x:Static local:Globals.MaxQuickResponseLength}"
+               Style="{DynamicResource MessagingTextBox}"
+               Text="{Binding LoginInfo.UserProfileEdit.FirstName, Converter={StaticResource CookedLimitedStringConverter}, ConverterParameter={x:Static local:Globals.MaxQuickResponseLength}, FallbackValue=Reply3}"/>
+      <TextBox GotKeyboardFocus="TextBox_GotKeyboardFocus" Name="Reply4" Width="277" Margin="372,273,0,0"
+               HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15"
+               MaxLength="{x:Static local:Globals.MaxQuickResponseLength}"
+               Style="{DynamicResource MessagingTextBox}"
+               Text="{Binding LoginInfo.UserProfileEdit.FirstName, Converter={StaticResource CookedLimitedStringConverter}, ConverterParameter={x:Static local:Globals.MaxQuickResponseLength}, FallbackValue=Reply4}"/>
+      <Grid Width="150" Margin="0,0,0,13" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+        <Grid Height="52" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+          <Button Click="Save_Click" Height="29" HorizontalAlignment="Center" VerticalAlignment="Top"
+                  HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" IsTabStop="false"
+                  Style="{StaticResource SaveCheckButton}"/>
+          <TextBlock Margin="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontFamily="Segoe UI Light"
+                     FontSize="15" Foreground="#A7A7AA" Style="{StaticResource BaseTextBlock}"
+                     Text="{x:Static local:Strings.Title_Button_CheckMark}"/>
+        </Grid>
+        <Grid Height="52" Margin="0,0,0,0" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+          <Button Click="Cancel_Click" Height="29" HorizontalAlignment="Center" VerticalAlignment="Top"
+                  IsTabStop="false" Style="{StaticResource CancelXButton}"/>
+          <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" FontFamily="Segoe UI Light" FontSize="15"
+                     Foreground="#A7A7AA" Style="{StaticResource BaseTextBlock}"
+                     Text="{x:Static local:Strings.Title_Button_X_Cancel}"/>
+        </Grid>
+      </Grid>
+      <Rectangle Height="1" Margin="0,0,0,34" VerticalAlignment="bottom" IsHitTestVisible="true" Stroke="Red"
+                 Visibility="{x:Static local:ViewModel.FallbackVisibility}"/>
+      <Rectangle Height="1" Margin="0,0,0,15" VerticalAlignment="bottom" IsHitTestVisible="true" Stroke="Red"
+                 Visibility="{x:Static local:ViewModel.FallbackVisibility}"/>
+    </Grid>
+    <Rectangle Margin="365,0,0,0" HorizontalAlignment="Left" IsHitTestVisible="true" Stroke="Red"
+               Visibility="{x:Static local:ViewModel.FallbackVisibility}"/>
+    <Rectangle Margin="444,0,0,0" HorizontalAlignment="Left" IsHitTestVisible="true" Stroke="Red"
+               Visibility="{x:Static local:ViewModel.FallbackVisibility}"/>
+  </Grid>
+</local:SyncAppPageControl>

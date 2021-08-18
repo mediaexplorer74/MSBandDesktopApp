@@ -1,0 +1,33 @@
+<Window x:Class="DesktopSyncApp.AppMainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:System="clr-namespace:System;assembly=mscorlib"
+        xmlns:local="clr-namespace:DesktopSyncApp"
+        Closed="MainWindow_Closed" Closing="MainWindow_Closing_HideInstead" KeyDown="MainWindow_KeyDown"
+        Loaded="MainWindow_Loaded" MouseDown="MainWindow_MouseDown" x:Name="MainWindow"
+        Title="{x:Static local:Strings.Title_MainWindow}" Width="830" Height="480"
+        Background="{StaticResource PrimaryMediumBrush}" FontFamily="Segoe UI Light" FontSize="15"
+        Foreground="White" Icon="App.ico" ResizeMode="CanMinimize" WindowStyle="None"
+        Visibility="{Binding AppVisibility, Mode=OneWay}" WindowState="{Binding AppState}">
+  <Grid>
+    <local:AnimatedPageControl x:Name="MainWindowPageManager"/>
+    <Grid HorizontalAlignment="Right" VerticalAlignment="Top">
+      <local:VariableOpacityButton Width="20" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top"
+                                   VerticalContentAlignment="Bottom" IsTabStop="false" Padding="1,1,1,3"
+                                   Style="{DynamicResource BorderlessVariableOpacityButtonStyle}"
+                                   Command="{Binding MinimizeAppCommand}">
+        <Image Source="{StaticResource minimize}" Stretch="None"/>
+      </local:VariableOpacityButton>
+      <local:VariableOpacityButton Width="35" Height="25" Margin="20,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
+                                   VerticalContentAlignment="Bottom" IsTabStop="false" Padding="1,1,1,3"
+                                   Style="{DynamicResource BorderlessVariableOpacityButtonStyle}" Command="{Binding HideAppCommand}">
+        <Image Source="{StaticResource close}" Stretch="None"/>
+      </local:VariableOpacityButton>
+    </Grid>
+    <local:AnimatedPageControl x:Name="SuperModalPageManager"/>
+    <Rectangle Margin="0,56,0,0" VerticalAlignment="Top" IsHitTestVisible="true" Stroke="Red"
+               Visibility="{x:Static local:ViewModel.FallbackVisibility}"/>
+    <Rectangle Margin="200,0,0,3" HorizontalAlignment="Left" IsHitTestVisible="true" Stroke="Red"
+               Visibility="{x:Static local:ViewModel.FallbackVisibility}"/>
+  </Grid>
+</Window>

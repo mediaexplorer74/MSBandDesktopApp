@@ -1,0 +1,35 @@
+<local:SyncAppPageControl x:Class="DesktopSyncApp.FirmwareUpdateProgressControl"
+                          xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                          xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                          xmlns:BindingConverters="clr-namespace:DesktopSyncApp.BindingConverters"
+                          xmlns:System="clr-namespace:System;assembly=mscorlib"
+                          xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                          xmlns:local="clr-namespace:DesktopSyncApp"
+                          xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                          Width="703" Height="454" Background="{StaticResource PrimaryBrush}">
+  <Grid MinWidth="550">
+    <TextBlock Margin="40,56,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
+               AutomationProperties.AutomationId="FirmwareUpdatingPageHeader" Style="{StaticResource Heading}"
+               Text="{x:Static local:Strings.Title_Page_FirmwareUpdating}"/>
+    <TextBlock x:Name="lblProfileFullName" Margin="40,129,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
+               AutomationProperties.AutomationId="FirmwareUpdateProgressMessage" FontSize="16"
+               RenderTransformOrigin="0.5,0.462" Style="{StaticResource SubHeading}"
+               Text="{x:Static local:Strings.Message_Page_FirmwareUpdating}" Background="{x:Null}"/>
+    <TextBlock Margin="40,0,0,108" HorizontalAlignment="Left" VerticalAlignment="Bottom"
+               AutomationProperties.AutomationId="lblCurrentUpdateState" Style="{DynamicResource SubHeading}"
+               TextWrapping="Wrap"
+               Text="{Binding DeviceManager.CurrentDevice.FirmwareUpdateProgress.LatestState, Converter={StaticResource FirmwareUpdatStateConverter}, FallbackValue='current update state'}"/>
+    <ProgressBar Height="15" Margin="40,0,40,64" VerticalAlignment="Bottom"
+                 AutomationProperties.AutomationId="LatestProgressPercentage" BorderBrush="White"
+                 BorderThickness="2" Foreground="White" UseLayoutRounding="true" Background="{x:Null}"
+                 Value="{Binding DeviceManager.CurrentDevice.FirmwareUpdateProgress.LatestProgressPercentage, Converter={StaticResource ProgressConverter}, FallbackValue=50}"/>
+    <TextBlock Margin="40,0,0,40" HorizontalAlignment="Left" VerticalAlignment="Bottom"
+               AutomationProperties.AutomationId="lblLatestProgressPercentage"
+               Style="{DynamicResource SubHeading}" TextWrapping="Wrap"
+               Text="{Binding DeviceManager.CurrentDevice.FirmwareUpdateProgress.LatestProgressPercentage, Converter={StaticResource ProgressConverter}, FallbackValue=50, StringFormat='{0} %', ValidatesOnNotifyDataErrors=false}"/>
+    <Rectangle Margin="0,190,0,0" VerticalAlignment="Top" IsHitTestVisible="true" Stroke="Red"
+               Visibility="{x:Static local:ViewModel.FallbackVisibility}"/>
+    <Rectangle Margin="200,0,0,3" HorizontalAlignment="Left" IsHitTestVisible="true" Stroke="Red"
+               Visibility="{x:Static local:ViewModel.FallbackVisibility}"/>
+  </Grid>
+</local:SyncAppPageControl>

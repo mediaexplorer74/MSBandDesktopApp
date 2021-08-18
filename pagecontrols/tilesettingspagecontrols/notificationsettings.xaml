@@ -1,0 +1,32 @@
+<local:SyncAppPageControl x:Class="DesktopSyncApp.NotificationSettings"
+                          xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                          xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                          xmlns:BindingConverters="clr-namespace:DesktopSyncApp.BindingConverters"
+                          xmlns:System="clr-namespace:System;assembly=mscorlib"
+                          xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                          xmlns:local="clr-namespace:DesktopSyncApp"
+                          xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006">
+  <Grid>
+    <Grid Background="#000000" Opacity=".9"/>
+    <Grid Margin="116,106,115,106" Background="{StaticResource BackgroundBrushDark}">
+      <local:VariableOpacityButton Click="Close_Click" HorizontalAlignment="Right" VerticalAlignment="Top"
+                                   HorizontalContentAlignment="Left" VerticalContentAlignment="Bottom" Content="X"
+                                   FontFamily="Sugoe UI Light" IsTabStop="false" MouseDownOpacity="0.5" Padding="4,0,6,0"
+                                   Style="{DynamicResource BorderlessVariableOpacityButtonStyle}"/>
+      <TextBlock Name="Title" Margin="41,11,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="28"
+                 Style="{StaticResource BaseTextBlock}" Text="{x:Static local:Strings.Settings_Email_Title}"/>
+      <TextBlock Name="NotificationsText" Margin="41,73,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
+                 FontSize="15" Style="{StaticResource BaseTextBlock}"
+                 Text="{x:Static local:Strings.Settings_Email_SubHeading1}" TextWrapping="Wrap"/>
+      <CheckBox Name="NotificationsOn" Width="415" Margin="41,150,0,0" HorizontalAlignment="Left"
+                VerticalAlignment="Top" FontFamily="Segoe UI Light" FontSize="30" IsTabStop="false"
+                Style="{StaticResource CheckBoxNoContent}" BorderBrush="{x:Null}"/>
+      <Rectangle Height="1" Margin="0,18,0,0" VerticalAlignment="top" IsHitTestVisible="true" Stroke="Red"
+                 Visibility="{x:Static local:ViewModel.FallbackVisibility}"/>
+      <Rectangle Margin="0,0,17,0" HorizontalAlignment="Right" IsHitTestVisible="true" Stroke="Red"
+                 Visibility="{x:Static local:ViewModel.FallbackVisibility}"/>
+      <Rectangle Margin="381,0,0,0" HorizontalAlignment="Left" IsHitTestVisible="true" Stroke="Red"
+                 Visibility="{x:Static local:ViewModel.FallbackVisibility}"/>
+    </Grid>
+  </Grid>
+</local:SyncAppPageControl>
