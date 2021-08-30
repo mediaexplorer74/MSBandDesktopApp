@@ -1,0 +1,953 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Label_Button_DFSupport" xml:space="preserve">
+    <value>Send feedback</value>
+  </data>
+  <data name="DefaultPhoneCannedResponses1" xml:space="preserve">
+    <value>Jeg ringer tilbage.</value>
+  </data>
+  <data name="DefaultPhoneCannedResponses3" xml:space="preserve">
+    <value>Send mig en sms.</value>
+  </data>
+  <data name="DefaultPhoneCannedResponses2" xml:space="preserve">
+    <value>Jeg sidder i møde.</value>
+  </data>
+  <data name="Settings_Twitter_SubHeading1" xml:space="preserve">
+    <value>Aktivér meddelelser for Twitter på dit Band.</value>
+  </data>
+  <data name="Settings_Bike_MainDataGrouping" xml:space="preserve">
+    <value>Primær</value>
+  </data>
+  <data name="SubHead_Page_Disconnected_Disconnected" xml:space="preserve">
+    <value>Tilslut dit Band</value>
+  </data>
+  <data name="MissingDeviceName" xml:space="preserve">
+    <value>&lt;Intet navn&gt;</value>
+  </data>
+  <data name="Label_Profile_Height" xml:space="preserve">
+    <value>Højde</value>
+  </data>
+  <data name="Label_Button_Support" xml:space="preserve">
+    <value>Support</value>
+  </data>
+  <data name="Label_CheckBox_Checked" xml:space="preserve">
+    <value>Til</value>
+  </data>
+  <data name="Label_UoM_Metric" xml:space="preserve">
+    <value>Metrisk</value>
+  </data>
+  <data name="Title_Button_Confirm" xml:space="preserve">
+    <value>Bekræft</value>
+  </data>
+  <data name="Message_Page_PairDevice_01" xml:space="preserve">
+    <value>Det ser ud til, at du har et nyt Band. Ønsker du at gemme det som stanard-Band for din profil?</value>
+  </data>
+  <data name="Message_Page_PairDevice_02" xml:space="preserve">
+    <value>ADVARSEL! HVIS DU GEMMER DETTE BAND, BLIVER ALLE DINE DATA UDELUKKENDE OVERFØRT TIL OG SYNKRONISERET MED DETTE BAND.</value>
+  </data>
+  <data name="Format_FirmwareVersionShort" xml:space="preserve">
+    <value>v {0}</value>
+  </data>
+  <data name="DOW_Thursday" xml:space="preserve">
+    <value>Tor</value>
+  </data>
+  <data name="Title_LoginDialog_Logout" xml:space="preserve">
+    <value>Log af</value>
+  </data>
+  <data name="Title_Page_Profile" xml:space="preserve">
+    <value>Min profil</value>
+  </data>
+  <data name="Title_Label_DeviceName" xml:space="preserve">
+    <value>Band-navn</value>
+  </data>
+  <data name="Title_Setting_AutoStart" xml:space="preserve">
+    <value>Åbn automatisk ved start</value>
+  </data>
+  <data name="ToolTip_ChangeToMetricWeight" xml:space="preserve">
+    <value>Skift til kilogram</value>
+  </data>
+  <data name="Status_FW_Checking" xml:space="preserve">
+    <value>kontrollerer</value>
+  </data>
+  <data name="Settings_Bike_SplitMarkerHeader" xml:space="preserve">
+    <value>Definer din mellemtidsdistance</value>
+  </data>
+  <data name="Label_UoM_Kilograms" xml:space="preserve">
+    <value>Kilogram</value>
+  </data>
+  <data name="OobeBandNameString" xml:space="preserve">
+    <value>Band tilhørende {0}</value>
+  </data>
+  <data name="Text_TrayIconBalloonTip_LoginToStart" xml:space="preserve">
+    <value>Log på med din Microsoft-konto.</value>
+  </data>
+  <data name="Settings_Cortana_Title" xml:space="preserve">
+    <value>Cortana-indstillinger</value>
+  </data>
+  <data name="Text_TrayIconBalloonTip_Syncing" xml:space="preserve">
+    <value>SYNKRONISERER - AFBRYD IKKE FORBINDELSEN</value>
+  </data>
+  <data name="Title_Button_MicrosoftAccount" xml:space="preserve">
+    <value>Microsoft-konto</value>
+  </data>
+  <data name="Title_Button_CheckMark" xml:space="preserve">
+    <value>bekræft</value>
+  </data>
+  <data name="Label_Profile_Name_Required" xml:space="preserve">
+    <value>Fornavn (påkrævet)</value>
+  </data>
+  <data name="Title_PleaseLogIn_1" xml:space="preserve">
+    <value>Log på med dit</value>
+  </data>
+  <data name="Title_PleaseLogIn_2" xml:space="preserve">
+    <value>Microsoft-konto</value>
+  </data>
+  <data name="SubHead_Page_LoginLogoutStatusMessage_Logout" xml:space="preserve">
+    <value>Logger dig af</value>
+  </data>
+  <data name="Settings_Starbucks_Title" xml:space="preserve">
+    <value>Starbucks-indstillinger</value>
+  </data>
+  <data name="Settings_FacebookMessenger_Title" xml:space="preserve">
+    <value>Facebook Messenger-indstillinger</value>
+  </data>
+  <data name="Title_Page_ForgetDeviceConfirm" xml:space="preserve">
+    <value>Afregistrer mit Microsoft Band</value>
+  </data>
+  <data name="UoM_Profile_Centimeters" xml:space="preserve">
+    <value>cm</value>
+  </data>
+  <data name="Title_Page_UpsellPage" xml:space="preserve">
+    <value>Microsoft Health til Windows 10</value>
+  </data>
+  <data name="Title_TrayIconToolTip_FirmwareUpdateRequired" xml:space="preserve">
+    <value>Microsoft Band - Softwareopdatering påkrævet</value>
+  </data>
+  <data name="Title_NavButton_PersonalizeBand" xml:space="preserve">
+    <value>Tilpas Band</value>
+  </data>
+  <data name="FirmwareVersionReleaseAbbr" xml:space="preserve">
+    <value>V</value>
+  </data>
+  <data name="Label_Button_PrivacyPolicy" xml:space="preserve">
+    <value>Politik om beskyttelse af personlige oplysninger</value>
+  </data>
+  <data name="Text_TrayIconBalloonTip_DeviceAbsent" xml:space="preserve">
+    <value>Tilslut dit Band for at gøre det muligt at lade op og synkronisere det.</value>
+  </data>
+  <data name="ToolTip_Profile_DeviceNameRequiredField" xml:space="preserve">
+    <value>Band-navn er et påkrævet felt</value>
+  </data>
+  <data name="Label_Button_TermsOfUse" xml:space="preserve">
+    <value>Vilkår for anvendelse</value>
+  </data>
+  <data name="Text_TrayIconBalloonTip_CloseWindowWarning" xml:space="preserve">
+    <value>Microsoft Band-synkronisering kører videre i baggrunden.
+
+Hvis du vil slippe for at se denne påmindelse igen, skal du klikke her.</value>
+  </data>
+  <data name="Settings_FacebookMessenger_SubHeading1" xml:space="preserve">
+    <value>Aktivér meddelelser for Facebook Messenger på dit Band.</value>
+  </data>
+  <data name="Title_Command_StopSyncing" xml:space="preserve">
+    <value>Stop</value>
+  </data>
+  <data name="Title_NavButton_Dashboard" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="Label_Profile_Gender" xml:space="preserve">
+    <value>Køn</value>
+  </data>
+  <data name="Status_AppUpdate_UpToDate" xml:space="preserve">
+    <value>opdateret</value>
+  </data>
+  <data name="Title_Page_InstallSoftware" xml:space="preserve">
+    <value>Installer ny software</value>
+  </data>
+  <data name="Title_NavButton_About" xml:space="preserve">
+    <value>Om</value>
+  </data>
+  <data name="Label_Profile_ZipCode_Optional" xml:space="preserve">
+    <value>Postnummer (valgfrit)</value>
+  </data>
+  <data name="Settings_Calls_SubHeading1" xml:space="preserve">
+    <value>Aktivér opkaldsmeddelelser på dit Band.</value>
+  </data>
+  <data name="Settings_Calls_SubHeading2" xml:space="preserve">
+    <value>Hurtigsvar for opkald</value>
+  </data>
+  <data name="Status_FW_Available" xml:space="preserve">
+    <value>kontrol afventer</value>
+  </data>
+  <data name="Label_CheckBox_Unchecked" xml:space="preserve">
+    <value>Fra</value>
+  </data>
+  <data name="Title_Setting_AutoSync" xml:space="preserve">
+    <value>Synkroniser automatisk ved forbindelse</value>
+  </data>
+  <data name="Title_Button_Download" xml:space="preserve">
+    <value>Hent</value>
+  </data>
+  <data name="Label_Profile_DeviceName_Required" xml:space="preserve">
+    <value>Band-navn (påkrævet)</value>
+  </data>
+  <data name="Status_AppUpdate_Unknown" xml:space="preserve">
+    <value>kontrol afventer</value>
+  </data>
+  <data name="SubHead_Page_Sync" xml:space="preserve">
+    <value>Dit Microsoft Band er forbundet</value>
+  </data>
+  <data name="Format_LastSync_Long" xml:space="preserve">
+    <value>Senest synkroniseret {0}</value>
+  </data>
+  <data name="Status_FirmwareUpdate_SyncingLog" xml:space="preserve">
+    <value>SYNKRONISERER DATA...</value>
+  </data>
+  <data name="UoM_Profile_Pounds" xml:space="preserve">
+    <value>lbs</value>
+  </data>
+  <data name="Message_Page_PairConfirm" xml:space="preserve">
+    <value>BEKRÆFT SYNKRONISERING AF DIN PROFIL OG DINE DATA TIL DETTE BAND</value>
+  </data>
+  <data name="Message_DeviceConnectErrorOccurred" xml:space="preserve">
+    <value>Vi har problemer med at oprette forbindelse til dit Band.</value>
+  </data>
+  <data name="Settings_SMS_SubHeading1" xml:space="preserve">
+    <value>Aktivér meddelelser for tekstmeddelelser på dit Band.</value>
+  </data>
+  <data name="Settings_SMS_SubHeading2" xml:space="preserve">
+    <value>Hurtigsvar for sms</value>
+  </data>
+  <data name="Label_UoM_Standard" xml:space="preserve">
+    <value>Britiske mål</value>
+  </data>
+  <data name="UoM_Profile_Inches" xml:space="preserve">
+    <value>in</value>
+  </data>
+  <data name="Settings_SplitMarkers" xml:space="preserve">
+    <value>Mellemtidsmarkører</value>
+  </data>
+  <data name="Title_CurrentFWVersion" xml:space="preserve">
+    <value>Aktuel version:</value>
+  </data>
+  <data name="Title_Command_Logout" xml:space="preserve">
+    <value>Log af</value>
+  </data>
+  <data name="Title_CloseAppDialog_Close" xml:space="preserve">
+    <value>Afslut</value>
+  </data>
+  <data name="Status_FirmwareUpdate_WaitingForReconnect" xml:space="preserve">
+    <value>GENSTARTER BAND...</value>
+  </data>
+  <data name="Label_DeviceSerialNumber" xml:space="preserve">
+    <value>Band-serienummer:</value>
+  </data>
+  <data name="Settings_Calendar_SubHeading1" xml:space="preserve">
+    <value>Aktivér kalendermeddelelser på dit Band.</value>
+  </data>
+  <data name="Settings_Facebook_Title" xml:space="preserve">
+    <value>Facebook-indstillinger</value>
+  </data>
+  <data name="Settings_Bike_SubHeading1" xml:space="preserve">
+    <value>Vælg tre primære måleparametre, som du vil følge under din cykeltur.</value>
+  </data>
+  <data name="Settings_Bike_SubHeading3" xml:space="preserve">
+    <value>Vælg, hvilke tre datapunkter du vil spore på dine cykelture.</value>
+  </data>
+  <data name="Settings_Bike_SubHeading2" xml:space="preserve">
+    <value>Under en cykeltur kan du også skifte mellem måleparametrene ved at dobbelttrykke på handlingsknappen.</value>
+  </data>
+  <data name="Title_Button_Save" xml:space="preserve">
+    <value>Gem</value>
+  </data>
+  <data name="Title_Button_Edit" xml:space="preserve">
+    <value>Rediger</value>
+  </data>
+  <data name="Title_LoginDialog_Login" xml:space="preserve">
+    <value>Log på</value>
+  </data>
+  <data name="Message_LoginErrorOccurred" xml:space="preserve">
+    <value>Vi har problemer med at logge dig på.</value>
+  </data>
+  <data name="Label_UoM_Fahrenheit" xml:space="preserve">
+    <value>Fahrenheit</value>
+  </data>
+  <data name="Label_Profile_Name" xml:space="preserve">
+    <value>Fornavn</value>
+  </data>
+  <data name="Label_Wallpaper" xml:space="preserve">
+    <value>Baggrund</value>
+  </data>
+  <data name="Label_AppVersion" xml:space="preserve">
+    <value>Appversion:</value>
+  </data>
+  <data name="Status_FirmwareUpdate_Downloading" xml:space="preserve">
+    <value>DOWNLOADER SOFTWARE...</value>
+  </data>
+  <data name="Label_Profile_Weight" xml:space="preserve">
+    <value>Vægt</value>
+  </data>
+  <data name="Status_AppUpdate_Available" xml:space="preserve">
+    <value>tilgængelig</value>
+  </data>
+  <data name="Title_Page_LoginLogoutBusy" xml:space="preserve">
+    <value>Vent et øjeblik</value>
+  </data>
+  <data name="Title_Page_FirmwareUpdating" xml:space="preserve">
+    <value>Softwareopdatering</value>
+  </data>
+  <data name="DOW_Friday" xml:space="preserve">
+    <value>Fre</value>
+  </data>
+  <data name="Settings_Bike_Title" xml:space="preserve">
+    <value>Cykleindstillinger</value>
+  </data>
+  <data name="Label_Button_ThirdPartyNotices" xml:space="preserve">
+    <value>Meddelelser om tredjepart</value>
+  </data>
+  <data name="Label_Profile_Temperature" xml:space="preserve">
+    <value>Temperatur</value>
+  </data>
+  <data name="Message_Page_CantRegister_Reset" xml:space="preserve">
+    <value>Det forbundne Microsoft Band er ikke registreret for din konto.
+
+Du kan registrere det ved at nulstille dit nye Band til fabriksindstillingerne.</value>
+  </data>
+  <data name="Message_WebErrorOccurred" xml:space="preserve">
+    <value>Vi har problemer med at oprette forbindelse til internettet. Tjek din netværksforbindelse, og prøv igen.</value>
+  </data>
+  <data name="Message_DeviceUnpairingErrorOccurred" xml:space="preserve">
+    <value>Vi har problemer med afregistrere dit nye Band fra din profil.</value>
+  </data>
+  <data name="Title_TrayIconToolTip_MultipleDevices" xml:space="preserve">
+    <value>Microsoft Band - Flere Band er forbundet</value>
+  </data>
+  <data name="Label_DeviceFWVersion" xml:space="preserve">
+    <value>Band-softwareversion:</value>
+  </data>
+  <data name="Status_FW_UpToDate" xml:space="preserve">
+    <value>opdateret</value>
+  </data>
+  <data name="Settings_SMS_Title" xml:space="preserve">
+    <value>Indstillinger for meddelelser</value>
+  </data>
+  <data name="Title_ErrorMessage" xml:space="preserve">
+    <value>Noget gik galt</value>
+  </data>
+  <data name="DOW_Wednesday" xml:space="preserve">
+    <value>Ons</value>
+  </data>
+  <data name="Settings_Run_Title" xml:space="preserve">
+    <value>Indstillinger for løb</value>
+  </data>
+  <data name="Message_Page_Profile_OOBE" xml:space="preserve">
+    <value>Besvar nogle få spørgsmål, så vi kan give dig mere nøjagtige oplysninger og resultater.</value>
+  </data>
+  <data name="Label_Gender_Male" xml:space="preserve">
+    <value>Mand</value>
+  </data>
+  <data name="Title_Page_CantPair" xml:space="preserve">
+    <value>Kan ikke registrere dit Band</value>
+  </data>
+  <data name="Settings_NotificationCenter_SubHeading1" xml:space="preserve">
+    <value>Aktivér alle andre meddelelser fra din telefons meddelelsescenter på dit Band.</value>
+  </data>
+  <data name="Title_Page_About2" xml:space="preserve">
+    <value>Microsoft Band Sync-app</value>
+  </data>
+  <data name="Title_Page_About1" xml:space="preserve">
+    <value>Om</value>
+  </data>
+  <data name="ToolTip_ChangeToMetricHeight" xml:space="preserve">
+    <value>Skift til centimeter</value>
+  </data>
+  <data name="Settings_Run_SubHeading1" xml:space="preserve">
+    <value>Vælg tre primære måleparametre, som du vil følge under dine løbeture.</value>
+  </data>
+  <data name="Settings_Run_SubHeading3" xml:space="preserve">
+    <value>Vælg, hvilke tre datapunkter du vil spore på dine løbeture.</value>
+  </data>
+  <data name="Settings_Run_SubHeading2" xml:space="preserve">
+    <value>Under en løbetur kan du også skifte mellem måleparametrene ved at dobbelttrykke på handlingsknappen.</value>
+  </data>
+  <data name="Text_Error_25Characters" xml:space="preserve">
+    <value>Angiv 1 til 25 tegn</value>
+  </data>
+  <data name="Text_TrayIconBalloonTip_FirmwateUpdateRequired" xml:space="preserve">
+    <value>Band-softwareopdatering er nu nødvendig.</value>
+  </data>
+  <data name="Status_Updating" xml:space="preserve">
+    <value>Opdaterer...</value>
+  </data>
+  <data name="Message_Page_FirmwareUpdateReady" xml:space="preserve">
+    <value>SOFTWARE TIL DIT BAND SKAL INSTALLERES</value>
+  </data>
+  <data name="Settings_Email_Title" xml:space="preserve">
+    <value>Mailindstillinger</value>
+  </data>
+  <data name="Settings_Bike_SecondaryDataGrouping" xml:space="preserve">
+    <value>Oversigt</value>
+  </data>
+  <data name="Title_Command_UpdateFirmware" xml:space="preserve">
+    <value>Opdater nu</value>
+  </data>
+  <data name="DOW_Monday" xml:space="preserve">
+    <value>Man</value>
+  </data>
+  <data name="Title_NavButton_Profile" xml:space="preserve">
+    <value>Min profil</value>
+  </data>
+  <data name="Title_Login" xml:space="preserve">
+    <value>Hej!</value>
+  </data>
+  <data name="Settings_Twitter_Title" xml:space="preserve">
+    <value>Twitter-indstillinger</value>
+  </data>
+  <data name="Title_Button_Cancel" xml:space="preserve">
+    <value>Annuller</value>
+  </data>
+  <data name="Settings_SplitMarkers_Imperial" xml:space="preserve">
+    <value>miles</value>
+  </data>
+  <data name="Title_Command_CancelSyncSensorLogs" xml:space="preserve">
+    <value>Stop</value>
+  </data>
+  <data name="Label_Profile_Birthdate" xml:space="preserve">
+    <value>Fødselsdato</value>
+  </data>
+  <data name="Message_Page_UninstallPart1" xml:space="preserve">
+    <value>Har du allerede den nye app? </value>
+  </data>
+  <data name="Message_Page_UninstallPart2" xml:space="preserve">
+    <value>Fjern Microsoft Band Sync nu.</value>
+  </data>
+  <data name="Title_Tiles_ClickIcon" xml:space="preserve">
+    <value>Klik på et felt, der har et redigeringsikon, for at angive dine indstillinger.</value>
+  </data>
+  <data name="Title_Command_LaunchAppUpdate" xml:space="preserve">
+    <value>Installer opdatering</value>
+  </data>
+  <data name="Title_NavButton_Settings" xml:space="preserve">
+    <value>Indstillinger</value>
+  </data>
+  <data name="DOW_Sunday" xml:space="preserve">
+    <value>Søn</value>
+  </data>
+  <data name="Settings_Calls_Title" xml:space="preserve">
+    <value>Opkaldsindstillinger</value>
+  </data>
+  <data name="Message_LogoutErrorOccurred" xml:space="preserve">
+    <value>Vi har problemer med at logge dig af.</value>
+  </data>
+  <data name="Text_AboutLegalNotice" xml:space="preserve">
+    <value>Advarsel! Dette computerprogram er beskyttet af regler om ophavsret og internationale traktater, Uautoriseret reproduktion eller distribution af dette program eller nogen del af det kan medføre alvorlige civil- og strafferetlige konsekvenser, som vil blive søgt effektueret i det omfang, gældende lov tillader det.</value>
+  </data>
+  <data name="UoM_Profile_Kilograms" xml:space="preserve">
+    <value>kg</value>
+  </data>
+  <data name="Title_Page_TileManagement" xml:space="preserve">
+    <value>Administrer felter</value>
+  </data>
+  <data name="Settings_Calendar_Title" xml:space="preserve">
+    <value>Kalenderindstillinger</value>
+  </data>
+  <data name="Message_Page_FirmwareUpdating" xml:space="preserve">
+    <value>SOFTWARE INSTALLERES - TAG IKKE STIKKET UD AF DIT BAND</value>
+  </data>
+  <data name="Message_Page_NewAppDescription" xml:space="preserve">
+    <value>Den nye Microsoft Health-app til Windows 10 er nu tilgængelig!
+Hent den nu på Windows Store.</value>
+  </data>
+  <data name="Status_FirmwareUpdate_BootingToUpdate" xml:space="preserve">
+    <value>GENSTARTER BAND...</value>
+  </data>
+  <data name="ToolTip_ChangeToImperialWeight" xml:space="preserve">
+    <value>Skift til pund</value>
+  </data>
+  <data name="Format_FirmwareVersion" xml:space="preserve">
+    <value>v {0} {1:00} {2}</value>
+  </data>
+  <data name="Title_Button_PairNow" xml:space="preserve">
+    <value>Gør dette til mit Band</value>
+  </data>
+  <data name="Title_MainWindow" xml:space="preserve">
+    <value>Microsoft Band-synkronisering</value>
+  </data>
+  <data name="Settings_Reply4" xml:space="preserve">
+    <value>Svar 4</value>
+  </data>
+  <data name="Settings_Reply1" xml:space="preserve">
+    <value>Svar 1</value>
+  </data>
+  <data name="Settings_Reply3" xml:space="preserve">
+    <value>Svar 3</value>
+  </data>
+  <data name="Settings_Reply2" xml:space="preserve">
+    <value>Svar 2</value>
+  </data>
+  <data name="Title_Page_Settings" xml:space="preserve">
+    <value>Indstillinger</value>
+  </data>
+  <data name="Label_Color" xml:space="preserve">
+    <value>Farve</value>
+  </data>
+  <data name="Title_Button_EditProfile" xml:space="preserve">
+    <value>Rediger min profil</value>
+  </data>
+  <data name="Message_Error_ConnectReconnect" xml:space="preserve">
+    <value>Vi har problemer med at oprette forbindelse til dit Band.
+Kontrollér, at du kan se Mig-feltet på dit Band.
+Afbryd derefter forbindelsen, og opret forbindelse igen for at fortsætte.</value>
+  </data>
+  <data name="Title_Page_PairDevice" xml:space="preserve">
+    <value>Nyt Microsoft Band fundet!</value>
+  </data>
+  <data name="ToolTip_CancelSync" xml:space="preserve">
+    <value>Annuller synkronisering</value>
+  </data>
+  <data name="Title_Button_Logout" xml:space="preserve">
+    <value>Log på som en anden bruger</value>
+  </data>
+  <data name="ToolTip_Profile_FirstNameRequiredField" xml:space="preserve">
+    <value>Fornavn er et påkrævet felt</value>
+  </data>
+  <data name="Message_ProfileSaveErrorOccurred" xml:space="preserve">
+    <value>Vi har problemer med at gemme din profil.</value>
+  </data>
+  <data name="Title_TrayIconToolTip_Syncing" xml:space="preserve">
+    <value>Microsoft Band - Synkronisering er i gang</value>
+  </data>
+  <data name="Title_TrayIconToolTip_UpdatingFirmware" xml:space="preserve">
+    <value>Microsoft Band - Softwareopdatering er i gang</value>
+  </data>
+  <data name="Title_Page_LogoutConfirm" xml:space="preserve">
+    <value>Logger af...</value>
+  </data>
+  <data name="FirmwareVersionDebugAbbr" xml:space="preserve">
+    <value>F</value>
+  </data>
+  <data name="Title_Page_FirmwareUpdateReady" xml:space="preserve">
+    <value>Softwareopdatering</value>
+  </data>
+  <data name="Label_Profile_Age" xml:space="preserve">
+    <value>ALDER</value>
+  </data>
+  <data name="Title_NewFWVersion" xml:space="preserve">
+    <value>Ny version:</value>
+  </data>
+  <data name="Format_LastSync_Short" xml:space="preserve">
+    <value>Microsoft Band - Senest synkroniseret {0}</value>
+  </data>
+  <data name="Text_Error_15Characters" xml:space="preserve">
+    <value>Angiv 1 til 15 tegn</value>
+  </data>
+  <data name="Title_Command_Settings" xml:space="preserve">
+    <value>Indstillinger</value>
+  </data>
+  <data name="Title_TrayIconToolTip_DevicePresent" xml:space="preserve">
+    <value>Microsoft Band - Forbundet</value>
+  </data>
+  <data name="Title_Page_Disconnected_1" xml:space="preserve">
+    <value>Dit Microsoft Band</value>
+  </data>
+  <data name="Title_Page_Disconnected_2" xml:space="preserve">
+    <value>er ikke forbundet.</value>
+  </data>
+  <data name="Title_Page_PairConfirm" xml:space="preserve">
+    <value>Gør dette til mit Microsoft Band</value>
+  </data>
+  <data name="Title_DialogDefaultButton" xml:space="preserve">
+    <value>Tilbage</value>
+  </data>
+  <data name="Status_FW_Downloading" xml:space="preserve">
+    <value>downloader</value>
+  </data>
+  <data name="Settings_Email_SubHeading1" xml:space="preserve">
+    <value>Aktivér mailmeddelelser på dit Band.</value>
+  </data>
+  <data name="Title_Page_LogIn" xml:space="preserve">
+    <value>Hej!</value>
+  </data>
+  <data name="Settings_TertiaryData" xml:space="preserve">
+    <value>Tertiære data</value>
+  </data>
+  <data name="Label_Gender_Female" xml:space="preserve">
+    <value>Kvinde</value>
+  </data>
+  <data name="Title_NavButton_ManageTiles" xml:space="preserve">
+    <value>Administrer felter</value>
+  </data>
+  <data name="Settings_SecondaryData" xml:space="preserve">
+    <value>Sekundære data</value>
+  </data>
+  <data name="ToolTip_PersonalizeBand" xml:space="preserve">
+    <value>Tilpas mit Band</value>
+  </data>
+  <data name="Message_Page_Multiple" xml:space="preserve">
+    <value>Det ser ud til, at du har flere Microsoft Bands forbundet.
+
+Kobl alle undtagen ét fra for at fortsætte.</value>
+  </data>
+  <data name="Title_Cancel" xml:space="preserve">
+    <value>Annuller</value>
+  </data>
+  <data name="Title_Command_SyncSensorLogs" xml:space="preserve">
+    <value>Synkroniser</value>
+  </data>
+  <data name="Settings_PrimaryData" xml:space="preserve">
+    <value>Primære data</value>
+  </data>
+  <data name="Title_TrayIconToolTip_Error" xml:space="preserve">
+    <value>Microsoft Band - Der opstod en fejl</value>
+  </data>
+  <data name="Settings_SplitMarkers_Metric" xml:space="preserve">
+    <value>kilometer</value>
+  </data>
+  <data name="Settings_NotificationCenter_Title" xml:space="preserve">
+    <value>Indstillinger for Meddelelsescenter</value>
+  </data>
+  <data name="Title_Button_SaveProfile" xml:space="preserve">
+    <value>Gem</value>
+  </data>
+  <data name="Title_LastFWCheck" xml:space="preserve">
+    <value>Senest kontrolleret:</value>
+  </data>
+  <data name="DOW_Tuesday" xml:space="preserve">
+    <value>Tir</value>
+  </data>
+  <data name="Label_UoM_Pounds" xml:space="preserve">
+    <value>Pund</value>
+  </data>
+  <data name="ToolTip_ChangeToImperialHeight" xml:space="preserve">
+    <value>Skift til fod og tommer</value>
+  </data>
+  <data name="Status_Syncing" xml:space="preserve">
+    <value>Synkroniserer...</value>
+  </data>
+  <data name="DefaultMessageCannedResponses2" xml:space="preserve">
+    <value>Jeg sidder i møde.</value>
+  </data>
+  <data name="DefaultMessageCannedResponses1" xml:space="preserve">
+    <value>Jeg ringer tilbage.</value>
+  </data>
+  <data name="DOW_Saturday" xml:space="preserve">
+    <value>Lør</value>
+  </data>
+  <data name="Text_TrayIconBalloonTip_Error" xml:space="preserve">
+    <value>Noget gik galt. Åbn appen for at få flere oplysninger eller for at gendanne synkroniseringen.</value>
+  </data>
+  <data name="Message_LoginDialog_Working" xml:space="preserve">
+    <value>Arbejder...</value>
+  </data>
+  <data name="Title_Page_PersonalizeBand" xml:space="preserve">
+    <value>Tilpas Band</value>
+  </data>
+  <data name="Message_Page_ForgetDeviceConfirm_01" xml:space="preserve">
+    <value>Er du sikker på, at du vil fjerne dette Band fra din profil?</value>
+  </data>
+  <data name="Message_Page_ForgetDeviceConfirm_02" xml:space="preserve">
+    <value>ADVARSEL! HVIS DU BEKRÆFTER, VIL DIN PROFIL IKKE LÆNGERE SYNKRONISERE MED DETTE BAND, OG DINE DATA BLIVER IKKE OPDATERET.</value>
+  </data>
+  <data name="Title_Page_CantPair_2" xml:space="preserve">
+    <value>Kobl alle undtagen ét fra for at fortsætte...</value>
+  </data>
+  <data name="Title_LastSync" xml:space="preserve">
+    <value>Senest synkroniseret:</value>
+  </data>
+  <data name="Message_Page_CantRegister_UnregisterReset" xml:space="preserve">
+    <value>Det forbundne Microsoft Band er ikke registreret for din konto.
+
+Du kan registrere det ved at fjerne registreringen fra dit aktuelle Band under Min profil og nulstille dit nye Band til fabriksindstillingerne.</value>
+  </data>
+  <data name="Settings_Bike_SplitMarkerSubHeader" xml:space="preserve">
+    <value>Brugerdefineret mellemtidsmarkør</value>
+  </data>
+  <data name="Message_Page_InstallSoftware" xml:space="preserve">
+    <value>Der er ny software tilgængelig. Overførslen starter i din webbrowser.</value>
+  </data>
+  <data name="Text_AboutCopyrightNotice" xml:space="preserve">
+    <value>© 2015 Microsoft Corporation. All rights reserved.</value>
+  </data>
+  <data name="Settings_BikeRun_DataTitle" xml:space="preserve">
+    <value>Måleparameter {0}</value>
+  </data>
+  <data name="Settings_Bike_DataPoint9" xml:space="preserve">
+    <value>Tempo</value>
+  </data>
+  <data name="Settings_Bike_DataPoint8" xml:space="preserve">
+    <value>Kalorier</value>
+  </data>
+  <data name="Settings_Bike_DataPoint1" xml:space="preserve">
+    <value>Distance</value>
+  </data>
+  <data name="Settings_Bike_DataPoint0" xml:space="preserve">
+    <value>Ingen</value>
+  </data>
+  <data name="Settings_Bike_DataPoint3" xml:space="preserve">
+    <value>Varighed</value>
+  </data>
+  <data name="Settings_Bike_DataPoint2" xml:space="preserve">
+    <value>Gennemsnitshastighed</value>
+  </data>
+  <data name="Settings_Bike_DataPoint5" xml:space="preserve">
+    <value>Puls</value>
+  </data>
+  <data name="Settings_Bike_DataPoint4" xml:space="preserve">
+    <value>Stigningsøgning</value>
+  </data>
+  <data name="Settings_Bike_DataPoint7" xml:space="preserve">
+    <value>Øjeblikkelig hastighed</value>
+  </data>
+  <data name="Settings_Bike_DataPoint6" xml:space="preserve">
+    <value>Tid</value>
+  </data>
+  <data name="Settings_Cortana_SubHeading1" xml:space="preserve">
+    <value>Aktivér meddelelser for Cortana på dit Band.</value>
+  </data>
+  <data name="Status_FirmwareUpdate_Uploading" xml:space="preserve">
+    <value>INSTALLERER SOFTWARE...</value>
+  </data>
+  <data name="Title_Command_About" xml:space="preserve">
+    <value>Om</value>
+  </data>
+  <data name="Title_Command_Close" xml:space="preserve">
+    <value>Afslut</value>
+  </data>
+  <data name="Settings_Run_DataPoint5" xml:space="preserve">
+    <value>Puls</value>
+  </data>
+  <data name="Settings_Run_DataPoint4" xml:space="preserve">
+    <value>Stigningsøgning</value>
+  </data>
+  <data name="Settings_Run_DataPoint7" xml:space="preserve">
+    <value>Øjeblikkeligt tempo</value>
+  </data>
+  <data name="Settings_Run_DataPoint6" xml:space="preserve">
+    <value>Tid</value>
+  </data>
+  <data name="Settings_Run_DataPoint1" xml:space="preserve">
+    <value>Distance</value>
+  </data>
+  <data name="Settings_Run_DataPoint0" xml:space="preserve">
+    <value>Ingen</value>
+  </data>
+  <data name="Settings_Run_DataPoint3" xml:space="preserve">
+    <value>Varighed</value>
+  </data>
+  <data name="Settings_Run_DataPoint2" xml:space="preserve">
+    <value>Gennemsnitstempo</value>
+  </data>
+  <data name="Settings_Run_DataPoint9" xml:space="preserve">
+    <value>Tempo</value>
+  </data>
+  <data name="Settings_Run_DataPoint8" xml:space="preserve">
+    <value>Kalorier</value>
+  </data>
+  <data name="Message_DevicePairingErrorOccurred" xml:space="preserve">
+    <value>Vi har problemer med registrere dit nye Band til din profil.</value>
+  </data>
+  <data name="Format_AppVersion" xml:space="preserve">
+    <value>Version {0}</value>
+  </data>
+  <data name="Settings_Metrics_SelectionError" xml:space="preserve">
+    <value>Alle datapunkter skal være unikke.</value>
+  </data>
+  <data name="Text_TrayIconBalloonTip_MultipleDevices" xml:space="preserve">
+    <value>Det ser ud til, at du har flere Microsoft Bands forbundet.
+Kobl alle undtagen ét fra for at fortsætte.</value>
+  </data>
+  <data name="Label_Profile_DeviceName" xml:space="preserve">
+    <value>Band-navn</value>
+  </data>
+  <data name="Title_Command_CheckForAppUpdate" xml:space="preserve">
+    <value>Kontrollér, om der er en opdatering</value>
+  </data>
+  <data name="SubHead_Page_LoginLogoutStatusMessage_Login" xml:space="preserve">
+    <value>Opretter forbindelse til din konto</value>
+  </data>
+  <data name="Label_Profile_ZipCode" xml:space="preserve">
+    <value>Postnummer</value>
+  </data>
+  <data name="Title_Button_ForgetDevice" xml:space="preserve">
+    <value>Fjern registreringen af mit Band</value>
+  </data>
+  <data name="Title_Command_Back" xml:space="preserve">
+    <value>Tilbage</value>
+  </data>
+  <data name="Title_Command_Open" xml:space="preserve">
+    <value>Åbn</value>
+  </data>
+  <data name="Settings_Facebook_SubHeading1" xml:space="preserve">
+    <value>Aktivér meddelelser for Facebook på dit Band.</value>
+  </data>
+  <data name="Text_TrayIconBalloonTip_DevicePresent" xml:space="preserve">
+    <value>Dit Band er forbundet.</value>
+  </data>
+  <data name="Status_AppUpdate_Checking" xml:space="preserve">
+    <value>kontrollerer</value>
+  </data>
+  <data name="Label_UoM_Celsius" xml:space="preserve">
+    <value>Celsius</value>
+  </data>
+  <data name="Status_FW_Unknown" xml:space="preserve">
+    <value>kontrol afventer</value>
+  </data>
+  <data name="Message_ErrorOccurred" xml:space="preserve">
+    <value>Seneste forsøg mislykkedes.</value>
+  </data>
+  <data name="UoM_Profile_Feet" xml:space="preserve">
+    <value>fd</value>
+  </data>
+  <data name="Settings_Customize" xml:space="preserve">
+    <value>Tilpas</value>
+  </data>
+  <data name="Title_TrayIconToolTip_DeviceAbsent" xml:space="preserve">
+    <value>Microsoft Band - Opret forbindelse for at synkronisere</value>
+  </data>
+  <data name="Title_Command_CheckForFirmwareUpdate" xml:space="preserve">
+    <value>Kontrollér, om der er opdateringer</value>
+  </data>
+  <data name="Message_ProfileRefreshErrorOccurred" xml:space="preserve">
+    <value>Vi har problemer med at opdatere din profil.</value>
+  </data>
+  <data name="SubHead_Page_Disconnected_Connecting" xml:space="preserve">
+    <value>Opretter forbindelse til dit Band</value>
+  </data>
+  <data name="Title_Button_X_Cancel" xml:space="preserve">
+    <value>annuller</value>
+  </data>
+  <data name="Text_TrayIconBalloonTip_UpdatingFirmware" xml:space="preserve">
+    <value>INSTALLERER NY SOFTWARE - AFBRYD IKKE FORBINDELSEN</value>
+  </data>
+  <data name="Message_Page_CantRegister_Unregister" xml:space="preserve">
+    <value>Det forbundne Microsoft Band er ikke registreret for din konto.
+
+Du kan registrere det ved at fjerne registreringen fra dit aktuelle Band under Min profil.</value>
+  </data>
+  <data name="Status_FW_ReadyToUpdate" xml:space="preserve">
+    <value>kontrol afventer</value>
+  </data>
+  <data name="Title_TrayIconToolTip_LoginToStart" xml:space="preserve">
+    <value>Microsoft Band - Log på</value>
+  </data>
+  <data name="Title_Tiles_DragIcon" xml:space="preserve">
+    <value>Træk i et felt for at ændre rækkefølgen.</value>
+  </data>
+</root>

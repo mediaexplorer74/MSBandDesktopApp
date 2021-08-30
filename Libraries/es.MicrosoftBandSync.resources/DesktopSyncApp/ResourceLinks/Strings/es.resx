@@ -1,0 +1,953 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Label_Button_DFSupport" xml:space="preserve">
+    <value>Enviar comentarios</value>
+  </data>
+  <data name="DefaultPhoneCannedResponses1" xml:space="preserve">
+    <value>Te llamaré luego.</value>
+  </data>
+  <data name="DefaultPhoneCannedResponses3" xml:space="preserve">
+    <value>Envíame un SMS.</value>
+  </data>
+  <data name="DefaultPhoneCannedResponses2" xml:space="preserve">
+    <value>Estoy en una reunión.</value>
+  </data>
+  <data name="Settings_Twitter_SubHeading1" xml:space="preserve">
+    <value>Habilita las notificaciones de Twitter en tu Band.</value>
+  </data>
+  <data name="Settings_Bike_MainDataGrouping" xml:space="preserve">
+    <value>Principal</value>
+  </data>
+  <data name="SubHead_Page_Disconnected_Disconnected" xml:space="preserve">
+    <value>Conecta tu Band</value>
+  </data>
+  <data name="MissingDeviceName" xml:space="preserve">
+    <value>&lt;Sin nombre&gt;</value>
+  </data>
+  <data name="Label_Profile_Height" xml:space="preserve">
+    <value>Altura</value>
+  </data>
+  <data name="Label_Button_Support" xml:space="preserve">
+    <value>Soporte técnico</value>
+  </data>
+  <data name="Label_CheckBox_Checked" xml:space="preserve">
+    <value>Activado</value>
+  </data>
+  <data name="Label_UoM_Metric" xml:space="preserve">
+    <value>Métrica</value>
+  </data>
+  <data name="Title_Button_Confirm" xml:space="preserve">
+    <value>Confirmar</value>
+  </data>
+  <data name="Message_Page_PairDevice_01" xml:space="preserve">
+    <value>Parece que tienes una Band nueva. ¿Deseas guardarla como Band predeterminada para el perfil?</value>
+  </data>
+  <data name="Message_Page_PairDevice_02" xml:space="preserve">
+    <value>ADVERTENCIA. SI GUARDAS ESTA BAND, TODOS LOS DATOS SE TRANSFERIRÁN Y SINCRONIZARÁN SOLO EN ESTA BAND.</value>
+  </data>
+  <data name="Format_FirmwareVersionShort" xml:space="preserve">
+    <value>v {0}</value>
+  </data>
+  <data name="DOW_Thursday" xml:space="preserve">
+    <value>Jue</value>
+  </data>
+  <data name="Title_LoginDialog_Logout" xml:space="preserve">
+    <value>Cerrar sesión</value>
+  </data>
+  <data name="Title_Page_Profile" xml:space="preserve">
+    <value>Mi perfil</value>
+  </data>
+  <data name="Title_Label_DeviceName" xml:space="preserve">
+    <value>Nombre de Band</value>
+  </data>
+  <data name="Title_Setting_AutoStart" xml:space="preserve">
+    <value>Abrir automáticamente al iniciar</value>
+  </data>
+  <data name="ToolTip_ChangeToMetricWeight" xml:space="preserve">
+    <value>Cambiar a kilogramos</value>
+  </data>
+  <data name="Status_FW_Checking" xml:space="preserve">
+    <value>comprobando</value>
+  </data>
+  <data name="Settings_Bike_SplitMarkerHeader" xml:space="preserve">
+    <value>Definir tu distancia de tiempos parciales</value>
+  </data>
+  <data name="Label_UoM_Kilograms" xml:space="preserve">
+    <value>Kilogramos</value>
+  </data>
+  <data name="OobeBandNameString" xml:space="preserve">
+    <value>Band de {0}</value>
+  </data>
+  <data name="Text_TrayIconBalloonTip_LoginToStart" xml:space="preserve">
+    <value>Inicia sesión con la cuenta de Microsoft.</value>
+  </data>
+  <data name="Settings_Cortana_Title" xml:space="preserve">
+    <value>Configuración de Cortana</value>
+  </data>
+  <data name="Text_TrayIconBalloonTip_Syncing" xml:space="preserve">
+    <value>SINCRONIZANDO. NO DESCONECTES.</value>
+  </data>
+  <data name="Title_Button_MicrosoftAccount" xml:space="preserve">
+    <value>Cuenta de Microsoft</value>
+  </data>
+  <data name="Title_Button_CheckMark" xml:space="preserve">
+    <value>confirmar</value>
+  </data>
+  <data name="Label_Profile_Name_Required" xml:space="preserve">
+    <value>Nombre (obligatorio)</value>
+  </data>
+  <data name="Title_PleaseLogIn_1" xml:space="preserve">
+    <value>Inicia sesión con tu</value>
+  </data>
+  <data name="Title_PleaseLogIn_2" xml:space="preserve">
+    <value>Cuenta de Microsoft</value>
+  </data>
+  <data name="SubHead_Page_LoginLogoutStatusMessage_Logout" xml:space="preserve">
+    <value>Cerrando sesión</value>
+  </data>
+  <data name="Settings_Starbucks_Title" xml:space="preserve">
+    <value>Configuración de Starbucks</value>
+  </data>
+  <data name="Settings_FacebookMessenger_Title" xml:space="preserve">
+    <value>Configuración de Facebook Messenger</value>
+  </data>
+  <data name="Title_Page_ForgetDeviceConfirm" xml:space="preserve">
+    <value>Anular registro de mi Microsoft Band</value>
+  </data>
+  <data name="UoM_Profile_Centimeters" xml:space="preserve">
+    <value>cm</value>
+  </data>
+  <data name="Title_Page_UpsellPage" xml:space="preserve">
+    <value>Microsoft Health para Windows 10</value>
+  </data>
+  <data name="Title_TrayIconToolTip_FirmwareUpdateRequired" xml:space="preserve">
+    <value>Microsoft Band: se requiere una actualización de software</value>
+  </data>
+  <data name="Title_NavButton_PersonalizeBand" xml:space="preserve">
+    <value>Personalizar Band</value>
+  </data>
+  <data name="FirmwareVersionReleaseAbbr" xml:space="preserve">
+    <value>R</value>
+  </data>
+  <data name="Label_Button_PrivacyPolicy" xml:space="preserve">
+    <value>Directiva de privacidad</value>
+  </data>
+  <data name="Text_TrayIconBalloonTip_DeviceAbsent" xml:space="preserve">
+    <value>Conecta tu Band para habilitar la carga y la sincronización.</value>
+  </data>
+  <data name="ToolTip_Profile_DeviceNameRequiredField" xml:space="preserve">
+    <value>El nombre de Band es un campo obligatorio</value>
+  </data>
+  <data name="Label_Button_TermsOfUse" xml:space="preserve">
+    <value>Términos de uso</value>
+  </data>
+  <data name="Text_TrayIconBalloonTip_CloseWindowWarning" xml:space="preserve">
+    <value>La sincronización de Microsoft Band seguirá ejecutándose en segundo plano.
+
+Para dejar de mostrar este recordatorio, haz clic aquí.</value>
+  </data>
+  <data name="Settings_FacebookMessenger_SubHeading1" xml:space="preserve">
+    <value>Habilita las notificaciones de Facebook Messenger en tu Band.</value>
+  </data>
+  <data name="Title_Command_StopSyncing" xml:space="preserve">
+    <value>Detener</value>
+  </data>
+  <data name="Title_NavButton_Dashboard" xml:space="preserve">
+    <value>Panel</value>
+  </data>
+  <data name="Label_Profile_Gender" xml:space="preserve">
+    <value>Sexo</value>
+  </data>
+  <data name="Status_AppUpdate_UpToDate" xml:space="preserve">
+    <value>actualizada</value>
+  </data>
+  <data name="Title_Page_InstallSoftware" xml:space="preserve">
+    <value>Instalar software nuevo</value>
+  </data>
+  <data name="Title_NavButton_About" xml:space="preserve">
+    <value>Acerca de</value>
+  </data>
+  <data name="Label_Profile_ZipCode_Optional" xml:space="preserve">
+    <value>Código postal (opcional)</value>
+  </data>
+  <data name="Settings_Calls_SubHeading1" xml:space="preserve">
+    <value>Habilita las notificaciones de llamadas en tu Band.</value>
+  </data>
+  <data name="Settings_Calls_SubHeading2" xml:space="preserve">
+    <value>Respuestas rápidas a llamadas</value>
+  </data>
+  <data name="Status_FW_Available" xml:space="preserve">
+    <value>pendiente de comprobación</value>
+  </data>
+  <data name="Label_CheckBox_Unchecked" xml:space="preserve">
+    <value>Desactivado</value>
+  </data>
+  <data name="Title_Setting_AutoSync" xml:space="preserve">
+    <value>Sincronizar automáticamente al conectar</value>
+  </data>
+  <data name="Title_Button_Download" xml:space="preserve">
+    <value>Descargar</value>
+  </data>
+  <data name="Label_Profile_DeviceName_Required" xml:space="preserve">
+    <value>Nombre de Band (obligatorio)</value>
+  </data>
+  <data name="Status_AppUpdate_Unknown" xml:space="preserve">
+    <value>pendiente de comprobación</value>
+  </data>
+  <data name="SubHead_Page_Sync" xml:space="preserve">
+    <value>Tu Microsoft Band se conectó</value>
+  </data>
+  <data name="Format_LastSync_Long" xml:space="preserve">
+    <value>Última sincronización {0}</value>
+  </data>
+  <data name="Status_FirmwareUpdate_SyncingLog" xml:space="preserve">
+    <value>SINCRONIZANDO DATOS...</value>
+  </data>
+  <data name="UoM_Profile_Pounds" xml:space="preserve">
+    <value>lb</value>
+  </data>
+  <data name="Message_Page_PairConfirm" xml:space="preserve">
+    <value>CONFIRMA PARA SINCRONIZAR EL PERFIL Y LOS DATOS CON TU BAND</value>
+  </data>
+  <data name="Message_DeviceConnectErrorOccurred" xml:space="preserve">
+    <value>Tenemos problemas para conectar con tu Band.</value>
+  </data>
+  <data name="Settings_SMS_SubHeading1" xml:space="preserve">
+    <value>Habilita las notificaciones de mensajes de texto en tu Band.</value>
+  </data>
+  <data name="Settings_SMS_SubHeading2" xml:space="preserve">
+    <value>Respuestas rápidas a SMS</value>
+  </data>
+  <data name="Label_UoM_Standard" xml:space="preserve">
+    <value>Imperial</value>
+  </data>
+  <data name="UoM_Profile_Inches" xml:space="preserve">
+    <value>in</value>
+  </data>
+  <data name="Settings_SplitMarkers" xml:space="preserve">
+    <value>Marcadores de tiempos parciales</value>
+  </data>
+  <data name="Title_CurrentFWVersion" xml:space="preserve">
+    <value>Versión actual:</value>
+  </data>
+  <data name="Title_Command_Logout" xml:space="preserve">
+    <value>Cerrar sesión</value>
+  </data>
+  <data name="Title_CloseAppDialog_Close" xml:space="preserve">
+    <value>Salir</value>
+  </data>
+  <data name="Status_FirmwareUpdate_WaitingForReconnect" xml:space="preserve">
+    <value>REINICIANDO BAND...</value>
+  </data>
+  <data name="Label_DeviceSerialNumber" xml:space="preserve">
+    <value>Número de serie de Band:</value>
+  </data>
+  <data name="Settings_Calendar_SubHeading1" xml:space="preserve">
+    <value>Habilita las notificaciones del calendario en tu Band.</value>
+  </data>
+  <data name="Settings_Facebook_Title" xml:space="preserve">
+    <value>Configuración de Facebook</value>
+  </data>
+  <data name="Settings_Bike_SubHeading1" xml:space="preserve">
+    <value>Selecciona tres métricas principales de las que quieres realizar un seguimiento durante el recorrido.</value>
+  </data>
+  <data name="Settings_Bike_SubHeading3" xml:space="preserve">
+    <value>Selecciona los tres puntos de datos de los que quieres realizar un seguimiento durante los recorridos.</value>
+  </data>
+  <data name="Settings_Bike_SubHeading2" xml:space="preserve">
+    <value>Durante un recorrido, también puedes pulsar dos veces el botón de acción para alternar las métricas.</value>
+  </data>
+  <data name="Title_Button_Save" xml:space="preserve">
+    <value>Guardar</value>
+  </data>
+  <data name="Title_Button_Edit" xml:space="preserve">
+    <value>Editar</value>
+  </data>
+  <data name="Title_LoginDialog_Login" xml:space="preserve">
+    <value>Iniciar sesión</value>
+  </data>
+  <data name="Message_LoginErrorOccurred" xml:space="preserve">
+    <value>Tenemos problemas para iniciar la sesión.</value>
+  </data>
+  <data name="Label_UoM_Fahrenheit" xml:space="preserve">
+    <value>Fahrenheit</value>
+  </data>
+  <data name="Label_Profile_Name" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="Label_Wallpaper" xml:space="preserve">
+    <value>Fondo de pantalla</value>
+  </data>
+  <data name="Label_AppVersion" xml:space="preserve">
+    <value>Versión de aplicación:</value>
+  </data>
+  <data name="Status_FirmwareUpdate_Downloading" xml:space="preserve">
+    <value>BAJANDO SOFTWARE...</value>
+  </data>
+  <data name="Label_Profile_Weight" xml:space="preserve">
+    <value>Peso</value>
+  </data>
+  <data name="Status_AppUpdate_Available" xml:space="preserve">
+    <value>disponible</value>
+  </data>
+  <data name="Title_Page_LoginLogoutBusy" xml:space="preserve">
+    <value>Espera...</value>
+  </data>
+  <data name="Title_Page_FirmwareUpdating" xml:space="preserve">
+    <value>Actualización de software</value>
+  </data>
+  <data name="DOW_Friday" xml:space="preserve">
+    <value>Vie</value>
+  </data>
+  <data name="Settings_Bike_Title" xml:space="preserve">
+    <value>Configuración de bicicleta</value>
+  </data>
+  <data name="Label_Button_ThirdPartyNotices" xml:space="preserve">
+    <value>Avisos de terceros</value>
+  </data>
+  <data name="Label_Profile_Temperature" xml:space="preserve">
+    <value>Temperatura</value>
+  </data>
+  <data name="Message_Page_CantRegister_Reset" xml:space="preserve">
+    <value>La Microsoft Band conectada no está registrada en la cuenta.
+
+Para registrarla, aplica el restablecimiento de fábrica a tu Band nueva.</value>
+  </data>
+  <data name="Message_WebErrorOccurred" xml:space="preserve">
+    <value>Tenemos problemas para acceder a Internet. Comprueba la conexión e inténtalo de nuevo.</value>
+  </data>
+  <data name="Message_DeviceUnpairingErrorOccurred" xml:space="preserve">
+    <value>Tenemos problemas para anular el registro de tu Band del perfil.</value>
+  </data>
+  <data name="Title_TrayIconToolTip_MultipleDevices" xml:space="preserve">
+    <value>Microsoft Band: varias Band conectadas</value>
+  </data>
+  <data name="Label_DeviceFWVersion" xml:space="preserve">
+    <value>Versión de software de Band:</value>
+  </data>
+  <data name="Status_FW_UpToDate" xml:space="preserve">
+    <value>actualizada</value>
+  </data>
+  <data name="Settings_SMS_Title" xml:space="preserve">
+    <value>Configuración de mensajes</value>
+  </data>
+  <data name="Title_ErrorMessage" xml:space="preserve">
+    <value>Hubo un problema</value>
+  </data>
+  <data name="DOW_Wednesday" xml:space="preserve">
+    <value>Mié</value>
+  </data>
+  <data name="Settings_Run_Title" xml:space="preserve">
+    <value>Configuración de Carrera</value>
+  </data>
+  <data name="Message_Page_Profile_OOBE" xml:space="preserve">
+    <value>Para poder ofrecer información y resultados precisos, responde algunas preguntas.</value>
+  </data>
+  <data name="Label_Gender_Male" xml:space="preserve">
+    <value>Hombre</value>
+  </data>
+  <data name="Title_Page_CantPair" xml:space="preserve">
+    <value>No se puede registrar tu Band</value>
+  </data>
+  <data name="Settings_NotificationCenter_SubHeading1" xml:space="preserve">
+    <value>Habilita el resto de las notificaciones del centro de notificaciones del teléfono en tu Band.</value>
+  </data>
+  <data name="Title_Page_About2" xml:space="preserve">
+    <value>Aplicación de sincronización de Microsoft Band</value>
+  </data>
+  <data name="Title_Page_About1" xml:space="preserve">
+    <value>Acerca de</value>
+  </data>
+  <data name="ToolTip_ChangeToMetricHeight" xml:space="preserve">
+    <value>Cambiar a centímetros</value>
+  </data>
+  <data name="Settings_Run_SubHeading1" xml:space="preserve">
+    <value>Selecciona tres métricas principales de las que quieres realizar un seguimiento durante las carreras.</value>
+  </data>
+  <data name="Settings_Run_SubHeading3" xml:space="preserve">
+    <value>Selecciona los tres puntos de datos de los que quieres realizar un seguimiento durante las carreras.</value>
+  </data>
+  <data name="Settings_Run_SubHeading2" xml:space="preserve">
+    <value>Durante una carrera, también puedes pulsar dos veces el botón de acción para alternar las métricas.</value>
+  </data>
+  <data name="Text_Error_25Characters" xml:space="preserve">
+    <value>Escribe entre 1 y 25 caracteres</value>
+  </data>
+  <data name="Text_TrayIconBalloonTip_FirmwateUpdateRequired" xml:space="preserve">
+    <value>Se requiere la actualización de software de Band.</value>
+  </data>
+  <data name="Status_Updating" xml:space="preserve">
+    <value>Actualizando...</value>
+  </data>
+  <data name="Message_Page_FirmwareUpdateReady" xml:space="preserve">
+    <value>ES NECESARIO INSTALAR EL SOFTWARE PARA TU BAND</value>
+  </data>
+  <data name="Settings_Email_Title" xml:space="preserve">
+    <value>Configuración de correo</value>
+  </data>
+  <data name="Settings_Bike_SecondaryDataGrouping" xml:space="preserve">
+    <value>Cajón</value>
+  </data>
+  <data name="Title_Command_UpdateFirmware" xml:space="preserve">
+    <value>Actualizar ahora</value>
+  </data>
+  <data name="DOW_Monday" xml:space="preserve">
+    <value>Lun</value>
+  </data>
+  <data name="Title_NavButton_Profile" xml:space="preserve">
+    <value>Mi perfil</value>
+  </data>
+  <data name="Title_Login" xml:space="preserve">
+    <value>Hola</value>
+  </data>
+  <data name="Settings_Twitter_Title" xml:space="preserve">
+    <value>Configuración de Twitter</value>
+  </data>
+  <data name="Title_Button_Cancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="Settings_SplitMarkers_Imperial" xml:space="preserve">
+    <value>millas</value>
+  </data>
+  <data name="Title_Command_CancelSyncSensorLogs" xml:space="preserve">
+    <value>Detener</value>
+  </data>
+  <data name="Label_Profile_Birthdate" xml:space="preserve">
+    <value>Fecha de nacimiento</value>
+  </data>
+  <data name="Message_Page_UninstallPart1" xml:space="preserve">
+    <value>¿Ya tienes la nueva aplicación? </value>
+  </data>
+  <data name="Message_Page_UninstallPart2" xml:space="preserve">
+    <value>Desinstala la aplicación de sincronización de Microsoft Band ahora.</value>
+  </data>
+  <data name="Title_Tiles_ClickIcon" xml:space="preserve">
+    <value>Haz clic en una ventana con el icono de edición para especificar tu configuración.</value>
+  </data>
+  <data name="Title_Command_LaunchAppUpdate" xml:space="preserve">
+    <value>Instalar actualización</value>
+  </data>
+  <data name="Title_NavButton_Settings" xml:space="preserve">
+    <value>Configuración</value>
+  </data>
+  <data name="DOW_Sunday" xml:space="preserve">
+    <value>Dom</value>
+  </data>
+  <data name="Settings_Calls_Title" xml:space="preserve">
+    <value>Configuración de Llamadas</value>
+  </data>
+  <data name="Message_LogoutErrorOccurred" xml:space="preserve">
+    <value>Tenemos problemas para cerrar la sesión.</value>
+  </data>
+  <data name="Text_AboutLegalNotice" xml:space="preserve">
+    <value>Advertencia: este programa está protegido por leyes de derechos de autor y por tratados internacionales. La reproducción o distribución ilícitas de este programa, o de cualquier parte de este, está penada por la ley con severas sanciones civiles y penales, y será objeto de todas las acciones judiciales que correspondan.</value>
+  </data>
+  <data name="UoM_Profile_Kilograms" xml:space="preserve">
+    <value>kg</value>
+  </data>
+  <data name="Title_Page_TileManagement" xml:space="preserve">
+    <value>Administrar ventanas</value>
+  </data>
+  <data name="Settings_Calendar_Title" xml:space="preserve">
+    <value>Configuración de Calendario</value>
+  </data>
+  <data name="Message_Page_FirmwareUpdating" xml:space="preserve">
+    <value>SE ESTÁ INSTALANDO EL SOFTWARE. NO DESCONECTES TU BAND.</value>
+  </data>
+  <data name="Message_Page_NewAppDescription" xml:space="preserve">
+    <value>Ya está disponible la nueva aplicación de Microsoft Health para Windows 10.
+Descárgala en la Tienda Windows.</value>
+  </data>
+  <data name="Status_FirmwareUpdate_BootingToUpdate" xml:space="preserve">
+    <value>REINICIANDO BAND...</value>
+  </data>
+  <data name="ToolTip_ChangeToImperialWeight" xml:space="preserve">
+    <value>Cambiar a libras</value>
+  </data>
+  <data name="Format_FirmwareVersion" xml:space="preserve">
+    <value>v {0} {1:00} {2}</value>
+  </data>
+  <data name="Title_Button_PairNow" xml:space="preserve">
+    <value>Definir como mi Band</value>
+  </data>
+  <data name="Title_MainWindow" xml:space="preserve">
+    <value>Sincronización de Microsoft Band</value>
+  </data>
+  <data name="Settings_Reply4" xml:space="preserve">
+    <value>Respuesta 4</value>
+  </data>
+  <data name="Settings_Reply1" xml:space="preserve">
+    <value>Respuesta 1</value>
+  </data>
+  <data name="Settings_Reply3" xml:space="preserve">
+    <value>Respuesta 3</value>
+  </data>
+  <data name="Settings_Reply2" xml:space="preserve">
+    <value>Respuesta 2</value>
+  </data>
+  <data name="Title_Page_Settings" xml:space="preserve">
+    <value>Configuración</value>
+  </data>
+  <data name="Label_Color" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="Title_Button_EditProfile" xml:space="preserve">
+    <value>Editar mi perfil</value>
+  </data>
+  <data name="Message_Error_ConnectReconnect" xml:space="preserve">
+    <value>Tenemos problemas para conectar con tu Band.
+Asegúrate de que se vea Mi ventana en tu Band y, 
+después, desconecta y vuelve a conectar.</value>
+  </data>
+  <data name="Title_Page_PairDevice" xml:space="preserve">
+    <value>Se detectó una Microsoft Band nueva.</value>
+  </data>
+  <data name="ToolTip_CancelSync" xml:space="preserve">
+    <value>Cancelar operación de sincronización</value>
+  </data>
+  <data name="Title_Button_Logout" xml:space="preserve">
+    <value>Iniciar sesión como otro usuario</value>
+  </data>
+  <data name="ToolTip_Profile_FirstNameRequiredField" xml:space="preserve">
+    <value>El nombre es un campo obligatorio</value>
+  </data>
+  <data name="Message_ProfileSaveErrorOccurred" xml:space="preserve">
+    <value>Tenemos problemas para guardar el perfil.</value>
+  </data>
+  <data name="Title_TrayIconToolTip_Syncing" xml:space="preserve">
+    <value>Microsoft Band: sincronización en curso</value>
+  </data>
+  <data name="Title_TrayIconToolTip_UpdatingFirmware" xml:space="preserve">
+    <value>Microsoft Band: actualización de software en curso</value>
+  </data>
+  <data name="Title_Page_LogoutConfirm" xml:space="preserve">
+    <value>Cerrando sesión...</value>
+  </data>
+  <data name="FirmwareVersionDebugAbbr" xml:space="preserve">
+    <value>D</value>
+  </data>
+  <data name="Title_Page_FirmwareUpdateReady" xml:space="preserve">
+    <value>Actualización de software</value>
+  </data>
+  <data name="Label_Profile_Age" xml:space="preserve">
+    <value>EDAD</value>
+  </data>
+  <data name="Title_NewFWVersion" xml:space="preserve">
+    <value>Versión nueva:</value>
+  </data>
+  <data name="Format_LastSync_Short" xml:space="preserve">
+    <value>Microsoft Band: última sincronización {0}</value>
+  </data>
+  <data name="Text_Error_15Characters" xml:space="preserve">
+    <value>Escribe entre 1 y 15 caracteres</value>
+  </data>
+  <data name="Title_Command_Settings" xml:space="preserve">
+    <value>Configuración</value>
+  </data>
+  <data name="Title_TrayIconToolTip_DevicePresent" xml:space="preserve">
+    <value>Microsoft Band: conectada</value>
+  </data>
+  <data name="Title_Page_Disconnected_1" xml:space="preserve">
+    <value>Tu Microsoft Band</value>
+  </data>
+  <data name="Title_Page_Disconnected_2" xml:space="preserve">
+    <value>no está conectado.</value>
+  </data>
+  <data name="Title_Page_PairConfirm" xml:space="preserve">
+    <value>Definir como mi Microsoft Band</value>
+  </data>
+  <data name="Title_DialogDefaultButton" xml:space="preserve">
+    <value>Atrás</value>
+  </data>
+  <data name="Status_FW_Downloading" xml:space="preserve">
+    <value>bajando</value>
+  </data>
+  <data name="Settings_Email_SubHeading1" xml:space="preserve">
+    <value>Habilita las notificaciones de correo en tu Band.</value>
+  </data>
+  <data name="Title_Page_LogIn" xml:space="preserve">
+    <value>Hola</value>
+  </data>
+  <data name="Settings_TertiaryData" xml:space="preserve">
+    <value>Datos terciarios</value>
+  </data>
+  <data name="Label_Gender_Female" xml:space="preserve">
+    <value>Mujer</value>
+  </data>
+  <data name="Title_NavButton_ManageTiles" xml:space="preserve">
+    <value>Administrar ventanas</value>
+  </data>
+  <data name="Settings_SecondaryData" xml:space="preserve">
+    <value>Datos secundarios</value>
+  </data>
+  <data name="ToolTip_PersonalizeBand" xml:space="preserve">
+    <value>Personalizar mi Band</value>
+  </data>
+  <data name="Message_Page_Multiple" xml:space="preserve">
+    <value>Parece que tienes varias Microsoft Bands conectadas.
+
+Desconéctalas todas excepto una para continuar.</value>
+  </data>
+  <data name="Title_Cancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="Title_Command_SyncSensorLogs" xml:space="preserve">
+    <value>Sincronizar</value>
+  </data>
+  <data name="Settings_PrimaryData" xml:space="preserve">
+    <value>Datos principales</value>
+  </data>
+  <data name="Title_TrayIconToolTip_Error" xml:space="preserve">
+    <value>Microsoft Band: error.</value>
+  </data>
+  <data name="Settings_SplitMarkers_Metric" xml:space="preserve">
+    <value>kilómetros</value>
+  </data>
+  <data name="Settings_NotificationCenter_Title" xml:space="preserve">
+    <value>Configuración del Centro de notificaciones</value>
+  </data>
+  <data name="Title_Button_SaveProfile" xml:space="preserve">
+    <value>Guardar</value>
+  </data>
+  <data name="Title_LastFWCheck" xml:space="preserve">
+    <value>Última comprobación:</value>
+  </data>
+  <data name="DOW_Tuesday" xml:space="preserve">
+    <value>Mar</value>
+  </data>
+  <data name="Label_UoM_Pounds" xml:space="preserve">
+    <value>Libras</value>
+  </data>
+  <data name="ToolTip_ChangeToImperialHeight" xml:space="preserve">
+    <value>Cambiar a pies y pulgadas</value>
+  </data>
+  <data name="Status_Syncing" xml:space="preserve">
+    <value>Sincronizando...</value>
+  </data>
+  <data name="DefaultMessageCannedResponses2" xml:space="preserve">
+    <value>Estoy en una reunión.</value>
+  </data>
+  <data name="DefaultMessageCannedResponses1" xml:space="preserve">
+    <value>Te llamaré luego.</value>
+  </data>
+  <data name="DOW_Saturday" xml:space="preserve">
+    <value>Sáb</value>
+  </data>
+  <data name="Text_TrayIconBalloonTip_Error" xml:space="preserve">
+    <value>Hubo un problema. Abre la aplicación para obtener más detalles o restaura la sincronización automática.</value>
+  </data>
+  <data name="Message_LoginDialog_Working" xml:space="preserve">
+    <value>Trabajando...</value>
+  </data>
+  <data name="Title_Page_PersonalizeBand" xml:space="preserve">
+    <value>Personalizar Band</value>
+  </data>
+  <data name="Message_Page_ForgetDeviceConfirm_01" xml:space="preserve">
+    <value>¿Estás seguro de que deseas quitar esta Band del perfil?</value>
+  </data>
+  <data name="Message_Page_ForgetDeviceConfirm_02" xml:space="preserve">
+    <value>ADVERTENCIA: AL CONFIRMAR, EL PERFIL YA NO SE SINCRONIZARÁ CON TU BAND Y TUS DATOS NO SE ACTUALIZARÁN.</value>
+  </data>
+  <data name="Title_Page_CantPair_2" xml:space="preserve">
+    <value>Desconéctalas todas excepto una para continuar...</value>
+  </data>
+  <data name="Title_LastSync" xml:space="preserve">
+    <value>Última sincronización:</value>
+  </data>
+  <data name="Message_Page_CantRegister_UnregisterReset" xml:space="preserve">
+    <value>La Microsoft Band conectada no está registrada en la cuenta.
+
+Para registrarla, anula el registro de tu Band actual desde Mi perfil y aplica el restablecimiento de fábrica a tu Band nueva.</value>
+  </data>
+  <data name="Settings_Bike_SplitMarkerSubHeader" xml:space="preserve">
+    <value>Personalizar marcador de tiempos parciales</value>
+  </data>
+  <data name="Message_Page_InstallSoftware" xml:space="preserve">
+    <value>Nuevo software disponible. La descarga se iniciará en tu explorador web.</value>
+  </data>
+  <data name="Text_AboutCopyrightNotice" xml:space="preserve">
+    <value>© 2015 Microsoft Corporation. Reservados todos los derechos.</value>
+  </data>
+  <data name="Settings_BikeRun_DataTitle" xml:space="preserve">
+    <value>Métrica {0}</value>
+  </data>
+  <data name="Settings_Bike_DataPoint9" xml:space="preserve">
+    <value>Ritmo</value>
+  </data>
+  <data name="Settings_Bike_DataPoint8" xml:space="preserve">
+    <value>Calorías</value>
+  </data>
+  <data name="Settings_Bike_DataPoint1" xml:space="preserve">
+    <value>Distancia</value>
+  </data>
+  <data name="Settings_Bike_DataPoint0" xml:space="preserve">
+    <value>Ninguno</value>
+  </data>
+  <data name="Settings_Bike_DataPoint3" xml:space="preserve">
+    <value>Duración</value>
+  </data>
+  <data name="Settings_Bike_DataPoint2" xml:space="preserve">
+    <value>Velocidad media</value>
+  </data>
+  <data name="Settings_Bike_DataPoint5" xml:space="preserve">
+    <value>Frecuencia cardíaca</value>
+  </data>
+  <data name="Settings_Bike_DataPoint4" xml:space="preserve">
+    <value>Ganancia de elevación</value>
+  </data>
+  <data name="Settings_Bike_DataPoint7" xml:space="preserve">
+    <value>Velocidad instantánea</value>
+  </data>
+  <data name="Settings_Bike_DataPoint6" xml:space="preserve">
+    <value>Tiempo</value>
+  </data>
+  <data name="Settings_Cortana_SubHeading1" xml:space="preserve">
+    <value>Habilita las notificaciones de Cortana en tu Band.</value>
+  </data>
+  <data name="Status_FirmwareUpdate_Uploading" xml:space="preserve">
+    <value>INSTALANDO SOFTWARE...</value>
+  </data>
+  <data name="Title_Command_About" xml:space="preserve">
+    <value>Acerca de</value>
+  </data>
+  <data name="Title_Command_Close" xml:space="preserve">
+    <value>Salir</value>
+  </data>
+  <data name="Settings_Run_DataPoint5" xml:space="preserve">
+    <value>Frecuencia cardíaca</value>
+  </data>
+  <data name="Settings_Run_DataPoint4" xml:space="preserve">
+    <value>Ganancia de elevación</value>
+  </data>
+  <data name="Settings_Run_DataPoint7" xml:space="preserve">
+    <value>Ritmo instantáneo</value>
+  </data>
+  <data name="Settings_Run_DataPoint6" xml:space="preserve">
+    <value>Tiempo</value>
+  </data>
+  <data name="Settings_Run_DataPoint1" xml:space="preserve">
+    <value>Distancia</value>
+  </data>
+  <data name="Settings_Run_DataPoint0" xml:space="preserve">
+    <value>Ninguno</value>
+  </data>
+  <data name="Settings_Run_DataPoint3" xml:space="preserve">
+    <value>Duración</value>
+  </data>
+  <data name="Settings_Run_DataPoint2" xml:space="preserve">
+    <value>Ritmo medio</value>
+  </data>
+  <data name="Settings_Run_DataPoint9" xml:space="preserve">
+    <value>Ritmo</value>
+  </data>
+  <data name="Settings_Run_DataPoint8" xml:space="preserve">
+    <value>Calorías</value>
+  </data>
+  <data name="Message_DevicePairingErrorOccurred" xml:space="preserve">
+    <value>Tenemos problemas para registrar tu Band nueva en el perfil.</value>
+  </data>
+  <data name="Format_AppVersion" xml:space="preserve">
+    <value>Versión {0}</value>
+  </data>
+  <data name="Settings_Metrics_SelectionError" xml:space="preserve">
+    <value>Todos los puntos de datos deben ser únicos.</value>
+  </data>
+  <data name="Text_TrayIconBalloonTip_MultipleDevices" xml:space="preserve">
+    <value>Parece que tienes varias Microsoft Bands conectadas.
+Desconéctalas todas excepto una para continuar.</value>
+  </data>
+  <data name="Label_Profile_DeviceName" xml:space="preserve">
+    <value>Nombre de Band</value>
+  </data>
+  <data name="Title_Command_CheckForAppUpdate" xml:space="preserve">
+    <value>Buscar actualización</value>
+  </data>
+  <data name="SubHead_Page_LoginLogoutStatusMessage_Login" xml:space="preserve">
+    <value>Conectando con la cuenta</value>
+  </data>
+  <data name="Label_Profile_ZipCode" xml:space="preserve">
+    <value>Código postal</value>
+  </data>
+  <data name="Title_Button_ForgetDevice" xml:space="preserve">
+    <value>Anular registro de mi Band</value>
+  </data>
+  <data name="Title_Command_Back" xml:space="preserve">
+    <value>Atrás</value>
+  </data>
+  <data name="Title_Command_Open" xml:space="preserve">
+    <value>Abrir</value>
+  </data>
+  <data name="Settings_Facebook_SubHeading1" xml:space="preserve">
+    <value>Habilita las notificaciones de Facebook en tu Band.</value>
+  </data>
+  <data name="Text_TrayIconBalloonTip_DevicePresent" xml:space="preserve">
+    <value>Tu Band está conectada.</value>
+  </data>
+  <data name="Status_AppUpdate_Checking" xml:space="preserve">
+    <value>comprobando</value>
+  </data>
+  <data name="Label_UoM_Celsius" xml:space="preserve">
+    <value>Celsius</value>
+  </data>
+  <data name="Status_FW_Unknown" xml:space="preserve">
+    <value>pendiente de comprobación</value>
+  </data>
+  <data name="Message_ErrorOccurred" xml:space="preserve">
+    <value>Intento insatisfactorio más reciente.</value>
+  </data>
+  <data name="UoM_Profile_Feet" xml:space="preserve">
+    <value>ft</value>
+  </data>
+  <data name="Settings_Customize" xml:space="preserve">
+    <value>Personalizar</value>
+  </data>
+  <data name="Title_TrayIconToolTip_DeviceAbsent" xml:space="preserve">
+    <value>Microsoft Band: conéctala para sincronizar</value>
+  </data>
+  <data name="Title_Command_CheckForFirmwareUpdate" xml:space="preserve">
+    <value>Buscar actualizaciones</value>
+  </data>
+  <data name="Message_ProfileRefreshErrorOccurred" xml:space="preserve">
+    <value>Tenemos problemas para actualizar el perfil.</value>
+  </data>
+  <data name="SubHead_Page_Disconnected_Connecting" xml:space="preserve">
+    <value>Conectando con tu Band</value>
+  </data>
+  <data name="Title_Button_X_Cancel" xml:space="preserve">
+    <value>cancelar</value>
+  </data>
+  <data name="Text_TrayIconBalloonTip_UpdatingFirmware" xml:space="preserve">
+    <value>INSTALANDO SOFTWARE NUEVO. NO DESCONECTES.</value>
+  </data>
+  <data name="Message_Page_CantRegister_Unregister" xml:space="preserve">
+    <value>La Microsoft Band conectada no está registrada en la cuenta.
+
+Para registrarla, anula el registro de tu Band actual desde Mi perfil.</value>
+  </data>
+  <data name="Status_FW_ReadyToUpdate" xml:space="preserve">
+    <value>pendiente de comprobación</value>
+  </data>
+  <data name="Title_TrayIconToolTip_LoginToStart" xml:space="preserve">
+    <value>Microsoft Band: inicia sesión</value>
+  </data>
+  <data name="Title_Tiles_DragIcon" xml:space="preserve">
+    <value>Arrastra una ventana para cambiar el orden.</value>
+  </data>
+</root>

@@ -1,0 +1,26 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.Health.App.Core.ViewModels.Workouts.Post.WorkoutResultTotalViewModel
+// Assembly: Microsoft.Health.App.Core, Version=1.3.20517.1, Culture=neutral, PublicKeyToken=null
+// MVID: 647AFE6E-8F28-4A0E-818D-2655ABCF9984
+// Assembly location: C:\Users\Pdawg\Downloads\Microsoft Band Sync Setup\Microsoft_Health_App_Core.dll
+
+namespace Microsoft.Health.App.Core.ViewModels.Workouts.Post
+{
+  public class WorkoutResultTotalViewModel : WorkoutResultItemViewModel
+  {
+    private bool showEstimatedRepsFootnote;
+    private bool showCalculatedDistanceFootnote;
+
+    public bool ShowEstimatedRepsFootnote
+    {
+      get => this.showEstimatedRepsFootnote;
+      set => this.SetProperty<bool>(ref this.showEstimatedRepsFootnote, value, nameof (ShowEstimatedRepsFootnote));
+    }
+
+    public bool ShowCalculatedDistanceFootnote
+    {
+      get => this.showCalculatedDistanceFootnote;
+      set => this.SetProperty<bool>(ref this.showCalculatedDistanceFootnote, value, nameof (ShowCalculatedDistanceFootnote));
+    }
+  }
+}

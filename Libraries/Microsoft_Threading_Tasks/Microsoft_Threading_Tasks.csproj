@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Users\Pdawg\Downloads\Microsoft Band Sync Setup\Microsoft_Threading_Tasks.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2274AA7C-6974-450E-B814-83ED8F3CB3C0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.Threading.Tasks</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile88</TargetFrameworkProfile>
+    <ApplicationVersion>1.0.12.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AwaitExtensions.cs" />
+    <Compile Include="Microsoft\ProgressEventHandler`1.cs" />
+    <Compile Include="Microsoft\Progress`1.cs" />
+    <Compile Include="Microsoft\ProgressStatics.cs" />
+    <Compile Include="Microsoft\Runtime\CompilerServices\ConfiguredTaskAwaitable.cs" />
+    <Compile Include="Microsoft\Runtime\CompilerServices\ConfiguredTaskAwaitable`1.cs" />
+    <Compile Include="Microsoft\Runtime\CompilerServices\TaskAwaiter.cs" />
+    <Compile Include="Microsoft\Runtime\CompilerServices\TaskAwaiter`1.cs" />
+    <Compile Include="Microsoft\Runtime\CompilerServices\YieldAwaitable.cs" />
+    <Compile Include="System\Threading\TimerManager.cs" />
+    <Compile Include="System\Threading\Tasks\TaskEx.cs" />
+    <Compile Include="System\Threading\Tasks\TaskServices.cs" />
+    <Compile Include="System\Runtime\CompilerServices\AsyncServices.cs" />
+    <Compile Include="System\Diagnostics\Contracts\Contract.cs" />
+    <Compile Include="System\Reflection\AssemblyMetadataAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

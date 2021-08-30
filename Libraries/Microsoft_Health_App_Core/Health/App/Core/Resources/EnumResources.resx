@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="GolfScorecardHeaderType_Total" xml:space="preserve">
+    <value>TOT</value>
+  </data>
+  <data name="WorkoutResultMetric_Distance" xml:space="preserve">
+    <value>DISTANCE</value>
+  </data>
+  <data name="GolfCourseType_Unknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="RunDisplayMetricType_ElevationGain" xml:space="preserve">
+    <value>Elevation gain</value>
+  </data>
+  <data name="GolfScorecardHeaderType_Inward" xml:space="preserve">
+    <value>IN</value>
+  </data>
+  <data name="DistanceUnitType_Metric" xml:space="preserve">
+    <value>Metric</value>
+  </data>
+  <data name="BikeDisplayMetricType_Speed" xml:space="preserve">
+    <value>Instantaneous speed (GPS required)</value>
+  </data>
+  <data name="BikeDisplayMetricType_Time" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="BikeDisplayMetricType_None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="BikeDisplayMetricType_Calories" xml:space="preserve">
+    <value>Calories</value>
+  </data>
+  <data name="GolfCourseType_Private" xml:space="preserve">
+    <value>Private</value>
+  </data>
+  <data name="RunDisplayMetricType_Distance" xml:space="preserve">
+    <value>Distance</value>
+  </data>
+  <data name="EventType_GuidedWorkout" xml:space="preserve">
+    <value>Guided Workout</value>
+  </data>
+  <data name="SyncFrequency_ThirtyMinutes" xml:space="preserve">
+    <value>30 Minutes</value>
+  </data>
+  <data name="EventType_Sleeping" xml:space="preserve">
+    <value>Sleep</value>
+  </data>
+  <data name="RunDisplayMetricType_AveragePace" xml:space="preserve">
+    <value>Average pace</value>
+  </data>
+  <data name="EventType_None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="EventType_Hike" xml:space="preserve">
+    <value>Walk</value>
+  </data>
+  <data name="EventType_Best" xml:space="preserve">
+    <value>Best</value>
+  </data>
+  <data name="EventType_Golf" xml:space="preserve">
+    <value>Golf</value>
+  </data>
+  <data name="GolfCourseFilterSubcategory_Private" xml:space="preserve">
+    <value>Private</value>
+  </data>
+  <data name="SyncFrequency_FourHours" xml:space="preserve">
+    <value>4 Hours</value>
+  </data>
+  <data name="BikeDisplayMetricType_AverageSpeed" xml:space="preserve">
+    <value>Average speed (GPS required)</value>
+  </data>
+  <data name="RunDisplayMetricType_Time" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="RunDisplayMetricType_Pace" xml:space="preserve">
+    <value>Instantaneous pace</value>
+  </data>
+  <data name="RunDisplayMetricType_None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="WorkoutResultMetric_Calories" xml:space="preserve">
+    <value>CALORIES</value>
+  </data>
+  <data name="WorkoutResultMetric_Pace" xml:space="preserve">
+    <value>PACE</value>
+  </data>
+  <data name="WorkoutResultMetric_Time" xml:space="preserve">
+    <value>TIME</value>
+  </data>
+  <data name="WorkoutResultMetric_Reps" xml:space="preserve">
+    <value>REPS</value>
+  </data>
+  <data name="SyncFrequency_OneHour" xml:space="preserve">
+    <value>1 Hour</value>
+  </data>
+  <data name="EventType_Biking" xml:space="preserve">
+    <value>Bike</value>
+  </data>
+  <data name="EventType_Walking" xml:space="preserve">
+    <value>Walk</value>
+  </data>
+  <data name="EventType_Workout" xml:space="preserve">
+    <value>Workout</value>
+  </data>
+  <data name="RunDisplayMetricType_Duration" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="EventType_Running" xml:space="preserve">
+    <value>Run</value>
+  </data>
+  <data name="Unconfigured" xml:space="preserve">
+    <value>&lt;Unknown Value&gt;</value>
+  </data>
+  <data name="GolfCourseFilterSubcategory_Public" xml:space="preserve">
+    <value>Public</value>
+  </data>
+  <data name="BikeDisplayMetricType_Duration" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="EventType_Driving" xml:space="preserve">
+    <value>Drive</value>
+  </data>
+  <data name="GolfCourseFilterCategory_Type" xml:space="preserve">
+    <value>Course type</value>
+  </data>
+  <data name="GolfCourseFilterCategory_Hole" xml:space="preserve">
+    <value># of holes</value>
+  </data>
+  <data name="GolfScorecardHeaderType_Outward" xml:space="preserve">
+    <value>OUT</value>
+  </data>
+  <data name="GolfCourseFilterSubcategory_Eighteen" xml:space="preserve">
+    <value>18 holes</value>
+  </data>
+  <data name="GolfCourseFilterSubcategory_Nine" xml:space="preserve">
+    <value>9 holes</value>
+  </data>
+  <data name="TemperatureUnitType_Metric" xml:space="preserve">
+    <value>Celsius</value>
+  </data>
+  <data name="RunDisplayMetricType_HeartRate" xml:space="preserve">
+    <value>Heart rate</value>
+  </data>
+  <data name="RunDisplayMetricType_Calories" xml:space="preserve">
+    <value>Calories</value>
+  </data>
+  <data name="TemperatureUnitType_Imperial" xml:space="preserve">
+    <value>Fahrenheit</value>
+  </data>
+  <data name="SyncFrequency_FifteenMinutes" xml:space="preserve">
+    <value>15 Minutes</value>
+  </data>
+  <data name="BikeDisplayMetricType_Distance" xml:space="preserve">
+    <value>Distance (GPS required)</value>
+  </data>
+  <data name="DistanceUnitType_Imperial" xml:space="preserve">
+    <value>Imperial</value>
+  </data>
+  <data name="GolfCourseType_Public" xml:space="preserve">
+    <value>Public</value>
+  </data>
+  <data name="MassUnitType_Imperial" xml:space="preserve">
+    <value>Pounds</value>
+  </data>
+  <data name="MassUnitType_Metric" xml:space="preserve">
+    <value>Kilograms</value>
+  </data>
+  <data name="BikeDisplayMetricType_HeartRate" xml:space="preserve">
+    <value>Heart rate</value>
+  </data>
+  <data name="BikeDisplayMetricType_ElevationGain" xml:space="preserve">
+    <value>Elevation gain</value>
+  </data>
+</root>

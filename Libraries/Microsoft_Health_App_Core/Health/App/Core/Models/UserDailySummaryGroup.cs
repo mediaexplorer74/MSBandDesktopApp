@@ -1,0 +1,46 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.Health.App.Core.Models.UserDailySummaryGroup
+// Assembly: Microsoft.Health.App.Core, Version=1.3.20517.1, Culture=neutral, PublicKeyToken=null
+// MVID: 647AFE6E-8F28-4A0E-818D-2655ABCF9984
+// Assembly location: C:\Users\Pdawg\Downloads\Microsoft Band Sync Setup\Microsoft_Health_App_Core.dll
+
+using Microsoft.Health.App.Core.Utilities;
+using Microsoft.Health.Cloud.Client;
+using System;
+using System.Collections.Generic;
+
+namespace Microsoft.Health.App.Core.Models
+{
+  public class UserDailySummaryGroup
+  {
+    public IList<UserDailySummary> UserDailySummaries { get; set; }
+
+    public IList<Sample> StepsSamples { get; set; }
+
+    public IList<Sample> CaloriesSamples { get; set; }
+
+    public IList<Sample> HeartRateSamples { get; set; }
+
+    public int TotalStepsTaken { get; set; }
+
+    public Length TotalDistance { get; set; }
+
+    public Length TotalDistanceOnFoot { get; set; }
+
+    public int TotalCaloriesBurned { get; set; }
+
+    public TimeSpan TotalActiveHours { get; set; }
+
+    public int AverageHeartRate { get; set; }
+
+    public int TotalFlightsClimbed { get; set; }
+
+    public Range<DateTimeOffset> RequestRange { get; set; }
+
+    public TimeSpan TotalUvExposure { get; set; }
+
+    public int TotalCardioScore { get; set; }
+
+    public int TotalCardioBonus { get; set; }
+  }
+}

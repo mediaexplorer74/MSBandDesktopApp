@@ -1,0 +1,4025 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ErrorTitleText" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="TableHeaderPointsOfInterest" xml:space="preserve">
+    <value>POINTS OF INTEREST</value>
+  </data>
+  <data name="SerialNumber" xml:space="preserve">
+    <value>Serial number {0}</value>
+  </data>
+  <data name="DefaultPhoneCannedResponses1" xml:space="preserve">
+    <value>I'll call you back.</value>
+  </data>
+  <data name="DefaultPhoneCannedResponses3" xml:space="preserve">
+    <value>Please text me.</value>
+  </data>
+  <data name="DefaultPhoneCannedResponses2" xml:space="preserve">
+    <value>I'm in a meeting.</value>
+  </data>
+  <data name="SleepChart_AsleepFlag" xml:space="preserve">
+    <value>Asleep {0}</value>
+  </data>
+  <data name="CortanaSearchSubText" xml:space="preserve">
+    <value>Look up weather, quick facts, etc.</value>
+  </data>
+  <data name="GenericErrorMessage" xml:space="preserve">
+    <value>Something went wrong. Please try again.</value>
+  </data>
+  <data name="AddBandHavingTroubleButtonText" xml:space="preserve">
+    <value>Having trouble connecting? &gt;</value>
+  </data>
+  <data name="GolfScorecardParColumnLabel" xml:space="preserve">
+    <value>PAR</value>
+  </data>
+  <data name="FirmwareUpdateState3SyncingLog" xml:space="preserve">
+    <value>Syncing data...</value>
+  </data>
+  <data name="CoachingPlanActivityMinutesFormat" xml:space="preserve">
+    <value>{0}min</value>
+  </data>
+  <data name="StepTileGoalCompleteText" xml:space="preserve">
+    <value>Step goal</value>
+  </data>
+  <data name="AverageSpeedLabel" xml:space="preserve">
+    <value>Avg speed</value>
+  </data>
+  <data name="NetPromoterScoreAppSubtitleInsert" xml:space="preserve">
+    <value>the Microsoft Health app</value>
+  </data>
+  <data name="WorkoutFootnote" xml:space="preserve">
+    <value>*{0}</value>
+  </data>
+  <data name="CoachingNewSleepTargetLaterBed" xml:space="preserve">
+    <value>Go to bed later</value>
+  </data>
+  <data name="CaloriesAbbrStringSingular" xml:space="preserve">
+    <value>cal</value>
+  </data>
+  <data name="StepsTileFirstUse" xml:space="preserve">
+    <value>Your daily step goal is {0} steps.
+You can change it at any time.</value>
+  </data>
+  <data name="FirmwareUpdatePageTitle" xml:space="preserve">
+    <value>Update in progress</value>
+  </data>
+  <data name="GolfSplitTileOnBandHeader" xml:space="preserve">
+    <value>A course is on your Band</value>
+  </data>
+  <data name="OobeSensorEnableNotEnabledInfoSubtitle" xml:space="preserve">
+    <value>Enable your phone’s motion tracking to help collect steps and calories.</value>
+  </data>
+  <data name="SystemTrayNoNetwork" xml:space="preserve">
+    <value>No network connection</value>
+  </data>
+  <data name="CoachingPlanActivityMetricThreeTitle" xml:space="preserve">
+    <value>Strength workouts</value>
+  </data>
+  <data name="LocationErrorTitle" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="ProfileImperialOutOfRangeErrorMessage" xml:space="preserve">
+    <value>Please enter a value between {0}'{1}"-{2}'{3}"</value>
+  </data>
+  <data name="RegionMexico" xml:space="preserve">
+    <value>Mexico</value>
+  </data>
+  <data name="ExerciseTile_Enablement" xml:space="preserve">
+    <value>Exercise is {0}</value>
+  </data>
+  <data name="MeterDistanceUnitAbbr" xml:space="preserve">
+    <value>m</value>
+  </data>
+  <data name="ShareRunMessage" xml:space="preserve">
+    <value>On {0} I completed a {1} run with my Microsoft Band.</value>
+  </data>
+  <data name="CourseDetailTypeLabel" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="ShareWorkoutTitle" xml:space="preserve">
+    <value>I completed a workout with my Microsoft Band!</value>
+  </data>
+  <data name="SplitMarkerHeader" xml:space="preserve">
+    <value>Define your split distance</value>
+  </data>
+  <data name="ReportProblemAttachedImageCountLabel" xml:space="preserve">
+    <value>+{0} image(s)</value>
+  </data>
+  <data name="WebTileResourceIndexProgressFormat" xml:space="preserve">
+    <value>{0} of {1}</value>
+  </data>
+  <data name="TimeSpanFormat" xml:space="preserve">
+    <value>{0} {1}</value>
+  </data>
+  <data name="SendErrorReportMessage" xml:space="preserve">
+    <value>The last time you ran the app it crashed. Would you like to send an error report?</value>
+  </data>
+  <data name="WorkoutResultSet" xml:space="preserve">
+    <value>Set</value>
+  </data>
+  <data name="EnableGpsToSeeRunPrompt" xml:space="preserve">
+    <value>Enable GPS on your Band to record a map of your run.</value>
+  </data>
+  <data name="WorkoutBlockWorkout" xml:space="preserve">
+    <value>Workout</value>
+  </data>
+  <data name="GolfTile_Enablement" xml:space="preserve">
+    <value>Golf tracking is {0}</value>
+  </data>
+  <data name="PanelStatisticLabelTopSpeed" xml:space="preserve">
+    <value>Top speed</value>
+  </data>
+  <data name="ReportProblemDescriptionTextPlaceholder" xml:space="preserve">
+    <value>Provide a brief description</value>
+  </data>
+  <data name="OobeLegalTermsOfUseLinkText" xml:space="preserve">
+    <value>Terms of Use</value>
+  </data>
+  <data name="EarlyUpdateSuccessBullet2" xml:space="preserve">
+    <value>In Settings, you’ll be able to check for updates and install them on your phone.</value>
+  </data>
+  <data name="EarlyUpdateSuccessBullet1" xml:space="preserve">
+    <value>Go to Settings &gt; Phone update</value>
+  </data>
+  <data name="SingleDevicePolicyMultiplePairedTitle" xml:space="preserve">
+    <value>You have more than one Band paired.</value>
+  </data>
+  <data name="FacebookSettings" xml:space="preserve">
+    <value>Facebook settings</value>
+  </data>
+  <data name="SyncFrequencyLabel" xml:space="preserve">
+    <value>Sync Frequency</value>
+  </data>
+  <data name="KilometersAbbreviation" xml:space="preserve">
+    <value>km</value>
+  </data>
+  <data name="HourAbbreviation" xml:space="preserve">
+    <value>hr</value>
+  </data>
+  <data name="RegionSweden" xml:space="preserve">
+    <value>Sweden</value>
+  </data>
+  <data name="PanelStatisticLabelMinHeartRate" xml:space="preserve">
+    <value>Low HR</value>
+  </data>
+  <data name="WorkoutRestAsNeeded" xml:space="preserve">
+    <value>As needed</value>
+  </data>
+  <data name="BandErrorPermissionDeniedMessage" xml:space="preserve">
+    <value>To sync with your Band, you must update your trusted devices' settings for Microsoft Health.</value>
+  </data>
+  <data name="BrowseWorkoutsFilterTitleDuration" xml:space="preserve">
+    <value>how long are your workouts?</value>
+  </data>
+  <data name="NavigationPersonalize" xml:space="preserve">
+    <value>Personalize Band</value>
+  </data>
+  <data name="FinanceSettings" xml:space="preserve">
+    <value>Finance settings</value>
+  </data>
+  <data name="DistanceValueUnitStyledFormat" xml:space="preserve">
+    <value>{0:Value} {1:Unit}</value>
+  </data>
+  <data name="BestGoalElevationGain" xml:space="preserve">
+    <value>largest gain</value>
+  </data>
+  <data name="SecondPluralFull" xml:space="preserve">
+    <value>seconds</value>
+  </data>
+  <data name="WeightTrackingBmiLabel" xml:space="preserve">
+    <value>BMI *</value>
+  </data>
+  <data name="NavigationPreferences" xml:space="preserve">
+    <value>Preferences</value>
+  </data>
+  <data name="PanelStatisticLabelCardioMinutes" xml:space="preserve">
+    <value>Cardio Minutes</value>
+  </data>
+  <data name="Centimeters" xml:space="preserve">
+    <value>centimeters</value>
+  </data>
+  <data name="SplitMarkers" xml:space="preserve">
+    <value>Split markers</value>
+  </data>
+  <data name="ManageTilesConfirmationBody" xml:space="preserve">
+    <value>Your changes haven't been saved or synced to your Band. Do you want to exit anyway?</value>
+  </data>
+  <data name="RegionNorway" xml:space="preserve">
+    <value>Norway</value>
+  </data>
+  <data name="TileTitle_Exercise" xml:space="preserve">
+    <value>Exercise</value>
+  </data>
+  <data name="MySensorCorePhoneHowToEnableGoToSettings" xml:space="preserve">
+    <value>Go to your phone's Settings.</value>
+  </data>
+  <data name="OobeMinimumAgeRequirmentTermsOfUseLinkText" xml:space="preserve">
+    <value>Please see the Microsoft Terms of Use for more details.</value>
+  </data>
+  <data name="HelpAndFeedbackNavigatioinSuggestAnIdea" xml:space="preserve">
+    <value>Suggest an idea</value>
+  </data>
+  <data name="HistoryFilterUnitLabelDistance" xml:space="preserve">
+    <value>Distance</value>
+  </data>
+  <data name="UnregisterThisBandConfirmationBody" xml:space="preserve">
+    <value>If you unregister your Band, you'll need to factory reset it before you can register it again.</value>
+  </data>
+  <data name="MySensorCorePhoneMotionSensor" xml:space="preserve">
+    <value>Motion Settings</value>
+  </data>
+  <data name="ShareGolfMessage" xml:space="preserve">
+    <value>On {0} I scored {1} at {2} with my Microsoft Band.</value>
+  </data>
+  <data name="CoachingNewSleepTargetEarlierWakeUp" xml:space="preserve">
+    <value>Wake up earlier</value>
+  </data>
+  <data name="CourseDetailOnBandMessage" xml:space="preserve">
+    <value>This course is on your Band</value>
+  </data>
+  <data name="DeleteWeightBodyText" xml:space="preserve">
+    <value>This entry will be removed from your history.</value>
+  </data>
+  <data name="OobeBandNameString" xml:space="preserve">
+    <value>{0}'s Band</value>
+  </data>
+  <data name="GuidedWorkoutResultTileNoContent" xml:space="preserve">
+    <value>Complete a workout and see your results here.</value>
+  </data>
+  <data name="AddBandPairingNeonInstructionsText" xml:space="preserve">
+    <value>Swipe on your Band and select "Pair now" to begin pairing.</value>
+  </data>
+  <data name="SearchHeaderFormat" xml:space="preserve">
+    <value>"{0}"</value>
+  </data>
+  <data name="EventTypeNameGolfLocked" xml:space="preserve">
+    <value>Golf</value>
+  </data>
+  <data name="ManageTilesThirdPartyTilesLabel" xml:space="preserve">
+    <value>Tiles you added</value>
+  </data>
+  <data name="TrackerHighestBurn" xml:space="preserve">
+    <value>Highest burn</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypeFootballOneOff" xml:space="preserve">
+    <value>Football (one-off)</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypeBasketballOneOff" xml:space="preserve">
+    <value>Basketball (one-off)</value>
+  </data>
+  <data name="SramFwUpdateBatteryTooLowErrorHeader" xml:space="preserve">
+    <value>Battery low</value>
+  </data>
+  <data name="NavigationMyBand" xml:space="preserve">
+    <value>My Microsoft Band</value>
+  </data>
+  <data name="FacebookLogInButtonCallToAction" xml:space="preserve">
+    <value>Connect with Facebook</value>
+  </data>
+  <data name="FirmwareUpdateMessageBoxRequiredUpdateHeader" xml:space="preserve">
+    <value>Software Update Required</value>
+  </data>
+  <data name="BikeSettings" xml:space="preserve">
+    <value>Bike settings</value>
+  </data>
+  <data name="SocialSignupButtonText" xml:space="preserve">
+    <value>Sign Up</value>
+  </data>
+  <data name="HRZoneLabelHard" xml:space="preserve">
+    <value>Hard</value>
+  </data>
+  <data name="WorkoutCircuitTaskRepeatInstructions" xml:space="preserve">
+    <value>Repeat this circuit for {0} rounds.</value>
+  </data>
+  <data name="ShareButtonOther" xml:space="preserve">
+    <value>More</value>
+  </data>
+  <data name="RegionAustria" xml:space="preserve">
+    <value>Austria</value>
+  </data>
+  <data name="WorkoutBlockCooldown" xml:space="preserve">
+    <value>Cooldown</value>
+  </data>
+  <data name="WeightLabel" xml:space="preserve">
+    <value>Weight</value>
+  </data>
+  <data name="GolfCourseRequestPageHeaderLocked" xml:space="preserve">
+    <value>request a course</value>
+  </data>
+  <data name="AddBandPairedBandRegisteredMessage" xml:space="preserve">
+    <value>This Band is already registered to you.</value>
+  </data>
+  <data name="CoachingTileTopText" xml:space="preserve">
+    <value>My action plan</value>
+  </data>
+  <data name="ReportProblemSelectEmailApp" xml:space="preserve">
+    <value>Choose Email App</value>
+  </data>
+  <data name="AddBandStartPageSubtitle" xml:space="preserve">
+    <value>Which Microsoft Band do you own? Choose below.</value>
+  </data>
+  <data name="PanelStatisticLabelCaloriesFromFat" xml:space="preserve">
+    <value>Fats</value>
+  </data>
+  <data name="SyncASingleWorkoutTitle" xml:space="preserve">
+    <value>Sync single workout?</value>
+  </data>
+  <data name="NetPromoterScoreLowScoreLabel" xml:space="preserve">
+    <value>Not at all likely</value>
+  </data>
+  <data name="FirmwareUpdateMessageBoxRequiredUpdateMessage" xml:space="preserve">
+    <value>There's an update available for your Microsoft Band. This will only take a couple of moments.
+
+Please update it now to continue.</value>
+  </data>
+  <data name="ReportIncorrectSleepTimingPrompt" xml:space="preserve">
+    <value>Are you sure you want to report incorrect timing?</value>
+  </data>
+  <data name="BestEventString4" xml:space="preserve">
+    <value>This is a personal best for {0}, {1}, {2} and {3}!</value>
+  </data>
+  <data name="BestEventString5" xml:space="preserve">
+    <value>This is a personal best for {0}, {1}, {2}, {3} and {4}!</value>
+  </data>
+  <data name="BestEventString6" xml:space="preserve">
+    <value>This is a personal best for {0}, {1}, {2}, {3}, {4} and {5}!</value>
+  </data>
+  <data name="BestEventString1" xml:space="preserve">
+    <value>This is a personal best for {0}!</value>
+  </data>
+  <data name="BestEventString2" xml:space="preserve">
+    <value>This is a personal best for {0} and {1}!</value>
+  </data>
+  <data name="BestEventString3" xml:space="preserve">
+    <value>This is a personal best for {0}, {1} and {2}!</value>
+  </data>
+  <data name="GolfScorecardAceLegendLabel" xml:space="preserve">
+    <value>-3</value>
+  </data>
+  <data name="CoachingComingUpNoEventsHeader" xml:space="preserve">
+    <value>Seize the day! To add healthy habits, visit Microsoft Health on the web.</value>
+  </data>
+  <data name="CoachingTileSubheaderFormat" xml:space="preserve">
+    <value>{0}: {1} @</value>
+  </data>
+  <data name="DistanceFormatLocked" xml:space="preserve">
+    <value>{0} {1}</value>
+  </data>
+  <data name="PanelStatisticLabelCaloriesBurned" xml:space="preserve">
+    <value>Calories burned</value>
+  </data>
+  <data name="ThirdPartyNotices" xml:space="preserve">
+    <value>Third Party notices</value>
+  </data>
+  <data name="Tomorrow" xml:space="preserve">
+    <value>Tomorrow</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypeFootball" xml:space="preserve">
+    <value>Football</value>
+  </data>
+  <data name="BestGoalAverageSpeed" xml:space="preserve">
+    <value>best avg speed</value>
+  </data>
+  <data name="ShareMetricLabelGolfScore" xml:space="preserve">
+    <value>Score</value>
+  </data>
+  <data name="AddBandEnableNotificationsSkipButtonText" xml:space="preserve">
+    <value>Skip</value>
+  </data>
+  <data name="WorkoutResultStartingHeartRate" xml:space="preserve">
+    <value>Starting heart rate</value>
+  </data>
+  <data name="EventTypeFilterNameAll" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="FirmwareUpdateState2DownloadingUpdate" xml:space="preserve">
+    <value>Downloading software...</value>
+  </data>
+  <data name="WorkoutIntervalsMultipleExerciseInstructions" xml:space="preserve">
+    <value>Cycle through one set of each exercise until all sets are complete.</value>
+  </data>
+  <data name="GolfSearchSuggestButtonText" xml:space="preserve">
+    <value>Suggest a course</value>
+  </data>
+  <data name="PrivacyPolicy" xml:space="preserve">
+    <value>Privacy Policy</value>
+  </data>
+  <data name="PanelStatisticLabelElevationMin" xml:space="preserve">
+    <value>Min elevation</value>
+  </data>
+  <data name="PanelStatisticLabelElevationMax" xml:space="preserve">
+    <value>Max elevation</value>
+  </data>
+  <data name="RegionFormatItemsLabel" xml:space="preserve">
+    <value>Format for date, time, etc. on your Band.</value>
+  </data>
+  <data name="CortanaTile_Enablement" xml:space="preserve">
+    <value>Cortana notifications are {0}</value>
+  </data>
+  <data name="MinuteSingularFull" xml:space="preserve">
+    <value>minute</value>
+  </data>
+  <data name="AddCardButtonTitle" xml:space="preserve">
+    <value>add card</value>
+  </data>
+  <data name="MyBand" xml:space="preserve">
+    <value>My Microsoft Band</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypeSkiingMultiWeek" xml:space="preserve">
+    <value>Skiing (multi-week)</value>
+  </data>
+  <data name="WeatherCaptionFog" xml:space="preserve">
+    <value>Fog</value>
+  </data>
+  <data name="WeatherCaptionIce" xml:space="preserve">
+    <value>Ice</value>
+  </data>
+  <data name="PanelStatisticLabelPace" xml:space="preserve">
+    <value>Avg Pace</value>
+  </data>
+  <data name="AddBandPairingRefreshButtonText" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="AddBandEnableBluetoothFailedTitle" xml:space="preserve">
+    <value>Bluetooth error</value>
+  </data>
+  <data name="TileTitle_Calendar" xml:space="preserve">
+    <value>Calendar</value>
+  </data>
+  <data name="OobeConnectionCancel" xml:space="preserve">
+    <value>cancel</value>
+  </data>
+  <data name="TileTitle_Calories" xml:space="preserve">
+    <value>Calories</value>
+  </data>
+  <data name="NotificationsDisabledHeader" xml:space="preserve">
+    <value>Notifications disabled</value>
+  </data>
+  <data name="SramFwUpdateBatteryTooLowErrorBody" xml:space="preserve">
+    <value>Please make sure your Microsoft Band is charged before you update your software.</value>
+  </data>
+  <data name="CourseDetailFindOtherCoursesButton" xml:space="preserve">
+    <value>find other courses</value>
+  </data>
+  <data name="Charts_PaceImperialSystem" xml:space="preserve">
+    <value>min/mi</value>
+  </data>
+  <data name="TemperatureLabel" xml:space="preserve">
+    <value>Temperature</value>
+  </data>
+  <data name="SystemErrorTitle" xml:space="preserve">
+    <value>System error</value>
+  </data>
+  <data name="FacebookSettingsEnableNotifications" xml:space="preserve">
+    <value>Enable Facebook notifications on your Band.</value>
+  </data>
+  <data name="GolfLandingConnectionCheckFailure" xml:space="preserve">
+    <value>We couldn’t check your connection status.</value>
+  </data>
+  <data name="LabelAddToList" xml:space="preserve">
+    <value>add more to list</value>
+  </data>
+  <data name="RegionFrance" xml:space="preserve">
+    <value>France</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="NavigationBrowseFitnessGoal" xml:space="preserve">
+    <value>Browse by Type</value>
+  </data>
+  <data name="StarbucksCardErrorTitle" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="ChooseWallpaperLabel" xml:space="preserve">
+    <value>Choose Wallpaper</value>
+  </data>
+  <data name="SettingsButton" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="ManageTilesConfirmationTitle" xml:space="preserve">
+    <value>Continue without saving?</value>
+  </data>
+  <data name="FirmwareVersionReleaseAbbr" xml:space="preserve">
+    <value>R</value>
+  </data>
+  <data name="TryAgainButton" xml:space="preserve">
+    <value>Try again</value>
+  </data>
+  <data name="ShareButtonFacebook" xml:space="preserve">
+    <value>Share to Facebook</value>
+  </data>
+  <data name="RegionPortugal" xml:space="preserve">
+    <value>Portugal</value>
+  </data>
+  <data name="FeatureNotImplemented" xml:space="preserve">
+    <value>Feature not implemented. Press back to return to the previous screen.</value>
+  </data>
+  <data name="NotificationsDisabledBody" xml:space="preserve">
+    <value>To use this tile, you'll need to enable notifications on your phone. Do you want to go to the Settings page now? Please tap Back to return to this app when you're done.</value>
+  </data>
+  <data name="TableHeaderPace" xml:space="preserve">
+    <value>PACE</value>
+  </data>
+  <data name="FacebookMessengerSettingsEnableNotifications" xml:space="preserve">
+    <value>Enable Facebook Messenger notifications on your Band.</value>
+  </data>
+  <data name="AddBandCancelDialogMessage" xml:space="preserve">
+    <value>Are you sure you want to cancel? If you cancel, your Band will not be registered and will not sync with your account.</value>
+  </data>
+  <data name="MessageBox_LearnMore" xml:space="preserve">
+    <value>learn more</value>
+  </data>
+  <data name="GolfLandingButtonConnect" xml:space="preserve">
+    <value>connect</value>
+  </data>
+  <data name="CallQuickResponses" xml:space="preserve">
+    <value>Call Quick Responses</value>
+  </data>
+  <data name="WorkoutRestDayLabel" xml:space="preserve">
+    <value>Rest</value>
+  </data>
+  <data name="SyncNotificationTickerText" xml:space="preserve">
+    <value>Syncing your data with the cloud…</value>
+  </data>
+  <data name="LiveTileLastActivityLabel" xml:space="preserve">
+    <value>Last activity</value>
+  </data>
+  <data name="WorkoutListMultipleExerciseInstructions" xml:space="preserve">
+    <value>Complete all sets for each exercise before progressing to the next.</value>
+  </data>
+  <data name="TrackerLowestBurn" xml:space="preserve">
+    <value>Lowest burn</value>
+  </data>
+  <data name="AddBandPairingPromptMessage" xml:space="preserve">
+    <value>Make sure that this PIN {0} matches the PIN that {1} displays.</value>
+  </data>
+  <data name="PanelStatisticLabelActiveTime" xml:space="preserve">
+    <value>Active time</value>
+  </data>
+  <data name="EnableLocationServicesPromptTitle" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="BrowseWorkoutsFilterTitleBrand" xml:space="preserve">
+    <value>select a brand</value>
+  </data>
+  <data name="CoachingEditHabitReminderLabel" xml:space="preserve">
+    <value>Remind me</value>
+  </data>
+  <data name="MySensorCorePhoneHowToEnableTapOnMotionData" xml:space="preserve">
+    <value>Tap on Motion Data.</value>
+  </data>
+  <data name="BrowseWorkoutsFilterTitleLevel" xml:space="preserve">
+    <value>what's your fitness level?</value>
+  </data>
+  <data name="BikeSettingsSubheader" xml:space="preserve">
+    <value>During the ride, you can also double press the action button to cycle through your metrics</value>
+  </data>
+  <data name="RegionHongKong" xml:space="preserve">
+    <value>Hong Kong SAR</value>
+  </data>
+  <data name="AddBandPairedBandNotInOOBETitle" xml:space="preserve">
+    <value>Factory reset required</value>
+  </data>
+  <data name="DoneButton" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="ProfileHasErrorsMessage" xml:space="preserve">
+    <value>*It looks like we need to fix a few things before we proceed.</value>
+  </data>
+  <data name="PointOfInterestUserGenerated" xml:space="preserve">
+    <value>Point of interest</value>
+  </data>
+  <data name="CaloriesAbbrString" xml:space="preserve">
+    <value>cals</value>
+  </data>
+  <data name="BeatsPerMinuteAbbrString" xml:space="preserve">
+    <value>bpm</value>
+  </data>
+  <data name="MailSettingsListSingle" xml:space="preserve">
+    <value>You have 1 contact in your VIP list.</value>
+  </data>
+  <data name="AddBandStatusDiscovery" xml:space="preserve">
+    <value>Looking for nearby devices</value>
+  </data>
+  <data name="StepTileGoalComplete" xml:space="preserve">
+    <value>{0}%</value>
+  </data>
+  <data name="MailSettingsListMultiple" xml:space="preserve">
+    <value>You have {0} contacts in your VIP list.</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypeBaseballMultiWeek" xml:space="preserve">
+    <value>Baseball (multi-week)</value>
+  </data>
+  <data name="OopsCaption" xml:space="preserve">
+    <value>Oops</value>
+  </data>
+  <data name="TimeoutErrorHeader" xml:space="preserve">
+    <value>Network error</value>
+  </data>
+  <data name="ReportIncorrectSleepTimingButtonText" xml:space="preserve">
+    <value>report incorrect sleep timing</value>
+  </data>
+  <data name="CoachingGoalInsightOpenButton" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="GolfSummarySendFeedbackButtonText" xml:space="preserve">
+    <value>send feedback on this round</value>
+  </data>
+  <data name="CalendarSettings" xml:space="preserve">
+    <value>Calendar settings</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypeSleepingOneOff" xml:space="preserve">
+    <value>Sleeping (one-off)</value>
+  </data>
+  <data name="ChartNoData" xml:space="preserve">
+    <value>There is no data to display.</value>
+  </data>
+  <data name="SyncState2DownloadingLog" xml:space="preserve">
+    <value>downloading log</value>
+  </data>
+  <data name="CoachingEditHabitSkipLabel" xml:space="preserve">
+    <value>Skip this event</value>
+  </data>
+  <data name="WorkoutLabelCurrentPlan" xml:space="preserve">
+    <value>This is your current plan</value>
+  </data>
+  <data name="WorkoutAlreadySubscribedMessage" xml:space="preserve">
+    <value>You currently have a plan already started that will be stopped. Are you sure you want to continue?</value>
+  </data>
+  <data name="Lowest" xml:space="preserve">
+    <value>Lowest</value>
+  </data>
+  <data name="DateAndTimeString" xml:space="preserve">
+    <value>{0} {1}</value>
+  </data>
+  <data name="EditButtonText" xml:space="preserve">
+    <value>edit</value>
+  </data>
+  <data name="SystemTrayAnalyzing" xml:space="preserve">
+    <value>Analyzing...</value>
+  </data>
+  <data name="BandOrganization" xml:space="preserve">
+    <value>Band Organization</value>
+  </data>
+  <data name="NetPromoterScoreRatingLevel4Label" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="NextButton" xml:space="preserve">
+    <value>next</value>
+  </data>
+  <data name="RunSettingsEditInfo" xml:space="preserve">
+    <value>Select three primary metrics that you want to track during your runs.</value>
+  </data>
+  <data name="CalendarAccessErrorBodyText" xml:space="preserve">
+    <value>Microsoft Health does not have access to your calendar. Please update your phone settings.</value>
+  </data>
+  <data name="RegionCanada" xml:space="preserve">
+    <value>Canada</value>
+  </data>
+  <data name="KDKPermissionBindToServiceDescription" xml:space="preserve">
+    <value>Grant permission to bind to Microsoft Health's Third-party Service</value>
+  </data>
+  <data name="HourSuffix" xml:space="preserve">
+    <value>h</value>
+  </data>
+  <data name="MinuteSingularFullLocked" xml:space="preserve">
+    <value>minute</value>
+  </data>
+  <data name="NavigationWhatsNew" xml:space="preserve">
+    <value>What's new</value>
+  </data>
+  <data name="NetPromoterScoreRatingLevel3Label" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="EnableGpsMessage" xml:space="preserve">
+    <value>Enable GPS on your Band to see your route and more.</value>
+  </data>
+  <data name="TileTitle_Mail" xml:space="preserve">
+    <value>Mail</value>
+  </data>
+  <data name="TileTitle_Golf" xml:space="preserve">
+    <value>Golf</value>
+  </data>
+  <data name="TileTitle_Feed" xml:space="preserve">
+    <value>Notification Center</value>
+  </data>
+  <data name="TileTitle_Hike" xml:space="preserve">
+    <value>Explore</value>
+  </data>
+  <data name="TileTitle_Bike" xml:space="preserve">
+    <value>Bike</value>
+  </data>
+  <data name="GolfCourseSearchResultsLabel" xml:space="preserve">
+    <value>Results ({0})</value>
+  </data>
+  <data name="EditGoalsDistanceLabel" xml:space="preserve">
+    <value>DISTANCE</value>
+  </data>
+  <data name="GolfScorecardHeader" xml:space="preserve">
+    <value>scorecard</value>
+  </data>
+  <data name="RegionGreatBritain" xml:space="preserve">
+    <value>United Kingdom</value>
+  </data>
+  <data name="WorkoutLabelDuration" xml:space="preserve">
+    <value>Est. duration</value>
+  </data>
+  <data name="EventTypeFilterNameBikeRides" xml:space="preserve">
+    <value>Bike rides</value>
+  </data>
+  <data name="WeatherTile_Enablement" xml:space="preserve">
+    <value>Weather notifications are {0}</value>
+  </data>
+  <data name="EarlyUpdateError" xml:space="preserve">
+    <value>An error occurred while signing up for Windows Phone Preview. Please try again later.</value>
+  </data>
+  <data name="TileFirstTimeUseGolfMessage" xml:space="preserve">
+    <value>Microsoft Band can track your shots, score, heart rate, and calorie burn.</value>
+  </data>
+  <data name="ActionPlanSleepProgressHeader" xml:space="preserve">
+    <value>Sleep Better</value>
+  </data>
+  <data name="FirmwareUpdateMessageBoxGeneralHeader" xml:space="preserve">
+    <value>Software update message</value>
+  </data>
+  <data name="Tiles_Gallery_Text" xml:space="preserve">
+    <value>Find more tiles in the Tile Gallery</value>
+  </data>
+  <data name="RunTileNoContent" xml:space="preserve">
+    <value>Going for a run? Track your route and performance.</value>
+  </data>
+  <data name="WorkoutUploadTileOpenFailureAndRetry" xml:space="preserve">
+    <value>We cannot sync a workout while the guided workouts tile is open on your Band. Would you like to try again?</value>
+  </data>
+  <data name="CustomizeHeader" xml:space="preserve">
+    <value>Customize</value>
+  </data>
+  <data name="MinuteSuffix" xml:space="preserve">
+    <value>m</value>
+  </data>
+  <data name="SyncWorkoutToBand" xml:space="preserve">
+    <value>Sync this workout to your Band</value>
+  </data>
+  <data name="RunDeleteMessage" xml:space="preserve">
+    <value>Are you sure you want to delete this run?</value>
+  </data>
+  <data name="ExerciseSettingsSubheader" xml:space="preserve">
+    <value>To keep track of your exercise, choose additional labels, or create up to five of your own.</value>
+  </data>
+  <data name="NetPromoterScoreRatingLevel5Label" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="AddBandStartCargoLabel" xml:space="preserve">
+    <value>Microsoft Band</value>
+  </data>
+  <data name="HourSingularFull" xml:space="preserve">
+    <value>hour</value>
+  </data>
+  <data name="Charts_PaceImperialSystemValueCompositeFormatString" xml:space="preserve">
+    <value>{0} min/mi</value>
+  </data>
+  <data name="GolfCourseRequestMessage" xml:space="preserve">
+    <value>We are adding new courses every day. Let us know if your course is missing, and we will get on it.</value>
+  </data>
+  <data name="GolfSyncTileOpenFailureAndRetry" xml:space="preserve">
+    <value>We cannot sync a course while the golf tile is open on your Band. Would you like to try again?</value>
+  </data>
+  <data name="CoachingPlanActivitySubmetricTwoTitle" xml:space="preserve">
+    <value>High intensity bonus</value>
+  </data>
+  <data name="CaloriesTileFirstUse" xml:space="preserve">
+    <value>Your daily calorie burn goal is {0}.
+You can change it at any time.</value>
+  </data>
+  <data name="LabelCancelLocked" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="CoachingPlanDetailsButton" xml:space="preserve">
+    <value>View details and sync workout</value>
+  </data>
+  <data name="MailSettingsListEmpty" xml:space="preserve">
+    <value>You haven't specified any VIPs.</value>
+  </data>
+  <data name="MessageSettings" xml:space="preserve">
+    <value>Messaging settings</value>
+  </data>
+  <data name="SocialLabelConfirm" xml:space="preserve">
+    <value>Remove Social tile</value>
+  </data>
+  <data name="SearchStockNameOrSymbol" xml:space="preserve">
+    <value>search stock name or symbol</value>
+  </data>
+  <data name="ProfilePostalCodeLabel" xml:space="preserve">
+    <value>ZIP code/postal code (optional)</value>
+  </data>
+  <data name="WeightTrackingLogMessageBoxTitle" xml:space="preserve">
+    <value>Set your weight</value>
+  </data>
+  <data name="WeatherCaptionSmoke" xml:space="preserve">
+    <value>Smoke</value>
+  </data>
+  <data name="WeatherCaptionSleet" xml:space="preserve">
+    <value>Sleet</value>
+  </data>
+  <data name="TileFirstTimeUseHikeMessage" xml:space="preserve">
+    <value>It's a good day to take Microsoft Band outside to explore. Pick a fun location, and start feeling the benefits.</value>
+  </data>
+  <data name="ShareGuidedWorkoutMessage" xml:space="preserve">
+    <value>On {0} I burned {1} in {2} doing a guided workout with my Microsoft Band.</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypeTriathlon" xml:space="preserve">
+    <value>Triathlon</value>
+  </data>
+  <data name="SendFeedback" xml:space="preserve">
+    <value>send feedback</value>
+  </data>
+  <data name="WeatherCaptionClear" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="CoachingEditHabitDetailsLabel" xml:space="preserve">
+    <value>According to your plan, this activity can be moved to any time between {0} and {1}.</value>
+  </data>
+  <data name="PersonalizeBand" xml:space="preserve">
+    <value>Personalize Band</value>
+  </data>
+  <data name="RatioFormatString" xml:space="preserve">
+    <value>{0}/{1}</value>
+  </data>
+  <data name="PreferencesTitle" xml:space="preserve">
+    <value>Preferences</value>
+  </data>
+  <data name="CortanaSearchButton" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="RightNavSyncLabel" xml:space="preserve">
+    <value>Sync</value>
+  </data>
+  <data name="ShareHikeTitle" xml:space="preserve">
+    <value>I completed a hike with my Microsoft Band!</value>
+  </data>
+  <data name="AddBandPairingPromptTitle" xml:space="preserve">
+    <value>Pairing accessory</value>
+  </data>
+  <data name="WorkoutDetailsPanelTitle" xml:space="preserve">
+    <value>details</value>
+  </data>
+  <data name="HoldDownTile" xml:space="preserve">
+    <value>Press a tile and drag to change the order.</value>
+  </data>
+  <data name="GolfCourseRequestPageHeader" xml:space="preserve">
+    <value>request a course</value>
+  </data>
+  <data name="WorkoutCircuitTimeInstructions" xml:space="preserve">
+    <value>Complete as many rounds of this circuit as possible in {0}.</value>
+  </data>
+  <data name="WebTileVersionLabel" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="DistanceStyledFormatLocked" xml:space="preserve">
+    <value>{0:Value} {1:Unit}</value>
+  </data>
+  <data name="WeightStyledFormat" xml:space="preserve">
+    <value>{0:Value} {1:Unit}</value>
+  </data>
+  <data name="WorkoutList" xml:space="preserve">
+    <value>List</value>
+  </data>
+  <data name="WorkoutFree" xml:space="preserve">
+    <value>Choose your own</value>
+  </data>
+  <data name="WorkoutSets" xml:space="preserve">
+    <value>{0} sets</value>
+  </data>
+  <data name="WorkoutRest" xml:space="preserve">
+    <value>Rest</value>
+  </data>
+  <data name="WorkoutReps" xml:space="preserve">
+    <value>{0} reps</value>
+  </data>
+  <data name="SyncNotificationInProgressMessage" xml:space="preserve">
+    <value>Syncing your data with the cloud…</value>
+  </data>
+  <data name="BluetoothOffErrorTitle" xml:space="preserve">
+    <value>Bluetooth disabled</value>
+  </data>
+  <data name="NetPromoterScoreRatingLevel2Label" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="SerialNumberFieldLabel" xml:space="preserve">
+    <value>Serial number:</value>
+  </data>
+  <data name="WhatsNewPivotSubheader6" xml:space="preserve">
+    <value>If you want to play a round of golf while adhering to USGA rules for competitive play, turn on tournament mode. It will hide your step count and distance during your round.</value>
+  </data>
+  <data name="WhatsNewPivotSubheader5" xml:space="preserve">
+    <value>Use GPS to get a detailed view of your pace and distance per exercise on your phone.</value>
+  </data>
+  <data name="WhatsNewPivotSubheader4" xml:space="preserve">
+    <value>Create challenges for steps, cardio minutes, runs, and bike rides between you and your Facebook friends who also use Microsoft Health.</value>
+  </data>
+  <data name="WhatsNewPivotSubheader3" xml:space="preserve">
+    <value>Everything you love from the Microsoft Health mobile app now available on your Windows 10 PC or tablet.</value>
+  </data>
+  <data name="WhatsNewPivotSubheader2" xml:space="preserve">
+    <value>Get a weekly, personalized view of you based on your activity, including insights on how to live healthier.</value>
+  </data>
+  <data name="WhatsNewPivotSubheader1" xml:space="preserve">
+    <value>GPS and altimeter/barometer tracks your path, elevation change, and more. Smart alerts remind you to stay hydrated and refuel. Drop points of interest as you go to remember exploration highlights.</value>
+  </data>
+  <data name="SystemTrayCheckingYourBand" xml:space="preserve">
+    <value>Checking your Band...</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypeBikingMultiWeek" xml:space="preserve">
+    <value>Biking (multi-week)</value>
+  </data>
+  <data name="PeakHRChartFlagLabel" xml:space="preserve">
+    <value>peak</value>
+  </data>
+  <data name="MySensorCorePhoneHowToEnableToggleEnablement" xml:space="preserve">
+    <value>Use the toggle to enable motion tracking.</value>
+  </data>
+  <data name="EarlyUpdatePendingMessage" xml:space="preserve">
+    <value>As a participant in Windows Phone Preview, you will have access to new features on your Band.</value>
+  </data>
+  <data name="ChooserShareGolf" xml:space="preserve">
+    <value>Share your score</value>
+  </data>
+  <data name="ChooserShareBike" xml:space="preserve">
+    <value>Share your ride</value>
+  </data>
+  <data name="ChooserShareHike" xml:space="preserve">
+    <value>Share your walk</value>
+  </data>
+  <data name="RegionUnitedStates" xml:space="preserve">
+    <value>United States</value>
+  </data>
+  <data name="NetPromoterScoreRatingLevel1Label" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="SelectWallpaperString" xml:space="preserve">
+    <value>Choose Wallpaper</value>
+  </data>
+  <data name="ProfileBirthMonthLabel" xml:space="preserve">
+    <value>Birth Month</value>
+  </data>
+  <data name="WorkoutCircuit" xml:space="preserve">
+    <value>Circuit</value>
+  </data>
+  <data name="SocialRemoveTile" xml:space="preserve">
+    <value>No thanks, remove this tile</value>
+  </data>
+  <data name="GolfScorecardScoreColumnLabel" xml:space="preserve">
+    <value>SCORE</value>
+  </data>
+  <data name="PanelStatisticLabelCaloriesFromCarbs" xml:space="preserve">
+    <value>Carbs</value>
+  </data>
+  <data name="FirmwareUpdateErrorLink" xml:space="preserve">
+    <value>Still having trouble? Learn more here.</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypeHiking" xml:space="preserve">
+    <value>Hiking</value>
+  </data>
+  <data name="BestGoalFurthestRide" xml:space="preserve">
+    <value>farthest ride</value>
+  </data>
+  <data name="StocksTile_Enablement" xml:space="preserve">
+    <value>Stocks is {0}</value>
+  </data>
+  <data name="BestGoalFurthestHike" xml:space="preserve">
+    <value>furthest walk</value>
+  </data>
+  <data name="TileTitle_Twitter" xml:space="preserve">
+    <value>Twitter</value>
+  </data>
+  <data name="EventSettingsDrawerSectionHeader" xml:space="preserve">
+    <value>Drawer</value>
+  </data>
+  <data name="SignOut" xml:space="preserve">
+    <value>Sign out</value>
+  </data>
+  <data name="ProfileHeightFeetLabel" xml:space="preserve">
+    <value>Height (ft.)</value>
+  </data>
+  <data name="WorkoutPlanOverview" xml:space="preserve">
+    <value>plan overview</value>
+  </data>
+  <data name="WeatherCaptionSquall" xml:space="preserve">
+    <value>Squall</value>
+  </data>
+  <data name="HRZoneLabelVeryLight" xml:space="preserve">
+    <value>Very light</value>
+  </data>
+  <data name="ChooseColorLabel" xml:space="preserve">
+    <value>Choose Color</value>
+  </data>
+  <data name="VerticalBarSeperator" xml:space="preserve">
+    <value>|</value>
+  </data>
+  <data name="ExerciseSettingsHeader" xml:space="preserve">
+    <value>Exercise Settings</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypeStrength" xml:space="preserve">
+    <value>Strength</value>
+  </data>
+  <data name="TableHeaderElevation" xml:space="preserve">
+    <value>ELEVATION</value>
+  </data>
+  <data name="WorkoutMyWorkouts" xml:space="preserve">
+    <value>My workouts</value>
+  </data>
+  <data name="GoalsTilePercentComplete" xml:space="preserve">
+    <value>{0}% Complete</value>
+  </data>
+  <data name="ReportProblemSendButton" xml:space="preserve">
+    <value>send</value>
+  </data>
+  <data name="EarlyUpdateFailureSubtitle" xml:space="preserve">
+    <value>Unfortunately, you can't sign up for Windows Phone Preview if you don't agree to the Terms and Conditions.</value>
+  </data>
+  <data name="PointOfInterestPause" xml:space="preserve">
+    <value>Pause</value>
+  </data>
+  <data name="PointOfInterestStart" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="CustomTagLabel2" xml:space="preserve">
+    <value>Custom 2</value>
+  </data>
+  <data name="CustomTagLabel3" xml:space="preserve">
+    <value>Custom 3</value>
+  </data>
+  <data name="CustomTagLabel1" xml:space="preserve">
+    <value>Custom 1</value>
+  </data>
+  <data name="CustomTagLabel4" xml:space="preserve">
+    <value>Custom 4</value>
+  </data>
+  <data name="CustomTagLabel5" xml:space="preserve">
+    <value>Custom 5</value>
+  </data>
+  <data name="WeightTrackingChangeLabelOneMonth" xml:space="preserve">
+    <value>1 mo trend</value>
+  </data>
+  <data name="FinanceSettingsCustomizeStocks" xml:space="preserve">
+    <value>Customize the stocks and market indices that appear on your Band.</value>
+  </data>
+  <data name="EarlyUpdateMessage" xml:space="preserve">
+    <value>Access additional features on your Microsoft Band by signing up for Windows Phone Preview.</value>
+  </data>
+  <data name="TileTitle_Alarm" xml:space="preserve">
+    <value>Alarm and Timer</value>
+  </data>
+  <data name="PanelStatisticLabelPaceOfPlay" xml:space="preserve">
+    <value>Pace of play</value>
+  </data>
+  <data name="DeleteWeightLabel" xml:space="preserve">
+    <value>Delete this entry</value>
+  </data>
+  <data name="SleepChartLegendLightSleep" xml:space="preserve">
+    <value>Light</value>
+  </data>
+  <data name="TileTitle_Steps" xml:space="preserve">
+    <value>Steps</value>
+  </data>
+  <data name="TileTitle_Sleep" xml:space="preserve">
+    <value>Sleep</value>
+  </data>
+  <data name="AddBandStatusPairingFailureMessage" xml:space="preserve">
+    <value>An error occurred while attempting to pair your selected device.</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypeTriathlonOneOff" xml:space="preserve">
+    <value>Triathlon (one-off)</value>
+  </data>
+  <data name="NavigationBrowseTitle" xml:space="preserve">
+    <value>find a workout</value>
+  </data>
+  <data name="EventTypeFilterNameSleep" xml:space="preserve">
+    <value>Sleep</value>
+  </data>
+  <data name="TileTitle_Phone" xml:space="preserve">
+    <value>Calls</value>
+  </data>
+  <data name="ProfileFirstNameLabel" xml:space="preserve">
+    <value>First name</value>
+  </data>
+  <data name="DistanceFormat" xml:space="preserve">
+    <value>{0} {1}</value>
+  </data>
+  <data name="AddBandEnableNotificationsSubtitleText" xml:space="preserve">
+    <value>To receive email and other notifications on your Band, please enable notification access on your phone.</value>
+  </data>
+  <data name="NetPromoterScoreBandSubtitleInsert" xml:space="preserve">
+    <value>the Microsoft Band</value>
+  </data>
+  <data name="TileFirstTimeUseRunImperialMessage" xml:space="preserve">
+    <value>Microsoft Band can track your route, pace, time, heart rate, and calorie burn. It even lets you know when you've hit another mile.</value>
+  </data>
+  <data name="GolfScorecardHandicapColumnLabel" xml:space="preserve">
+    <value>HDCP</value>
+  </data>
+  <data name="WebTileAuthenticationPassword" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="LetsGetStartedMessage" xml:space="preserve">
+    <value>Let's get started.</value>
+  </data>
+  <data name="SocialMicrosoftBand" xml:space="preserve">
+    <value>Microsoft Band</value>
+  </data>
+  <data name="SyncSettingsLabel" xml:space="preserve">
+    <value>Sync Settings</value>
+  </data>
+  <data name="HourAbbreviationLocked" xml:space="preserve">
+    <value>hr</value>
+  </data>
+  <data name="HelpAndFeedbackNavigationReportAProblem" xml:space="preserve">
+    <value>Report a problem</value>
+  </data>
+  <data name="SensorCoreDisabledExceptionMessage" xml:space="preserve">
+    <value>Motion data has been disabled.</value>
+  </data>
+  <data name="ReportProblemAddImageHeader" xml:space="preserve">
+    <value>Add image</value>
+  </data>
+  <data name="MinutePluralFullLocked" xml:space="preserve">
+    <value>minutes</value>
+  </data>
+  <data name="ProfileWeightImperialLabel" xml:space="preserve">
+    <value>Weight (lbs.)</value>
+  </data>
+  <data name="MySensorCorePhoneEnabled" xml:space="preserve">
+    <value>Enabled</value>
+  </data>
+  <data name="TileFirstTimeUseSleepMessage" xml:space="preserve">
+    <value>We know that sleep recharges our bodies at night, but the rest can be a mystery. Wear your Microsoft Band at night to help understand your sleep patterns.</value>
+  </data>
+  <data name="EventTypeNameRunning" xml:space="preserve">
+    <value>Run</value>
+  </data>
+  <data name="TeePickPageTitle" xml:space="preserve">
+    <value>What tees will you be playing</value>
+  </data>
+  <data name="Pounds" xml:space="preserve">
+    <value>pounds</value>
+  </data>
+  <data name="BandSyncFailedErrorBody" xml:space="preserve">
+    <value>We had trouble saving to your band. We'll update it next time we sync.</value>
+  </data>
+  <data name="UnitsLabel" xml:space="preserve">
+    <value>Units</value>
+  </data>
+  <data name="CoachingNewSleepTargetIncreaseDecline" xml:space="preserve">
+    <value>I don’t want the extra {0} minutes</value>
+  </data>
+  <data name="RunSettingsSubheader" xml:space="preserve">
+    <value>During the run, you can also double press the action button to cycle through your metrics</value>
+  </data>
+  <data name="PermissionErrorTitle" xml:space="preserve">
+    <value>Permission required</value>
+  </data>
+  <data name="TrackerFlightsClimbed" xml:space="preserve">
+    <value>Floors Climbed *</value>
+  </data>
+  <data name="WebTileProcessingMessage" xml:space="preserve">
+    <value>Processing a tile...</value>
+  </data>
+  <data name="MarketingSignInSubtitle" xml:space="preserve">
+    <value>Microsoft Health helps you live healthier by providing actionable insights based on data gathered from the fitness devices and apps that you use every day.</value>
+  </data>
+  <data name="CoachingEditHabitTimePickerErrorLabel" xml:space="preserve">
+    <value>*Please enter a value between {0} and {1}.</value>
+  </data>
+  <data name="SendErrorReportTitle" xml:space="preserve">
+    <value>Send error report?</value>
+  </data>
+  <data name="TermsOfUse" xml:space="preserve">
+    <value>Terms of Use</value>
+  </data>
+  <data name="WhatWasThisActivity" xml:space="preserve">
+    <value>what was this activity?</value>
+  </data>
+  <data name="SkipButton" xml:space="preserve">
+    <value>Skip</value>
+  </data>
+  <data name="FacebookFriendsListPermissionError" xml:space="preserve">
+    <value>Microsoft Health needs your permission to connect you with your friends on Facebook.</value>
+  </data>
+  <data name="AveragePace" xml:space="preserve">
+    <value>average pace</value>
+  </data>
+  <data name="FeetAbbreviation" xml:space="preserve">
+    <value>ft</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypeBiking" xml:space="preserve">
+    <value>Biking</value>
+  </data>
+  <data name="LeftNavConnectedApps" xml:space="preserve">
+    <value>Apps</value>
+  </data>
+  <data name="SleepChartLegendDeepSleep" xml:space="preserve">
+    <value>Restful</value>
+  </data>
+  <data name="PermissionErrorLocation" xml:space="preserve">
+    <value>To continue, Microsoft Health needs to access your current location.</value>
+  </data>
+  <data name="MinuteAbbreviation" xml:space="preserve">
+    <value>min</value>
+  </data>
+  <data name="AlarmTile_Enablement" xml:space="preserve">
+    <value>Alarm is {0}</value>
+  </data>
+  <data name="TileTitle_Facebook" xml:space="preserve">
+    <value>Facebook</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypeBodyweightMultiWeek" xml:space="preserve">
+    <value>Bodyweight (multi-week)</value>
+  </data>
+  <data name="ActivityHistoryHeader" xml:space="preserve">
+    <value>activity history</value>
+  </data>
+  <data name="NoResultsMessageSubText" xml:space="preserve">
+    <value>Let's track something today.</value>
+  </data>
+  <data name="PivotDaily" xml:space="preserve">
+    <value>day</value>
+  </data>
+  <data name="CheckingProfileLoadingText" xml:space="preserve">
+    <value>I'm checking your online profile...</value>
+  </data>
+  <data name="RegionSouthAfrica" xml:space="preserve">
+    <value>South Africa</value>
+  </data>
+  <data name="PanelStatisticLabel2MinRecovery" xml:space="preserve">
+    <value>2 min</value>
+  </data>
+  <data name="NetPromoterScoreFeedbackPlaceholderText" xml:space="preserve">
+    <value>Please explain why you gave this score.</value>
+  </data>
+  <data name="RegisterUnregisterBandConfirmationBody" xml:space="preserve">
+    <value>Are you sure you want to replace your Band? This will unregister your existing Band and it will no longer sync with your account.</value>
+  </data>
+  <data name="Gender_Male" xml:space="preserve">
+    <value>Male</value>
+  </data>
+  <data name="LiveTileSettingsCustomizeTiles" xml:space="preserve">
+    <value>Choose what you want to see on your Microsoft Health Live Tile.</value>
+  </data>
+  <data name="TrackerDistance" xml:space="preserve">
+    <value>Distance</value>
+  </data>
+  <data name="ChartEstimateElevationLabel" xml:space="preserve">
+    <value>estimated elevation</value>
+  </data>
+  <data name="ShareHikeMessage" xml:space="preserve">
+    <value>On {0}, I burned {1} calories with my Microsoft Band. Check out my full session!</value>
+  </data>
+  <data name="ReportProblemConfirmIncludeLogHeader" xml:space="preserve">
+    <value>Include Diagnostic Log</value>
+  </data>
+  <data name="ProfileHeightInchesLabel" xml:space="preserve">
+    <value>Height (in.)</value>
+  </data>
+  <data name="GeoLocationWestAbbreviation" xml:space="preserve">
+    <value>W</value>
+  </data>
+  <data name="ReportIncorrectSleepTimingFeedbackText" xml:space="preserve">
+    <value>Incorrect auto-detected sleep timing.</value>
+  </data>
+  <data name="NoGolfCourseDataFoundMessage" xml:space="preserve">
+    <value>No results found.</value>
+  </data>
+  <data name="FeetAbbreviationLocked" xml:space="preserve">
+    <value>ft</value>
+  </data>
+  <data name="MmsDefaultText" xml:space="preserve">
+    <value>This MMS doesn't contain any text. Please view this message on your phone.</value>
+  </data>
+  <data name="MessagingUnknownSender" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypePilates" xml:space="preserve">
+    <value>Pilates</value>
+  </data>
+  <data name="CoachingNewSleepTargetExtraText" xml:space="preserve">
+    <value>If you change your wake or bed time, we’ll reschedule your daily sleep habits accordingly.</value>
+  </data>
+  <data name="RegisterThisBandConfirmationBody" xml:space="preserve">
+    <value>To register your Band please un-pair all Bands and factory reset the Band you want to use.</value>
+  </data>
+  <data name="HRZoneLabelFatBurn" xml:space="preserve">
+    <value>Fat burn</value>
+  </data>
+  <data name="LabelCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="ProfileWeightMetricLabel" xml:space="preserve">
+    <value>Weight (kg)</value>
+  </data>
+  <data name="StepsSingular" xml:space="preserve">
+    <value>step</value>
+  </data>
+  <data name="NavigationBrowseAll" xml:space="preserve">
+    <value>Browse all</value>
+  </data>
+  <data name="StepsTile_Enablement" xml:space="preserve">
+    <value>Steps are {0}</value>
+  </data>
+  <data name="AddBandPairingSuccessPageTitle" xml:space="preserve">
+    <value>Success!</value>
+  </data>
+  <data name="FinanceWatchlist" xml:space="preserve">
+    <value>Watchlist</value>
+  </data>
+  <data name="PanelStatisticLabelRecoveryTimeFormat" xml:space="preserve">
+    <value>{0} at</value>
+  </data>
+  <data name="GolfScorecardDoubleBogeyLegendLabel" xml:space="preserve">
+    <value>+2</value>
+  </data>
+  <data name="GolfSyncPageTitle" xml:space="preserve">
+    <value>Pro Tip</value>
+  </data>
+  <data name="NotificationCenterSettingsSubheader" xml:space="preserve">
+    <value>Select the apps you want to see notifications from on your Band.</value>
+  </data>
+  <data name="SystemTraySyncing" xml:space="preserve">
+    <value>Syncing...</value>
+  </data>
+  <data name="TaskCancelledErrorBody" xml:space="preserve">
+    <value>A Bluetooth task timed out.</value>
+  </data>
+  <data name="OobeProfileNextButtonText" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="LabelConfirmLocked" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="FirmwareUpdateMessageBoxOptionalUpdateMessage" xml:space="preserve">
+    <value>There's an update available for your Microsoft Band. This will only take a couple of moments.
+
+Please update it now to continue.</value>
+  </data>
+  <data name="SingleDevicePolicyNotReset" xml:space="preserve">
+    <value>Make sure your Band is factory reset.</value>
+  </data>
+  <data name="LiveTileBatteryLevelHeader" xml:space="preserve">
+    <value>Battery Level</value>
+  </data>
+  <data name="TableHeaderDistance" xml:space="preserve">
+    <value>DISTANCE</value>
+  </data>
+  <data name="GolfSyncPageSubtitle" xml:space="preserve">
+    <value>To get the best out of your round, make sure to fully charge your Band.</value>
+  </data>
+  <data name="TileTitle_Weather" xml:space="preserve">
+    <value>Weather</value>
+  </data>
+  <data name="ReportProblemMaxImageAmountExceededMessageHeader" xml:space="preserve">
+    <value>Add image error</value>
+  </data>
+  <data name="NetworkErrorBody" xml:space="preserve">
+    <value>Something went wrong. Please check your network connection and try again.</value>
+  </data>
+  <data name="BandErrorOobeBody" xml:space="preserve">
+    <value>I can't find your Band. Please make sure it is nearby and paired to your phone.</value>
+  </data>
+  <data name="Gender_Female" xml:space="preserve">
+    <value>Female</value>
+  </data>
+  <data name="NavigationManageTiles" xml:space="preserve">
+    <value>Manage tiles</value>
+  </data>
+  <data name="OobeLegalTermsIAgreeButton" xml:space="preserve">
+    <value>I agree</value>
+  </data>
+  <data name="CalorieTileGoalCompleteText" xml:space="preserve">
+    <value>Calorie goal</value>
+  </data>
+  <data name="ValuePlusUnitLabel" xml:space="preserve">
+    <value>{0} {1}</value>
+  </data>
+  <data name="GeoLocationNorthAbbreviation" xml:space="preserve">
+    <value>N</value>
+  </data>
+  <data name="PointOfInterestMaxElevation" xml:space="preserve">
+    <value>Max elevation</value>
+  </data>
+  <data name="GolfDeleteMessage" xml:space="preserve">
+    <value>Are you sure you want to delete this round of golf?</value>
+  </data>
+  <data name="CentimetersAbbreviation" xml:space="preserve">
+    <value>cm</value>
+  </data>
+  <data name="WorkoutSingleExerciseInstructions" xml:space="preserve">
+    <value>Complete all sets for this exercise.</value>
+  </data>
+  <data name="ShareTitle" xml:space="preserve">
+    <value>Share activity</value>
+  </data>
+  <data name="ActionPlanMetricTotalFormat" xml:space="preserve">
+    <value>/{0}</value>
+  </data>
+  <data name="SleepTile_Subheader_UserDetectedSleep_FormatString" xml:space="preserve">
+    <value>{0}
+Sleep</value>
+  </data>
+  <data name="MySensorCorePhoneHowToEnableReturnToApp" xml:space="preserve">
+    <value>Once enabled, return to the app and enjoy!</value>
+  </data>
+  <data name="WeightTrackingChangeLabelAll" xml:space="preserve">
+    <value>Total change</value>
+  </data>
+  <data name="FirmwareUpdateSucceededHeader" xml:space="preserve">
+    <value>Update complete</value>
+  </data>
+  <data name="DeselectAllButton" xml:space="preserve">
+    <value>Deselect all</value>
+  </data>
+  <data name="RunTile_Enablement" xml:space="preserve">
+    <value>Run tracking is {0}</value>
+  </data>
+  <data name="DataErrorMessage" xml:space="preserve">
+    <value>We couldn't load the data. Please try again later.</value>
+  </data>
+  <data name="KDKPermissionGroupLabel" xml:space="preserve">
+    <value>Microsoft Health's Third-party Permissions</value>
+  </data>
+  <data name="CortanaAlarmSubText" xml:space="preserve">
+    <value>Set an alarm</value>
+  </data>
+  <data name="AddBandStartLearnMore" xml:space="preserve">
+    <value>Learn what Band and Microsoft Health can do for you. &gt;</value>
+  </data>
+  <data name="TableHeaderAverageHeartRate" xml:space="preserve">
+    <value>AVG HR</value>
+  </data>
+  <data name="BandErrorMailMaxVIPsBody" xml:space="preserve">
+    <value>Only 10 contacts are allowed. Please remove 1 or more.</value>
+  </data>
+  <data name="EventTypeNameWorkout2" xml:space="preserve">
+    <value>Exercise</value>
+  </data>
+  <data name="NoFavoritesMessage" xml:space="preserve">
+    <value>You currently haven't marked any workout plans as favorite.</value>
+  </data>
+  <data name="NavigationSettingsLabel" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="PanelStatisticLabelDuration" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="HikeDeleteMessage" xml:space="preserve">
+    <value>Are you sure you want to delete this walk?</value>
+  </data>
+  <data name="PanelStatisticLabelEndingHeartRate" xml:space="preserve">
+    <value>Ending HR</value>
+  </data>
+  <data name="UnregisterThisBandConfirmationTitle" xml:space="preserve">
+    <value>Unregistering this Band</value>
+  </data>
+  <data name="ManageTilesText" xml:space="preserve">
+    <value>add and manage tiles</value>
+  </data>
+  <data name="WorkoutResultEstimated" xml:space="preserve">
+    <value>Estimated reps</value>
+  </data>
+  <data name="NavigationHelpAndFeedback" xml:space="preserve">
+    <value>Help &amp; feedback</value>
+  </data>
+  <data name="WorkoutResultCaloriesHeader" xml:space="preserve">
+    <value>CALS</value>
+  </data>
+  <data name="OobeMinimumAgeRequirmentText" xml:space="preserve">
+    <value>Sorry, you do not meet Microsoft Health's minimum age requirement.</value>
+  </data>
+  <data name="SecondSuffix" xml:space="preserve">
+    <value>s</value>
+  </data>
+  <data name="AddBandPairingTryAgainButtonText" xml:space="preserve">
+    <value>Try again</value>
+  </data>
+  <data name="EarlyUpdateSignUpButton" xml:space="preserve">
+    <value>sign up</value>
+  </data>
+  <data name="WorkoutResultTotalText" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="CoachingPlanActivityMetricOneTitle" xml:space="preserve">
+    <value>Cardio minutes</value>
+  </data>
+  <data name="WorkoutCircuitTaskNoRepeatInstructions" xml:space="preserve">
+    <value>Perform each exercise in order.</value>
+  </data>
+  <data name="AddBandPairingCancelButtonText" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="WallpaperLabel" xml:space="preserve">
+    <value>Wallpaper</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypePilatesOneOff" xml:space="preserve">
+    <value>Pilates (one-off)</value>
+  </data>
+  <data name="CaloriesBurned" xml:space="preserve">
+    <value>calories burned</value>
+  </data>
+  <data name="StarbucksCardError" xml:space="preserve">
+    <value>The number you entered is incorrect. Please check your card and try again.</value>
+  </data>
+  <data name="NavigationHistory" xml:space="preserve">
+    <value>History</value>
+  </data>
+  <data name="NavigationProfile" xml:space="preserve">
+    <value>Profile</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypeTennisMultiWeek" xml:space="preserve">
+    <value>Tennis (multi-week)</value>
+  </data>
+  <data name="CustomizeLiveTilePageTitle" xml:space="preserve">
+    <value>Live Tiles</value>
+  </data>
+  <data name="DisclaimerUV" xml:space="preserve">
+    <value>** UV tracking available on Microsoft Band 2</value>
+  </data>
+  <data name="OobeLegalTermsCancelButton" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="DistanceStyledFormat" xml:space="preserve">
+    <value>{0:Value} {1:Unit}</value>
+  </data>
+  <data name="MarketingSignInWhyLinkMessage" xml:space="preserve">
+    <value>Logging in allows your preferences and history to move with you. You can view your information without your Microsoft Band, or seamlessly restore your data if you get a new Band. It also allows you to automatically integrate with your Xbox and other Microsoft apps and services on all devices.</value>
+  </data>
+  <data name="OobeLegalPrivacyPolicyLinkText" xml:space="preserve">
+    <value>Privacy Policy</value>
+  </data>
+  <data name="TwitterSettings" xml:space="preserve">
+    <value>Twitter settings</value>
+  </data>
+  <data name="WeatherCaptionCloudy" xml:space="preserve">
+    <value>Cloudy</value>
+  </data>
+  <data name="RateAndReview" xml:space="preserve">
+    <value>Rate and review Microsoft Health</value>
+  </data>
+  <data name="ExerciseDeleteMessage" xml:space="preserve">
+    <value>Are you sure you want to delete this exercise?</value>
+  </data>
+  <data name="EditStepGoalMessage" xml:space="preserve">
+    <value>Increasing your step goal is a great way to get out and burn more calories.</value>
+  </data>
+  <data name="EventTypeNameGuidedWorkout" xml:space="preserve">
+    <value>Guided Workout</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypeSleepingMultiWeek" xml:space="preserve">
+    <value>Sleeping (multi-week)</value>
+  </data>
+  <data name="CoachingNewSleepTargetEarlierBed" xml:space="preserve">
+    <value>Go to bed earlier</value>
+  </data>
+  <data name="RegionUnitedArabEmirates" xml:space="preserve">
+    <value>United Arab Emirates</value>
+  </data>
+  <data name="NavigationBrowseWorkouts" xml:space="preserve">
+    <value>Find a workout</value>
+  </data>
+  <data name="UsbBandName" xml:space="preserve">
+    <value>Microsoft Band (USB)</value>
+  </data>
+  <data name="EarlyUpdateInfoSubtitle" xml:space="preserve">
+    <value>Signing up for Windows Phone Preview gives you access to additional features for your Microsoft Band.</value>
+  </data>
+  <data name="ElevationFormat" xml:space="preserve">
+    <value>{0}{1}</value>
+  </data>
+  <data name="BikeSettingsInfo" xml:space="preserve">
+    <value>You can keep track of your performance by locking your preferred data points to the bike screen.
+
+Your metrics will be in a glanceable format. You can double press the Action Button to cycle through your metrics.</value>
+  </data>
+  <data name="PanelRenameButtonText" xml:space="preserve">
+    <value>rename</value>
+  </data>
+  <data name="GolfScorecardBogeyLegendLabel" xml:space="preserve">
+    <value>+1</value>
+  </data>
+  <data name="PointOfInterestFinish" xml:space="preserve">
+    <value>Finish</value>
+  </data>
+  <data name="SyncASingleWorkoutMessage" xml:space="preserve">
+    <value>Your current workout plan will resume after this workout is complete.</value>
+  </data>
+  <data name="GolfScorecardYardsColumnLabel" xml:space="preserve">
+    <value>YARDS</value>
+  </data>
+  <data name="DataUniqueError" xml:space="preserve">
+    <value>You must select unique data points.</value>
+  </data>
+  <data name="PivotMyProgress" xml:space="preserve">
+    <value>my progress</value>
+  </data>
+  <data name="ElapsedTimeAsTickOnlyMinutes" xml:space="preserve">
+    <value>{0}′</value>
+  </data>
+  <data name="NavigationHome" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="WorkoutSyncedToBand" xml:space="preserve">
+    <value>This workout is on your Band</value>
+  </data>
+  <data name="PointOfInterestSunrise" xml:space="preserve">
+    <value>Sunrise</value>
+  </data>
+  <data name="EventTypeFilterNameGuidedWorkout" xml:space="preserve">
+    <value>Guided Workouts</value>
+  </data>
+  <data name="AddBandPairingInquiryPageSubtitle" xml:space="preserve">
+    <value>Choose the name of your Band from the list below.</value>
+  </data>
+  <data name="PeakHRChartFlagLabelFormat" xml:space="preserve">
+    <value>{0} peak</value>
+  </data>
+  <data name="EditStepGoalLabel" xml:space="preserve">
+    <value>STEP GOAL</value>
+  </data>
+  <data name="DistanceHeightLabel" xml:space="preserve">
+    <value>Distance and height</value>
+  </data>
+  <data name="BikeData" xml:space="preserve">
+    <value>Data on active bike screen</value>
+  </data>
+  <data name="StarbucksNoCardOnDevice" xml:space="preserve">
+    <value>Go to Manage Tiles in your app to add a card</value>
+  </data>
+  <data name="MainMetricTitles" xml:space="preserve">
+    <value>Metric {0}</value>
+  </data>
+  <data name="OobeFinishButton" xml:space="preserve">
+    <value>Finish</value>
+  </data>
+  <data name="HRZoneLabelMaximum" xml:space="preserve">
+    <value>Maximum</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypeTennis" xml:space="preserve">
+    <value>Tennis</value>
+  </data>
+  <data name="AcceptButton" xml:space="preserve">
+    <value>accept</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypeSoccer" xml:space="preserve">
+    <value>Soccer</value>
+  </data>
+  <data name="StarbucksCardBackMessage" xml:space="preserve">
+    <value>Look on the back of your Starbucks Card to find your card number.</value>
+  </data>
+  <data name="SleepChart_WokeUpFlag" xml:space="preserve">
+    <value>Woke Up {0}</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypeSkiing" xml:space="preserve">
+    <value>Skiing</value>
+  </data>
+  <data name="FirmwareVersionFieldLabel" xml:space="preserve">
+    <value>Band software version:</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypeBaseballOneOff" xml:space="preserve">
+    <value>Baseball (one-off)</value>
+  </data>
+  <data name="GolfScorecardMetersColumnLabel" xml:space="preserve">
+    <value>METERS</value>
+  </data>
+  <data name="LabelAdd" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="SyncState8Done" xml:space="preserve">
+    <value>done</value>
+  </data>
+  <data name="GolfSyncTryAgainTitle" xml:space="preserve">
+    <value>Try again</value>
+  </data>
+  <data name="StockTypeXI" xml:space="preserve">
+    <value>Index</value>
+  </data>
+  <data name="StockTypeST" xml:space="preserve">
+    <value>Stock</value>
+  </data>
+  <data name="StockTypeFO" xml:space="preserve">
+    <value>Mutual Fund</value>
+  </data>
+  <data name="StockTypeFE" xml:space="preserve">
+    <value>ETF</value>
+  </data>
+  <data name="BestGoalSplit" xml:space="preserve">
+    <value>best split</value>
+  </data>
+  <data name="TrackerWalkTime" xml:space="preserve">
+    <value>Active time</value>
+  </data>
+  <data name="MessageBox_Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="PanelStatisticLabelParOrBetter" xml:space="preserve">
+    <value>Par or better</value>
+  </data>
+  <data name="BikeDeleteMessage" xml:space="preserve">
+    <value>Are you sure you want to delete this bike ride?</value>
+  </data>
+  <data name="CaloriesValueUnitStyledFormat" xml:space="preserve">
+    <value>{0:Value} {1:Unit}</value>
+  </data>
+  <data name="SplitDistanceStyledFormat" xml:space="preserve">
+    <value>{1:Unit}. {0:Value}</value>
+  </data>
+  <data name="ProfileFirstNameErrorMessage" xml:space="preserve">
+    <value>Please enter a value between {0}-{1} characters</value>
+  </data>
+  <data name="StarbucksBandError1" xml:space="preserve">
+    <value>Go to Manage Tiles</value>
+  </data>
+  <data name="StarbucksBandError2" xml:space="preserve">
+    <value>in your app to</value>
+  </data>
+  <data name="StarbucksBandError3" xml:space="preserve">
+    <value>add a card.</value>
+  </data>
+  <data name="ExerciseTileNoContent" xml:space="preserve">
+    <value>Track your heart rate and calorie burn during sports or other physical activities.</value>
+  </data>
+  <data name="SingleDevicePolicyMismatchedTitle" xml:space="preserve">
+    <value>Band not registered</value>
+  </data>
+  <data name="CasualBooleanNo" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="ShareGolfTitle" xml:space="preserve">
+    <value>I completed a round of golf with my Microsoft Band!</value>
+  </data>
+  <data name="ReportProblemNextButtonContent" xml:space="preserve">
+    <value>next</value>
+  </data>
+  <data name="EnableNotificationsPromptTitle" xml:space="preserve">
+    <value>Notifications</value>
+  </data>
+  <data name="WorkoutBlockWarmup" xml:space="preserve">
+    <value>Warmup</value>
+  </data>
+  <data name="WorkoutBrowseCustom" xml:space="preserve">
+    <value>my workouts</value>
+  </data>
+  <data name="ManageTilesArrangeAppsLabel" xml:space="preserve">
+    <value>Rearrange the tiles on your Band's Start strip.</value>
+  </data>
+  <data name="PendingFirmwareUpdateToast" xml:space="preserve">
+    <value>Software update available. Tap to update your Microsoft Band so we can keep you and your data in sync.</value>
+  </data>
+  <data name="KDKPermissionGroupDescription" xml:space="preserve">
+    <value>Microsoft Health's Third-party Permission Group</value>
+  </data>
+  <data name="ShareSleepTitle" xml:space="preserve">
+    <value>I wore my Microsoft Band to track my sleep!</value>
+  </data>
+  <data name="CourseDetailSyncToBandMessage" xml:space="preserve">
+    <value>Sync this course to your Band</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypeGolfing" xml:space="preserve">
+    <value>Golfing</value>
+  </data>
+  <data name="WhatsNewPivotButtonLabel1b" xml:space="preserve">
+    <value>Install the Explore tile now</value>
+  </data>
+  <data name="CustomizeSubheader" xml:space="preserve">
+    <value>Personalize your activity</value>
+  </data>
+  <data name="ActionPlanSleepMetricOneTitle" xml:space="preserve">
+    <value>Time in bed consistency</value>
+  </data>
+  <data name="WorkoutLabelGoals" xml:space="preserve">
+    <value>Goal(s)</value>
+  </data>
+  <data name="TileTitle_Starbucks" xml:space="preserve">
+    <value>Starbucks</value>
+  </data>
+  <data name="ChartWeightFormat" xml:space="preserve">
+    <value>{0} {1}</value>
+  </data>
+  <data name="MySensorCorePhoneSummary" xml:space="preserve">
+    <value>Don’t miss a beat—when enabled, your phone’s motion tracking will fill in the gaps when you’re not wearing your Band.</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypeBodyweight" xml:space="preserve">
+    <value>Bodyweight</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypeSkiingOneOff" xml:space="preserve">
+    <value>Skiing (one-off)</value>
+  </data>
+  <data name="GpsLossFootnote" xml:space="preserve">
+    <value>*estimated value due to GPS loss</value>
+  </data>
+  <data name="PanelShareToFacebookButton" xml:space="preserve">
+    <value>share</value>
+  </data>
+  <data name="ErrorPageTitle" xml:space="preserve">
+    <value>Something went wrong</value>
+  </data>
+  <data name="OobeProfileSubheaderText" xml:space="preserve">
+    <value>Give us a little information about yourself so we can accurately track your data.</value>
+  </data>
+  <data name="WorkoutSubscribeBandNotRegistered" xml:space="preserve">
+    <value>You don't have a Microsoft Band registered to you. Tap "+" on the home screen to add a Band before attempting to sync a workout.</value>
+  </data>
+  <data name="GuidedWorkoutSplitTileWorkoutOnBand" xml:space="preserve">
+    <value>A workout is on your Band</value>
+  </data>
+  <data name="RejectButton" xml:space="preserve">
+    <value>reject</value>
+  </data>
+  <data name="OobeSensorEnableButton" xml:space="preserve">
+    <value>Enable</value>
+  </data>
+  <data name="HRZoneLabelModerate" xml:space="preserve">
+    <value>Moderate</value>
+  </data>
+  <data name="UnregisterThisBand" xml:space="preserve">
+    <value>unregister your Band</value>
+  </data>
+  <data name="NoResultsMessage" xml:space="preserve">
+    <value>It looks like you haven't recorded anything yet.</value>
+  </data>
+  <data name="GpsLowPowerFootnote" xml:space="preserve">
+    <value>*GPS power saver mode on. Route &amp; distance displayed is an approximation.</value>
+  </data>
+  <data name="CourseDetailSetToPlayTeesMessage" xml:space="preserve">
+    <value>Tees you're set to play: {0}</value>
+  </data>
+  <data name="RemoveCardButtonTitle" xml:space="preserve">
+    <value>remove card</value>
+  </data>
+  <data name="ColorLabel" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="FeedTile_Enablement" xml:space="preserve">
+    <value>Notification Center notifications are {0}</value>
+  </data>
+  <data name="TableHeaderTimeOfDay" xml:space="preserve">
+    <value>TIME OF DAY</value>
+  </data>
+  <data name="CoachingComingUpNoEventsToday" xml:space="preserve">
+    <value>You’ve got nothing planned for today. Go to the web to set something up...</value>
+  </data>
+  <data name="TileFirstTimeUseLearnMore" xml:space="preserve">
+    <value>Learn more</value>
+  </data>
+  <data name="CallsSettings" xml:space="preserve">
+    <value>Call settings</value>
+  </data>
+  <data name="PhoneTile_Enablement" xml:space="preserve">
+    <value>Phone notifications are {0}</value>
+  </data>
+  <data name="ProfileSummaryEmailOptIn" xml:space="preserve">
+    <value>I'd like to receive emails regarding personal highlights based on my activity.</value>
+  </data>
+  <data name="Charts_PaceMetricSystem" xml:space="preserve">
+    <value>min/km</value>
+  </data>
+  <data name="CoachingPlanActivitySubmetricOneTitle" xml:space="preserve">
+    <value>Actual</value>
+  </data>
+  <data name="NetPromoterScoreSectionSubtitleFormat" xml:space="preserve">
+    <value>How likely are you to recommend {0} to a friend or colleague?</value>
+  </data>
+  <data name="CompanyNameWithCopyRight" xml:space="preserve">
+    <value>© 2016 Microsoft Corporation</value>
+  </data>
+  <data name="PerUnitStyledFormat" xml:space="preserve">
+    <value>/{0:Unit}</value>
+  </data>
+  <data name="MailTile_Enablement" xml:space="preserve">
+    <value>Mail notifications are {0}</value>
+  </data>
+  <data name="NavigationBrowseProfessionals" xml:space="preserve">
+    <value>Browse by Brand</value>
+  </data>
+  <data name="RegionFinland" xml:space="preserve">
+    <value>Finland</value>
+  </data>
+  <data name="WorkoutNumberedHeaderFormat" xml:space="preserve">
+    <value>{0} {1}</value>
+  </data>
+  <data name="GoalsSaveError" xml:space="preserve">
+    <value>Your goal was saved to your user profile, but didn't save to your Band. Please try again.</value>
+  </data>
+  <data name="ShowSocialTileWarningLabel" xml:space="preserve">
+    <value>If you’re already connected, removing this tile will end any current challenges you created.</value>
+  </data>
+  <data name="AddBandStartPageTitle" xml:space="preserve">
+    <value>Add your Band</value>
+  </data>
+  <data name="PivotComingUp" xml:space="preserve">
+    <value>coming up</value>
+  </data>
+  <data name="SleepTile_Subheader_AutoDetectedSleep_FormatString" xml:space="preserve">
+    <value>{0}
+Sleep (Detected)</value>
+  </data>
+  <data name="WorkoutLabelDifficulty" xml:space="preserve">
+    <value>Difficulty level</value>
+  </data>
+  <data name="TrackerTotalSteps" xml:space="preserve">
+    <value>Total steps</value>
+  </data>
+  <data name="OobeLegalTermsText1" xml:space="preserve">
+    <value>Microsoft Health provides valuable, personal insights so you can reach your fitness goals. We collect your fitness data through activity tracking devices and online services. You can manage your data at any time through the Microsoft Health app, the Microsoft Health Dashboard or by contacting Microsoft support.</value>
+  </data>
+  <data name="OobeLegalTermsText2" xml:space="preserve">
+    <value>Microsoft Health data will be stored and processed in Microsoft data centers which may be located outside of your country/region.</value>
+  </data>
+  <data name="SocialConnectAppPageBody" xml:space="preserve">
+    <value>Microsoft Health needs your permission to connect you with your friends on Facebook. Once signed-in, you can create challenges between you and your friends and check your position in the daily leaderboards to see who has racked up the most steps or cardio minutes.</value>
+  </data>
+  <data name="AddBandRecommendPairOnPhoneBody" xml:space="preserve">
+    <value>We recommend downloading the Microsoft Health mobile app and completing Band setup from your phone. If you continue from your computer, you’ll need to manually pair your Band to your phone via Bluetooth settings.</value>
+  </data>
+  <data name="WeightTrackingSaveWeightHeader" xml:space="preserve">
+    <value>Today's weight</value>
+  </data>
+  <data name="ProfileTelemetryOptIn" xml:space="preserve">
+    <value>Allow Microsoft to collect anonymous usage data.</value>
+  </data>
+  <data name="SecondAbbreviationLocked" xml:space="preserve">
+    <value>sec</value>
+  </data>
+  <data name="StartActivityErrorTitle" xml:space="preserve">
+    <value>Unable to perform action</value>
+  </data>
+  <data name="ExerciseSettingsCustomizeSubLabel" xml:space="preserve">
+    <value>Create up to five custom exercise labels to track your personal favorites.</value>
+  </data>
+  <data name="On" xml:space="preserve">
+    <value>On</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="TrackerMostBurned" xml:space="preserve">
+    <value>Most burned</value>
+  </data>
+  <data name="ManageTilesAppSpaceLabel" xml:space="preserve">
+    <value>You have room for {0} more.</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypeTennisOneOff" xml:space="preserve">
+    <value>Tennis (one-off)</value>
+  </data>
+  <data name="SocialRemoveTileConfirmation" xml:space="preserve">
+    <value>Are you sure you want to remove this tile? If you change your mind, you can add it back in Preferences.</value>
+  </data>
+  <data name="AddCardHeading" xml:space="preserve">
+    <value>Add card</value>
+  </data>
+  <data name="FirmwareUpdateSucceededMessage" xml:space="preserve">
+    <value>Your Band is good to go.</value>
+  </data>
+  <data name="NetPromoterScoreHighScoreLabel" xml:space="preserve">
+    <value>Extremely likely</value>
+  </data>
+  <data name="LastSyncLabel" xml:space="preserve">
+    <value>Last Sync</value>
+  </data>
+  <data name="AddBandPairingSuccessNextButtonText" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="MessageSettingsEnableNotifications" xml:space="preserve">
+    <value>Enable text message notifications on your Band.</value>
+  </data>
+  <data name="SelectColorString" xml:space="preserve">
+    <value>Choose Color</value>
+  </data>
+  <data name="SecondPluralFullLocked" xml:space="preserve">
+    <value>seconds</value>
+  </data>
+  <data name="NotAvailable" xml:space="preserve">
+    <value>--</value>
+  </data>
+  <data name="TrackerMostActive" xml:space="preserve">
+    <value>Most active</value>
+  </data>
+  <data name="HRZoneLabelMaximumAbbrev" xml:space="preserve">
+    <value>Max. </value>
+  </data>
+  <data name="HikeWaypointsTotalLoss" xml:space="preserve">
+    <value>Total loss</value>
+  </data>
+  <data name="HikeWaypointsTotalGain" xml:space="preserve">
+    <value>Total gain</value>
+  </data>
+  <data name="GolfScorecardParLegendLabel" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GuidedWorkoutsNoWorkoutTileText" xml:space="preserve">
+    <value>Let's find a workout plan to match your fitness goals.</value>
+  </data>
+  <data name="PrivateIncomingCallDisplayName" xml:space="preserve">
+    <value>Private</value>
+  </data>
+  <data name="ValuePlusUnitLabelStyledFormat" xml:space="preserve">
+    <value>{0:Value} {1:Unit}</value>
+  </data>
+  <data name="AddBandCancelButton" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="TileTitle_GuidedWorkout" xml:space="preserve">
+    <value>Guided Workouts</value>
+  </data>
+  <data name="BandUpdateLoadingText" xml:space="preserve">
+    <value>Your Band is being updated...</value>
+  </data>
+  <data name="TimeSpanFormatLockedStyledFormat" xml:space="preserve">
+    <value>{0:None} {1:None}</value>
+  </data>
+  <data name="PanelStatisticLabelDistance" xml:space="preserve">
+    <value>Distance</value>
+  </data>
+  <data name="BluetoothOffErrorBody" xml:space="preserve">
+    <value>Bluetooth is disabled in your phone settings.</value>
+  </data>
+  <data name="ValuePlusUnitLabelTimeSpanOneChar" xml:space="preserve">
+    <value>{0}{1}</value>
+  </data>
+  <data name="WorkoutIntervals" xml:space="preserve">
+    <value>Intervals</value>
+  </data>
+  <data name="PermissionErrorExternalStorage" xml:space="preserve">
+    <value>To continue, Microsoft Health needs to access this device’s storage.</value>
+  </data>
+  <data name="GoalsTileOverAchievementCalories" xml:space="preserve">
+    <value>You've burned {0} cals more than your goal today!</value>
+  </data>
+  <data name="FormatterGolfScoreFormatString" xml:space="preserve">
+    <value>({0}{1})</value>
+  </data>
+  <data name="PanelStatisticLabelLowestHeartRate" xml:space="preserve">
+    <value>Low</value>
+  </data>
+  <data name="MinutePluralFull" xml:space="preserve">
+    <value>minutes</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypeBasketball" xml:space="preserve">
+    <value>Basketball</value>
+  </data>
+  <data name="CourseDetailHolesLabel" xml:space="preserve">
+    <value>Holes</value>
+  </data>
+  <data name="WorkoutUploadFailureAndRetryTitle" xml:space="preserve">
+    <value>Try again</value>
+  </data>
+  <data name="GolfCourseRecentPageHeader" xml:space="preserve">
+    <value>recent</value>
+  </data>
+  <data name="NotificationsNotSupportedInAndroidVersion" xml:space="preserve">
+    <value>Sorry, this tile is only available on Android version 4.3 and later.</value>
+  </data>
+  <data name="MailSubheaderText" xml:space="preserve">
+    <value>Only receive notifications for mails from VIPs.</value>
+  </data>
+  <data name="PivotThreeMonth" xml:space="preserve">
+    <value>3 mo</value>
+  </data>
+  <data name="NeedToCheckProfileMessage" xml:space="preserve">
+    <value>To run this app for the first time, please connect to the Internet so we can set up your account.</value>
+  </data>
+  <data name="OobeSensorEnableEnabledTitle" xml:space="preserve">
+    <value>You're all set</value>
+  </data>
+  <data name="CortanaSettingsEnableNotifications" xml:space="preserve">
+    <value>Enable Cortana notifications on your Band. 
+
+Pin Cortana to your phone’s Start screen to enable personalized, glanceable information on your Microsoft Band.</value>
+  </data>
+  <data name="MessageBox_CasualAffirmative" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypeSleeping" xml:space="preserve">
+    <value>Sleeping</value>
+  </data>
+  <data name="FeaturedWorkoutsDefaultPhrase" xml:space="preserve">
+    <value>Ready to sweat? Grab a workout and send it to your Band.</value>
+  </data>
+  <data name="Now" xml:space="preserve">
+    <value>Now</value>
+  </data>
+  <data name="Off" xml:space="preserve">
+    <value>Off</value>
+  </data>
+  <data name="KDKPermissionBindToServiceAdminLabel" xml:space="preserve">
+    <value>Permission to Bind to Microsoft Health's Third-party Service as admin</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="Miles" xml:space="preserve">
+    <value>miles</value>
+  </data>
+  <data name="NeedToCheckProfileHeader" xml:space="preserve">
+    <value>Go Online</value>
+  </data>
+  <data name="CoachingEditHabitSkipBody" xml:space="preserve">
+    <value>Are you sure you want to skip this event?</value>
+  </data>
+  <data name="Today" xml:space="preserve">
+    <value>Today</value>
+  </data>
+  <data name="HRZoneLabelVeryHard" xml:space="preserve">
+    <value>Very hard</value>
+  </data>
+  <data name="Speed" xml:space="preserve">
+    <value>avg speed</value>
+  </data>
+  <data name="Split" xml:space="preserve">
+    <value>split</value>
+  </data>
+  <data name="GolfSyncPageSubtitle2" xml:space="preserve">
+    <value>Remember to wear your Band on your leading arm, and don’t switch it mid-round!</value>
+  </data>
+  <data name="AddBandEnableBluetoothMessage" xml:space="preserve">
+    <value>Your phone's Bluetooth is currently disabled. Do you want to enable it?</value>
+  </data>
+  <data name="WeightTileNoContent" xml:space="preserve">
+    <value>Track your weight and stay on top of your health!</value>
+  </data>
+  <data name="OobeSensorV2EnableSubtitle" xml:space="preserve">
+    <value>Enable your phone’s motion tracking to count your Steps and Calories.</value>
+  </data>
+  <data name="SecondAbbreviation" xml:space="preserve">
+    <value>sec</value>
+  </data>
+  <data name="OobeLegalTermsPageHeader" xml:space="preserve">
+    <value>Terms and conditions</value>
+  </data>
+  <data name="PanelStatisticLabelSleepRestoration" xml:space="preserve">
+    <value>Sleep restoration</value>
+  </data>
+  <data name="EventTypeNameWorkoutLocked" xml:space="preserve">
+    <value>Workout</value>
+  </data>
+  <data name="AddBandPairedBandNotInOOBEMessage" xml:space="preserve">
+    <value>This Band has not been factory reset. You must factory reset this Band before registering it to your account.</value>
+  </data>
+  <data name="RunSettingsEditInfoForNeon" xml:space="preserve">
+    <value>Select three primary metrics and up to four secondary metrics that you want to track during your runs.</value>
+  </data>
+  <data name="GuidedWorkoutTile_Enablement" xml:space="preserve">
+    <value>Guided workouts are {0}</value>
+  </data>
+  <data name="WebTileHeaderLabel" xml:space="preserve">
+    <value>Add this tile to your Band?</value>
+  </data>
+  <data name="OobePersonalizeBandNameError" xml:space="preserve">
+    <value>We're unable to connect to your Microsoft Band. Please tap Retry to try again.</value>
+  </data>
+  <data name="StepsValueUnitStyledFormat" xml:space="preserve">
+    <value>{0:Value} {1:Unit}</value>
+  </data>
+  <data name="GeoLocationEastAbbreviation" xml:space="preserve">
+    <value>E</value>
+  </data>
+  <data name="BandLoadingText" xml:space="preserve">
+    <value>Grabbing some information from your Band...</value>
+  </data>
+  <data name="EventTypeNameSleeping" xml:space="preserve">
+    <value>Sleep</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypeBodyweightOneOff" xml:space="preserve">
+    <value>Bodyweight (one-off)</value>
+  </data>
+  <data name="CoachingEditHabitTimePickerLabel" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="PoundsPluralAbbreviation" xml:space="preserve">
+    <value>lbs</value>
+  </data>
+  <data name="GoalsTileOverAchievementSteps" xml:space="preserve">
+    <value>You've taken {0} steps more than your goal today!</value>
+  </data>
+  <data name="TileSettingsHeaderFormat" xml:space="preserve">
+    <value>{0} settings</value>
+  </data>
+  <data name="OobeSensorEnableNotEnabledSubtitle" xml:space="preserve">
+    <value>Don’t miss a beat—enable your phone’s motion tracking, and we'll fill in the gaps when you’re not wearing your Band.</value>
+  </data>
+  <data name="CoachingComingUpNoEventsTomorrow" xml:space="preserve">
+    <value>You’ve got nothing planned for tomorrow. Go to the web to set something up...</value>
+  </data>
+  <data name="CoachingTileNothingComingUp" xml:space="preserve">
+    <value>Nothing coming up</value>
+  </data>
+  <data name="GolfScorecardHoleColumnLabel" xml:space="preserve">
+    <value>HOLE</value>
+  </data>
+  <data name="MilesPerHourAbbreviation" xml:space="preserve">
+    <value>mph</value>
+  </data>
+  <data name="PivotPointsOfInterest" xml:space="preserve">
+    <value>points of interest</value>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>Continue</value>
+  </data>
+  <data name="FacebookMessengerSettings" xml:space="preserve">
+    <value>Facebook Messenger settings</value>
+  </data>
+  <data name="ShareDescription" xml:space="preserve">
+    <value>Share your progress and activity details (such as your fitness and wellbeing stats) on Facebook, email, text, or your favorite social network.</value>
+  </data>
+  <data name="PanelStatisticLabelMaxHeartRate" xml:space="preserve">
+    <value>Peak HR</value>
+  </data>
+  <data name="TileTitle_Cortana" xml:space="preserve">
+    <value>Cortana</value>
+  </data>
+  <data name="FirmwareUpdateState4BootingToUpdateMode" xml:space="preserve">
+    <value>Restarting Band...</value>
+  </data>
+  <data name="ShareBikeTitle" xml:space="preserve">
+    <value>I completed a ride with my Microsoft Band!</value>
+  </data>
+  <data name="GoalTileAlmostThereCalories" xml:space="preserve">
+    <value>Keep after it--you've almost hit your goal!</value>
+  </data>
+  <data name="WeightTrackingLastWeight" xml:space="preserve">
+    <value>Last weight</value>
+  </data>
+  <data name="EarlyUpdateInfoBullet2" xml:space="preserve">
+    <value>Participation in this program may void the warranty with your mobile operator and your device manufacturer.</value>
+  </data>
+  <data name="EarlyUpdateInfoBullet1" xml:space="preserve">
+    <value>Updates will come directly from Microsoft</value>
+  </data>
+  <data name="WorkoutRounds" xml:space="preserve">
+    <value>{0} rounds</value>
+  </data>
+  <data name="MeterDistanceUnitAbbrLocked" xml:space="preserve">
+    <value>m</value>
+  </data>
+  <data name="RegionSwitzerland" xml:space="preserve">
+    <value>Switzerland</value>
+  </data>
+  <data name="AddBandPairingTimeoutPageSubtitle" xml:space="preserve">
+    <value>Sorry, we couldn't find your Band. Make sure your Band is close by and try again.</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypeYogaOneOff" xml:space="preserve">
+    <value>Yoga (one-off)</value>
+  </data>
+  <data name="BestGoalDuration" xml:space="preserve">
+    <value>longest duration</value>
+  </data>
+  <data name="Charts_MinuteValueCompositeFormatString" xml:space="preserve">
+    <value>{0}m</value>
+  </data>
+  <data name="TrackerTotalFloors" xml:space="preserve">
+    <value>Total Floors *</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypeYogaMultiWeek" xml:space="preserve">
+    <value>Yoga (multi-week)</value>
+  </data>
+  <data name="AddBandConnectingText" xml:space="preserve">
+    <value>Connecting...</value>
+  </data>
+  <data name="KilogramsAbbreviation" xml:space="preserve">
+    <value>kg</value>
+  </data>
+  <data name="FacebookTile_Enablement" xml:space="preserve">
+    <value>Facebook notifications are {0}</value>
+  </data>
+  <data name="BandErrorBody" xml:space="preserve">
+    <value>Sorry, I can't find your Band. Please make sure it's nearby and paired to your phone.</value>
+  </data>
+  <data name="GesturesLabel" xml:space="preserve">
+    <value>Gestures</value>
+  </data>
+  <data name="GuidedWorkoutsCalendarTileSubTitleFormat" xml:space="preserve">
+    <value>{0}: {1}</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypeGolfingMultiWeek" xml:space="preserve">
+    <value>Golfing (multi-week)</value>
+  </data>
+  <data name="GolfScorecardEagleLegendLabel" xml:space="preserve">
+    <value>-2</value>
+  </data>
+  <data name="OobePersonalizeBandNameHeader" xml:space="preserve">
+    <value>Name your Band</value>
+  </data>
+  <data name="ActionPlanWeekDisplayFormat" xml:space="preserve">
+    <value>{0} to {1}</value>
+  </data>
+  <data name="ElevationGain" xml:space="preserve">
+    <value>elevation gain</value>
+  </data>
+  <data name="GolfCourseUnderValueUnitStyledFormat" xml:space="preserve">
+    <value>{0:Value} ({1:Unit})</value>
+  </data>
+  <data name="HeartRateStyledFormat" xml:space="preserve">
+    <value>{0:Value} {1:Unit}</value>
+  </data>
+  <data name="NetworkErrorTitle" xml:space="preserve">
+    <value>Network error</value>
+  </data>
+  <data name="MyBandNameLabel" xml:space="preserve">
+    <value>Band name</value>
+  </data>
+  <data name="WorkoutResultTimeHeader" xml:space="preserve">
+    <value>TIME</value>
+  </data>
+  <data name="CortanaActivationTips" xml:space="preserve">
+    <value>Press and hold Action on your Band to activate Cortana. Here are some of the things she can help you do.</value>
+  </data>
+  <data name="EditStepGoalUserPartOfPlanMessage" xml:space="preserve">
+    <value>Your steps goal is set by your Move More plan and can’t be changed here.</value>
+  </data>
+  <data name="AppBarNext" xml:space="preserve">
+    <value>next</value>
+  </data>
+  <data name="ShareExerciseMessage" xml:space="preserve">
+    <value>On {0} I burned {1} in {2} with my Microsoft Band.</value>
+  </data>
+  <data name="WorkoutNavigateManageTiles" xml:space="preserve">
+    <value>You don't have the Guided Workouts tile enabled on your Band. Do you want to adjust which tiles are enabled by going to Manage Tiles?</value>
+  </data>
+  <data name="EventSettingsMainSectionHeader" xml:space="preserve">
+    <value>Main</value>
+  </data>
+  <data name="HistoryNoResultsForFilterTypeMessage" xml:space="preserve">
+    <value>It looks like you haven't recorded any {0} yet</value>
+  </data>
+  <data name="HikeTileNoContent" xml:space="preserve">
+    <value>Hiking and walking energize your body. Go outside and explore today.</value>
+  </data>
+  <data name="LiveTileLastUpdatedFormat" xml:space="preserve">
+    <value>Updated: {0}</value>
+  </data>
+  <data name="NetPromoterScoreSubmitButtonLabel" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="SystemErrorBody" xml:space="preserve">
+    <value>Something went wrong. Please try again later.</value>
+  </data>
+  <data name="FirmwareUpdateSubtitle" xml:space="preserve">
+    <value>Hang tight, this may take a few minutes.</value>
+  </data>
+  <data name="WeightTrackingBmiUnderweight" xml:space="preserve">
+    <value>Underweight</value>
+  </data>
+  <data name="BikeTile_Enablement" xml:space="preserve">
+    <value>Bike tracking is {0}</value>
+  </data>
+  <data name="HikeLatitudeString" xml:space="preserve">
+    <value>Lat: {0} {1}° {2}' {3}"</value>
+  </data>
+  <data name="FirmwareUpdateState1NotStarted" xml:space="preserve">
+    <value>Preparing to update...</value>
+  </data>
+  <data name="EventTypeFilterNameRuns" xml:space="preserve">
+    <value>Runs</value>
+  </data>
+  <data name="EventTypeFilterNameGolf" xml:space="preserve">
+    <value>Golf</value>
+  </data>
+  <data name="EventTypeFilterNameBest" xml:space="preserve">
+    <value>Bests</value>
+  </data>
+  <data name="EventTypeFilterNameHike" xml:space="preserve">
+    <value>Walks</value>
+  </data>
+  <data name="CourseDetailSlopeRatingLabel" xml:space="preserve">
+    <value>Slope rating</value>
+  </data>
+  <data name="NoWorkoutDataFoundMessage" xml:space="preserve">
+    <value>No results found</value>
+  </data>
+  <data name="LoggingInLoadingText" xml:space="preserve">
+    <value>Logging in...</value>
+  </data>
+  <data name="CourseDetailWebsiteLinkText" xml:space="preserve">
+    <value>website</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypeStrengthOneOff" xml:space="preserve">
+    <value>Strength (one-off)</value>
+  </data>
+  <data name="EditCustomTagsPageHeader" xml:space="preserve">
+    <value>Create Exercise Labels</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypeRunningMultiWeek" xml:space="preserve">
+    <value>Running (multi-week)</value>
+  </data>
+  <data name="UseLiveTileLabel" xml:space="preserve">
+    <value>Live Tile</value>
+  </data>
+  <data name="WeightTrackingSaveWeightBlurb" xml:space="preserve">
+    <value>Monitoring your weight will help you maintain a healthy lifestyle.</value>
+  </data>
+  <data name="TrackerTotalBurned" xml:space="preserve">
+    <value>Total burn</value>
+  </data>
+  <data name="GolfLandingButtonRecent" xml:space="preserve">
+    <value>Recent</value>
+  </data>
+  <data name="WorkoutRound" xml:space="preserve">
+    <value>{0} round</value>
+  </data>
+  <data name="TitleFilterBy" xml:space="preserve">
+    <value>Filter by</value>
+  </data>
+  <data name="ProfileOutOfRangeErrorMessage" xml:space="preserve">
+    <value>Please enter a value between {0}-{1}{2}</value>
+  </data>
+  <data name="PanelStatisticLabelUvExposure" xml:space="preserve">
+    <value>UV Exposure (est) **</value>
+  </data>
+  <data name="AddBandPairingSuccessSubtitleText" xml:space="preserve">
+    <value>Your {0} is connected.</value>
+  </data>
+  <data name="GoalsReached" xml:space="preserve">
+    <value>You have reached your goal!</value>
+  </data>
+  <data name="ElapsedTimeAsTickWithMinutes" xml:space="preserve">
+    <value>{0}′{1:00}″</value>
+  </data>
+  <data name="BandErrorTitle" xml:space="preserve">
+    <value>Band error</value>
+  </data>
+  <data name="OobeConnectionSuccessSubState" xml:space="preserve">
+    <value>Your phone is paired with your Microsoft Band.</value>
+  </data>
+  <data name="WeatherCaptionDrizzle" xml:space="preserve">
+    <value>Drizzle</value>
+  </data>
+  <data name="Tiles_Gallery_Button" xml:space="preserve">
+    <value>Go to gallery</value>
+  </data>
+  <data name="GolfScorecardBirdieLegendLabel" xml:space="preserve">
+    <value>-1</value>
+  </data>
+  <data name="SyncState4UpdatingEphemeris" xml:space="preserve">
+    <value>updating ephemeris</value>
+  </data>
+  <data name="WebTileAuthenticationHeader" xml:space="preserve">
+    <value>Authentication required</value>
+  </data>
+  <data name="FirmwareVersionDebugAbbr" xml:space="preserve">
+    <value>D</value>
+  </data>
+  <data name="WeightTrackingSaveWeightButtonText" xml:space="preserve">
+    <value>Log today's weight</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypeYoga" xml:space="preserve">
+    <value>Yoga</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypeTime" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypeTask" xml:space="preserve">
+    <value>Task</value>
+  </data>
+  <data name="FacebookDuplicateBindingError" xml:space="preserve">
+    <value>This account is already connected to a Facebook account. Please try again with the original Facebook account you connected to.</value>
+  </data>
+  <data name="GuidedWorkoutSplitTileRestDay" xml:space="preserve">
+    <value>Today is a rest day</value>
+  </data>
+  <data name="SyncState6SyncingBandInstrumentation" xml:space="preserve">
+    <value>syncing instrumentation</value>
+  </data>
+  <data name="ProfileWelcomeMessage" xml:space="preserve">
+    <value>For accurate information and results, please answer a few questions.</value>
+  </data>
+  <data name="ProfileGenderLabel" xml:space="preserve">
+    <value>Gender</value>
+  </data>
+  <data name="ManageTilesChooseAppsLabel" xml:space="preserve">
+    <value>Choose which tiles appear on your Band.</value>
+  </data>
+  <data name="CortanaUpdateRequiredBody" xml:space="preserve">
+    <value>This version of Microsoft Health doesn't support speaking to Cortana. Please stay tuned for updates.</value>
+  </data>
+  <data name="PointOfInterestSunset" xml:space="preserve">
+    <value>Sunset</value>
+  </data>
+  <data name="AddBandStartNoBandButtonText" xml:space="preserve">
+    <value>I don't have a Band.</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypeRunning" xml:space="preserve">
+    <value>Running</value>
+  </data>
+  <data name="ManageTilesLabel" xml:space="preserve">
+    <value>Manage tiles</value>
+  </data>
+  <data name="ChartTodayLabel" xml:space="preserve">
+    <value>Today</value>
+  </data>
+  <data name="GettingReadyLoadingText" xml:space="preserve">
+    <value>Getting things ready...</value>
+  </data>
+  <data name="TileSettingsSubheaderFormat" xml:space="preserve">
+    <value>Enable {0} notifications on your Band.</value>
+  </data>
+  <data name="ValuePlusUnitLabelTimeSpanOneCharStyledFormat" xml:space="preserve">
+    <value>{0:Value}{1:Unit}</value>
+  </data>
+  <data name="NavigationMyPhone" xml:space="preserve">
+    <value>My phone</value>
+  </data>
+  <data name="SyncState7BandCrashDump" xml:space="preserve">
+    <value>crash dump</value>
+  </data>
+  <data name="WeightTrackingChangeLabelThreeMonth" xml:space="preserve">
+    <value>3 mo trend</value>
+  </data>
+  <data name="WeatherCaptionRainSnow" xml:space="preserve">
+    <value>Rain/Snow</value>
+  </data>
+  <data name="EarlyUpdateInfoTitle" xml:space="preserve">
+    <value>Sign up for Windows Phone Preview</value>
+  </data>
+  <data name="BandErrorMinStocksBody" xml:space="preserve">
+    <value>Your list must have at least one stock or index.</value>
+  </data>
+  <data name="SecondSingularFull" xml:space="preserve">
+    <value>second</value>
+  </data>
+  <data name="ActionPlanSleepMetricTwoTitle" xml:space="preserve">
+    <value>Bedtime consistency</value>
+  </data>
+  <data name="RunSettings" xml:space="preserve">
+    <value>Run settings</value>
+  </data>
+  <data name="WhatsNewPivotButtonLabel2bAnd3B" xml:space="preserve">
+    <value>Learn more about Microsoft Band 2</value>
+  </data>
+  <data name="RunData" xml:space="preserve">
+    <value>Data on active run screen</value>
+  </data>
+  <data name="EarlyUpdateInfoLearnMoreLink" xml:space="preserve">
+    <value>Learn more...</value>
+  </data>
+  <data name="ManageTilesMaxBody" xml:space="preserve">
+    <value>You've reached the maximum number of tiles. Please remove one or more, and try again.</value>
+  </data>
+  <data name="CourseDetailCourseRatingLabel" xml:space="preserve">
+    <value>Course rating</value>
+  </data>
+  <data name="StarbucksTile_Enablement" xml:space="preserve">
+    <value>Starbucks tiles are {0}</value>
+  </data>
+  <data name="LastUpdated" xml:space="preserve">
+    <value>Last updated</value>
+  </data>
+  <data name="BrowseWorkoutsFilterTitleType" xml:space="preserve">
+    <value>select a type</value>
+  </data>
+  <data name="TileTitle_Run" xml:space="preserve">
+    <value>Run</value>
+  </data>
+  <data name="GeoLocationSouthAbbreviation" xml:space="preserve">
+    <value>S</value>
+  </data>
+  <data name="WorkoutResultEndingHeartRate" xml:space="preserve">
+    <value>Ending heart rate</value>
+  </data>
+  <data name="WebTileAuthorLabel" xml:space="preserve">
+    <value>Author</value>
+  </data>
+  <data name="WorkoutRestBetween" xml:space="preserve">
+    <value>{0} | Rest: {1} between</value>
+  </data>
+  <data name="WeatherCaptionThunderstorm" xml:space="preserve">
+    <value>T-Storm</value>
+  </data>
+  <data name="PanelStatisticLabel1MinRecovery" xml:space="preserve">
+    <value>1 min</value>
+  </data>
+  <data name="AveragePaceLabel" xml:space="preserve">
+    <value>Avg Pace</value>
+  </data>
+  <data name="NavigationAddABand" xml:space="preserve">
+    <value>Add a Band</value>
+  </data>
+  <data name="FirmwareUpdateMessageBoxInterruptedErrorMessage" xml:space="preserve">
+    <value>You navigated away from the Microsoft Health app during a software update. Please make sure to keep the Microsoft Health app open while the software is being updated. Tap OK to retry the update.</value>
+  </data>
+  <data name="HelpAndFeedbackNavigationHelpAndSupport" xml:space="preserve">
+    <value>Help and support</value>
+  </data>
+  <data name="WorkoutBrowseFavorites" xml:space="preserve">
+    <value>Favorites</value>
+  </data>
+  <data name="GolfLandingPageTitle" xml:space="preserve">
+    <value>find a course</value>
+  </data>
+  <data name="SignInLoadingText" xml:space="preserve">
+    <value>We're logging you in to your Microsoft account...</value>
+  </data>
+  <data name="PanelNameButtonText" xml:space="preserve">
+    <value>name</value>
+  </data>
+  <data name="GoalTileAlmostThereSteps" xml:space="preserve">
+    <value>Almost there! Take a {0} walk to reach your daily goal.</value>
+  </data>
+  <data name="MessageBox_CasualNegative" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="SleepStatLight" xml:space="preserve">
+    <value>Light sleep</value>
+  </data>
+  <data name="GolfCourseNearbyPageHeader" xml:space="preserve">
+    <value>nearby</value>
+  </data>
+  <data name="CustomTagErrorText" xml:space="preserve">
+    <value>Please use letters and numbers only.</value>
+  </data>
+  <data name="PanelStatisticLabelBestSplit" xml:space="preserve">
+    <value>Best split</value>
+  </data>
+  <data name="GolfCourseBrowsePageHeaderRegions" xml:space="preserve">
+    <value>select a country/region</value>
+  </data>
+  <data name="ProfileOutOfRangeAgeErrorMessage" xml:space="preserve">
+    <value>You must be between {0} and {1} years old</value>
+  </data>
+  <data name="CortanaAlarmButton" xml:space="preserve">
+    <value>Alarm</value>
+  </data>
+  <data name="NoGolfCourseDataFoundTryLaterMessage" xml:space="preserve">
+    <value>That course isn't available yet. We're adding more courses every day. You can request a course by going to Help and feedback &gt; Report a problem.</value>
+  </data>
+  <data name="HikeLongitudeString" xml:space="preserve">
+    <value>Long: {0} {1}° {2}' {3}"</value>
+  </data>
+  <data name="MessagingTile_Enablement" xml:space="preserve">
+    <value>Text notifications are {0}</value>
+  </data>
+  <data name="CalculatedDistanceFootnoteText" xml:space="preserve">
+    <value>*Calculated distance</value>
+  </data>
+  <data name="SleepDeleteMessage" xml:space="preserve">
+    <value>Are you sure you want to delete this sleep?</value>
+  </data>
+  <data name="FirmwareVersion" xml:space="preserve">
+    <value>Band software version {0}</value>
+  </data>
+  <data name="AboutVersion" xml:space="preserve">
+    <value>Microsoft Health version</value>
+  </data>
+  <data name="DeleteWeightTitleText" xml:space="preserve">
+    <value>Delete weight?</value>
+  </data>
+  <data name="EventTypeFilterNameExercises" xml:space="preserve">
+    <value>Exercises</value>
+  </data>
+  <data name="RegionIreland" xml:space="preserve">
+    <value>Ireland</value>
+  </data>
+  <data name="BackgroundRegistrationError" xml:space="preserve">
+    <value>We're unable to register this background task. To sync your Band and receive notifications, go to Battery Saver and make sure it's enabled. If it's already enabled, disable some other apps.</value>
+  </data>
+  <data name="OobeSetupLoadingText" xml:space="preserve">
+    <value>We're getting you all set up...</value>
+  </data>
+  <data name="MailSettingsEnableNotifications" xml:space="preserve">
+    <value>Enable mail notifications on your Band.</value>
+  </data>
+  <data name="CountFormat" xml:space="preserve">
+    <value>{0}x</value>
+  </data>
+  <data name="GolfCourseBrowsePageHeaderStates" xml:space="preserve">
+    <value>select a state/province</value>
+  </data>
+  <data name="TableHeaderSpeed" xml:space="preserve">
+    <value>SPEED</value>
+  </data>
+  <data name="BestGoalFurthestRun" xml:space="preserve">
+    <value>furthest run</value>
+  </data>
+  <data name="LiveTileStepsLabel" xml:space="preserve">
+    <value>Steps</value>
+  </data>
+  <data name="FacebookMessengerTile_Enablement" xml:space="preserve">
+    <value>Facebook Messenger notifications are {0}</value>
+  </data>
+  <data name="ProfileBirthYearLabel" xml:space="preserve">
+    <value>Birth Year</value>
+  </data>
+  <data name="OnlineCommunicationProfileHeader" xml:space="preserve">
+    <value>Just a few seconds...</value>
+  </data>
+  <data name="NavigationReplaceMyBand" xml:space="preserve">
+    <value>Replace my Band</value>
+  </data>
+  <data name="ElevationStyledFormat" xml:space="preserve">
+    <value>{0:Value}{1:Unit}</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypeSwimmingOneOff" xml:space="preserve">
+    <value>Swimming (one-off)</value>
+  </data>
+  <data name="PanelStatisticLabelRecoveryTime" xml:space="preserve">
+    <value>Recovery Time</value>
+  </data>
+  <data name="ReportProblemPageTitle" xml:space="preserve">
+    <value>report a problem</value>
+  </data>
+  <data name="WorkoutButtonLabelStopPlan" xml:space="preserve">
+    <value>end this workout plan</value>
+  </data>
+  <data name="MilesAbbreviationLocked" xml:space="preserve">
+    <value>mi</value>
+  </data>
+  <data name="HistoryFilterUnitLabelCalories" xml:space="preserve">
+    <value>Calories</value>
+  </data>
+  <data name="NavigationDeviceSettingsLabel" xml:space="preserve">
+    <value>Device settings</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypeFootballMultiWeek" xml:space="preserve">
+    <value>Football (multi-week)</value>
+  </data>
+  <data name="ExerciseSettingsCustomizeLabel" xml:space="preserve">
+    <value>Customize</value>
+  </data>
+  <data name="HRZoneLabelEmpty" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ChartParFormat" xml:space="preserve">
+    <value>+{0}</value>
+  </data>
+  <data name="StepsPlural" xml:space="preserve">
+    <value>steps</value>
+  </data>
+  <data name="OobeSensorEnableBullet2" xml:space="preserve">
+    <value>Once enabled, return to this app.</value>
+  </data>
+  <data name="OobeSensorEnableBullet1" xml:space="preserve">
+    <value>Enable your phone's motion tracking to help collect Steps and Calories.</value>
+  </data>
+  <data name="Kilometers" xml:space="preserve">
+    <value>kilometers</value>
+  </data>
+  <data name="HelpAndFeedbackPageTitle" xml:space="preserve">
+    <value>help and feedback</value>
+  </data>
+  <data name="HRZoneLabelLight" xml:space="preserve">
+    <value>Light</value>
+  </data>
+  <data name="BikeSettingsEditInfoForNeon" xml:space="preserve">
+    <value>Select three primary metrics and up to four secondary metrics that you want to track during your ride.</value>
+  </data>
+  <data name="HRZoneLabelUnder" xml:space="preserve">
+    <value>Under</value>
+  </data>
+  <data name="ProfileHeightMetricLabel" xml:space="preserve">
+    <value>Height (cm)</value>
+  </data>
+  <data name="RegionBelgium" xml:space="preserve">
+    <value>Belgium</value>
+  </data>
+  <data name="ResetOobeMessageHeader" xml:space="preserve">
+    <value>Reset Oobe</value>
+  </data>
+  <data name="NoDataAvailable" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PanelStatisticLabelPeakHeartRate" xml:space="preserve">
+    <value>Peak</value>
+  </data>
+  <data name="WorkoutEstimatedRepsFormat" xml:space="preserve">
+    <value>{0}*</value>
+  </data>
+  <data name="LetYourMusclesRest" xml:space="preserve">
+    <value>Let your muscles recover today.</value>
+  </data>
+  <data name="PanelStatisticLabelAverageHeartRate" xml:space="preserve">
+    <value>Avg HR</value>
+  </data>
+  <data name="WorkoutFindMore" xml:space="preserve">
+    <value>find other workouts</value>
+  </data>
+  <data name="EnableLocationServicesPromptBody" xml:space="preserve">
+    <value>To enable this tile, go to your phone's settings, tap Location, and turn Location Services on.</value>
+  </data>
+  <data name="TeePickOptionDontKnow" xml:space="preserve">
+    <value>I’m not sure yet</value>
+  </data>
+  <data name="WorkoutMax" xml:space="preserve">
+    <value>Max</value>
+  </data>
+  <data name="WorkoutSet" xml:space="preserve">
+    <value>{0} set</value>
+  </data>
+  <data name="WorkoutRep" xml:space="preserve">
+    <value>{0} rep</value>
+  </data>
+  <data name="EditCalorieGoalLabel" xml:space="preserve">
+    <value>CALORIE GOAL</value>
+  </data>
+  <data name="PivotAll" xml:space="preserve">
+    <value>all</value>
+  </data>
+  <data name="ShareRunTitle" xml:space="preserve">
+    <value>I completed a run with my Microsoft Band!</value>
+  </data>
+  <data name="FirmwareUpdateState7Done" xml:space="preserve">
+    <value>All done!</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypeHikingOneOff" xml:space="preserve">
+    <value>Hiking (one-off)</value>
+  </data>
+  <data name="ReportProblemConfirmDescriptionSummaryHeader" xml:space="preserve">
+    <value>Description summary</value>
+  </data>
+  <data name="UseTransparentLiveTileLabel" xml:space="preserve">
+    <value>Transparency</value>
+  </data>
+  <data name="PanelStatisticLabelElevationGain" xml:space="preserve">
+    <value>Total gain</value>
+  </data>
+  <data name="PanelStatisticLabelElevationLoss" xml:space="preserve">
+    <value>Total loss</value>
+  </data>
+  <data name="WeightTrackingBmiBorderline" xml:space="preserve">
+    <value>Borderline high</value>
+  </data>
+  <data name="EarlyUpdateSuccessTitle" xml:space="preserve">
+    <value>Almost there…</value>
+  </data>
+  <data name="SMSQuickResponses" xml:space="preserve">
+    <value>SMS quick responses</value>
+  </data>
+  <data name="GuidedWorkoutSplitTileFindWorkout" xml:space="preserve">
+    <value>Find a workout</value>
+  </data>
+  <data name="PanelStatisticLabelAvgClimbRate" xml:space="preserve">
+    <value>Avg climb rate</value>
+  </data>
+  <data name="WorkoutMultipleSets" xml:space="preserve">
+    <value>{0} x {1}</value>
+  </data>
+  <data name="TimeSpanStyledFormat" xml:space="preserve">
+    <value>{0:None} {1:None}</value>
+  </data>
+  <data name="ElevationUnstyledFormat" xml:space="preserve">
+    <value>{0} {1}</value>
+  </data>
+  <data name="ChartHeartRateZoneFormat" xml:space="preserve">
+    <value>{0}-{1}</value>
+  </data>
+  <data name="CaloriesTile_Enablement" xml:space="preserve">
+    <value>Calories are {0}</value>
+  </data>
+  <data name="SplitMarkerSubheader" xml:space="preserve">
+    <value>Custom split marker</value>
+  </data>
+  <data name="AddBandMessageBody" xml:space="preserve">
+    <value>Would you like to add your new Microsoft Band?</value>
+  </data>
+  <data name="BandErrorMaxStocksBody" xml:space="preserve">
+    <value>Only seven stocks or indices are allowed. Please remove one or more.</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypeSwimmingMultiWeek" xml:space="preserve">
+    <value>Swimming (multi-week)</value>
+  </data>
+  <data name="WorkoutActivity_Exercise" xml:space="preserve">
+    <value>Exercise</value>
+  </data>
+  <data name="DataErrorMessageLocked" xml:space="preserve">
+    <value>We couldn't load the data. Please try again later.</value>
+  </data>
+  <data name="CourseDetailManageTilesDialogMessage" xml:space="preserve">
+    <value>You don’t have the Golf tile enabled on your Band. Do you want to adjust which tiles are enabled by going to Manage Tiles?</value>
+  </data>
+  <data name="StocksWatchlistHeader" xml:space="preserve">
+    <value>Watchlist</value>
+  </data>
+  <data name="GolfSplitTileSyncHeader" xml:space="preserve">
+    <value>Sync a new course</value>
+  </data>
+  <data name="EarlyUpdateEulaTitle" xml:space="preserve">
+    <value>Terms and Conditions for Windows Phone Preview for Microsoft Band users</value>
+  </data>
+  <data name="FreProfileTitle" xml:space="preserve">
+    <value>Your profile</value>
+  </data>
+  <data name="StarbucksHelp1" xml:space="preserve">
+    <value>Register your card at</value>
+  </data>
+  <data name="StarbucksHelp2" xml:space="preserve">
+    <value>to earn rewards, check your balance and protect your account.</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypeSoccerOneOff" xml:space="preserve">
+    <value>Soccer (one-off)</value>
+  </data>
+  <data name="MailListSubheader" xml:space="preserve">
+    <value>Receive mail notifications only from your most important contacts.
+Choose up to 10 people.</value>
+  </data>
+  <data name="HistoryItem_Name_AutoDetectedSleep_FormatString" xml:space="preserve">
+    <value>{0} (Detected)</value>
+  </data>
+  <data name="UpdatingTileMessage" xml:space="preserve">
+    <value>Updating...</value>
+  </data>
+  <data name="WorkoutLastRestDroppedInstructions" xml:space="preserve">
+    <value>{0} (*Last rest is dropped.)</value>
+  </data>
+  <data name="ShareMetricLabelAverageHeartRate" xml:space="preserve">
+    <value>Average HR</value>
+  </data>
+  <data name="CharacterRangeErrorMessage" xml:space="preserve">
+    <value>Please enter a value between {0}-{1} characters</value>
+  </data>
+  <data name="CortanaSettings" xml:space="preserve">
+    <value>Cortana Settings</value>
+  </data>
+  <data name="StarbucksLoginTextUS" xml:space="preserve">
+    <value>Starbucks.com</value>
+  </data>
+  <data name="StarbucksLoginTextUK" xml:space="preserve">
+    <value>Starbucks.co.uk</value>
+  </data>
+  <data name="ReportProblemIncludeDiagnosticBody" xml:space="preserve">
+    <value>Diagnostic Logs are a troubleshooting tool for developers. When including a Diagnostic Log, Microsoft Health sends a report that contains application-related data. Diagnostic Logs don't contain any Personally Identifiable Information (PII).</value>
+  </data>
+  <data name="ShowSocialTileLabel" xml:space="preserve">
+    <value>Show Social tile on Home.</value>
+  </data>
+  <data name="GolfScorecardTripleBogeyLegendLabel" xml:space="preserve">
+    <value>+3</value>
+  </data>
+  <data name="SyncState1NotStarted" xml:space="preserve">
+    <value>starting sync</value>
+  </data>
+  <data name="WebTileOrganizationLabel" xml:space="preserve">
+    <value>Organization</value>
+  </data>
+  <data name="ShareSleepTitleOnImage" xml:space="preserve">
+    <value>{0}, Sleep Session</value>
+  </data>
+  <data name="DisclaimerStairs" xml:space="preserve">
+    <value>* Stairs tracking available on Microsoft Band 2</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypeStrengthMultiWeek" xml:space="preserve">
+    <value>Strength (multi-week)</value>
+  </data>
+  <data name="WorkoutResultRound" xml:space="preserve">
+    <value>Round</value>
+  </data>
+  <data name="SMSEmptyResponseError" xml:space="preserve">
+    <value>You must have at least one response.</value>
+  </data>
+  <data name="InternetRequiredMessage" xml:space="preserve">
+    <value>Sorry, you are currently offline. Please check your connection and try again.</value>
+  </data>
+  <data name="RestingHRChartFlagLabel" xml:space="preserve">
+    <value>resting</value>
+  </data>
+  <data name="PivotOneMonth" xml:space="preserve">
+    <value>1 mo</value>
+  </data>
+  <data name="StartActivityErrorMessage" xml:space="preserve">
+    <value>No suitable applications found on device</value>
+  </data>
+  <data name="FirmwareUpdateErrorSubtitle" xml:space="preserve">
+    <value>Please try to install the latest update again.</value>
+  </data>
+  <data name="FirmwareUpdateMessage" xml:space="preserve">
+    <value>There's an update available for your Microsoft Band. This will only take a couple of moments. (Because this is a debug build, you have the option to cancel now and disable these notifications in the debug menu. This isn't recommended).
+
+Please update now to continue.</value>
+  </data>
+  <data name="FirmwareUpdateDialogTitle" xml:space="preserve">
+    <value>Software update</value>
+  </data>
+  <data name="TileFirstTimeUseGuidedWorkoutMessage" xml:space="preserve">
+    <value>Microsoft Band gives you access to expert, targeted workout routines and provides a detailed summary including reps, calories burned, and more.</value>
+  </data>
+  <data name="CortanaRemindersButton" xml:space="preserve">
+    <value>Reminders</value>
+  </data>
+  <data name="Kilograms" xml:space="preserve">
+    <value>kilograms</value>
+  </data>
+  <data name="HourSingularFullLocked" xml:space="preserve">
+    <value>hour</value>
+  </data>
+  <data name="SleepStatEfficiency" xml:space="preserve">
+    <value>Efficiency</value>
+  </data>
+  <data name="RetryButton" xml:space="preserve">
+    <value>retry</value>
+  </data>
+  <data name="TimeSpanFormatLocked" xml:space="preserve">
+    <value>{0} {1}</value>
+  </data>
+  <data name="CoachingPlanActivityBonusMinutesStyledFormat" xml:space="preserve">
+    <value>{0:Value} min</value>
+  </data>
+  <data name="ShareFacebookLearnMore" xml:space="preserve">
+    <value>See what's shared</value>
+  </data>
+  <data name="PanelStatisticLabelCalories" xml:space="preserve">
+    <value>Calories</value>
+  </data>
+  <data name="AddBandEnableBluetoothTitle" xml:space="preserve">
+    <value>Bluetooth disabled</value>
+  </data>
+  <data name="SignOutConfirmationMessage" xml:space="preserve">
+    <value>Would you like to sign out?</value>
+  </data>
+  <data name="FirmwareUpdateState5SendingUpdateToBand" xml:space="preserve">
+    <value>Installing software...</value>
+  </data>
+  <data name="LocationErrorBody" xml:space="preserve">
+    <value>To see nearby courses, go to your phone's settings, tap Location, and then turn Location Services on.</value>
+  </data>
+  <data name="EventTypeNameBiking" xml:space="preserve">
+    <value>Bike</value>
+  </data>
+  <data name="WeightTrackingBmiHigh" xml:space="preserve">
+    <value>High</value>
+  </data>
+  <data name="WeightTrackingBmiNote" xml:space="preserve">
+    <value>* Body Mass Index (BMI) is used as one measure to gauge risk for overall health problems.</value>
+  </data>
+  <data name="SensorCoreNotAvailableExceptionMessage" xml:space="preserve">
+    <value>Motion data isn't available.</value>
+  </data>
+  <data name="PanelStatisticLabelStartTime" xml:space="preserve">
+    <value>Start Time</value>
+  </data>
+  <data name="CoachingNewSleepTargetChangeQuestion" xml:space="preserve">
+    <value>How would you like to change your sleep timing?</value>
+  </data>
+  <data name="GolfLandingConnectedText" xml:space="preserve">
+    <value>Connected</value>
+  </data>
+  <data name="StocksWatchlistSubheader" xml:space="preserve">
+    <value>Follow up to seven stocks and indices on your Band.</value>
+  </data>
+  <data name="WebTileAuthenticationUsername" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="BandErrorNoRegisteredBandBody" xml:space="preserve">
+    <value>You don't have a Microsoft Band registered to you. Please tap "+" to register your Band.</value>
+  </data>
+  <data name="ChooserShareRun" xml:space="preserve">
+    <value>Share your run</value>
+  </data>
+  <data name="TitleFiltersLocked" xml:space="preserve">
+    <value>Filters</value>
+  </data>
+  <data name="WebTileInstallationMessage" xml:space="preserve">
+    <value>Adding a tile...</value>
+  </data>
+  <data name="CoachingPlanActivityMetricTwoTitle" xml:space="preserve">
+    <value>Average daily steps</value>
+  </data>
+  <data name="ChooserShareExercise" xml:space="preserve">
+    <value>Share your exercise</value>
+  </data>
+  <data name="CourseDetailManageTilesDialogTitle" xml:space="preserve">
+    <value>Manage tiles</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypeBasketballMultiWeek" xml:space="preserve">
+    <value>Basketball (multi-week)</value>
+  </data>
+  <data name="EventTypeNameWorkout" xml:space="preserve">
+    <value>Workout</value>
+  </data>
+  <data name="EditCustomTagsPageSubheader" xml:space="preserve">
+    <value>Enter an exercise label to track your custom exercises. These custom labels will use generic heart rate algorithms and actual results may vary depending on exercise type.</value>
+  </data>
+  <data name="OobePersonalizeHeader" xml:space="preserve">
+    <value>Now it's time to personalize your Microsoft Band.</value>
+  </data>
+  <data name="YardDistanceUnitAbbr" xml:space="preserve">
+    <value>yd</value>
+  </data>
+  <data name="MilesAbbreviation" xml:space="preserve">
+    <value>mi</value>
+  </data>
+  <data name="RestDay" xml:space="preserve">
+    <value>Rest day :)</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypeHikingMultiWeek" xml:space="preserve">
+    <value>Hiking (multi-week)</value>
+  </data>
+  <data name="SocialConnectAppPageTitleCallToAction" xml:space="preserve">
+    <value>Connect your crew, get moving, and get fit!</value>
+  </data>
+  <data name="GolfLandingButtonNearby" xml:space="preserve">
+    <value>Nearby</value>
+  </data>
+  <data name="NavigationFindGolfCourse" xml:space="preserve">
+    <value>Find a course</value>
+  </data>
+  <data name="BandErrorMailDuplicateBody" xml:space="preserve">
+    <value>That contact is already on the list.</value>
+  </data>
+  <data name="StarbucksHelp2_UK" xml:space="preserve">
+    <value>to earn rewards, top off your funds and protect your balance.</value>
+  </data>
+  <data name="HelpAndFeedbackNavigationRateUs" xml:space="preserve">
+    <value>Rate us</value>
+  </data>
+  <data name="PointOfInterestMidpoint" xml:space="preserve">
+    <value>Mid duration</value>
+  </data>
+  <data name="LiveTileLabel" xml:space="preserve">
+    <value>Home Tile</value>
+  </data>
+  <data name="DefaultMessageCannedResponses2" xml:space="preserve">
+    <value>I'm in a meeting.</value>
+  </data>
+  <data name="DefaultMessageCannedResponses1" xml:space="preserve">
+    <value>I'll call you back.</value>
+  </data>
+  <data name="HistoryFilterUnitLabelMetric" xml:space="preserve">
+    <value>Metric</value>
+  </data>
+  <data name="EarlyUpdateEulaLink" xml:space="preserve">
+    <value>View complete Terms and Conditions</value>
+  </data>
+  <data name="ShareSleepMessage" xml:space="preserve">
+    <value>On {0} I reached {1}% sleep efficiency with my Microsoft Band.</value>
+  </data>
+  <data name="MailListHeader" xml:space="preserve">
+    <value>VIP List</value>
+  </data>
+  <data name="StepsTileNoDataMessage" xml:space="preserve">
+    <value>Not wearing your Band? It's been a while since we've recorded any steps.</value>
+  </data>
+  <data name="SelectAllButton" xml:space="preserve">
+    <value>Select all</value>
+  </data>
+  <data name="WebTileDataSourceLabel" xml:space="preserve">
+    <value>Data source</value>
+  </data>
+  <data name="AddBandStartNeonLabel" xml:space="preserve">
+    <value>Microsoft Band 2</value>
+  </data>
+  <data name="HistoryFilterUnitLabelTime" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="SpeedFormat" xml:space="preserve">
+    <value>{0} {1}</value>
+  </data>
+  <data name="AddBandStatusPairingFailureTitle" xml:space="preserve">
+    <value>Unable to pair</value>
+  </data>
+  <data name="SingleDevicePolicyMismatched" xml:space="preserve">
+    <value>This Band isn't registered to you. If you want to use it, go to My Microsoft Band to register it.</value>
+  </data>
+  <data name="ShakeFeedbackConfirmationOKButton" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypeGolfingOneOff" xml:space="preserve">
+    <value>Golfing (one-off)</value>
+  </data>
+  <data name="FirmwareCheckingForUpdateMessage" xml:space="preserve">
+    <value>Checking for updates...</value>
+  </data>
+  <data name="WorkoutOverviewPanelTitle" xml:space="preserve">
+    <value>overview</value>
+  </data>
+  <data name="WorkoutNoCustomWorkouts" xml:space="preserve">
+    <value>No workouts to show yet—go to your dashboard to create a custom workout!</value>
+  </data>
+  <data name="CalorieTileGoalComplete" xml:space="preserve">
+    <value>{0}%</value>
+  </data>
+  <data name="UVTile_Enablement" xml:space="preserve">
+    <value>UV is {0}</value>
+  </data>
+  <data name="CortanaRemindersSubText" xml:space="preserve">
+    <value>Create a reminder</value>
+  </data>
+  <data name="HikeWaypointsClimbRate" xml:space="preserve">
+    <value>Climb rate</value>
+  </data>
+  <data name="LastWeightDeleteErrorBodyText" xml:space="preserve">
+    <value>We're unable to delete this entry. You need at least one value in your account.</value>
+  </data>
+  <data name="RegionDenmark" xml:space="preserve">
+    <value>Denmark</value>
+  </data>
+  <data name="WorkoutPlanFavorite" xml:space="preserve">
+    <value>Favorite</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypeBaseball" xml:space="preserve">
+    <value>Baseball</value>
+  </data>
+  <data name="CheckingFirmwareVersions" xml:space="preserve">
+    <value>Checking Band software versions...</value>
+  </data>
+  <data name="EarlyUpdateSuccessParagraph2" xml:space="preserve">
+    <value>After you’ve completed the update, you will have access to all the features that Microsoft Band has to offer!</value>
+  </data>
+  <data name="EarlyUpdateSuccessParagraph1" xml:space="preserve">
+    <value>You've signed up for Windows Phone Preview. Just follow these steps to complete updating your phone:</value>
+  </data>
+  <data name="CalendarSettingsEnableNotifications" xml:space="preserve">
+    <value>Enable calendar notifications on your Band.</value>
+  </data>
+  <data name="TileFirstTimeUseRunMetricMessage" xml:space="preserve">
+    <value>Microsoft Band can track your route, pace, time, heart rate, and calorie burn. It even lets you know when you've hit another kilometer.</value>
+  </data>
+  <data name="ElapsedTimeAsTickOnlySeconds" xml:space="preserve">
+    <value>{0}″</value>
+  </data>
+  <data name="ChartMaximumHeartRateZoneFormat" xml:space="preserve">
+    <value>{0}+</value>
+  </data>
+  <data name="EditCalorieGoalMessage" xml:space="preserve">
+    <value>Aligning your calorie goal to your fitness plan will create faster results.</value>
+  </data>
+  <data name="MarketingSignInWhyLinkTitle" xml:space="preserve">
+    <value>Why do I need a login?</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypeRunningOneOff" xml:space="preserve">
+    <value>Running (one-off)</value>
+  </data>
+  <data name="AddBandPairingPageTitle" xml:space="preserve">
+    <value>Pair your Band</value>
+  </data>
+  <data name="SingleDevicePolicyMultiplePaired" xml:space="preserve">
+    <value>Go to your phone's Bluetooth settings, and make sure that only one Band is paired.</value>
+  </data>
+  <data name="OobeSensorEnableNotEnabledTitle" xml:space="preserve">
+    <value>Almost done!</value>
+  </data>
+  <data name="ReportProblemDescriptionHeader" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="MinuteAbbreviationLocked" xml:space="preserve">
+    <value>min</value>
+  </data>
+  <data name="TileFirstTimeUseBikeMessage" xml:space="preserve">
+    <value>Microsoft Band can track your route, pace, time, heart rate, and calorie burn. It can even track your elevation gain.</value>
+  </data>
+  <data name="WorkoutButtonLabelStartPlan" xml:space="preserve">
+    <value>Make this your workout plan</value>
+  </data>
+  <data name="ReportProblemMaxImageAmountExceededMessage" xml:space="preserve">
+    <value>You cannot attach more than five images.</value>
+  </data>
+  <data name="SleepStatTimeToFallAsleep" xml:space="preserve">
+    <value>Time to fall asleep</value>
+  </data>
+  <data name="AccountInfoLoadingText" xml:space="preserve">
+    <value>We're getting your account info...</value>
+  </data>
+  <data name="SpeedStyledFormat" xml:space="preserve">
+    <value>{0:Value}{1:Unit}</value>
+  </data>
+  <data name="FirmwareUpdateMessageBoxBandUpToDateHeader" xml:space="preserve">
+    <value>Latest software</value>
+  </data>
+  <data name="GolfScorecardConnectMessage" xml:space="preserve">
+    <value>For future rounds, you can connect to TaylorMade to see a map of your shots on each hole.</value>
+  </data>
+  <data name="CaloriesTileNoDataMessage" xml:space="preserve">
+    <value>Wear your Band for an accurate count.</value>
+  </data>
+  <data name="EventTileLoadingSubheader" xml:space="preserve">
+    <value>Updating with your last {0}...</value>
+  </data>
+  <data name="BandErrorDuplicateStockBody" xml:space="preserve">
+    <value>That symbol is already in your list.</value>
+  </data>
+  <data name="HourPluralFullLocked" xml:space="preserve">
+    <value>hours</value>
+  </data>
+  <data name="CoachingPlanActivityProgressHeader" xml:space="preserve">
+    <value>Move more plan</value>
+  </data>
+  <data name="TileTitle_Weight" xml:space="preserve">
+    <value>Weight</value>
+  </data>
+  <data name="RegionGermany" xml:space="preserve">
+    <value>Germany</value>
+  </data>
+  <data name="YesterdayDateString" xml:space="preserve">
+    <value>Yesterday</value>
+  </data>
+  <data name="CortanaVoiceNotesSubText" xml:space="preserve">
+    <value>Create a quick note</value>
+  </data>
+  <data name="WorkoutUploadFailureAndRetry" xml:space="preserve">
+    <value>We're having trouble communicating with your Band. Make sure your Band is near your phone. Do you want to try again?</value>
+  </data>
+  <data name="FirmwareUpdateMessageBoxOptionalUpdateHeader" xml:space="preserve">
+    <value>Software update available</value>
+  </data>
+  <data name="TileFirstTimeUseExerciseMessage" xml:space="preserve">
+    <value>Microsoft Band gives you a detailed summary including calories burned, and more.</value>
+  </data>
+  <data name="ShakeFeedbackLabel" xml:space="preserve">
+    <value>Shake phone to send feedback</value>
+  </data>
+  <data name="EventTypeNameGolf" xml:space="preserve">
+    <value>Golf</value>
+  </data>
+  <data name="EventTypeNameBest" xml:space="preserve">
+    <value>Best</value>
+  </data>
+  <data name="EventTypeNameHike" xml:space="preserve">
+    <value>Walk</value>
+  </data>
+  <data name="AddBandStartCancelButtonText" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="WorkoutAlreadySubscribedTitle" xml:space="preserve">
+    <value>Stop previous plan</value>
+  </data>
+  <data name="GolfTileNoContent" xml:space="preserve">
+    <value>Get out there to play a round!</value>
+  </data>
+  <data name="LiveTileSettings" xml:space="preserve">
+    <value>Live Tile settings</value>
+  </data>
+  <data name="SingleDevicePolicyExceptionMessage" xml:space="preserve">
+    <value>The single device policy could not be enforced.</value>
+  </data>
+  <data name="RestingHRChartFlagLabelFormat" xml:space="preserve">
+    <value>{0} resting</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypeSoccerMultiWeek" xml:space="preserve">
+    <value>Soccer (multi-week)</value>
+  </data>
+  <data name="WorkoutScheduleWorkoutOnBand" xml:space="preserve">
+    <value>On Band</value>
+  </data>
+  <data name="ApplicationTitle" xml:space="preserve">
+    <value>Microsoft Health</value>
+  </data>
+  <data name="Charts_PaceMetricSystemValueCompositeFormatString" xml:space="preserve">
+    <value>{0} min/km</value>
+  </data>
+  <data name="HourPluralFull" xml:space="preserve">
+    <value>hours</value>
+  </data>
+  <data name="RegionAustralia" xml:space="preserve">
+    <value>Australia</value>
+  </data>
+  <data name="FirmwareUpdateMessageBoxBandUpToDateMessage" xml:space="preserve">
+    <value>Your Microsoft Band is running the latest software version available.</value>
+  </data>
+  <data name="BandErrorTileCapacityBody" xml:space="preserve">
+    <value>You've reached the maximum number of tiles. Please remove one or more and try again.</value>
+  </data>
+  <data name="ActionPlanSleepMetricThreeTitle" xml:space="preserve">
+    <value>Wake time consistency</value>
+  </data>
+  <data name="SecondSingularFullLocked" xml:space="preserve">
+    <value>second</value>
+  </data>
+  <data name="RegionSpain" xml:space="preserve">
+    <value>Spain</value>
+  </data>
+  <data name="PivotSummary" xml:space="preserve">
+    <value>summary</value>
+  </data>
+  <data name="RegionItaly" xml:space="preserve">
+    <value>Italy</value>
+  </data>
+  <data name="ActionPlanProgressWeeklySubheader" xml:space="preserve">
+    <value>Your progress this week</value>
+  </data>
+  <data name="RegionNetherlands" xml:space="preserve">
+    <value>Netherlands</value>
+  </data>
+  <data name="WorkoutSchedulePanelTitle" xml:space="preserve">
+    <value>schedule</value>
+  </data>
+  <data name="RegionJapan" xml:space="preserve">
+    <value>Japan</value>
+  </data>
+  <data name="RegionKorea" xml:space="preserve">
+    <value>Korea</value>
+  </data>
+  <data name="UnknownErrorBody" xml:space="preserve">
+    <value>An unknown error occurred with your Band.</value>
+  </data>
+  <data name="RegionChina" xml:space="preserve">
+    <value>China</value>
+  </data>
+  <data name="TaskCancelledErrorHeader" xml:space="preserve">
+    <value>Time out</value>
+  </data>
+  <data name="UpdatingLoadingText" xml:space="preserve">
+    <value>Updating...</value>
+  </data>
+  <data name="PointOfInterestMinElevation" xml:space="preserve">
+    <value>Min elevation</value>
+  </data>
+  <data name="UnitFormat" xml:space="preserve">
+    <value>{0} {1}</value>
+  </data>
+  <data name="TileTitle_Stocks" xml:space="preserve">
+    <value>Finance</value>
+  </data>
+  <data name="NotificationCenterSettingsHeader" xml:space="preserve">
+    <value>Notification Center settings</value>
+  </data>
+  <data name="LiveTileCaloriesLabel" xml:space="preserve">
+    <value>Calories</value>
+  </data>
+  <data name="WeightTrackingBmiNormal" xml:space="preserve">
+    <value>Normal weight</value>
+  </data>
+  <data name="BestGoalBurn" xml:space="preserve">
+    <value>best burn</value>
+  </data>
+  <data name="BestGoalPace" xml:space="preserve">
+    <value>best avg pace</value>
+  </data>
+  <data name="WhatsNewPivotButtonLabel4" xml:space="preserve">
+    <value>Get started</value>
+  </data>
+  <data name="WhatsNewPivotButtonLabel5" xml:space="preserve">
+    <value>Find a Guided Workout</value>
+  </data>
+  <data name="WhatsNewPivotButtonLabel6" xml:space="preserve">
+    <value>Find your favorite course</value>
+  </data>
+  <data name="WhatsNewPivotButtonLabel1" xml:space="preserve">
+    <value>Get started</value>
+  </data>
+  <data name="WhatsNewPivotButtonLabel2" xml:space="preserve">
+    <value>Subscribe now</value>
+  </data>
+  <data name="WhatsNewPivotButtonLabel3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WhatsNewPivotHeader3" xml:space="preserve">
+    <value>Microsoft Health app for Windows 10</value>
+  </data>
+  <data name="WhatsNewPivotHeader2" xml:space="preserve">
+    <value>Sign up for your weekly highlights email</value>
+  </data>
+  <data name="WhatsNewPivotHeader1" xml:space="preserve">
+    <value>Get out and explore with Microsoft Band 2 and the Explore tile</value>
+  </data>
+  <data name="WhatsNewPivotHeader6" xml:space="preserve">
+    <value>Play golf like a pro</value>
+  </data>
+  <data name="WhatsNewPivotHeader5" xml:space="preserve">
+    <value>Track your guided workouts with GPS</value>
+  </data>
+  <data name="WhatsNewPivotHeader4" xml:space="preserve">
+    <value>Connect and compete with your friends</value>
+  </data>
+  <data name="KDKPermissionBindToServiceLabel" xml:space="preserve">
+    <value>Permission to Bind to Microsoft Health's Third-party Service</value>
+  </data>
+  <data name="OobeSensorEnableEnabledSubtitle" xml:space="preserve">
+    <value>Let's get moving!</value>
+  </data>
+  <data name="SyncNotificationTitle" xml:space="preserve">
+    <value>Microsoft Health</value>
+  </data>
+  <data name="CalendarTile_Enablement" xml:space="preserve">
+    <value>Calendar events are {0}</value>
+  </data>
+  <data name="PendingFirmwareUpdateSummary" xml:space="preserve">
+    <value>We couldn't sync with your Band.</value>
+  </data>
+  <data name="WorkoutDeleteMessage" xml:space="preserve">
+    <value>Are you sure you want to delete this workout?</value>
+  </data>
+  <data name="AverageAbbreviation" xml:space="preserve">
+    <value>Avg</value>
+  </data>
+  <data name="ReplaceBandMessageBody" xml:space="preserve">
+    <value>Would you like to add your new Microsoft Band?  This will unregister your existing Band and it will no longer sync with your account.</value>
+  </data>
+  <data name="MyProfileTitle" xml:space="preserve">
+    <value>My profile</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypeBikingOneOff" xml:space="preserve">
+    <value>Biking (one-off)</value>
+  </data>
+  <data name="ShareEventButtonText" xml:space="preserve">
+    <value>share</value>
+  </data>
+  <data name="RegionNewZealand" xml:space="preserve">
+    <value>New Zealand</value>
+  </data>
+  <data name="BackgroundRegistrationErrorTitle" xml:space="preserve">
+    <value>Background task warning</value>
+  </data>
+  <data name="BikeTileNoContent" xml:space="preserve">
+    <value>Going for a bike ride? Track your route and performance.</value>
+  </data>
+  <data name="FiltersClearAll" xml:space="preserve">
+    <value>Clear all</value>
+  </data>
+  <data name="ActionPlanProgressError" xml:space="preserve">
+    <value>There was a problem and we couldn't get your progress information.</value>
+  </data>
+  <data name="ManageTilesDisableThirdPartyBody" xml:space="preserve">
+    <value>You're removing one or more tiles. To turn them back on, you have to return to their respective apps. Okay to continue?</value>
+  </data>
+  <data name="Tiles_Gallery_Text_No_Developer_Tiles" xml:space="preserve">
+    <value>You haven't added any tiles to your Band. See what's available in our Tile Gallery.</value>
+  </data>
+  <data name="RegionSingapore" xml:space="preserve">
+    <value>Singapore</value>
+  </data>
+  <data name="NetPromoterScorePersonalInfoLabel" xml:space="preserve">
+    <value>Do not include any personally identifiable information (address, email, etc.).</value>
+  </data>
+  <data name="MailSettings" xml:space="preserve">
+    <value>Mail settings</value>
+  </data>
+  <data name="GolfLandingButtonRequestCourse" xml:space="preserve">
+    <value>Request a course</value>
+  </data>
+  <data name="PanelStatisticLabelLongestDrive" xml:space="preserve">
+    <value>Longest drive</value>
+  </data>
+  <data name="BikeSettingsDrawerSectionHeader" xml:space="preserve">
+    <value>Drawer</value>
+  </data>
+  <data name="WeightFormat" xml:space="preserve">
+    <value>{0} {1}</value>
+  </data>
+  <data name="KilometersPerHourAbbreviation" xml:space="preserve">
+    <value>km/h</value>
+  </data>
+  <data name="CasualBooleanYes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="ChartElevationFormat" xml:space="preserve">
+    <value>{0} {1}</value>
+  </data>
+  <data name="WebTileAuthenticationFailureLabel" xml:space="preserve">
+    <value>Invalid username or password. Please re-enter your credentials.</value>
+  </data>
+  <data name="CoachingNewSleepTargetChangeDecline" xml:space="preserve">
+    <value>I don’t want to change my sleep timing</value>
+  </data>
+  <data name="ShareTwitterDescription" xml:space="preserve">
+    <value>Check out my session!</value>
+  </data>
+  <data name="SleepTile_Enablement" xml:space="preserve">
+    <value>Sleep tracking is {0}</value>
+  </data>
+  <data name="RunSettingsInfo" xml:space="preserve">
+    <value>You can keep track of your performance by locking your preferred data points to the Run screen.
+
+During a run, you can also double-press Action to cycle through your metrics.</value>
+  </data>
+  <data name="ShakeFeedbackConfirmationTitle" xml:space="preserve">
+    <value>Shake to send feedback</value>
+  </data>
+  <data name="StarbucksCardNumber" xml:space="preserve">
+    <value>Starbucks Card Number</value>
+  </data>
+  <data name="StarbucksSettings" xml:space="preserve">
+    <value>Starbucks Card settings</value>
+  </data>
+  <data name="BikeSettingsMainSectionHeader" xml:space="preserve">
+    <value>Main</value>
+  </data>
+  <data name="TwitterTile_Enablement" xml:space="preserve">
+    <value>Twitter notifications are {0}</value>
+  </data>
+  <data name="SleepStatRest" xml:space="preserve">
+    <value>Resting HR</value>
+  </data>
+  <data name="SleepStatDeep" xml:space="preserve">
+    <value>Restful sleep</value>
+  </data>
+  <data name="SleepStatCals" xml:space="preserve">
+    <value>Calories burned</value>
+  </data>
+  <data name="SleepTileNoContent" xml:space="preserve">
+    <value>Ever wonder what your sleep is like? Track it tonight to find out.</value>
+  </data>
+  <data name="CortanaVoiceNotesButton" xml:space="preserve">
+    <value>Voice notes</value>
+  </data>
+  <data name="Statistic_PercentageValueCompositeFormatString" xml:space="preserve">
+    <value>{0}%</value>
+  </data>
+  <data name="SocialLabel" xml:space="preserve">
+    <value>Social</value>
+  </data>
+  <data name="CoachingNewSleepTargetLaterWakeUp" xml:space="preserve">
+    <value>Wake up later</value>
+  </data>
+  <data name="GolfSummaryFindAGolfCourseButton" xml:space="preserve">
+    <value>find a golf course</value>
+  </data>
+  <data name="GolfCourseOverParValueUnitStyledFormat" xml:space="preserve">
+    <value>{0:Value} (+{1:Unit})</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypeSwimming" xml:space="preserve">
+    <value>Swimming</value>
+  </data>
+  <data name="CoachingNewSleepTargetIncreaseQuestion" xml:space="preserve">
+    <value>How would you like to spend your extra {0} minutes?</value>
+  </data>
+  <data name="TitleActivitySignIn" xml:space="preserve">
+    <value>sign in</value>
+  </data>
+  <data name="CoachingPlanActivityMetricTwoMissingTitle" xml:space="preserve">
+    <value>No cardio minutes goal this week</value>
+  </data>
+  <data name="HistoryFilterUnitLabelScore" xml:space="preserve">
+    <value>Score</value>
+  </data>
+  <data name="PaymentCard" xml:space="preserve">
+    <value>Payment card</value>
+  </data>
+  <data name="RegionTaiwan" xml:space="preserve">
+    <value>Taiwan</value>
+  </data>
+  <data name="SleepContinuousTrackingMessage" xml:space="preserve">
+    <value>To ensure continuous sleep tracking, make sure your Band sits snugly on your wrist.</value>
+  </data>
+  <data name="DeleteTitle" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="LabelConfirm" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="CoachingNewSleepTargetTitle" xml:space="preserve">
+    <value>Based on your recent sleep, we have a new time in bed recommendation for you</value>
+  </data>
+  <data name="ShakeFeedbackConfirmationMessage" xml:space="preserve">
+    <value>Your feedback and suggestions help us improve Microsoft Health. To disable the Shake gesture, visit Preferences.</value>
+  </data>
+  <data name="SMSReplyHeader4" xml:space="preserve">
+    <value>Reply 4</value>
+  </data>
+  <data name="SMSReplyHeader1" xml:space="preserve">
+    <value>Reply 1</value>
+  </data>
+  <data name="SMSReplyHeader3" xml:space="preserve">
+    <value>Reply 3</value>
+  </data>
+  <data name="SMSReplyHeader2" xml:space="preserve">
+    <value>Reply 2</value>
+  </data>
+  <data name="BrowseWorkoutsFeaturedTitle" xml:space="preserve">
+    <value>Featured</value>
+  </data>
+  <data name="AddBandEnableNotificationsPageTitle" xml:space="preserve">
+    <value>Enable Notifications</value>
+  </data>
+  <data name="WeatherCaptionRain" xml:space="preserve">
+    <value>Rain</value>
+  </data>
+  <data name="WeatherCaptionSand" xml:space="preserve">
+    <value>Sand</value>
+  </data>
+  <data name="WeatherCaptionSnow" xml:space="preserve">
+    <value>Snow</value>
+  </data>
+  <data name="WeatherCaptionFair" xml:space="preserve">
+    <value>Fair</value>
+  </data>
+  <data name="WeatherCaptionDust" xml:space="preserve">
+    <value>Dust</value>
+  </data>
+  <data name="WeatherCaptionHaze" xml:space="preserve">
+    <value>Haze</value>
+  </data>
+  <data name="WeatherCaptionHail" xml:space="preserve">
+    <value>Hail</value>
+  </data>
+  <data name="TodayDateString" xml:space="preserve">
+    <value>Today</value>
+  </data>
+  <data name="GolfLandingButtonBrowseRegion" xml:space="preserve">
+    <value>Browse by Country/Region</value>
+  </data>
+  <data name="BluetoothSupportDisabledWindowsDesktop" xml:space="preserve">
+    <value>Please plug in your Band to sync your data. Bluetooth is not supported at this time.</value>
+  </data>
+  <data name="TwitterSettingsEnableNotifications" xml:space="preserve">
+    <value>Enable Twitter notifications on your Band.</value>
+  </data>
+  <data name="SavingProfileLoadingText" xml:space="preserve">
+    <value>We're saving your settings...</value>
+  </data>
+  <data name="TileTitle_Messaging" xml:space="preserve">
+    <value>Messaging</value>
+  </data>
+  <data name="WorkoutResultsNameHeader" xml:space="preserve">
+    <value>NAME</value>
+  </data>
+  <data name="ResetOobeMessage" xml:space="preserve">
+    <value>Unable to reset the oobe status, please retry.</value>
+  </data>
+  <data name="PanelStatisticLabelFitnessBenefit" xml:space="preserve">
+    <value>Cardio benefit</value>
+  </data>
+  <data name="SearchAppsPlaceholder" xml:space="preserve">
+    <value>Search apps</value>
+  </data>
+  <data name="BikeSettingsEditInfo" xml:space="preserve">
+    <value>Select three primary metrics that you want to track during your ride.</value>
+  </data>
+  <data name="OobeSensorEnableEnabledInfoSubtitle" xml:space="preserve">
+    <value>Microsoft Health is using your phone's motion tracking to help collect Steps and Calories. Let's get moving!</value>
+  </data>
+  <data name="TileTitle_FacebookMessenger" xml:space="preserve">
+    <value>Facebook Messenger</value>
+  </data>
+  <data name="OobeSensorCorePageTitle" xml:space="preserve">
+    <value>Enable motion tracking</value>
+  </data>
+  <data name="AddBandEnableNotificationsEnableButtonText" xml:space="preserve">
+    <value>Enable</value>
+  </data>
+  <data name="PanelStatisticLabelSteps" xml:space="preserve">
+    <value>Steps</value>
+  </data>
+  <data name="EstimatedRepsFootnoteText" xml:space="preserve">
+    <value>*Estimated number of reps</value>
+  </data>
+  <data name="NoDataMessageLocked" xml:space="preserve">
+    <value>No data was found.</value>
+  </data>
+  <data name="PanelStatisticLabelAverageSpeed" xml:space="preserve">
+    <value>Average speed</value>
+  </data>
+  <data name="SleepChartLegendAwake" xml:space="preserve">
+    <value>Awake</value>
+  </data>
+  <data name="TitleFilters" xml:space="preserve">
+    <value>Filters</value>
+  </data>
+  <data name="SleepStatNumWake" xml:space="preserve">
+    <value>Woke up</value>
+  </data>
+  <data name="CountUnit" xml:space="preserve">
+    <value>x</value>
+  </data>
+  <data name="TileTitle_UV" xml:space="preserve">
+    <value>UV</value>
+  </data>
+  <data name="NotificationNotSupportedInWinPhoneBlue" xml:space="preserve">
+    <value>Notifications are not supported in this version of Windows Phone.</value>
+  </data>
+  <data name="SyncState5UpdatingTimeZoneData" xml:space="preserve">
+    <value>updating time zone</value>
+  </data>
+  <data name="GolfSearchNoResultsMessage" xml:space="preserve">
+    <value>That course isn’t available. We’re always adding more courses—let us know if there’s one you’d like us to add!</value>
+  </data>
+  <data name="PivotSplits" xml:space="preserve">
+    <value>splits</value>
+  </data>
+  <data name="EnableNotificationsPromptBodyFormat" xml:space="preserve">
+    <value>To enable notifications for {0}, go to your phone's settings, tap Accessory Apps, and turn the switch on for {1}.</value>
+  </data>
+  <data name="ChooserShareSleep" xml:space="preserve">
+    <value>Share your sleep session</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypePilatesMultiWeek" xml:space="preserve">
+    <value>Pilates (multi-week)</value>
+  </data>
+  <data name="BrowseWorkoutFilterTypeTriathlonMultiWeek" xml:space="preserve">
+    <value>Triathlon (multi-week)</value>
+  </data>
+  <data name="CoachingNewSleepTargetTimeLabel" xml:space="preserve">
+    <value>New recommended time in bed</value>
+  </data>
+  <data name="TimeoutErrorBody" xml:space="preserve">
+    <value>The operation timed out. Please try again.</value>
+  </data>
+  <data name="CoachingEditHabitNameLabel" xml:space="preserve">
+    <value>{0}:</value>
+  </data>
+  <data name="StarbucksAddCardMessage" xml:space="preserve">
+    <value>Add your Starbucks Card to your Band for easy payment at Starbucks stores.</value>
+  </data>
+  <data name="CoachingPlanActivityMetricThreeMissingTitle" xml:space="preserve">
+    <value>No strength goal this week</value>
+  </data>
+  <data name="RegionPoland" xml:space="preserve">
+    <value>Poland</value>
+  </data>
+  <data name="RegionSaudiArabia" xml:space="preserve">
+    <value>Saudi Arabia</value>
+  </data>
+  <data name="ShareDashboardCallToAction" xml:space="preserve">
+    <value>Check out my full session!</value>
+  </data>
+  <data name="WorkoutUploadBandNotRegistered" xml:space="preserve">
+    <value>You don't have a Microsoft Band registered to you. Tap "+" on the home screen to add a Band before attempting to sync a workout.</value>
+  </data>
+  <data name="FirmwareVersionFormat" xml:space="preserve">
+    <value>{0} {1:00} {2}</value>
+  </data>
+  <data name="FirmwareUpdateStepText" xml:space="preserve">
+    <value>Step {0} of {1}</value>
+  </data>
+  <data name="FindWorkoutsResultsTitle" xml:space="preserve">
+    <value>Results</value>
+  </data>
+  <data name="KilometersAbbreviationLocked" xml:space="preserve">
+    <value>km</value>
+  </data>
+  <data name="AddBandTimeToPairText" xml:space="preserve">
+    <value>It's time to pair your Microsoft Band to your mobile phone.</value>
+  </data>
+  <data name="GolfCourseUnderParValueUnitStyledFormat" xml:space="preserve">
+    <value>{0:Value} ({1:Unit})</value>
+  </data>
+  <data name="RetryLink" xml:space="preserve">
+    <value>Try again.</value>
+  </data>
+  <data name="ProfileMarketingOptIn" xml:space="preserve">
+    <value>I'd like to receive information, offers, surveys, and other Microsoft Health related content in email.</value>
+  </data>
+  <data name="CoachingInisghtDismissButton" xml:space="preserve">
+    <value>Dismiss</value>
+  </data>
+  <data name="ShareBikeMessage" xml:space="preserve">
+    <value>On {0} I completed a {1} bike ride with my Microsoft Band.</value>
+  </data>
+  <data name="WorkoutLabelBodyParts" xml:space="preserve">
+    <value>Body Part(s)</value>
+  </data>
+  <data name="LiveTileBatteryLabel" xml:space="preserve">
+    <value>Battery level</value>
+  </data>
+  <data name="CallsSettingsEnableNotifications" xml:space="preserve">
+    <value>Enable call notifications on your Band.</value>
+  </data>
+  <data name="EarlyUpdateDownloadPrompt" xml:space="preserve">
+    <value>Go to Settings &gt; Phone update to download this update.</value>
+  </data>
+  <data name="Feet" xml:space="preserve">
+    <value>feet</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="GolfLandingButtonManageAppsText" xml:space="preserve">
+    <value>Manage</value>
+  </data>
+  <data name="FeaturedWorkoutsDefaultTitle" xml:space="preserve">
+    <value>Guided Workouts</value>
+  </data>
+  <data name="GolfScorecardTeesPlayedFormatString" xml:space="preserve">
+    <value>Tees played: {0}</value>
+  </data>
+  <data name="RegionFormatLabel" xml:space="preserve">
+    <value>Choose your region</value>
+  </data>
+  <data name="TitleHistory" xml:space="preserve">
+    <value>activity history</value>
+  </data>
+  <data name="PanelDeleteButtonText" xml:space="preserve">
+    <value>delete</value>
+  </data>
+  <data name="NoDataMessage" xml:space="preserve">
+    <value>No data was found.</value>
+  </data>
+  <data name="AddBandEnableBluetoothFailedMessage" xml:space="preserve">
+    <value>Failed to enable Bluetooth.</value>
+  </data>
+  <data name="TileFirstTimeUseGolfLearnMore" xml:space="preserve">
+    <value>Find a golf course</value>
+  </data>
+  <data name="PivotWeekly" xml:space="preserve">
+    <value>week</value>
+  </data>
+  <data name="NetPromoterScorePageTitle" xml:space="preserve">
+    <value>We’d love to get your feedback!</value>
+  </data>
+  <data name="MySensorCorePhoneDisabled" xml:space="preserve">
+    <value>Disabled</value>
+  </data>
+  <data name="PanelStatisticLabelRestingTime" xml:space="preserve">
+    <value>Resting time</value>
+  </data>
+</root>
