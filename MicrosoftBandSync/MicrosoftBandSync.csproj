@@ -809,5 +809,31 @@
   <ItemGroup>
     <None Include="app.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Microsoft_Band\Microsoft.Band.csproj">
+      <Project>{7ac5b21c-e909-4d66-a9bc-f92525720e49}</Project>
+      <Name>Microsoft.Band</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft_Band_Admin\Microsoft.Band.Admin.csproj">
+      <Project>{5e0afd9c-9161-49ec-b17d-49694680289b}</Project>
+      <Name>Microsoft.Band.Admin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft_Band_Admin_Desktop\Microsoft.Band.Admin.Desktop.csproj">
+      <Project>{470e3fd1-bbbd-4c02-a153-e4e180beebd6}</Project>
+      <Name>Microsoft.Band.Admin.Desktop</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft_Band_Desktop\Microsoft.Band.Desktop.csproj">
+      <Project>{f3d8c2df-6cb6-4031-b0af-261553f5abf0}</Project>
+      <Name>Microsoft.Band.Desktop</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft_Health_App_Core\Microsoft.Health.App.Core.csproj">
+      <Project>{6278950e-d3a4-482a-a68f-19b14da5f84a}</Project>
+      <Name>Microsoft.Health.App.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft_Health_Cloud_Client\Microsoft_Health_Cloud_Client.csproj">
+      <Project>{75f73245-cfe9-4922-b0d9-44b9a9aa2345}</Project>
+      <Name>Microsoft_Health_Cloud_Client</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

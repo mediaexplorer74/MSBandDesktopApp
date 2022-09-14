@@ -31,10 +31,12 @@ namespace Microsoft.Band
         yield return obj;
     }
 
-    public static IEnumerable<T> TakeAddDefaults<T>(
+    public static IEnumerable<T> TakeAddDefaults<T>
+    (
       this IEnumerable<T> items,
       int count,
-      T defaultValue = null)
+      T defaultValue //  = null
+    ) 
     {
       foreach (T obj in items.Take<T>(count))
       {

@@ -11,7 +11,7 @@ using Microsoft.Band.Sensors;
 using Microsoft.Band.Tiles;
 using Microsoft.Band.Tiles.Pages;
 using System;
-//using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.IO;
@@ -1366,8 +1366,10 @@ namespace Microsoft.Band
           lock (this.tileEventQueue)
           {
             this.tileEventQueue.Enqueue(bandTileEventBase);
-            if ( (int)this.tileEventQueue > 200)
+
+            if ( this.tileEventQueue.Count > 200)
               this.tileEventQueue.Dequeue();
+            
             this.streamingDataReceivedEvent.Set();
           }
         }

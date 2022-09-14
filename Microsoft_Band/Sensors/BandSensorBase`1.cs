@@ -82,10 +82,10 @@ namespace Microsoft.Band.Sensors
           await Task.Run((Action) (() =>
           {
             // ISSUE: reference to a compiler-generated field
-            lock (this.\u003C\u003E4__this.readingsLock)
+            lock (this.readingsLock)
             {
               // ISSUE: reference to a compiler-generated field
-              this.\u003C\u003E4__this.clientHandle.SensorSubscribe(type);
+              this.clientHandle.SensorSubscribe(type);
             }
           }), token);
           return true;

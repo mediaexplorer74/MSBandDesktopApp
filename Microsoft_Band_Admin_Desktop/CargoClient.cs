@@ -2771,9 +2771,11 @@ label_7:
 
     private double CalculateTransferKbytesPerSecond(long ellapsedMilliseconds, long bytes) => Math.Round((double) bytes / (double) ellapsedMilliseconds * 1000.0 / 1024.0, 2);
 
-    internal LogSyncResult SyncSensorLog(
+    internal LogSyncResult SyncSensorLog
+    (
       CancellationToken cancellationToken,
-      ProgressTrackerPrimitive progress)
+      ProgressTrackerPrimitive progress
+    )
     {
       this.CheckIfDisposed();
       this.CheckIfDisconnectedOrUpdateMode();
@@ -2809,7 +2811,7 @@ label_7:
           num3 = num7;
           num4 = 0;
         }
-        rangeMetadata = this.GetChunkRangeMetadata(this.platformProvider.MaxChunkRange);
+        LogMetadataRange rangeMetadata = this.GetChunkRangeMetadata(this.platformProvider.MaxChunkRange);
         int num8 = rangeMetadata.ByteCount > 0U ? (int) rangeMetadata.EndingSeqNumber - (int) rangeMetadata.StartingSeqNumber + 1 : 0;
         cancellationToken.ThrowIfCancellationRequested();
         if (num8 != 0)
@@ -2827,9 +2829,11 @@ label_7:
               uploadWatch.Stop();
               return (FileUploadStatus) cloud;
             }));
+
+            //LogMetadataRange rangeMetadata = null;
             try
             {
-              LogMetadataRange rangeMetadata;
+              Action<ICargoWriter> closure_0 = null;
               Action<ICargoWriter> writeArgBuf = closure_0 ?? (closure_0 = (Action<ICargoWriter>) (w => rangeMetadata.SerializeToBand(w)));
               using (CargoCommandReader cargoCommandReader = this.ProtocolBeginRead(DeviceCommands.CargoLoggerGetChunkRangeData, LogMetadataRange.GetSerializedByteCount(), (int) rangeMetadata.ByteCount, writeArgBuf, CommandStatusHandling.DoNotCheck))
               {

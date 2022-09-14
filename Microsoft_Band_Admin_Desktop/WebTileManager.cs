@@ -48,7 +48,7 @@ namespace Microsoft.Band.Admin
     {
       IWebTile webTile = (IWebTile) null;
       string url = this.GetWebTileUrlFromUri(uri);
-      string zipPath;
+      string zipPath = "";
       string str = zipPath;
       zipPath = await this.DownloadWebTileAsync(url);
       try

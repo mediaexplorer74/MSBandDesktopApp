@@ -59,7 +59,10 @@ namespace Microsoft.Band.Admin
       action(SyncTasks.UserProfileFirmwareBytes | SyncTasks.UserProfile);
       action(SyncTasks.SensorLog);
       action(SyncTasks.WebTiles | SyncTasks.WebTilesForced);
-      Func<SyncTasks, ProgressTrackerPrimitive> func = (Func<SyncTasks, ProgressTrackerPrimitive>) (tasksToCheckIfIncluded => new ProgressTrackerPrimitive((ProgressTracker) closure_0, Need(tasksToCheckIfIncluded) ? KdkSyncProgress.TaskWeights[tasksToCheckIfIncluded] * KdkSyncProgress.TotalTaskWeight / weightOfRequested : 0.0));
+
+      ProgressTracker closure_0 = null;
+      Func<SyncTasks, ProgressTrackerPrimitive> func = (Func<SyncTasks, ProgressTrackerPrimitive>) (tasksToCheckIfIncluded => 
+      new ProgressTrackerPrimitive((ProgressTracker) closure_0, Need(tasksToCheckIfIncluded) ? KdkSyncProgress.TaskWeights[tasksToCheckIfIncluded] * KdkSyncProgress.TotalTaskWeight / weightOfRequested : 0.0));
       this.CurrentTimeAndTimeZoneProgress = func(SyncTasks.TimeAndTimeZone);
       this.EphemerisProgress = func(SyncTasks.EphemerisFile);
       this.TimeZoneProgress = func(SyncTasks.TimeZoneFile);

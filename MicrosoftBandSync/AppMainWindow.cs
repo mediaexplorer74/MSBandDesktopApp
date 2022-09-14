@@ -26,11 +26,11 @@ using System.Windows.Threading;
 
 namespace DesktopSyncApp
 {
-  public sealed class AppMainWindow : 
+  public sealed partial class AppMainWindow : 
     Window,
     INotifyPropertyChanged,
-    IDisposable,
-    IComponentConnector
+    IDisposable//,
+    //IComponentConnector
   {
     private ViewModel model;
     private TrayIcon trayIcon;

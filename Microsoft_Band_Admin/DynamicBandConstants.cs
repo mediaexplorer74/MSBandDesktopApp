@@ -21,22 +21,41 @@ namespace Microsoft.Band.Admin
 
     public BandClass BandClass { get; private set; }
 
-    [SpecialName]
-    ushort IDynamicBandConstants.get_MeTileWidth() => this.MeTileWidth;
+        [SpecialName]
+        ushort IDynamicBandConstants.MeTileWidth 
+        { 
+            get => this.MeTileWidth; 
+        }
 
-    [SpecialName]
-    ushort IDynamicBandConstants.get_MeTileHeight() => this.MeTileHeight;
+        [SpecialName]
+        ushort IDynamicBandConstants.MeTileHeight
+        { 
+            get => this.MeTileHeight;
+        }
 
-    [SpecialName]
-    ushort IDynamicBandConstants.get_TileIconPreferredSize() => this.TileIconPreferredSize;
+        [SpecialName]
+        ushort IDynamicBandConstants.TileIconPreferredSize 
+        { 
+            get => this.TileIconPreferredSize;
+        }
 
-    [SpecialName]
-    ushort IDynamicBandConstants.get_BadgeIconPreferredSize() => this.BadgeIconPreferredSize;
+        [SpecialName]
+        ushort IDynamicBandConstants.BadgeIconPreferredSize 
+        { 
+            get => this.BadgeIconPreferredSize;
+        }
 
-    [SpecialName]
-    ushort IDynamicBandConstants.get_NotificiationIconPreferredSize() => this.NotificiationIconPreferredSize;
+        [SpecialName]
+        ushort IDynamicBandConstants.NotificiationIconPreferredSize
+        { 
+            get => this.NotificiationIconPreferredSize;
+        }
 
-    [SpecialName]
-    int IDynamicBandConstants.get_MaxIconsPerTile() => this.MaxIconsPerTile;
-  }
+        [SpecialName]
+        int IDynamicBandConstants.MaxIconsPerTile 
+        { 
+            get => this.MaxIconsPerTile;
+        }
+
+    }
 }

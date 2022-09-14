@@ -171,7 +171,7 @@ namespace Microsoft.Band.Tiles.Pages
     internal virtual void SerializeToBand(ICargoWriter writer)
     {
       writer.WriteUInt16((ushort) this.TypeId);
-      writer.WriteUInt16((ushort) ((int) this.ElementId ?? 0));
+      writer.WriteUInt16((ushort) ((int)(this.ElementId ?? 0)));
       writer.WriteUInt16(this.ChildCount);
       this.Rect.SerializeToBand(writer);
       this.Margins.SerializeToBand(writer);
