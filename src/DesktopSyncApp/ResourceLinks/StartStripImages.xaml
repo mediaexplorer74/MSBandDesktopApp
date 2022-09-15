@@ -1,0 +1,6 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:Imaging="clr-namespace:System.Windows.Media.Imaging;assembly=PresentationCore"
+                    xmlns:System="clr-namespace:System;assembly=mscorlib">
+  <!--Imaging:BitmapImage x:Key="tile-starbucks" UriSource="/Resources/TileManagement/starbucks.png"/-->
+</ResourceDictionary>

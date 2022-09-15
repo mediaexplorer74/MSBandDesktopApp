@@ -1,0 +1,57 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:BindingConverters="clr-namespace:DesktopSyncApp.BindingConverters">
+  <BindingConverters:BoolNotConverter x:Key="BoolNotConverter"/>
+  <BindingConverters:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" DefaultMapping="FalseHidden"/>
+  <BindingConverters:NullToVisibilityConverter x:Key="NullToVisibilityConverter" DefaultMapping="NullHidden"/>
+  <BindingConverters:NullToBoolConverter x:Key="NullToBoolConverter" DefaultMapping="NullFalse"/>
+  <BindingConverters:CollectionPopulatedToBoolConverter x:Key="CollectionPopulatedToBoolConverter" DefaultMapping="EmptyFalse"/>
+  <BindingConverters:VersionConverter x:Key="VersionConverter"/>
+  <BindingConverters:LoginLogoutStatusToVisibilityConverter x:Key="LoginLogoutStatusToVisibilityConverter"/>
+  <BindingConverters:LoginLogoutStatusToBoolConverter x:Key="LoginLogoutStatusToBoolConverter"/>
+  <BindingConverters:RelativeSyncTimeConverter x:Key="RelativeSyncTimeConverter"/>
+  <BindingConverters:RelativeFWCheckTimeConverter x:Key="RelativeFWCheckTimeConverter"/>
+  <BindingConverters:StringToVisibilityConverter x:Key="StringToVisibilityConverter"/>
+  <BindingConverters:StringTrimmedToVisibilityConverter x:Key="StringTrimmedToVisibilityConverter"/>
+  <BindingConverters:StringToBoolConverter x:Key="StringToBoolConverter"/>
+  <BindingConverters:StringTrimmedToBoolConverter x:Key="StringTrimmedToBoolConverter"/>
+  <BindingConverters:FirmwareStatusToVisibilityConverter x:Key="FirmwareStatusToVisibilityConverter"/>
+  <BindingConverters:FirmwareStatusToStatusStringConverter x:Key="FirmwareStatusToStatusStringConverter"/>
+  <BindingConverters:ProgressConverter x:Key="ProgressConverter"/>
+  <BindingConverters:SyncFirmwareVisibleMultiConverter x:Key="SyncFirmwareVisibleMultiConverter"/>
+  <BindingConverters:FirmwareUpdatStateConverter x:Key="FirmwareUpdatStateConverter"/>
+  <BindingConverters:DateTimeAndFormatMultiConverter x:Key="DateTimeAndFormatMultiConverter"/>
+  <BindingConverters:DateTimeToDOWConverter x:Key="DateTimeToDOWConverter"/>
+  <BindingConverters:GenderConverter x:Key="GenderConverter"/>
+  <BindingConverters:DeviceNameConverter x:Key="DeviceNameConverter"/>
+  <BindingConverters:UserNameMultiConverter x:Key="UserNameMultiConverter"/>
+  <BindingConverters:DisplayUnitsToBoolConverter x:Key="DisplayUnitsToBoolConverter"/>
+  <BindingConverters:BirthDateConverter x:Key="BirthDateConverter"/>
+  <BindingConverters:HeightUnitsConverter x:Key="HeightUnitsConverter"/>
+  <BindingConverters:WeightUnitsConverter x:Key="WeightUnitsConverter"/>
+  <BindingConverters:TemperatureUnitsConverter x:Key="TemperatureUnitsConverter"/>
+  <BindingConverters:HeightFeetHighComboBoxIndexConverter x:Key="HeightFeetHighComboBoxIndexConverter"/>
+  <BindingConverters:HeightEditVisibilityMultiConverter x:Key="HeightEditVisibilityMultiConverter"/>
+  <BindingConverters:DisplayUnitsToHeightLowValueVisibiliyConverter x:Key="DisplayUnitsToHeightLowValueVisibiliyConverter"/>
+  <BindingConverters:GenderComboBoxIndexConverter x:Key="GenderComboBoxIndexConverter"/>
+  <BindingConverters:MonthComboBoxIndexConverter x:Key="MonthComboBoxIndexConverter"/>
+  <BindingConverters:DistanceUnitsComboBoxIndexConverter x:Key="DistanceUnitsComboBoxIndexConverter"/>
+  <BindingConverters:MassUnitsComboBoxIndexConverter x:Key="MassUnitsComboBoxIndexConverter"/>
+  <BindingConverters:TemperatureUnitsComboBoxIndexConverter x:Key="TemperatureUnitsComboBoxIndexConverter"/>
+  <BindingConverters:NullableIntToStringConverter x:Key="NullableIntToStringConverter"/>
+  <BindingConverters:CookedLimitedStringConverter x:Key="CookedLimitedStringConverter"/>
+  <BindingConverters:DeviceFaceInfoVisibleMultiConverter x:Key="DeviceFaceInfoVisibleMultiConverter"/>
+  <BindingConverters:CantPairReasonMessageConverter x:Key="CantPairReasonMessageConverter"/>
+  <BindingConverters:AppUpdateStatusToVisibilityConverter x:Key="AppUpdateStatusToVisibilityConverter"/>
+  <BindingConverters:AppUpdateStatusToStatusStringConverter x:Key="AppUpdateStatusToStatusStringConverter"/>
+  <BindingConverters:AppUpdateStatusToAppUpdateCommandTextConverter x:Key="AppUpdateStatusToAppUpdateCommandTextConverter"/>
+  <BindingConverters:CancelButtonVisibilityConverter x:Key="CancelButtonVisibilityConverter"/>
+  <BindingConverters:EntryValueErrorToLabelForegroundColorConverter x:Key="EntryValueErrorToLabelForegroundColorConverter"/>
+  <BindingConverters:EntryValueErrorToTextBoxBorderColorConverter x:Key="EntryValueErrorToTextBoxBorderColorConverter"/>
+  <BindingConverters:EqualityToVisibilityConverter x:Key="EqualityToVisibleConverter" DefaultMapping="UnequalHidden"/>
+  <BindingConverters:EqualityToVisibilityConverter x:Key="EqualityToHiddenConverter" DefaultMapping="EqualHidden"/>
+  <BindingConverters:BikeMetricComboBoxIndexConverter x:Key="BikeMetricComboBoxIndexConverter"/>
+  <BindingConverters:BikeSplitComboBoxIndexConverter x:Key="BikeSplitComboBoxIndexConverter"/>
+  <BindingConverters:RunMetricComboBoxIndexConverter x:Key="RunMetricComboBoxIndexConverter"/>
+  <BindingConverters:DeviceStatusToVisibilityConverter x:Key="DeviceStatusToVisibilityConverter"/>
+</ResourceDictionary>

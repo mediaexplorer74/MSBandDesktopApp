@@ -31,19 +31,43 @@ namespace DesktopSyncApp
             this.InitializeComponent();
         }
 
-        public SyncAppPageControl TopPage => this.pageStack.Count <= 0 ? (SyncAppPageControl) null : this.pageStack.First.Value;
+        public SyncAppPageControl TopPage
+        {
+            get
+            {
+                return this.pageStack.Count <= 0 
+                    ? (SyncAppPageControl)null 
+                    : this.pageStack.First.Value;
+            }
+        }
 
-    public SyncAppPageControl ModelPage => this.modalPageStack.Count <= 0 ? (SyncAppPageControl) null : this.modalPageStack.First.Value;
+        public SyncAppPageControl ModelPage
+        {
+            get
+            {
+                return this.modalPageStack.Count <= 0 ? (SyncAppPageControl)null : this.modalPageStack.First.Value;
+            }
+        }
 
-    public void ShowPage(SyncAppPageControl page, bool animate = true, PageSlideDirection direction = PageSlideDirection.Left)
+        public void ShowPage(SyncAppPageControl page, bool animate = true, PageSlideDirection direction = PageSlideDirection.Left)
     {
-      if (page == null)
-        throw new ArgumentNullException(nameof (page));
-      SyncAppPageControl syncAppPageControl = (SyncAppPageControl) null;
-      if (this.pageStack.Count > 0)
-        syncAppPageControl = this.pageStack.First.Value;
-      if (syncAppPageControl == page)
-        return;
+        if (page == null)
+        {
+            throw new ArgumentNullException(nameof(page));
+        }
+      
+        SyncAppPageControl syncAppPageControl = (SyncAppPageControl) null;
+
+        if (this.pageStack.Count > 0)
+        {
+            syncAppPageControl = this.pageStack.First.Value;
+        }
+
+        if (syncAppPageControl == page)
+        {
+            return;
+        }
+      
       if (syncAppPageControl != null)
       {
         if (this.modalPageStack.Count == 0 & animate)

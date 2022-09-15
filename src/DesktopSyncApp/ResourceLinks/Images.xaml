@@ -1,0 +1,7 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <!--BitmapImage x:Key="close" UriSource="/Resources/close.png"/>
+  <BitmapImage x:Key="minimize" UriSource="/Resources/minimize.png"/>
+  <BitmapImage x:Key="cancel" UriSource="/Resources/cancel.png"/>
+  <BitmapImage x:Key="check" UriSource="/Resources/check.png"/-->
+</ResourceDictionary>

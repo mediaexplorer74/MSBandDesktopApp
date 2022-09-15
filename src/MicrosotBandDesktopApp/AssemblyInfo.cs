@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Windows;
 
-[assembly: Extension]
+//[assembly: Extension]
 [assembly: AssemblyFileVersion("1.3.20517.1")]
 [assembly: AssemblyTitle("Microsoft Band Sync")]
 [assembly: AssemblyProduct("Microsoft Band Sync")]
