@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Users\Pdawg\Downloads\Microsoft Band Sync Setup\Cirrious_MvvmCross.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{953D1F7B-912E-4593-9B7B-CE36DD6B628E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Cirrious.MvvmCross</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Cirrious.MvvmCross</RootNamespace>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Collections" />
+    <Reference Include="System.Diagnostics.Debug" />
+    <Reference Include="System.Linq" />
+    <Reference Include="System.Linq.Expressions" />
+    <Reference Include="System.ObjectModel" />
+    <Reference Include="System.Reflection" />
+    <Reference Include="System.Reflection.Extensions" />
+    <Reference Include="System.Resources.ResourceManager" />
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Threading" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IMvxSingletonCache.cs" />
+    <Compile Include="MvxSingletonCache.cs" />
+    <Compile Include="Parse\StringDictionary\IMvxStringDictionaryParser.cs" />
+    <Compile Include="Parse\StringDictionary\IMvxStringDictionaryWriter.cs" />
+    <Compile Include="Parse\StringDictionary\MvxViewModelRequestCustomTextSerializer.cs" />
+    <Compile Include="Parse\StringDictionary\MvxStringDictionaryParser.cs" />
+    <Compile Include="Parse\StringDictionary\MvxStringDictionaryWriter.cs" />
+    <Compile Include="Platform\IMvxFillableStringToTypeParser.cs" />
+    <Compile Include="Platform\IMvxStringToTypeParser.cs" />
+    <Compile Include="Platform\IMvxSettings.cs" />
+    <Compile Include="Platform\MvxSettings.cs" />
+    <Compile Include="Platform\MvxStringToTypeParser.cs" />
+    <Compile Include="Platform\MvxSimplePropertyDictionaryExtensionMethods.cs" />
+    <Compile Include="Platform\IMvxLifetime.cs" />
+    <Compile Include="Platform\MvxLifetimeEvent.cs" />
+    <Compile Include="Platform\MvxLifetimeEventArgs.cs" />
+    <Compile Include="Platform\MvxLifetimeMonitor.cs" />
+    <Compile Include="Platform\MvxSetup.cs" />
+    <Compile Include="ViewModels\IMvxCommandCollection.cs" />
+    <Compile Include="ViewModels\IMvxCommandCollectionBuilder.cs" />
+    <Compile Include="ViewModels\IMvxInpcInterceptor.cs" />
+    <Compile Include="ViewModels\IMvxInteraction.cs" />
+    <Compile Include="ViewModels\IMvxInteraction`1.cs" />
+    <Compile Include="ViewModels\IMvxNameMapping.cs" />
+    <Compile Include="ViewModels\IMvxNotifyPropertyChanged.cs" />
+    <Compile Include="ViewModels\IMvxTypeFinder.cs" />
+    <Compile Include="ViewModels\IMvxViewModelByNameRegistry.cs" />
+    <Compile Include="ViewModels\IMvxViewModelTypeFinder.cs" />
+    <Compile Include="ViewModels\IMvxTypeToTypeLookupBuilder.cs" />
+    <Compile Include="ViewModels\IMvxViewModelByNameLookup.cs" />
+    <Compile Include="ViewModels\MvxInteraction.cs" />
+    <Compile Include="ViewModels\MvxInteraction`1.cs" />
+    <Compile Include="ViewModels\MvxInteractionExtensionMethods.cs" />
+    <Compile Include="ViewModels\MvxNotifyPropertyChangedExtensions.cs" />
+    <Compile Include="ViewModels\MvxViewToViewModelNameMapping.cs" />
+    <Compile Include="ViewModels\MvxPostfixAwareViewToViewModelNameMapping.cs" />
+    <Compile Include="ViewModels\MvxPropertyChangedListener.cs" />
+    <Compile Include="ViewModels\MvxInpcInterceptionResult.cs" />
+    <Compile Include="ViewModels\MvxPresentationHint.cs" />
+    <Compile Include="ViewModels\MvxClosePresentationHint.cs" />
+    <Compile Include="ViewModels\MvxCommandAttribute.cs" />
+    <Compile Include="ViewModels\MvxCommandCollectionBuilder.cs" />
+    <Compile Include="ViewModels\IMvxNavigationSerializer.cs" />
+    <Compile Include="ViewModels\MvxStringDictionaryNavigationSerializer.cs" />
+    <Compile Include="ViewModels\MvxViewModelViewTypeFinder.cs" />
+    <Compile Include="ViewModels\MvxViewModelByNameLookup.cs" />
+    <Compile Include="ViewModels\MvxViewModelViewLookupBuilder.cs" />
+    <Compile Include="ViewModels\IMvxCommand.cs" />
+    <Compile Include="ViewModels\IMvxViewModelLocatorCollection.cs" />
+    <Compile Include="ViewModels\IMvxApplication.cs" />
+    <Compile Include="ViewModels\MvxApplication.cs" />
+    <Compile Include="ViewModels\MvxCommandCollection.cs" />
+    <Compile Include="ViewModels\IMvxViewModelLocator.cs" />
+    <Compile Include="ViewModels\MvxDefaultViewModelLocator.cs" />
+    <Compile Include="ViewModels\MvxNavigationSerializer.cs" />
+    <Compile Include="ViewModels\MvxNavigationSerializer`1.cs" />
+    <Compile Include="ViewModels\MvxJsonNavigationSerializer.cs" />
+    <Compile Include="ViewModels\MvxViewForAttribute.cs" />
+    <Compile Include="ViewModels\IMvxViewModelLoader.cs" />
+    <Compile Include="ViewModels\MvxViewModelLoader.cs" />
+    <Compile Include="ViewModels\IMvxBundle.cs" />
+    <Compile Include="ViewModels\MvxBundle.cs" />
+    <Compile Include="ViewModels\MvxViewModelExtensions.cs" />
+    <Compile Include="ViewModels\IMvxAppStart.cs" />
+    <Compile Include="ViewModels\IMvxViewModel.cs" />
+    <Compile Include="ViewModels\MvxRequestedBy.cs" />
+    <Compile Include="ViewModels\MvxRequestedByType.cs" />
+    <Compile Include="ViewModels\MvxNotifyPropertyChanged.cs" />
+    <Compile Include="ViewModels\MvxNavigatingObject.cs" />
+    <Compile Include="ViewModels\MvxViewModel.cs" />
+    <Compile Include="ViewModels\MvxNullViewModel.cs" />
+    <Compile Include="ViewModels\IMvxCommandHelper.cs" />
+    <Compile Include="ViewModels\MvxStrongCommandHelper.cs" />
+    <Compile Include="ViewModels\MvxWeakCommandHelper.cs" />
+    <Compile Include="ViewModels\MvxCommandBase.cs" />
+    <Compile Include="ViewModels\MvxCommand.cs" />
+    <Compile Include="ViewModels\MvxCommand`1.cs" />
+    <Compile Include="ViewModels\MvxAppStart`1.cs" />
+    <Compile Include="ViewModels\MvxViewModelRequest.cs" />
+    <Compile Include="ViewModels\MvxViewModelRequest`1.cs" />
+    <Compile Include="Views\IMvxViewPresenter.cs" />
+    <Compile Include="Views\MvxViewExtensionMethods.cs" />
+    <Compile Include="Views\IMvxView.cs" />
+    <Compile Include="Views\IMvxView`1.cs" />
+    <Compile Include="Views\IMvxViewDispatcher.cs" />
+    <Compile Include="Views\IMvxViewFinder.cs" />
+    <Compile Include="Views\IMvxViewsContainer.cs" />
+    <Compile Include="Views\MvxViewsContainer.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cirrious.CrossCore\Cirrious.CrossCore.csproj">
+      <Project>{a9c48d36-878a-4d41-96bc-12573b3ea0c9}</Project>
+      <Name>Cirrious.CrossCore</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

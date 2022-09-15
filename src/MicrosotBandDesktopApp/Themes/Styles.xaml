@@ -1,0 +1,905 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero"
+                    xmlns:local="clr-namespace:DesktopSyncApp">
+  <ResourceDictionary.MergedDictionaries>
+    <ResourceDictionary Source="ResourceLinks/ThemeColors.xaml"/>
+  </ResourceDictionary.MergedDictionaries>
+  <Style x:Key="Standard" TargetType="{x:Type Control}">
+    <Setter Property="Control.Background" Value="{x:Null}"/>
+    <Setter Property="Control.Foreground" Value="#FFFFFF"/>
+  </Style>
+  <Style x:Key="BaseTextBlock" TargetType="{x:Type TextBlock}">
+    <Setter Property="TextBlock.Background" Value="{x:Null}"/>
+    <Setter Property="TextBlock.Foreground" Value="#FFFFFF"/>
+    <Setter Property="TextBlock.TextWrapping" Value="NoWrap"/>
+  </Style>
+  <Style x:Key="Heading" BasedOn="{StaticResource BaseTextBlock}" TargetType="{x:Type TextBlock}">
+    <Setter Property="TextBlock.FontFamily" Value="Seqoe UI"/>
+    <Setter Property="TextBlock.FontSize" Value="32"/>
+    <Setter Property="TextBlock.FontWeight" Value="Normal"/>
+  </Style>
+  <Style x:Key="SubHeading" BasedOn="{StaticResource BaseTextBlock}" TargetType="{x:Type TextBlock}">
+    <Setter Property="TextBlock.FontFamily" Value="Segoe UI"/>
+    <Setter Property="TextBlock.FontSize" Value="15"/>
+    <Setter Property="TextBlock.Foreground" Value="{StaticResource SecondaryTextBrush}"/>
+  </Style>
+  <Style TargetType="{x:Type Grid}">
+    <Setter Property="Panel.Background" Value="{x:Null}"/>
+  </Style>
+  <Style TargetType="{x:Type local:AnimatedPageControl}">
+    <Setter Property="Panel.Background" Value="{x:Null}"/>
+  </Style>
+  <Style TargetType="{x:Type ListBox}">
+    <Setter Property="Control.Background" Value="{x:Null}"/>
+    <Setter Property="Control.Foreground" Value="#FFFFFF"/>
+    <Setter Property="Control.FontFamily" Value="Segoe UI Light"/>
+    <Setter Property="Control.FontSize" Value="20"/>
+  </Style>
+  <Style TargetType="{x:Type CheckBox}">
+    <Setter Property="Control.Foreground" Value="#FFFFFF"/>
+  </Style>
+  <Style TargetType="{x:Type RadioButton}">
+    <Setter Property="Control.Foreground" Value="#FFFFFF"/>
+  </Style>
+  <Style TargetType="{x:Type GroupBox}">
+    <Setter Property="Control.Foreground" Value="#FFFFFF"/>
+  </Style>
+  <Style x:Key="TileSettingsGrid" TargetType="{x:Type Grid}">
+    <Setter Property="Panel.Background" Value="#FF1B1717"/>
+  </Style>
+  <Style x:Key="BaseButton" TargetType="{x:Type Button}">
+    <Setter Property="Control.Foreground" Value="White"/>
+    <Setter Property="Control.Background" Value="{x:Null}"/>
+    <Setter Property="Control.BorderBrush" Value="{x:Null}"/>
+    <Setter Property="Control.BorderThickness" Value="0"/>
+  </Style>
+  <ControlTemplate x:Key="VariableOpacityButtonTemplate" TargetType="{x:Type local:VariableOpacityButton}">
+    <Border x:Name="Border" BorderBrush="{TemplateBinding Control.BorderBrush}"
+            BorderThickness="{TemplateBinding Control.BorderThickness}" SnapsToDevicePixels="true">
+      <Grid>
+        <Grid x:Name="Background" Background="{TemplateBinding Control.Background}"
+              Opacity="{TemplateBinding local:VariableOpacityButton.BaseOpacity}"/>
+        <ContentPresenter Margin="{TemplateBinding Control.Padding}"
+                          HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+                          VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}"
+                          Content="{TemplateBinding ContentControl.Content}"
+                          ContentStringFormat="{TemplateBinding ContentControl.ContentStringFormat}"
+                          ContentTemplate="{TemplateBinding ContentControl.ContentTemplate}" Focusable="false"
+                          RecognizesAccessKey="true" SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"/>
+      </Grid>
+    </Border>
+    <ControlTemplate.Triggers>
+      <Trigger Property="UIElement.IsEnabled" Value="false">
+        <Setter Property="Control.Foreground" Value="Gray"/>
+        <Setter TargetName="Border" Property="Border.BorderBrush" Value="Gray"/>
+      </Trigger>
+      <Trigger Property="UIElement.IsMouseOver" Value="true">
+        <Setter TargetName="Background"
+                Value="{Binding MouseOverBackground, RelativeSource={RelativeSource AncestorType={x:Type local:VariableOpacityButton}}}"
+                Property="Panel.Background"/>
+        <Setter TargetName="Background"
+                Value="{Binding MouseOverOpacity, RelativeSource={RelativeSource AncestorType={x:Type local:VariableOpacityButton}}}"
+                Property="UIElement.Opacity"/>
+        <Setter Value="{Binding MouseOverForeground, RelativeSource={x:Static RelativeSource.Self}}"
+                Property="Control.Foreground"/>
+      </Trigger>
+      <Trigger Property="ButtonBase.IsPressed" Value="true">
+        <Setter TargetName="Background"
+                Value="{Binding MouseDownBackground, RelativeSource={RelativeSource AncestorType={x:Type local:VariableOpacityButton}}}"
+                Property="Panel.Background"/>
+        <Setter TargetName="Background"
+                Value="{Binding MouseDownOpacity, RelativeSource={RelativeSource AncestorType={x:Type local:VariableOpacityButton}}}"
+                Property="UIElement.Opacity"/>
+        <Setter Value="{Binding MouseDownForeground, RelativeSource={x:Static RelativeSource.Self}}"
+                Property="Control.Foreground"/>
+      </Trigger>
+    </ControlTemplate.Triggers>
+  </ControlTemplate>
+  <Style x:Key="VariableOpacityButtonStyle" TargetType="{x:Type local:VariableOpacityButton}">
+    <Setter Property="local:VariableOpacityButton.BaseOpacity" Value="0.0"/>
+    <Setter Property="local:VariableOpacityButton.MouseOverOpacity" Value="0.3"/>
+    <Setter Property="local:VariableOpacityButton.MouseDownOpacity" Value="0.5"/>
+    <Setter Property="Control.Background" Value="Lavender"/>
+    <Setter Property="local:VariableOpacityButton.MouseOverBackground" Value="Lavender"/>
+    <Setter Property="local:VariableOpacityButton.MouseDownBackground" Value="Lavender"/>
+    <Setter Property="Control.Foreground" Value="White"/>
+    <Setter Property="local:VariableOpacityButton.MouseOverForeground" Value="White"/>
+    <Setter Property="local:VariableOpacityButton.MouseDownForeground" Value="White"/>
+    <Setter Property="Control.BorderBrush" Value="White"/>
+    <Setter Property="Control.FontSize" Value="20"/>
+    <Setter Property="Control.Template" Value="{StaticResource VariableOpacityButtonTemplate}"/>
+  </Style>
+  <Style BasedOn="{StaticResource VariableOpacityButtonStyle}"
+         TargetType="{x:Type local:VariableOpacityButton}"/>
+  <Style x:Key="BorderlessVariableOpacityButtonStyle" BasedOn="{StaticResource VariableOpacityButtonStyle}"
+         TargetType="{x:Type local:VariableOpacityButton}">
+    <Setter Property="Control.BorderBrush" Value="{x:Null}"/>
+    <Setter Property="Control.BorderThickness" Value="0"/>
+  </Style>
+  <Style x:Key="ContextMenu" BasedOn="{StaticResource VariableOpacityButtonStyle}"
+         TargetType="{x:Type local:VariableOpacityButton}">
+    <Setter Property="FrameworkElement.HorizontalAlignment" Value="Stretch"/>
+    <Setter Property="Control.HorizontalContentAlignment" Value="Left"/>
+    <Setter Property="local:VariableOpacityButton.BaseOpacity" Value="100"/>
+    <Setter Property="local:VariableOpacityButton.MouseOverOpacity" Value="100"/>
+    <Setter Property="local:VariableOpacityButton.MouseDownOpacity" Value="100"/>
+    <Setter Property="Control.Background" Value="White"/>
+    <Setter Property="Control.Foreground" Value="Black"/>
+    <Setter Property="local:VariableOpacityButton.MouseOverBackground" Value="#FF3D2362"/>
+    <Setter Property="local:VariableOpacityButton.MouseOverForeground" Value="White"/>
+    <Setter Property="local:VariableOpacityButton.MouseDownBackground" Value="#FF3D2362"/>
+    <Setter Property="local:VariableOpacityButton.MouseDownForeground" Value="White"/>
+    <Setter Property="Control.BorderBrush" Value="{x:Null}"/>
+    <Setter Property="Control.BorderThickness" Value="0"/>
+  </Style>
+  <Style x:Key="CustomizeBandButtonStyle" BasedOn="{StaticResource BorderlessVariableOpacityButtonStyle}"
+         TargetType="{x:Type local:VariableOpacityButton}">
+    <Setter Property="local:VariableOpacityButton.BaseOpacity" Value="0.7"/>
+    <Setter Property="local:VariableOpacityButton.MouseOverOpacity" Value="0.7"/>
+    <Setter Property="local:VariableOpacityButton.MouseDownOpacity" Value="0.7"/>
+    <Setter Property="Control.Background" Value="White"/>
+    <Setter Property="local:VariableOpacityButton.MouseOverBackground" Value="Black"/>
+    <Setter Property="local:VariableOpacityButton.MouseDownBackground" Value="White"/>
+    <Setter Property="Control.Foreground" Value="Black"/>
+    <Setter Property="local:VariableOpacityButton.MouseOverForeground" Value="White"/>
+    <Setter Property="local:VariableOpacityButton.MouseDownForeground" Value="Black"/>
+  </Style>
+  <Style x:Key="TileDetailsButtonStyle" BasedOn="{StaticResource BorderlessVariableOpacityButtonStyle}"
+         TargetType="{x:Type local:VariableOpacityButton}">
+    <Setter Property="local:VariableOpacityButton.BaseOpacity" Value="0.7"/>
+    <Setter Property="local:VariableOpacityButton.MouseOverOpacity" Value="0.7"/>
+    <Setter Property="local:VariableOpacityButton.MouseDownOpacity" Value="0.7"/>
+    <Setter Property="Control.Background" Value="{x:Null}"/>
+    <Setter Property="local:VariableOpacityButton.MouseOverBackground" Value="Black"/>
+    <Setter Property="local:VariableOpacityButton.MouseDownBackground" Value="White"/>
+    <Setter Property="Control.Foreground" Value="Black"/>
+    <Setter Property="local:VariableOpacityButton.MouseOverForeground" Value="White"/>
+    <Setter Property="local:VariableOpacityButton.MouseDownForeground" Value="Black"/>
+  </Style>
+  <Style x:Key="ImageButton" TargetType="{x:Type Button}">
+    <Setter Property="Control.Foreground" Value="{x:Null}"/>
+    <Setter Property="Control.Background" Value="#018B00FF"/>
+    <Setter Property="Control.BorderThickness" Value="0"/>
+    <Setter Property="Control.Padding" Value="0"/>
+  </Style>
+  <Style x:Key="BackButton" BasedOn="{StaticResource ImageButton}" TargetType="{x:Type Button}">
+    <Setter Property="Control.Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type Button}">
+          <Grid>
+            <Image x:Name="Normal" Opacity="1" Source="Resources/back-arrow.png" Stretch="None" Visibility="Visible"/>
+            <Image x:Name="Pressed" Opacity="1" Source="Resources/back-arrow-mousedown.png" Stretch="None"
+                   Visibility="Hidden"/>
+          </Grid>
+          <ControlTemplate.Triggers>
+            <Trigger Property="UIElement.IsMouseOver" Value="true">
+              <Setter TargetName="Normal" Property="UIElement.Visibility" Value="Hidden"/>
+              <Setter TargetName="Pressed" Property="UIElement.Visibility" Value="Visible"/>
+            </Trigger>
+            <Trigger Property="ButtonBase.IsPressed" Value="true">
+              <Setter TargetName="Normal" Property="UIElement.Visibility" Value="Visible"/>
+              <Setter TargetName="Pressed" Property="UIElement.Visibility" Value="Hidden"/>
+            </Trigger>
+            <Trigger Property="UIElement.IsEnabled" Value="false">
+              <Setter TargetName="Normal" Property="UIElement.Visibility" Value="Visible"/>
+              <Setter TargetName="Pressed" Property="UIElement.Visibility" Value="Hidden"/>
+              <Setter TargetName="Normal" Property="UIElement.Opacity" Value=".8"/>
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style x:Key="ForwardButton" BasedOn="{StaticResource ImageButton}" TargetType="{x:Type Button}">
+    <Setter Property="Control.Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type Button}">
+          <Grid>
+            <Image x:Name="Normal" Opacity="1" Source="Resources/forward-arrow.png" Stretch="None"
+                   Visibility="Visible"/>
+            <Image x:Name="Pressed" Opacity="1" Source="Resources/forward-arrow-mousedown.png" Stretch="None"
+                   Visibility="Hidden"/>
+          </Grid>
+          <ControlTemplate.Triggers>
+            <Trigger Property="UIElement.IsMouseOver" Value="true">
+              <Setter TargetName="Normal" Property="UIElement.Visibility" Value="Hidden"/>
+              <Setter TargetName="Pressed" Property="UIElement.Visibility" Value="Visible"/>
+            </Trigger>
+            <Trigger Property="ButtonBase.IsPressed" Value="true">
+              <Setter TargetName="Normal" Property="UIElement.Visibility" Value="Visible"/>
+              <Setter TargetName="Pressed" Property="UIElement.Visibility" Value="Hidden"/>
+            </Trigger>
+            <Trigger Property="UIElement.IsEnabled" Value="false">
+              <Setter TargetName="Normal" Property="UIElement.Visibility" Value="Visible"/>
+              <Setter TargetName="Pressed" Property="UIElement.Visibility" Value="Hidden"/>
+              <Setter TargetName="Normal" Property="UIElement.Opacity" Value=".8"/>
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style x:Key="SaveCheckButton" BasedOn="{StaticResource ImageButton}" TargetType="{x:Type Button}">
+    <Setter Property="Control.Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type Button}">
+          <Grid>
+            <Image x:Name="Normal" Opacity="1" Source="Resources/check.png" Visibility="Visible"/>
+            <Image x:Name="Hover" Opacity="1" Source="Resources/check-mouseover.png" Visibility="Hidden"/>
+            <Image x:Name="Pressed" Opacity="1" Source="Resources/check-mousedown.png" Visibility="Hidden"/>
+          </Grid>
+          <ControlTemplate.Triggers>
+            <Trigger Property="UIElement.IsMouseOver" Value="true">
+              <Setter TargetName="Normal" Property="UIElement.Visibility" Value="Hidden"/>
+              <Setter TargetName="Hover" Property="UIElement.Visibility" Value="Visible"/>
+              <Setter TargetName="Pressed" Property="UIElement.Visibility" Value="Hidden"/>
+            </Trigger>
+            <Trigger Property="ButtonBase.IsPressed" Value="true">
+              <Setter TargetName="Normal" Property="UIElement.Visibility" Value="Visible"/>
+              <Setter TargetName="Hover" Property="UIElement.Visibility" Value="Hidden"/>
+              <Setter TargetName="Pressed" Property="UIElement.Visibility" Value="Hidden"/>
+            </Trigger>
+            <Trigger Property="UIElement.IsEnabled" Value="false">
+              <Setter TargetName="Normal" Property="UIElement.Visibility" Value="Visible"/>
+              <Setter TargetName="Hover" Property="UIElement.Visibility" Value="Hidden"/>
+              <Setter TargetName="Pressed" Property="UIElement.Visibility" Value="Hidden"/>
+              <Setter TargetName="Normal" Property="UIElement.Opacity" Value=".8"/>
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style x:Key="CancelXButton" BasedOn="{StaticResource ImageButton}" TargetType="{x:Type Button}">
+    <Setter Property="Control.Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type Button}">
+          <Grid>
+            <Image x:Name="Normal" Opacity="1" Source="Resources/cancel.png" Visibility="Visible"/>
+            <Image x:Name="Hover" Opacity="1" Source="Resources/cancel-mouseover.png" Visibility="Hidden"/>
+            <Image x:Name="Pressed" Opacity="1" Source="Resources/cancel-mousedown.png" Visibility="Hidden"/>
+          </Grid>
+          <ControlTemplate.Triggers>
+            <Trigger Property="UIElement.IsMouseOver" Value="true">
+              <Setter TargetName="Normal" Property="UIElement.Visibility" Value="Hidden"/>
+              <Setter TargetName="Hover" Property="UIElement.Visibility" Value="Visible"/>
+              <Setter TargetName="Pressed" Property="UIElement.Visibility" Value="Hidden"/>
+            </Trigger>
+            <Trigger Property="ButtonBase.IsPressed" Value="true">
+              <Setter TargetName="Normal" Property="UIElement.Visibility" Value="Visible"/>
+              <Setter TargetName="Hover" Property="UIElement.Visibility" Value="Hidden"/>
+              <Setter TargetName="Pressed" Property="UIElement.Visibility" Value="Hidden"/>
+            </Trigger>
+            <Trigger Property="UIElement.IsEnabled" Value="false">
+              <Setter TargetName="Normal" Property="UIElement.Visibility" Value="Visible"/>
+              <Setter TargetName="Hover" Property="UIElement.Visibility" Value="Hidden"/>
+              <Setter TargetName="Pressed" Property="UIElement.Visibility" Value="Hidden"/>
+              <Setter TargetName="Normal" Property="UIElement.Opacity" Value=".8"/>
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style x:Key="ImageTextButton" TargetType="{x:Type Button}">
+    <Setter Property="Control.Foreground" Value="White"/>
+    <Setter Property="Control.Background" Value="#018B00FF"/>
+    <Setter Property="Control.BorderThickness" Value="0"/>
+    <Setter Property="Control.Padding" Value="0"/>
+  </Style>
+  <Style x:Key="ForwardTextButton" BasedOn="{StaticResource ImageTextButton}" TargetType="{x:Type Button}">
+    <Setter Property="Control.Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type Button}">
+          <Grid>
+            <Border Background="White" Opacity=".01"/>
+            <ContentPresenter x:Name="ContentPresenter" Margin="{TemplateBinding Control.Padding}" HorizontalAlignment="Stretch"
+                              VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}"
+                              Content="{TemplateBinding ContentControl.Content}"
+                              ContentStringFormat="{TemplateBinding ContentControl.ContentStringFormat}"
+                              ContentTemplate="{TemplateBinding ContentControl.ContentTemplate}" Focusable="false" Opacity=".8"
+                              RecognizesAccessKey="true" SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"/>
+            <Image x:Name="NormalGlyph" HorizontalAlignment="Right" VerticalAlignment="Center" Opacity="1"
+                   Source="Resources/forward-arrow.png" Stretch="None" Visibility="Visible"/>
+            <Image x:Name="PressedGlyph" HorizontalAlignment="Right" VerticalAlignment="Center" Opacity="1"
+                   Source="Resources/forward-arrow-mousedown.png" Stretch="None" Visibility="Hidden"/>
+          </Grid>
+          <ControlTemplate.Triggers>
+            <Trigger Property="UIElement.IsMouseOver" Value="true">
+              <Setter TargetName="NormalGlyph" Property="UIElement.Visibility" Value="Hidden"/>
+              <Setter TargetName="PressedGlyph" Property="UIElement.Visibility" Value="Visible"/>
+              <Setter TargetName="ContentPresenter" Property="UIElement.Opacity" Value="1"/>
+            </Trigger>
+            <Trigger Property="ButtonBase.IsPressed" Value="true">
+              <Setter TargetName="NormalGlyph" Property="UIElement.Visibility" Value="Visible"/>
+              <Setter TargetName="PressedGlyph" Property="UIElement.Visibility" Value="Hidden"/>
+              <Setter TargetName="ContentPresenter" Property="UIElement.Opacity" Value="1"/>
+            </Trigger>
+            <Trigger Property="UIElement.IsEnabled" Value="false">
+              <Setter TargetName="NormalGlyph" Property="UIElement.Opacity" Value=".6"/>
+              <Setter TargetName="ContentPresenter" Property="UIElement.Opacity" Value=".6"/>
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style x:Key="TextButton" BasedOn="{StaticResource BaseButton}" TargetType="{x:Type Button}">
+    <Setter Property="Control.Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type Button}">
+          <Grid>
+            <ContentPresenter x:Name="Presenter" Margin="{TemplateBinding Control.Padding}"
+                              HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+                              VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}"
+                              Content="{TemplateBinding ContentControl.Content}"
+                              ContentStringFormat="{TemplateBinding ContentControl.ContentStringFormat}"
+                              ContentTemplate="{TemplateBinding ContentControl.ContentTemplate}" Focusable="false" Opacity=".8"
+                              RecognizesAccessKey="true" SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"/>
+          </Grid>
+          <ControlTemplate.Triggers>
+            <Trigger Property="UIElement.IsMouseOver" Value="true">
+              <Setter TargetName="Presenter" Property="UIElement.Opacity" Value="1"/>
+            </Trigger>
+            <Trigger Property="ButtonBase.IsPressed" Value="true">
+              <Setter TargetName="Presenter" Property="UIElement.Opacity" Value="1"/>
+              <Setter Property="Control.FontWeight" Value="Bold"/>
+            </Trigger>
+            <Trigger Property="UIElement.IsEnabled" Value="false">
+              <Setter Property="Control.Foreground" Value="LightGray"/>
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style x:Key="NavButton" BasedOn="{StaticResource BaseButton}" TargetType="{x:Type Button}">
+    <Setter Property="Control.FontFamily" Value="Segoe UI Light"/>
+    <Setter Property="Control.FontSize" Value="20"/>
+    <Setter Property="Control.Foreground" Value="{StaticResource SecondaryTextBrush}"/>
+    <Setter Property="Control.Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type Button}">
+          <Grid>
+            <ContentPresenter x:Name="Presenter" Margin="{TemplateBinding Control.Padding}"
+                              HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+                              VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}"
+                              Content="{TemplateBinding ContentControl.Content}"
+                              ContentStringFormat="{TemplateBinding ContentControl.ContentStringFormat}"
+                              ContentTemplate="{TemplateBinding ContentControl.ContentTemplate}" Focusable="false" Opacity=".8"
+                              RecognizesAccessKey="true" SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"/>
+          </Grid>
+          <ControlTemplate.Triggers>
+            <Trigger Property="UIElement.IsMouseOver" Value="true">
+              <Setter TargetName="Presenter" Property="UIElement.Opacity" Value="1"/>
+            </Trigger>
+            <Trigger Property="ButtonBase.IsPressed" Value="true">
+              <Setter TargetName="Presenter" Property="UIElement.Opacity" Value="1"/>
+              <Setter Property="Control.FontWeight" Value="Bold"/>
+            </Trigger>
+            <Trigger Property="UIElement.IsEnabled" Value="false">
+              <Setter TargetName="Presenter" Property="UIElement.Opacity" Value=".6"/>
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style x:Key="LogoutButton" BasedOn="{StaticResource BaseButton}" TargetType="{x:Type Button}">
+    <Setter Property="Control.FontFamily" Value="Segoe UI"/>
+    <Setter Property="Control.FontSize" Value="15"/>
+    <Setter Property="Control.Foreground" Value="{StaticResource SecondaryTextBrush}"/>
+    <Setter Property="Control.Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type Button}">
+          <Grid>
+            <ContentPresenter x:Name="Presenter" Margin="{TemplateBinding Control.Padding}"
+                              HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+                              VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}"
+                              Content="{TemplateBinding ContentControl.Content}"
+                              ContentStringFormat="{TemplateBinding ContentControl.ContentStringFormat}"
+                              ContentTemplate="{TemplateBinding ContentControl.ContentTemplate}" Focusable="false" Opacity=".8"
+                              RecognizesAccessKey="true" SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"/>
+          </Grid>
+          <ControlTemplate.Triggers>
+            <Trigger Property="UIElement.IsMouseOver" Value="true">
+              <Setter TargetName="Presenter" Property="UIElement.Opacity" Value="1"/>
+            </Trigger>
+            <Trigger Property="ButtonBase.IsPressed" Value="true">
+              <Setter TargetName="Presenter" Property="UIElement.Opacity" Value="1"/>
+            </Trigger>
+            <Trigger Property="UIElement.IsEnabled" Value="false">
+              <Setter TargetName="Presenter" Property="UIElement.Opacity" Value=".6"/>
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style x:Key="SmallGlyphButtonCommonStyle" TargetType="{x:Type Button}">
+    <Setter Property="UIElement.ClipToBounds" Value="true"/>
+    <Setter Property="FrameworkElement.HorizontalAlignment" Value="Center"/>
+    <Setter Property="FrameworkElement.VerticalAlignment" Value="Center"/>
+    <Setter Property="Control.FontFamily" Value="Segoe UI Symbol"/>
+    <Setter Property="Control.FontWeight" Value="Normal"/>
+  </Style>
+  <ControlTemplate x:Key="BlankButtonTemplate" TargetType="{x:Type Button}">
+    <Grid>
+      <ContentPresenter x:Name="Presenter" Margin="{TemplateBinding Control.Padding}"
+                        HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+                        VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}"
+                        Content="{TemplateBinding ContentControl.Content}"
+                        ContentStringFormat="{TemplateBinding ContentControl.ContentStringFormat}"
+                        ContentTemplate="{TemplateBinding ContentControl.ContentTemplate}" Focusable="false"
+                        Opacity="{TemplateBinding UIElement.Opacity}" RecognizesAccessKey="true"
+                        SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"/>
+    </Grid>
+  </ControlTemplate>
+  <Style x:Key="CheckBox" TargetType="{x:Type CheckBox}">
+    <Setter Property="ContentControl.Content" Value="{x:Static local:Strings.Label_CheckBox_Checked}"/>
+    <Setter Property="Control.FontFamily" Value="Segoe UI Semibold"/>
+    <Setter Property="Control.FontSize" Value="15"/>
+    <Setter Property="Control.Foreground" Value="{StaticResource WhiteTextBrush}"/>
+    <Setter Property="Control.Background" Value="{x:Null}"/>
+    <Setter Property="Control.Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type CheckBox}">
+          <Grid Background="{TemplateBinding Control.Background}">
+            <Grid Margin="33,0,15,0">
+              <ContentPresenter x:Name="contentPresenter"
+                                HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+                                VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}"
+                                Content="{TemplateBinding ContentControl.Content}"
+                                ContentStringFormat="{TemplateBinding ContentControl.ContentStringFormat}"
+                                ContentTemplate="{TemplateBinding ContentControl.ContentTemplate}" Focusable="false"
+                                RecognizesAccessKey="true" SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"/>
+              <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                <Grid Margin="0,0,20,0">
+                  <TextBlock x:Name="labelCheckBoxUnchecked" VerticalAlignment="Center" FontFamily="Segoe UI" FontSize="20"
+                             Text="{x:Static local:Strings.Label_CheckBox_Unchecked}" Visibility="Visible"/>
+                  <TextBlock x:Name="labelCheckBoxChecked" VerticalAlignment="Center" FontFamily="Segoe UI" FontSize="20"
+                             Text="{x:Static local:Strings.Label_CheckBox_Checked}" Visibility="Hidden"/>
+                </Grid>
+                <Grid>
+                  <Image x:Name="imageCheckBoxUnchecked" HorizontalAlignment="Right" Source="Resources/toggle-off.png"
+                         Stretch="None" Visibility="Visible"/>
+                  <Image x:Name="imageCheckBoxChecked" HorizontalAlignment="Right" Source="Resources/toggle-on.png"
+                         Stretch="None" Visibility="Hidden"/>
+                </Grid>
+              </StackPanel>
+            </Grid>
+          </Grid>
+          <ControlTemplate.Triggers>
+            <Trigger Property="ToggleButton.IsChecked" Value="False">
+              <Setter TargetName="imageCheckBoxUnchecked" Property="UIElement.Visibility" Value="Visible"/>
+              <Setter TargetName="imageCheckBoxChecked" Property="UIElement.Visibility" Value="Hidden"/>
+              <Setter TargetName="labelCheckBoxUnchecked" Property="UIElement.Visibility" Value="Visible"/>
+              <Setter TargetName="labelCheckBoxChecked" Property="UIElement.Visibility" Value="Hidden"/>
+            </Trigger>
+            <Trigger Property="ToggleButton.IsChecked" Value="True">
+              <Setter TargetName="imageCheckBoxUnchecked" Property="UIElement.Visibility" Value="Hidden"/>
+              <Setter TargetName="imageCheckBoxChecked" Property="UIElement.Visibility" Value="Visible"/>
+              <Setter TargetName="labelCheckBoxUnchecked" Property="UIElement.Visibility" Value="Hidden"/>
+              <Setter TargetName="labelCheckBoxChecked" Property="UIElement.Visibility" Value="Visible"/>
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style x:Key="CheckBoxNoContent" TargetType="{x:Type CheckBox}">
+    <Setter Property="ContentControl.Content" Value="{x:Static local:Strings.Label_CheckBox_Checked}"/>
+    <Setter Property="Control.FontFamily" Value="Segoe UI Semibold"/>
+    <Setter Property="Control.FontSize" Value="15"/>
+    <Setter Property="Control.Foreground" Value="{StaticResource WhiteTextBrush}"/>
+    <Setter Property="Control.Background" Value="{x:Null}"/>
+    <Setter Property="Control.Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type CheckBox}">
+          <Grid Background="{TemplateBinding Control.Background}">
+            <Grid Margin="0,0,15,0">
+              <ContentPresenter x:Name="contentPresenter"
+                                HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+                                VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}"
+                                Content="{TemplateBinding ContentControl.Content}"
+                                ContentStringFormat="{TemplateBinding ContentControl.ContentStringFormat}"
+                                ContentTemplate="{TemplateBinding ContentControl.ContentTemplate}" Focusable="false"
+                                RecognizesAccessKey="true" SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"/>
+              <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                <Grid>
+                  <Image x:Name="imageCheckBoxUnchecked" HorizontalAlignment="Right" Source="Resources/toggle-off.png"
+                         Stretch="None" Visibility="Visible"/>
+                  <Image x:Name="imageCheckBoxChecked" HorizontalAlignment="Right" Source="Resources/toggle-on.png"
+                         Stretch="None" Visibility="Hidden"/>
+                </Grid>
+              </StackPanel>
+            </Grid>
+          </Grid>
+          <ControlTemplate.Triggers>
+            <Trigger Property="ToggleButton.IsChecked" Value="False">
+              <Setter TargetName="imageCheckBoxUnchecked" Property="UIElement.Visibility" Value="Visible"/>
+              <Setter TargetName="imageCheckBoxChecked" Property="UIElement.Visibility" Value="Hidden"/>
+              <Setter Value="{x:Static local:Strings.Label_CheckBox_Unchecked}" Property="ContentControl.Content"/>
+            </Trigger>
+            <Trigger Property="ToggleButton.IsChecked" Value="True">
+              <Setter TargetName="imageCheckBoxUnchecked" Property="UIElement.Visibility" Value="Hidden"/>
+              <Setter TargetName="imageCheckBoxChecked" Property="UIElement.Visibility" Value="Visible"/>
+              <Setter Value="{x:Static local:Strings.Label_CheckBox_Checked}" Property="ContentControl.Content"/>
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style x:Key="TextBox" BasedOn="{StaticResource Standard}" TargetType="{x:Type TextBox}">
+    <Setter Property="TextBoxBase.CaretBrush" Value="White"/>
+    <Setter Property="Control.Background" Value="{StaticResource TextboxBackgroundOnPrimaryMediumBrush}"/>
+    <Setter Property="Control.Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type TextBox}">
+          <Border x:Name="Border" Background="{TemplateBinding Control.Background}"
+                  BorderBrush="{StaticResource WhiteBrush}"
+                  BorderThickness="{TemplateBinding Control.BorderThickness}" SnapsToDevicePixels="true">
+            <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden"
+                          VerticalScrollBarVisibility="Hidden"/>
+          </Border>
+          <ControlTemplate.Triggers>
+            <Trigger Property="UIElement.IsEnabled" Value="false">
+              <Setter Property="UIElement.Opacity" Value=".6"/>
+            </Trigger>
+            <Trigger Property="UIElement.IsMouseOver" Value="true"/>
+            <Trigger Property="UIElement.IsKeyboardFocused" Value="true">
+              <Setter TargetName="Border" Value="{StaticResource WhiteBrush}" Property="Border.BorderBrush"/>
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style x:Key="MessagingTextBox" BasedOn="{StaticResource Standard}" TargetType="{x:Type TextBox}">
+    <Setter Property="Control.Foreground" Value="White"/>
+    <Setter Property="Control.Background" Value="#454545"/>
+    <Setter Property="Control.Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type TextBox}">
+          <Border x:Name="Border" Background="{TemplateBinding Control.Background}"
+                  BorderThickness="{TemplateBinding Control.BorderThickness}" SnapsToDevicePixels="true"
+                  BorderBrush="{x:Null}">
+            <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden"
+                          VerticalScrollBarVisibility="Hidden"/>
+          </Border>
+          <ControlTemplate.Triggers>
+            <Trigger Property="UIElement.IsEnabled" Value="false">
+              <Setter Property="UIElement.Opacity" Value=".6"/>
+            </Trigger>
+            <Trigger Property="UIElement.IsMouseOver" Value="true"/>
+            <Trigger Property="UIElement.IsKeyboardFocused" Value="true">
+              <Setter Property="Control.Background" Value="White"/>
+              <Setter Property="Control.Foreground" Value="Black"/>
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <ControlTemplate x:Key="ComboBoxTemplate" TargetType="{x:Type ComboBox}">
+    <Grid x:Name="templateRoot" SnapsToDevicePixels="true">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="0" MinWidth="{DynamicResource {x:Static SystemParameters.VerticalScrollBarWidthKey}}"/>
+      </Grid.ColumnDefinitions>
+      <Popup x:Name="PART_Popup" Grid.ColumnSpan="2" Margin="1" AllowsTransparency="true" Placement="Bottom"
+             PopupAnimation="{DynamicResource {x:Static SystemParameters.ComboBoxPopupAnimationKey}}"
+             IsOpen="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}">
+        <!-- *ME* RnD, TODO -->
+        <!--Themes:SystemDropShadowChrome x:Name="shadow" FrameworkElement.MaxHeight="{TemplateBinding ComboBox.MaxDropDownHeight}"
+                                       Color="Transparent" FrameworkElement.MinWidth="{Binding ActualWidth, ElementName=templateRoot}">
+          <Border x:Name="DropDownBorder" Background="{TemplateBinding Control.Background}"
+                  BorderBrush="{TemplateBinding Control.BorderBrush}"
+                  BorderThickness="{TemplateBinding Control.BorderThickness}">
+            <ScrollViewer x:Name="DropDownScrollViewer">
+              <Grid x:Name="grid" RenderOptions.ClearTypeHint="Enabled">
+                <Canvas x:Name="canvas" Width="0" Height="0" HorizontalAlignment="Left" VerticalAlignment="Top">
+                  <Rectangle x:Name="OpaqueRect" Width="{Binding ActualWidth, ElementName=DropDownBorder}"
+                             Height="{Binding ActualHeight, ElementName=DropDownBorder}"
+                             Fill="{Binding Background, ElementName=DropDownBorder}"/>
+                </Canvas>
+                <ItemsPresenter x:Name="ItemsPresenter" KeyboardNavigation.DirectionalNavigation="Contained"
+                                SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"/>
+              </Grid>
+            </ScrollViewer>
+          </Border>
+        </Themes:SystemDropShadowChrome-->
+      </Popup>
+      <ToggleButton x:Name="toggleButton" Grid.ColumnSpan="2" Background="{TemplateBinding Control.Background}"
+                    BorderBrush="{TemplateBinding Control.BorderBrush}"
+                    BorderThickness="{TemplateBinding Control.BorderThickness}"
+                    IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}">
+        <FrameworkElement.Style>
+          <Style TargetType="{x:Type ToggleButton}">
+            <Setter Property="FrameworkElement.OverridesDefaultStyle" Value="true"/>
+            <Setter Property="Control.IsTabStop" Value="false"/>
+            <Setter Property="UIElement.Focusable" Value="false"/>
+            <Setter Property="ButtonBase.ClickMode" Value="Press"/>
+            <Setter Property="Control.Template">
+              <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ToggleButton}">
+                  <Grid Background="{TemplateBinding Control.Background}">
+                    <Border x:Name="templateRoot" BorderBrush="{TemplateBinding Control.BorderBrush}"
+                            BorderThickness="{TemplateBinding Control.BorderThickness}" Opacity="0.8"
+                            SnapsToDevicePixels="true"/>
+                    <Border x:Name="splitBorder"
+                            Width="{DynamicResource {x:Static SystemParameters.VerticalScrollBarWidthKey}}" Margin="0"
+                            HorizontalAlignment="Right" BorderBrush="Transparent" BorderThickness="1"
+                            SnapsToDevicePixels="true">
+                      <Path x:Name="Arrow" Margin="0,1,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"
+                            Data="F1 M 0,0 L 2.667,2.66665 5.3334,0 5.3334,-1.78168 2.6667,0.88501 0,-1.78168 0,0 Z"
+                            Opacity="0.8" Stroke="{TemplateBinding Control.Foreground}" StrokeThickness="2"/>
+                    </Border>
+                  </Grid>
+                  <ControlTemplate.Triggers>
+                    <MultiDataTrigger>
+                      <MultiDataTrigger.Conditions>
+                        <Condition Binding="{Binding IsKeyboardFocused, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type ComboBox}}}"
+                                   Value="true"/>
+                      </MultiDataTrigger.Conditions>
+                      <Setter TargetName="templateRoot" Property="UIElement.Opacity" Value="1"/>
+                      <Setter TargetName="Arrow" Property="UIElement.Opacity" Value="1"/>
+                    </MultiDataTrigger>
+                    <Trigger Property="UIElement.IsEnabled" Value="false">
+                      <Setter TargetName="templateRoot" Property="UIElement.Opacity" Value="1"/>
+                      <Setter TargetName="Arrow" Property="UIElement.Opacity" Value="1"/>
+                    </Trigger>
+                  </ControlTemplate.Triggers>
+                </ControlTemplate>
+              </Setter.Value>
+            </Setter>
+          </Style>
+        </FrameworkElement.Style>
+      </ToggleButton>
+      <ContentPresenter x:Name="contentPresenter" Margin="{TemplateBinding Control.Padding}"
+                        HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+                        VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}"
+                        Content="{TemplateBinding ComboBox.SelectionBoxItem}"
+                        ContentStringFormat="{TemplateBinding ComboBox.SelectionBoxItemStringFormat}"
+                        ContentTemplate="{TemplateBinding ComboBox.SelectionBoxItemTemplate}" IsHitTestVisible="false"
+                        SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"
+                        TextElement.Foreground="{TemplateBinding Control.Foreground}"/>
+    </Grid>
+    <ControlTemplate.Triggers>
+      <Trigger SourceName="PART_Popup" Property="Popup.HasDropShadow" Value="true">
+        <Setter TargetName="shadow" Property="FrameworkElement.Margin" Value="0,0,5,5"/>
+        <Setter TargetName="shadow" Property="Themes:SystemDropShadowChrome.Color" Value="#71000000"/>
+      </Trigger>
+      <Trigger Property="ItemsControl.HasItems" Value="false">
+        <Setter TargetName="DropDownBorder" Property="FrameworkElement.Height" Value="95"/>
+      </Trigger>
+      <MultiTrigger>
+        <MultiTrigger.Conditions>
+          <Condition Property="ItemsControl.IsGrouping" Value="true"/>
+          <Condition Property="VirtualizingPanel.IsVirtualizingWhenGrouping" Value="false"/>
+        </MultiTrigger.Conditions>
+        <Setter Property="ScrollViewer.CanContentScroll" Value="false"/>
+      </MultiTrigger>
+      <Trigger SourceName="DropDownScrollViewer" Property="ScrollViewer.CanContentScroll" Value="false">
+        <Setter TargetName="OpaqueRect" Value="{Binding VerticalOffset, ElementName=DropDownScrollViewer}"
+                Property="Canvas.Top"/>
+        <Setter TargetName="OpaqueRect" Value="{Binding HorizontalOffset, ElementName=DropDownScrollViewer}"
+                Property="Canvas.Left"/>
+      </Trigger>
+      <Trigger Property="UIElement.IsEnabled" Value="false">
+        <Setter Property="UIElement.Opacity" Value="0.7"/>
+      </Trigger>
+    </ControlTemplate.Triggers>
+  </ControlTemplate>
+  <ControlTemplate x:Key="DeviceThemeColorPickerRadioButtonTemplate" TargetType="{x:Type RadioButton}">
+    <Grid x:Name="templateRoot" Background="Transparent" SnapsToDevicePixels="true">
+      <Border x:Name="optionMark" BorderBrush="White" BorderThickness="2"/>
+      <Border BorderThickness="2">
+        <ContentPresenter x:Name="contentPresenter" Margin="{TemplateBinding Control.Padding}"
+                          HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+                          VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}"
+                          Content="{TemplateBinding ContentControl.Content}"
+                          ContentStringFormat="{TemplateBinding ContentControl.ContentStringFormat}"
+                          ContentTemplate="{TemplateBinding ContentControl.ContentTemplate}" Focusable="false"
+                          RecognizesAccessKey="true" SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"/>
+      </Border>
+    </Grid>
+    <ControlTemplate.Triggers>
+      <Trigger Property="ContentControl.HasContent" Value="true">
+        <Setter Property="FrameworkElement.FocusVisualStyle">
+          <Setter.Value>
+            <Style>
+              <Setter Property="Control.Template">
+                <Setter.Value>
+                  <ControlTemplate>
+                    <Rectangle Margin="0,0,0,0" SnapsToDevicePixels="true"
+                               Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeDashArray="1 2"
+                               StrokeThickness="1"/>
+                  </ControlTemplate>
+                </Setter.Value>
+              </Setter>
+            </Style>
+          </Setter.Value>
+        </Setter>
+      </Trigger>
+      <Trigger Property="ToggleButton.IsChecked" Value="True">
+        <Setter TargetName="optionMark" Property="UIElement.Visibility" Value="Visible"/>
+      </Trigger>
+      <Trigger Property="ToggleButton.IsChecked" Value="False">
+        <Setter TargetName="optionMark" Property="UIElement.Visibility" Value="Hidden"/>
+      </Trigger>
+      <Trigger Value="{x:Null}" Property="ToggleButton.IsChecked">
+        <Setter TargetName="optionMark" Property="UIElement.Visibility" Value="Hidden"/>
+      </Trigger>
+    </ControlTemplate.Triggers>
+  </ControlTemplate>
+  <Style x:Key="ManageTiles" TargetType="{x:Type ListView}">
+    <Setter Property="Control.FontFamily" Value="Segoe UI Light"/>
+    <Setter Property="Control.FontSize" Value="20"/>
+    <Setter Property="Control.Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type ListView}">
+          <Border Name="Border" Background="#202020">
+            <ScrollViewer Template="{DynamicResource ScrollViewerControlTemplate}">
+              <ItemsPresenter/>
+            </ScrollViewer>
+          </Border>
+          <ControlTemplate.Triggers>
+            <Trigger Property="UIElement.IsEnabled" Value="false">
+              <Setter TargetName="Border" Property="Border.Background" Value="#202020"/>
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <ControlTemplate x:Key="ScrollViewerControlTemplate" TargetType="{x:Type ScrollViewer}">
+    <Grid x:Name="Grid" Background="{TemplateBinding Control.Background}">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition/>
+        <ColumnDefinition Width="Auto"/>
+      </Grid.ColumnDefinitions>
+      <Grid.RowDefinitions>
+        <RowDefinition/>
+        <RowDefinition Height="Auto"/>
+      </Grid.RowDefinitions>
+      <Rectangle x:Name="Corner" Grid.Row="1" Grid.Column="1"
+                 Fill="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"/>
+      <ScrollContentPresenter x:Name="PART_ScrollContentPresenter" Grid.RowSpan="2" Grid.ColumnSpan="2"
+                              Margin="{TemplateBinding Control.Padding}"
+                              CanContentScroll="{TemplateBinding ScrollViewer.CanContentScroll}" CanHorizontallyScroll="false"
+                              CanVerticallyScroll="false" Content="{TemplateBinding ContentControl.Content}"
+                              ContentTemplate="{TemplateBinding ContentControl.ContentTemplate}"/>
+      <ScrollBar x:Name="PART_VerticalScrollBar" Grid.Row="0" Grid.Column="1" Width="8"
+                 AutomationProperties.AutomationId="VerticalScrollBar" Cursor="Arrow"
+                 Maximum="{TemplateBinding ScrollViewer.ScrollableHeight}" Minimum="0"
+                 ViewportSize="{TemplateBinding ScrollViewer.ViewportHeight}"
+                 Visibility="{TemplateBinding ScrollViewer.ComputedVerticalScrollBarVisibility}"
+                 Value="{Binding VerticalOffset, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}"/>
+      <ScrollBar x:Name="PART_HorizontalScrollBar" Grid.Row="1" Grid.Column="0" Height="8"
+                 AutomationProperties.AutomationId="HorizontalScrollBar" Cursor="Arrow"
+                 Maximum="{TemplateBinding ScrollViewer.ScrollableWidth}" Minimum="0" Orientation="Horizontal"
+                 ViewportSize="{TemplateBinding ScrollViewer.ViewportWidth}"
+                 Visibility="{TemplateBinding ScrollViewer.ComputedHorizontalScrollBarVisibility}"
+                 Value="{Binding HorizontalOffset, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}"/>
+    </Grid>
+  </ControlTemplate>
+  <Style x:Key="ScrollBarPageButton" TargetType="{x:Type RepeatButton}">
+    <Setter Property="FrameworkElement.OverridesDefaultStyle" Value="true"/>
+    <Setter Property="Control.Background" Value="Transparent"/>
+    <Setter Property="UIElement.Focusable" Value="false"/>
+    <Setter Property="Control.IsTabStop" Value="false"/>
+    <Setter Property="Control.Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type RepeatButton}">
+          <Rectangle Width="{TemplateBinding FrameworkElement.Width}" Height="{TemplateBinding FrameworkElement.Height}"
+                     Fill="{TemplateBinding Control.Background}"/>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style x:Key="VerticalThumb" TargetType="{x:Type Thumb}">
+    <Setter Property="Control.Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type Thumb}">
+          <Grid>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="4"/>
+              <RowDefinition Height="4"/>
+              <RowDefinition/>
+              <RowDefinition Height="4"/>
+              <RowDefinition Height="4"/>
+            </Grid.RowDefinitions>
+            <Ellipse Grid.Row="0" Grid.RowSpan="2" Fill="#A7A7AA"/>
+            <Rectangle Grid.Row="1" Grid.RowSpan="3" Fill="#A7A7AA"/>
+            <Ellipse Grid.Row="3" Grid.RowSpan="2" Fill="#A7A7AA"/>
+          </Grid>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style x:Key="HorizontalThumb" TargetType="{x:Type Thumb}">
+    <Setter Property="Control.Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type Thumb}">
+          <Grid>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="4"/>
+              <ColumnDefinition Width="4"/>
+              <ColumnDefinition/>
+              <ColumnDefinition Width="4"/>
+              <ColumnDefinition Width="4"/>
+            </Grid.ColumnDefinitions>
+            <Ellipse Grid.Column="0" Grid.ColumnSpan="2" Fill="#A7A7AA"/>
+            <Rectangle Grid.Column="1" Grid.ColumnSpan="3" Fill="#A7A7AA"/>
+            <Ellipse Grid.Column="3" Grid.ColumnSpan="2" Fill="#A7A7AA"/>
+          </Grid>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style TargetType="{x:Type ScrollBar}">
+    <Setter Property="Stylus.IsPressAndHoldEnabled" Value="false"/>
+    <Setter Property="Stylus.IsFlicksEnabled" Value="false"/>
+    <Setter Property="Control.Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+    <Setter Property="FrameworkElement.Width" Value="10"/>
+    <Setter Property="FrameworkElement.MinWidth" Value="10"/>
+    <Setter Property="Control.Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type ScrollBar}">
+          <Grid x:Name="Bg" Background="#202020" SnapsToDevicePixels="true">
+            <Grid.RowDefinitions>
+              <RowDefinition Height="0.00001*"/>
+            </Grid.RowDefinitions>
+            <Track x:Name="PART_Track" Grid.Row="1" IsDirectionReversed="true"
+                   IsEnabled="{TemplateBinding UIElement.IsMouseOver}">
+              <Track.DecreaseRepeatButton>
+                <RepeatButton Command="{x:Static ScrollBar.PageUpCommand}" Style="{StaticResource ScrollBarPageButton}"/>
+              </Track.DecreaseRepeatButton>
+              <Track.IncreaseRepeatButton>
+                <RepeatButton Command="{x:Static ScrollBar.PageDownCommand}" Style="{StaticResource ScrollBarPageButton}"/>
+              </Track.IncreaseRepeatButton>
+              <Track.Thumb>
+                                <Thumb Width="8" Style="{DynamicResource VerticalThumb}"/>
+                                <!--ScrollGlyph="VerticalGripper"-->
+              </Track.Thumb>
+            </Track>
+          </Grid>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+    <Style.Triggers>
+      <Trigger Property="ScrollBar.Orientation" Value="Horizontal">
+        <Setter Property="FrameworkElement.Width" Value="Auto"/>
+        <Setter Property="FrameworkElement.MinWidth" Value="0"/>
+        <Setter Property="FrameworkElement.Height" Value="10"/>
+        <Setter Property="FrameworkElement.MinHeight" Value="10"/>
+        <Setter Property="Control.Template">
+          <Setter.Value>
+            <ControlTemplate TargetType="{x:Type ScrollBar}">
+              <Grid x:Name="Bg" Background="#202020" SnapsToDevicePixels="true">
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="0.00001*"/>
+                </Grid.ColumnDefinitions>
+                <Track x:Name="PART_Track" Grid.Column="1" IsEnabled="{TemplateBinding UIElement.IsMouseOver}">
+                  <Track.DecreaseRepeatButton>
+                    <RepeatButton Command="{x:Static ScrollBar.PageLeftCommand}" Style="{StaticResource ScrollBarPageButton}"/>
+                  </Track.DecreaseRepeatButton>
+                  <Track.IncreaseRepeatButton>
+                    <RepeatButton Command="{x:Static ScrollBar.PageRightCommand}" Style="{StaticResource ScrollBarPageButton}"/>
+                  </Track.IncreaseRepeatButton>
+                  <Track.Thumb>
+                    <Thumb Height="8" Style="{DynamicResource HorizontalThumb}" />
+                                        <!-- ScrollGlyph="HorizontalGripper"-->
+                                    </Track.Thumb>
+                </Track>
+              </Grid>
+            </ControlTemplate>
+          </Setter.Value>
+        </Setter>
+      </Trigger>
+    </Style.Triggers>
+  </Style>
+</ResourceDictionary>

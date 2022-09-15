@@ -1,0 +1,875 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Users\Pdawg\Downloads\Microsoft Band Sync Setup\MicrosoftBandSync.exe-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CD64CCE5-E9DC-4EAA-B059-4B58279AD98C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>Microsoft Band Sync</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>1.3.20517.1</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>DesktopSyncApp</RootNamespace>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonServiceLocator, Version=2.0.2.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\CommonServiceLocator.2.0.2\lib\net47\CommonServiceLocator.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight, Version=5.4.1.0, Culture=neutral, PublicKeyToken=e7570ab207bcb616, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmLightLibs.5.4.1.1\lib\net45\GalaSoft.MvvmLight.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras, Version=5.4.1.0, Culture=neutral, PublicKeyToken=669f0b5e8f868abf, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmLightLibs.5.4.1.1\lib\net45\GalaSoft.MvvmLight.Extras.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Platform, Version=5.4.1.0, Culture=neutral, PublicKeyToken=5f873c45e98af8a1, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmLightLibs.5.4.1.1\lib\net45\GalaSoft.MvvmLight.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="ServiceLocation, Version=1.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ServiceLocation.1.3.1\lib\net45\ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Globalization" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmLightLibs.5.4.1.1\lib\net45\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LaunchSoftwareUpdate.cs" />
+    <Compile Include="Microsoft\Band\Build\BranchInfo.cs" />
+    <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\ViewModelLocator.cs" />
+    <Compile Include="XamlGeneratedNamespace\GeneratedInternalTypeHelper.cs" />
+    <Compile Include="CloudCaller.cs" />
+    <Compile Include="DisplayDeviceCargo.cs" />
+    <Compile Include="DisplayDeviceEnvoy.cs" />
+    <Compile Include="PersonalizeDeviceCargo.cs" />
+    <Compile Include="PersonalizeDeviceEnvoy.cs" />
+    <Compile Include="DesktopTelemetry.cs" />
+    <Compile Include="ApplicationInsightsTelemetryListener.cs" />
+    <Compile Include="DisplayTile.cs" />
+    <Compile Include="VariableOpacityButton.cs" />
+    <Compile Include="Bike\BikeRunBaseManager.cs" />
+    <Compile Include="Bike\BikeSettingsManager.cs" />
+    <Compile Include="RunSettingsManager.cs" />
+    <Compile Include="SelectableTile.cs" />
+    <Compile Include="SelectableThemeItem.cs" />
+    <Compile Include="StartStripManager.cs" />
+    <Compile Include="Themes\ThemeItemCollection1.cs" />
+    <Compile Include="Themes\ThemeComponent.cs" />
+    <Compile Include="Device\DeviceThemeManager.cs" />
+    <Compile Include="Themes\ThemePattern.cs" />
+    <Compile Include="Themes\ThemeColorPaletteProxy.cs" />
+    <Compile Include="Themes\ThemeColorSet.cs" />
+    <Compile Include="Themes\ThemePatternCollection.cs" />
+    <Compile Include="Fader.cs" />
+    <Compile Include="AppUpdateCheckStatus.cs" />
+    <Compile Include="CursorUIElement.cs" />
+    <Compile Include="DynamicGlobalizationConfiguration.cs" />
+    <Compile Include="ErrorMessageControl.cs" />
+    <Compile Include="LaunchSoftwareUpdateControl.cs" />
+    <Compile Include="ThemeColorPickerControl.cs" />
+    <Compile Include="TileManagementControl.cs" />
+    <Compile Include="RunSettings.cs" />
+    <Compile Include="Bike\BikeSettings.cs" />
+    <Compile Include="NotificationSettings.cs" />
+    <Compile Include="MessagingSettings.cs" />
+    <Compile Include="UpsellPageControl.cs" />
+    <Compile Include="Icons.cs" />
+    <Compile Include="RelativeTimeStrings.cs" />
+    <Compile Include="Strings.cs" />
+    <Compile Include="SemaphoreLocker.cs" />
+    <Compile Include="Device\DeviceScanSuppressor.cs" />
+    <Compile Include="User\User32.cs" />
+    <Compile Include="WindowMessage.cs" />
+    <Compile Include="TokenRefreshResponse.cs" />
+    <Compile Include="SecurityInfo.cs" />
+    <Compile Include="LoginResponse.cs" />
+    <Compile Include="BusySpinner.cs" />
+    <Compile Include="User\UserProfileEdit.cs" />
+    <Compile Include="HeartBeatHandler.cs" />
+    <Compile Include="HeartBeatService.cs" />
+    <Compile Include="User\UserProfileSurrogate.cs" />
+    <Compile Include="Firmware\FirmwareCheckStatus.cs" />
+    <Compile Include="Firmware\FirmwareStatus.cs" />
+    <Compile Include="KDeviceConnection.cs" />
+    <Compile Include="KDeviceInfo.cs" />
+    <Compile Include="KDKProgress1.cs" />
+    <Compile Include="Device\DeviceSyncProgress.cs" />
+    <Compile Include="Firmware\FirmwareUpdateProgress.cs" />
+    <Compile Include="KDeviceManager.cs" />
+    <Compile Include="ErrorInfo.cs" />
+    <Compile Include="ExecuteHandler.cs" />
+    <Compile Include="Command.cs" />
+    <Compile Include="CantPairDeviceControl.cs" />
+    <Compile Include="ForgetDeviceConfirmControl.cs" />
+    <Compile Include="PairDeviceConfirmControl.cs" />
+    <Compile Include="ProfileControl.cs" />
+    <Compile Include="FirmwareUpdateProgressControl.cs" />
+    <Compile Include="MainWindowControl.cs" />
+    <Compile Include="FirmwareUpdateControl.cs" />
+    <Compile Include="PairDeviceControl.cs" />
+    <Compile Include="DisconnectedControl.cs" />
+    <Compile Include="LoginControl.cs" />
+    <Compile Include="SyncAppPageControl.cs" />
+    <Compile Include="SyncControl.cs" />
+    <Compile Include="AboutControl.cs" />
+    <Compile Include="SettingsControl.cs" />
+    <Compile Include="PageSlideDirection.cs" />
+    <Compile Include="AnimatedPageControl.cs" />
+    <Compile Include="RelativeTimeFormat.cs" />
+    <Compile Include="RelativeTime.cs" />
+    <Compile Include="DownloadCenter.cs" />
+    <Compile Include="DisposableAction.cs" />
+    <Compile Include="INotifyPropertyChangedExtensions.cs" />
+    <Compile Include="CentimetersPerSecondToSpeedConverter.cs" />
+    <Compile Include="CentimetersToLengthConverter.cs" />
+    <Compile Include="HttpExtensions.cs" />
+    <Compile Include="JsonAssert.cs" />
+    <Compile Include="JsonUtilities.cs" />
+    <Compile Include="MsPerKilometerToSpeedConverter.cs" />
+    <Compile Include="SecondsToTimeSpanConverter.cs" />
+    <Compile Include="UnknownEnumConverter.cs" />
+    <Compile Include="UnknownEnumValueAttribute.cs" />
+    <Compile Include="UnitConversion.cs" />
+    <Compile Include="WebBrowserJavascriptErrors.cs" />
+    <Compile Include="CommandLineSettings.cs" />
+    <Compile Include="LoginInfo.cs" />
+    <Compile Include="Math2.cs" />
+    <Compile Include="StringUtils.cs" />
+    <Compile Include="User\UserDeviceStatus.cs" />
+    <Compile Include="LoginLogoutStatus.cs" />
+    <Compile Include="LoginContext.cs" />
+    <Compile Include="AppUpdateStatus.cs" />
+    <Compile Include="ViewModel\ViewModel.cs" />
+    <Compile Include="AppMainWindow.cs" />
+    <Compile Include="PropertyValueChangedEventArgs.cs" />
+    <Compile Include="PropertyValueChangedEventHandler.cs" />
+    <Compile Include="User\UserInfo.cs" />
+    <Compile Include="RegistrySettingsProvider.cs" />
+    <Compile Include="DynamicSettings.cs" />
+    <Compile Include="TrayIcon.cs" />
+    <Compile Include="WebUtil.cs" />
+    <Compile Include="Globals.cs" />
+    <Compile Include="Properties\MonthNames.cs" />
+    <Compile Include="BindingConverters\DateTimeAndFormatMultiConverter.cs" />
+    <Compile Include="BindingConverters\DateTimeToDOWConverter.cs" />
+    <Compile Include="BindingConverters\CantPairReasonMessageConverter.cs" />
+    <Compile Include="BindingConverters\AppUpdateStatusToVisibilityConverter.cs" />
+    <Compile Include="BindingConverters\AppUpdateStatusToStatusStringConverter.cs" />
+    <Compile Include="BindingConverters\AppUpdateStatusToAppUpdateCommandTextConverter.cs" />
+    <Compile Include="BindingConverters\FirmwareUpdatStateConverter.cs" />
+    <Compile Include="BindingConverters\DeviceFaceInfoVisibleMultiConverter.cs" />
+    <Compile Include="BindingConverters\BirthDateConverter.cs" />
+    <Compile Include="BindingConverters\HeightUnitsConverter.cs" />
+    <Compile Include="BindingConverters\WeightUnitsConverter.cs" />
+    <Compile Include="BindingConverters\TemperatureUnitsConverter.cs" />
+    <Compile Include="BindingConverters\DisplayUnitsToHeightLowValueVisibiliyConverter.cs" />
+    <Compile Include="BindingConverters\GenderConverter.cs" />
+    <Compile Include="BindingConverters\DeviceNameConverter.cs" />
+    <Compile Include="BindingConverters\UserNameMultiConverter.cs" />
+    <Compile Include="BindingConverters\DisplayUnitsToBoolConverter.cs" />
+    <Compile Include="BindingConverters\HeightFeetHighComboBoxIndexConverter.cs" />
+    <Compile Include="BindingConverters\WeightEditVisibilityMultiConverter.cs" />
+    <Compile Include="BindingConverters\HeightEditVisibilityMultiConverter.cs" />
+    <Compile Include="BindingConverters\GenderComboBoxIndexConverter.cs" />
+    <Compile Include="BindingConverters\MonthComboBoxIndexConverter.cs" />
+    <Compile Include="BindingConverters\DistanceUnitsComboBoxIndexConverter.cs" />
+    <Compile Include="BindingConverters\MassUnitsComboBoxIndexConverter.cs" />
+    <Compile Include="BindingConverters\TemperatureUnitsComboBoxIndexConverter.cs" />
+    <Compile Include="BindingConverters\ForgetDeviceVisibilityMultiConverter.cs" />
+    <Compile Include="BindingConverters\NullableIntToStringConverter.cs" />
+    <Compile Include="BindingConverters\CookedLimitedStringConverter.cs" />
+    <Compile Include="BindingConverters\CancelButtonVisibilityConverter.cs" />
+    <Compile Include="BindingConverters\EntryValueErrorToLabelForegroundColorConverter.cs" />
+    <Compile Include="BindingConverters\EntryValueErrorToTextBoxBorderColorConverter.cs" />
+    <Compile Include="BindingConverters\SyncFirmwareVisibleMultiConverter.cs" />
+    <Compile Include="BindingConverters\ProgressConverter.cs" />
+    <Compile Include="BindingConverters\FirmwareStatusToVisibilityConverter.cs" />
+    <Compile Include="BindingConverters\FirmwareStatusToStatusStringConverter.cs" />
+    <Compile Include="BindingConverters\BoolToVisibilityConverter.cs" />
+    <Compile Include="BindingConverters\NullToVisibilityConverter.cs" />
+    <Compile Include="BindingConverters\StringToVisibilityConverter.cs" />
+    <Compile Include="BindingConverters\StringTrimmedToVisibilityConverter.cs" />
+    <Compile Include="BindingConverters\StringToBoolConverter.cs" />
+    <Compile Include="BindingConverters\StringTrimmedToBoolConverter.cs" />
+    <Compile Include="BindingConverters\BoolNotConverter.cs" />
+    <Compile Include="BindingConverters\NullToBoolConverter.cs" />
+    <Compile Include="BindingConverters\CollectionPopulatedToBoolConverter.cs" />
+    <Compile Include="BindingConverters\CollectionPopulatedToVisibilityConverter.cs" />
+    <Compile Include="BindingConverters\EqualityToVisibilityConverter.cs" />
+    <Compile Include="BindingConverters\RunMetricComboBoxIndexConverter.cs" />
+    <Compile Include="BindingConverters\BikeMetricComboBoxIndexConverter.cs" />
+    <Compile Include="BindingConverters\BikeSplitComboBoxIndexConverter.cs" />
+    <Compile Include="BindingConverters\DeviceStatusToVisibilityConverter.cs" />
+    <Compile Include="BindingConverters\RelativeSyncTimeConverter.cs" />
+    <Compile Include="BindingConverters\RelativeFWCheckTimeConverter.cs" />
+    <Compile Include="BindingConverters\SyncingToSyncCommandTitleConverter.cs" />
+    <Compile Include="BindingConverters\LoginLogoutStatusToVisibilityConverter.cs" />
+    <Compile Include="BindingConverters\LoginLogoutStatusToBoolConverter.cs" />
+    <Compile Include="BindingConverters\VersionConverter.cs" />
+    <Compile Include="LoginDialog.xaml.cs">
+      <DependentUpon>LoginDialog.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="app.ico" />
+    <Resource Include="Resources\back-arrow.png" />
+    <Resource Include="Resources\back-arrow-mousedown.png" />
+    <Resource Include="Resources\battery-charging.png" />
+    <Resource Include="Resources\battery-empty.png" />
+    <Resource Include="Resources\cancel.png" />
+    <Resource Include="Resources\cancel-mousedown.png" />
+    <Resource Include="Resources\cancel-mouseover.png" />
+    <Resource Include="Resources\check.png" />
+    <Resource Include="Resources\check-mousedown.png" />
+    <Resource Include="Resources\check-mouseover.png" />
+    <Resource Include="Resources\close.png" />
+    <Resource Include="Resources\device-64x64.png" />
+    <Resource Include="Resources\device-face-cargo.png" />
+    <Resource Include="Resources\device-face-neon.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\coral_angle.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\coral_blank.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\coral_blinds.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\coral_folds.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\coral_honeycomb.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\coral_mesh.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\coral_petals.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\coral_pixels.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\coral_sequins.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\coral_stripes.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\coral_triangles.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\coral_vortex.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\cornflower_angle.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\cornflower_blank.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\cornflower_blinds.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\cornflower_folds.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\cornflower_honeycomb.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\cornflower_mesh.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\cornflower_petals.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\cornflower_pixels.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\cornflower_sequins.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\cornflower_stripes.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\cornflower_triangles.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\cornflower_vortex.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\cyber_angle.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\cyber_blank.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\cyber_blinds.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\cyber_folds.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\cyber_honeycomb.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\cyber_mesh.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\cyber_petals.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\cyber_pixels.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\cyber_sequins.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\cyber_stripes.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\cyber_triangles.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\cyber_vortex.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\electric_angle.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\electric_blank.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\electric_blinds.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\electric_folds.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\electric_honeycomb.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\electric_mesh.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\electric_petals.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\electric_pixels.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\electric_sequins.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\electric_stripes.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\electric_triangles.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\electric_vortex.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\flame_angle.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\flame_blank.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\flame_blinds.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\flame_folds.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\flame_honeycomb.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\flame_mesh.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\flame_petals.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\flame_pixels.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\flame_sequins.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\flame_stripes.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\flame_triangles.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\flame_vortex.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\fuchsia_angle.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\fuchsia_blank.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\fuchsia_blinds.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\fuchsia_folds.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\fuchsia_honeycomb.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\fuchsia_mesh.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\fuchsia_petals.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\fuchsia_pixels.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\fuchsia_sequins.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\fuchsia_stripes.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\fuchsia_triangles.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\fuchsia_vortex.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\joule_angle.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\joule_blank.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\joule_blinds.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\joule_folds.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\joule_honeycomb.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\joule_mesh.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\joule_petals.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\joule_pixels.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\joule_sequins.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\joule_stripes.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\joule_triangles.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\joule_vortex.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\lime_angle.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\lime_blank.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\lime_blinds.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\lime_folds.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\lime_honeycomb.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\lime_mesh.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\lime_petals.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\lime_pixels.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\lime_sequins.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\lime_stripes.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\lime_triangles.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\lime_vortex.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\orchid_angle.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\orchid_blank.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\orchid_blinds.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\orchid_folds.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\orchid_honeycomb.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\orchid_mesh.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\orchid_petals.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\orchid_pixels.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\orchid_sequins.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\orchid_stripes.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\orchid_triangles.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\orchid_vortex.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\penguin_angle.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\penguin_blank.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\penguin_blinds.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\penguin_folds.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\penguin_honeycomb.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\penguin_mesh.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\penguin_petals.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\penguin_pixels.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\penguin_sequins.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\penguin_stripes.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\penguin_triangles.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\penguin_vortex.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\storm_angle.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\storm_blank.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\storm_blinds.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\storm_folds.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\storm_honeycomb.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\storm_mesh.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\storm_petals.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\storm_pixels.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\storm_sequins.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\storm_stripes.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\storm_triangles.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\storm_vortex.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\tuxedo_angle.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\tuxedo_blank.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\tuxedo_blinds.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\tuxedo_folds.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\tuxedo_honeycomb.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\tuxedo_mesh.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\tuxedo_petals.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\tuxedo_pixels.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\tuxedo_sequins.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\tuxedo_stripes.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\tuxedo_triangles.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\tuxedo_vortex.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\violet_angle.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\violet_blank.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\violet_blinds.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\violet_folds.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\violet_honeycomb.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\violet_mesh.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\violet_petals.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\violet_pixels.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\violet_sequins.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\violet_stripes.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\violet_triangles.png" />
+    <Resource Include="Resources\devicepersonalization\cargo\violet_vortex.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\berry_blank.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\berry_chevs.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\berry_curves.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\berry_dan.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\berry_fast.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\berry_fiber.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\berry_fwd.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\berry_noods.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\berry_plates.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\berry_time.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\california_blank.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\california_chevs.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\california_curves.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\california_dan.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\california_fast.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\california_fiber.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\california_fwd.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\california_noods.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\california_plates.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\california_time.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\cargo_blank.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\cargo_chevs.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\cargo_curves.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\cargo_dan.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\cargo_fast.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\cargo_fiber.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\cargo_fwd.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\cargo_noods.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\cargo_plates.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\cargo_time.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\coral_blank.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\coral_chevs.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\coral_curves.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\coral_dan.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\coral_fast.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\coral_fiber.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\coral_fwd.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\coral_noods.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\coral_plates.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\coral_time.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\cyber_blank.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\cyber_chevs.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\cyber_curves.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\cyber_dan.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\cyber_fast.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\cyber_fiber.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\cyber_fwd.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\cyber_noods.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\cyber_plates.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\cyber_time.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\dj_blank.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\dj_chevs.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\dj_curves.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\dj_dan.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\dj_fast.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\dj_fiber.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\dj_fwd.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\dj_noods.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\dj_plates.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\dj_time.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\electric_blank.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\electric_chevs.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\electric_curves.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\electric_dan.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\electric_fast.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\electric_fiber.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\electric_fwd.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\electric_noods.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\electric_plates.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\electric_time.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\kale_blank.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\kale_chevs.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\kale_curves.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\kale_dan.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\kale_fast.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\kale_fiber.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\kale_fwd.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\kale_noods.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\kale_plates.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\kale_time.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\killabee_blank.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\killabee_chevs.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\killabee_curves.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\killabee_dan.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\killabee_fast.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\killabee_fiber.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\killabee_fwd.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\killabee_noods.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\killabee_plates.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\killabee_time.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\koolaid_blank.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\koolaid_chevs.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\koolaid_curves.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\koolaid_dan.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\koolaid_fast.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\koolaid_fiber.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\koolaid_fwd.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\koolaid_noods.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\koolaid_plates.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\koolaid_time.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\lasertag_blank.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\lasertag_chevs.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\lasertag_curves.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\lasertag_dan.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\lasertag_fast.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\lasertag_fiber.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\lasertag_fwd.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\lasertag_noods.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\lasertag_plates.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\lasertag_time.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\lime_blank.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\lime_chevs.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\lime_curves.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\lime_dan.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\lime_fast.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\lime_fiber.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\lime_fwd.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\lime_noods.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\lime_plates.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\lime_time.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\pizza_blank.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\pizza_chevs.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\pizza_curves.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\pizza_dan.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\pizza_fast.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\pizza_fiber.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\pizza_fwd.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\pizza_noods.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\pizza_plates.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\pizza_time.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\skyline_blank.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\skyline_chevs.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\skyline_curves.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\skyline_dan.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\skyline_fast.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\skyline_fiber.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\skyline_fwd.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\skyline_noods.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\skyline_plates.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\skyline_time.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\storm_blank.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\storm_chevs.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\storm_curves.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\storm_dan.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\storm_fast.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\storm_fiber.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\storm_fwd.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\storm_noods.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\storm_plates.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\storm_time.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\tang_blank.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\tang_chevs.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\tang_curves.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\tang_dan.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\tang_fast.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\tang_fiber.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\tang_fwd.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\tang_noods.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\tang_plates.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\tang_time.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\tangerine_blank.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\tangerine_chevs.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\tangerine_curves.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\tangerine_dan.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\tangerine_fast.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\tangerine_fiber.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\tangerine_fwd.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\tangerine_noods.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\tangerine_plates.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\tangerine_time.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\tuxedo_blank.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\tuxedo_chevs.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\tuxedo_curves.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\tuxedo_dan.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\tuxedo_fast.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\tuxedo_fiber.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\tuxedo_fwd.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\tuxedo_noods.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\tuxedo_plates.png" />
+    <Resource Include="Resources\devicepersonalization\envoy\tuxedo_time.png" />
+    <Resource Include="Resources\disconnected-graphic.png" />
+    <Resource Include="Resources\error.png" />
+    <Resource Include="Resources\error-red.ico" />
+    <Resource Include="Resources\forward-arrow.png" />
+    <Resource Include="Resources\forward-arrow-mousedown.png" />
+    <Resource Include="Resources\minimize.png" />
+    <Resource Include="Resources\syncing-frame-01.ico" />
+    <Resource Include="Resources\syncing-frame-02.ico" />
+    <Resource Include="Resources\syncing-frame-03.ico" />
+    <Resource Include="Resources\syncing-white-34x34.png" />
+    <Resource Include="Resources\tilemanagement\alarm.png" />
+    <Resource Include="Resources\tilemanagement\bike.png" />
+    <Resource Include="Resources\tilemanagement\calendar.png" />
+    <Resource Include="Resources\tilemanagement\calls.png" />
+    <Resource Include="Resources\tilemanagement\cortana.png" />
+    <Resource Include="Resources\tilemanagement\email.png" />
+    <Resource Include="Resources\tilemanagement\exercise.png" />
+    <Resource Include="Resources\tilemanagement\facebook.png" />
+    <Resource Include="Resources\tilemanagement\facebookmessenger.png" />
+    <Resource Include="Resources\tilemanagement\finance.png" />
+    <Resource Include="Resources\tilemanagement\guidedworkouts.png" />
+    <Resource Include="Resources\tilemanagement\lync.png" />
+    <Resource Include="Resources\tilemanagement\messaging.png" />
+    <Resource Include="Resources\tilemanagement\notificationcenter.png" />
+    <Resource Include="Resources\tilemanagement\run.png" />
+    <Resource Include="Resources\tilemanagement\sleep.png" />
+    <Resource Include="Resources\tilemanagement\starbucks.png" />
+    <Resource Include="Resources\tilemanagement\twitter.png" />
+    <Resource Include="Resources\tilemanagement\uv.png" />
+    <Resource Include="Resources\tilemanagement\weather.png" />
+    <Resource Include="Resources\toggle-off.png" />
+    <Resource Include="Resources\toggle-on.png" />
+    <Resource Include="Resources\usb-cord-x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Configurations\ae.json" />
+    <EmbeddedResource Include="Assets\Configurations\at.json" />
+    <EmbeddedResource Include="Assets\Configurations\au.json" />
+    <EmbeddedResource Include="Assets\Configurations\be.json" />
+    <EmbeddedResource Include="Assets\Configurations\ca.json" />
+    <EmbeddedResource Include="Assets\Configurations\ch.json" />
+    <EmbeddedResource Include="Assets\Configurations\cn.json" />
+    <EmbeddedResource Include="Assets\Configurations\de.json" />
+    <EmbeddedResource Include="Assets\Configurations\defaultconfig.json" />
+    <EmbeddedResource Include="Assets\Configurations\dk.json" />
+    <EmbeddedResource Include="Assets\Configurations\es.json" />
+    <EmbeddedResource Include="Assets\Configurations\fi.json" />
+    <EmbeddedResource Include="Assets\Configurations\fr.json" />
+    <EmbeddedResource Include="Assets\Configurations\gb.json" />
+    <EmbeddedResource Include="Assets\Configurations\hk.json" />
+    <EmbeddedResource Include="Assets\Configurations\ie.json" />
+    <EmbeddedResource Include="Assets\Configurations\it.json" />
+    <EmbeddedResource Include="Assets\Configurations\kr.json" />
+    <EmbeddedResource Include="Assets\Configurations\nl.json" />
+    <EmbeddedResource Include="Assets\Configurations\no.json" />
+    <EmbeddedResource Include="Assets\Configurations\nz.json" />
+    <EmbeddedResource Include="Assets\Configurations\pt.json" />
+    <EmbeddedResource Include="Assets\Configurations\se.json" />
+    <EmbeddedResource Include="Assets\Configurations\sg.json" />
+    <EmbeddedResource Include="Assets\Configurations\tw.json" />
+    <EmbeddedResource Include="Assets\Configurations\us.json" />
+    <EmbeddedResource Include="Assets\Configurations\za.json" />
+    <EmbeddedResource Include="ResourceLinks\Icons.resx" />
+    <EmbeddedResource Include="ResourceLinks\RelativeTimeStrings.resx" />
+    <EmbeddedResource Include="ResourceLinks\Strings.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AnimatedPageControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="bindingconverters\bindingconverters.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BusySpinner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DisplayDeviceCargo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DisplayDeviceEnvoy.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DisplayTile.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Fader.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PersonalizeDeviceCargo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PersonalizeDeviceEnvoy.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="VariableOpacityButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="LoginDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AboutControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CantPairDeviceControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DisconnectedControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ErrorMessageControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FirmwareUpdateControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FirmwareUpdateProgressControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ForgetDeviceConfirmControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="LaunchSoftwareUpdate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="LoginControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainWindowControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PairDeviceConfirmControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PairDeviceControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ProfileControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SettingsControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SyncControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ThemeColorpickerControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TileManagementControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TileSettingsPageControls\bikesettings.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TileSettingsPageControls\messagingsettings.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TileSettingsPageControls\notificationsettings.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TileSettingsPageControls\runsettings.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UpsellPageControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="resourcelinks\images.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="resourcelinks\metileimages.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="resourcelinks\startstripimages.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="resourcelinks\themecolors.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Microsoft.Band\Microsoft.Band.csproj">
+      <Project>{7ac5b21c-e909-4d66-a9bc-f92525720e49}</Project>
+      <Name>Microsoft.Band</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Band.Admin\Microsoft.Band.Admin.csproj">
+      <Project>{5e0afd9c-9161-49ec-b17d-49694680289b}</Project>
+      <Name>Microsoft.Band.Admin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Band.Admin.Desktop\Microsoft.Band.Admin.Desktop.csproj">
+      <Project>{470e3fd1-bbbd-4c02-a153-e4e180beebd6}</Project>
+      <Name>Microsoft.Band.Admin.Desktop</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Band.Desktop\Microsoft.Band.Desktop.csproj">
+      <Project>{f3d8c2df-6cb6-4031-b0af-261553f5abf0}</Project>
+      <Name>Microsoft.Band.Desktop</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Health.App.Core\Microsoft.Health.App.Core.csproj">
+      <Project>{6278950e-d3a4-482a-a68f-19b14da5f84a}</Project>
+      <Name>Microsoft.Health.App.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Health.Cloud.Client\Microsoft.Health.Cloud.Client.csproj">
+      <Project>{75f73245-cfe9-4922-b0d9-44b9a9aa2345}</Project>
+      <Name>Microsoft.Health.Cloud.Client</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BaseControls\" />
+    <Folder Include="Controls\" />
+    <Folder Include="PageControls\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

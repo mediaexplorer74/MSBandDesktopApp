@@ -1,0 +1,113 @@
+<local:SyncAppPageControl 
+    x:Class="DesktopSyncApp.AboutControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:BindingConverters="clr-namespace:DesktopSyncApp.BindingConverters"
+    xmlns:System="clr-namespace:System;assembly=mscorlib"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:DesktopSyncApp"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    d:DataContext="{d:DesignInstance Type=local:ViewModel1}"
+    Width="825" 
+    Height="479" 
+    Background="{StaticResource PrimaryMediumBrush}"
+>
+    <Grid>
+    <TextBlock Margin="117,53,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
+               AutomationProperties.AutomationId="PageHeader" Style="{DynamicResource Heading}"
+               Text="{x:Static local:Strings.Title_Page_About2}"/>
+    <Button Margin="40,53,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
+            AutomationProperties.AutomationId="BackButton" IsTabStop="false"
+            Style="{StaticResource BackButton}"/>
+    <StackPanel Margin="121,120,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
+      <TextBlock Margin="0,0,0,5" HorizontalAlignment="Left" VerticalAlignment="Top"
+                 AutomationProperties.AutomationId="AppVersion" FontSize="15" FontWeight="Bold"
+                 Foreground="{StaticResource TertiaryTextForegroundBrush}" Style="{DynamicResource BaseTextBlock}">
+        <Run Text="{x:Static local:Strings.Label_AppVersion}"/>
+        <Run Text="{Binding Path=(local:Globals.ApplicationVersion), Mode=OneWay}"/>
+      </TextBlock>
+      <local:VariableOpacityButton Height="40" Margin="0,0,0,5" HorizontalAlignment="Left" VerticalAlignment="Top"
+                                   HorizontalContentAlignment="Center" AutomationProperties.AutomationId="AppUpdateBtn" FontSize="15"
+                                   IsTabStop="false" Padding="20,0" Command="{Binding CheckOrOfferAppUpdate}"
+                                   Content="{Binding AppUpdateStatus, Converter={StaticResource AppUpdateStatusToAppUpdateCommandTextConverter}, FallbackValue='App Update Btn'}"/>
+      <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Horizontal">
+        <TextBlock Margin="0,0,10,0" HorizontalAlignment="Left" VerticalAlignment="Center"
+                   AutomationProperties.AutomationId="ProgressBar" FontFamily="Segoe UI Light"
+                   Style="{DynamicResource BaseTextBlock}"
+                   Text="{Binding AppUpdateStatus, Converter={StaticResource AppUpdateStatusToStatusStringConverter}, FallbackValue='doing nothing'}"/>
+        <local:BusySpinner Width="20" Height="20" HorizontalAlignment="Left" VerticalAlignment="Center"
+                           AutomationProperties.AutomationId="BusySpinner"
+                           Visibility="{Binding AppUpdateStatus, Converter={StaticResource AppUpdateStatusToVisibilityConverter}}"/>
+      </StackPanel>
+    </StackPanel>
+    <TextBlock Margin="121,214,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
+               AutomationProperties.AutomationId="BandSerialNumber" FontSize="15" FontWeight="Bold"
+               Foreground="{StaticResource TertiaryTextForegroundBrush}" Style="{DynamicResource BaseTextBlock}"
+               Visibility="{Binding DeviceManager.CurrentDevice, Converter={StaticResource NullToVisibilityConverter}}">
+      <Run Text="{x:Static local:Strings.Label_DeviceSerialNumber}"/>
+      <Run Text="{Binding DeviceManager.CurrentDevice.DeviceSerialNumber, FallbackValue=????????}"/>
+    </TextBlock>
+    <TextBlock Margin="121,237,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
+               AutomationProperties.AutomationId="BandSoftwareVersion" FontSize="15" FontWeight="Bold"
+               Foreground="{StaticResource TertiaryTextForegroundBrush}" Style="{DynamicResource BaseTextBlock}"
+               Visibility="{Binding DeviceManager.CurrentDevice, Converter={StaticResource NullToVisibilityConverter}}">
+      <Run Text="{x:Static local:Strings.Label_DeviceFWVersion}"/>
+      <Run Text="{Binding DeviceManager.CurrentDevice.DeviceInfo.Versions, Converter={StaticResource VersionConverter}, FallbackValue=?.?.????.?}"/>
+    </TextBlock>
+    <TextBlock Margin="121,0,0,25" HorizontalAlignment="Left" VerticalAlignment="Bottom"
+               AutomationProperties.AutomationId="CompanyNameWithCopyRight" FontFamily="Segoe UI Semibold"
+               FontSize="15" Foreground="{StaticResource TertiaryTextForegroundBrush}"
+               Style="{DynamicResource BaseTextBlock}" Text="{x:Static local:Strings.Text_AboutCopyrightNotice}"/>
+    <Button Margin="118,285,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
+            HorizontalContentAlignment="Left" AutomationProperties.AutomationId="TermsOfUse" FontSize="20"
+            Padding="1" Style="{DynamicResource NavButton}" Command="{Binding LaunchTermsOfUseWeb}">
+      <TextBlock Text="{x:Static local:Strings.Label_Button_TermsOfUse}">
+        <TextBlock.TextDecorations>
+          <TextDecoration/>
+        </TextBlock.TextDecorations>
+      </TextBlock>
+    </Button>
+    <Button Margin="118,315,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
+            HorizontalContentAlignment="Left" AutomationProperties.AutomationId="PrivacyPolicy" FontSize="20"
+            Padding="1" Style="{DynamicResource NavButton}" Command="{Binding LaunchPrivacyPolicyWeb}">
+      <TextBlock Text="{x:Static local:Strings.Label_Button_PrivacyPolicy}">
+        <TextBlock.TextDecorations>
+          <TextDecoration/>
+        </TextBlock.TextDecorations>
+      </TextBlock>
+    </Button>
+    <Button Margin="118,345,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
+            HorizontalContentAlignment="Left" AutomationProperties.AutomationId="ThirdPartyNotices"
+            FontSize="20" Padding="1" Style="{DynamicResource NavButton}"
+            Command="{Binding LaunchThirdPartyNoticesWeb}">
+      <TextBlock Text="{x:Static local:Strings.Label_Button_ThirdPartyNotices}">
+        <TextBlock.TextDecorations>
+          <TextDecoration/>
+        </TextBlock.TextDecorations>
+      </TextBlock>
+    </Button>
+    <Button Margin="118,375,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
+            HorizontalContentAlignment="Left" AutomationProperties.AutomationId="Support" FontSize="20"
+            Padding="1" Style="{DynamicResource NavButton}" Command="{Binding LaunchSupportWeb}">
+      <TextBlock Text="{x:Static local:Strings.Label_Button_Support}">
+        <TextBlock.TextDecorations>
+          <TextDecoration/>
+        </TextBlock.TextDecorations>
+      </TextBlock>
+    </Button>
+    <Button Margin="350,375,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
+            HorizontalContentAlignment="Left" AutomationProperties.AutomationId="SendFeedback" FontSize="20"
+            Padding="1" Style="{DynamicResource NavButton}" Command="{Binding SendSupportEmail}"
+            Visibility="{Binding SupportMailto, Converter={StaticResource NullToVisibilityConverter}}">
+      <TextBlock Text="{x:Static local:Strings.Label_Button_DFSupport}">
+        <TextBlock.TextDecorations>
+          <TextDecoration/>
+        </TextBlock.TextDecorations>
+      </TextBlock>
+    </Button>
+    <Rectangle Margin="0,463,0,0" VerticalAlignment="Top" IsHitTestVisible="true" Stroke="Red"
+               Visibility="{x:Static local:ViewModel.FallbackVisibility}"/>
+    <Rectangle Margin="121,0,0,3" HorizontalAlignment="Left" IsHitTestVisible="true" Stroke="Red"
+               Visibility="{x:Static local:ViewModel.FallbackVisibility}"/>
+  </Grid>
+</local:SyncAppPageControl>
