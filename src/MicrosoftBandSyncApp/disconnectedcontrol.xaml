@@ -12,20 +12,20 @@
            AutomationProperties.AutomationId="BandDisconnectedImage"
            Source="/Resources/disconnected-graphic.png" Stretch="None"/>
     <TextBlock Margin="40,50,40,0" VerticalAlignment="Top" AutomationProperties.AutomationId="PageTitle1"
-               Style="{DynamicResource Heading}" Text="{x:Static local:Strings.Title_Page_Disconnected_1}"
+               Style="{DynamicResource Heading}" Text="{x:Static local:LStrings.Title_Page_Disconnected_1}"
                Background="{x:Null}"/>
     <TextBlock Margin="40,97,80,0" VerticalAlignment="Top" AutomationProperties.AutomationId="PageTitle2"
-               Style="{DynamicResource Heading}" Text="{x:Static local:Strings.Title_Page_Disconnected_2}"
+               Style="{DynamicResource Heading}" Text="{x:Static local:LStrings.Title_Page_Disconnected_2}"
                Background="{x:Null}"/>
     <TextBlock x:Name="lblProfileFullName" Margin="40,174,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
                AutomationProperties.AutomationId="SubHeadingLabel" FontSize="16" RenderTransformOrigin="0.5,0.462"
                Style="{DynamicResource SubHeading}"
-               Text="{x:Static local:Strings.SubHead_Page_Disconnected_Disconnected}" Background="{x:Null}"
-               Visibility="{Binding AquiringDevice, Converter={StaticResource BoolToVisibilityConverter}, ConverterParameter={x:Static BindingConverters:BoolToVisibilityConverter+Mapping.TrueHidden}}"/>
+               Text="{x:Static local:LStrings.SubHead_Page_Disconnected_Disconnected}" Background="{x:Null}"
+               Visibility="{Binding AquiringDevice, Converter={StaticResource BoolToVisibilityConverter}, ConverterParameter={x:Static BindingConverters:BoolToVisibilityConverter}}"/>
     <TextBlock Margin="40,174,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
                AutomationProperties.AutomationId="ConnectingText" FontSize="16" RenderTransformOrigin="0.5,0.462"
                Style="{DynamicResource SubHeading}"
-               Text="{x:Static local:Strings.SubHead_Page_Disconnected_Connecting}" Background="{x:Null}"
+               Text="{x:Static local:LStrings.SubHead_Page_Disconnected_Connecting}" Background="{x:Null}"
                Visibility="{Binding AquiringDevice, Converter={StaticResource BoolToVisibilityConverter}}"/>
     <local:BusySpinner Width="40" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center"
                        AutomationProperties.AutomationId="BusySpinner"

@@ -18,15 +18,22 @@ using System.Windows.Threading;
 
 namespace DesktopSyncApp
 {
-  public sealed partial class App : Application, IDisposable
+  public  partial class App : Application, IDisposable
   {
     private Mutex singletonMutex;
     private ViewModel model;
-    private bool _contentLoaded;
 
-    public static App Current => Application.Current as App;
+        //private bool _contentLoaded;
 
-    public AppMainWindow MainWindow
+        public static App Current
+        {
+            get
+            {
+                return Application.Current as App;
+            }
+        }
+
+        public AppMainWindow MainWindow
     {
       get => base.MainWindow as AppMainWindow;
       set => this.MainWindow = value; // (Window)
@@ -68,9 +75,11 @@ namespace DesktopSyncApp
       this.model.TelemetryListener.Flush();
     }
 
-    private void App_DispatcherUnhandledException(
+    private void App_DispatcherUnhandledException
+    (
       object sender,
-      DispatcherUnhandledExceptionEventArgs e)
+      DispatcherUnhandledExceptionEventArgs e
+    )
     {
       e.Handled = true;
       ErrorInfo error = new ErrorInfo(nameof (App_DispatcherUnhandledException), "Unhandled dispatcher error", e.Exception);
@@ -205,6 +214,7 @@ namespace DesktopSyncApp
         }
         catch
         {
+           //
         }
       }
     }
@@ -226,13 +236,13 @@ namespace DesktopSyncApp
     //[STAThread]
     //[DebuggerNonUserCode]
     //[GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
-    /*
+    
     public static void Main()
     {
       App app = new App();
       app.InitializeComponent();
       app.Run();
     }
-    */
+    
   }
 }

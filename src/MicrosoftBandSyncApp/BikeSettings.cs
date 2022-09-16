@@ -18,33 +18,33 @@ namespace DesktopSyncApp
   public partial class BikeSettings : SyncAppPageControl, IComponentConnector
   {
     private BikeSettingsManager manager;
-    internal TextBlock Title;
-    internal TextBlock NotificationsText;
-    internal TextBlock NotificationsText1;
-    internal ComboBox SplitMarkers;
-    internal TextBlock MainDataGrouping;
-    internal TextBlock Metric1Title;
-    internal TextBlock Metric2Title;
-    internal TextBlock Metric3Title;
-    internal ComboBox Metric1Data;
-    internal ComboBox Metric2Data;
-    internal ComboBox Metric3Data;
-    internal TextBlock Metric1Error;
-    internal TextBlock Metric2Error;
-    internal TextBlock Metric3Error;
-    internal TextBlock DrawerDataGrouping;
-    internal TextBlock Metric4Title;
-    internal TextBlock Metric5Title;
-    internal TextBlock Metric6Title;
-    internal TextBlock Metric7Title;
-    internal ComboBox Metric4Data;
-    internal ComboBox Metric5Data;
-    internal ComboBox Metric6Data;
-    internal ComboBox Metric7Data;
-    internal TextBlock Metric4Error;
-    internal TextBlock Metric5Error;
-    internal TextBlock Metric6Error;
-    internal TextBlock Metric7Error;
+    //internal TextBlock Title;
+    //internal TextBlock NotificationsText;
+    //internal TextBlock NotificationsText1;
+    //internal ComboBox SplitMarkers;
+    //internal TextBlock MainDataGrouping;
+    //internal TextBlock Metric1Title;
+    //internal TextBlock Metric2Title;
+    //internal TextBlock Metric3Title;
+    //internal ComboBox Metric1Data;
+    //internal ComboBox Metric2Data;
+    //internal ComboBox Metric3Data;
+    //internal TextBlock Metric1Error;
+    //internal TextBlock Metric2Error;
+    //internal TextBlock Metric3Error;
+    //internal TextBlock DrawerDataGrouping;
+    //internal TextBlock Metric4Title;
+    //internal TextBlock Metric5Title;
+    //internal TextBlock Metric6Title;
+    //internal TextBlock Metric7Title;
+    //internal ComboBox Metric4Data;
+    //internal ComboBox Metric5Data;
+    //internal ComboBox Metric6Data;
+    //internal ComboBox Metric7Data;
+    //internal TextBlock Metric4Error;
+    //internal TextBlock Metric5Error;
+    //internal TextBlock Metric6Error;
+    //internal TextBlock Metric7Error;
     
     //private bool _contentLoaded;
 
@@ -70,6 +70,7 @@ namespace DesktopSyncApp
       ((TileManagementControl) this.container).ShowSettingsPage((SyncAppPageControl) null);
     }
 
+    /*
     [DebuggerNonUserCode]
     [GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
     public void InitializeComponent()
@@ -179,5 +180,6 @@ namespace DesktopSyncApp
           break;
       }
     }
+    */
   }
 }

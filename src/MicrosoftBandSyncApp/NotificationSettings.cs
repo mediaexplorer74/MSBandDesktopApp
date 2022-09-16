@@ -14,12 +14,12 @@ using System.Windows.Markup;
 
 namespace DesktopSyncApp
 {
-  public class NotificationSettings : SyncAppPageControl, IComponentConnector
+  public partial class NotificationSettings : SyncAppPageControl, IComponentConnector
   {
-    internal TextBlock Title;
-    internal TextBlock NotificationsText;
-    internal CheckBox NotificationsOn;
-    private bool _contentLoaded;
+    //internal TextBlock Title;
+    //internal TextBlock NotificationsText;
+    //internal CheckBox NotificationsOn;
+    //private bool _contentLoaded;
 
     public NotificationSettings(AppMainWindow main, SyncAppPageControl parent)
       : base(main, parent, true)
@@ -29,6 +29,7 @@ namespace DesktopSyncApp
 
     private void Close_Click(object sender, RoutedEventArgs e) => ((TileManagementControl) this.container).ShowSettingsPage((SyncAppPageControl) null);
 
+        /*
     [DebuggerNonUserCode]
     [GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
     public void InitializeComponent()
@@ -64,5 +65,6 @@ namespace DesktopSyncApp
           break;
       }
     }
+        */
   }
 }

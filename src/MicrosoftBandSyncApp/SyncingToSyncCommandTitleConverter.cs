@@ -13,9 +13,14 @@ namespace DesktopSyncApp.BindingConverters
   [ValueConversion(typeof (bool), typeof (string))]
   public class SyncingToSyncCommandTitleConverter : IValueConverter
   {
-    public object Convert(object value, Type targetType, object parameter, CultureInfo culture) => !(bool) value ? (object) Strings.Title_Command_SyncSensorLogs : (object) Strings.Title_Command_CancelSyncSensorLogs;
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            return !(bool)value 
+                ? (object)LStrings.Title_Command_SyncSensorLogs 
+                : (object)LStrings.Title_Command_CancelSyncSensorLogs;
+        }
 
-    public object ConvertBack(
+        public object ConvertBack(
       object value,
       Type targetType,
       object parameter,

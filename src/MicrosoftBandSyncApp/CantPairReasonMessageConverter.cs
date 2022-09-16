@@ -20,13 +20,13 @@ namespace DesktopSyncApp.BindingConverters
       switch (value)
       {
         case UserDeviceStatus.Multiple:
-          return Strings.Message_Page_Multiple;
+          return LStrings.Message_Page_Multiple;
         case UserDeviceStatus.CantRegisterReset:
-          return Strings.Message_Page_CantRegister_Reset;
+          return LStrings.Message_Page_CantRegister_Reset;
         case UserDeviceStatus.CantRegisterUnregister:
-          return Strings.Message_Page_CantRegister_Unregister;
+          return LStrings.Message_Page_CantRegister_Unregister;
         case UserDeviceStatus.CantRegisterUnregisterReset:
-          return Strings.Message_Page_CantRegister_UnregisterReset;
+          return LStrings.Message_Page_CantRegister_UnregisterReset;
         default:
           return "";
       }

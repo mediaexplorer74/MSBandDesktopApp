@@ -34,9 +34,16 @@ namespace DesktopSyncApp.BindingConverters
       }
     }
 
-    public string Convert(FirmwareVersions value) => string.Format(Strings.Format_FirmwareVersion, (object) value.ApplicationVersion, (object) value.PcbId, value.ApplicationVersion.Debug ? (object) Strings.FirmwareVersionDebugAbbr : (object) Strings.FirmwareVersionReleaseAbbr);
+        public string Convert(FirmwareVersions value)
+        {
+            return string.Format(LStrings.Format_FirmwareVersion, 
+                (object)value.ApplicationVersion, 
+                (object)value.PcbId, value.ApplicationVersion.Debug 
+                ? (object)LStrings.FirmwareVersionDebugAbbr 
+                : (object)LStrings.FirmwareVersionReleaseAbbr);
+        }
 
-    public string Convert(Version value) => string.Format(Strings.Format_FirmwareVersionShort, (object) value);
+        public string Convert(Version value) => string.Format(LStrings.Format_FirmwareVersionShort, (object) value);
 
     public object ConvertBack(
       object value,

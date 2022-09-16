@@ -38,21 +38,21 @@ namespace DesktopSyncApp
       }
     }
 
-    public bool DeviceIsEnvoy => this.deviceType == 2;
+    public bool DeviceIsEnvoy => (int)this.deviceType == 2;
 
-    public string Metric1Title => string.Format(Strings.Settings_BikeRun_DataTitle, (object) 1);
+    public string Metric1Title => string.Format(LStrings.Settings_BikeRun_DataTitle, (object) 1);
 
-    public string Metric2Title => string.Format(Strings.Settings_BikeRun_DataTitle, (object) 2);
+    public string Metric2Title => string.Format(LStrings.Settings_BikeRun_DataTitle, (object) 2);
 
-    public string Metric3Title => string.Format(Strings.Settings_BikeRun_DataTitle, (object) 3);
+    public string Metric3Title => string.Format(LStrings.Settings_BikeRun_DataTitle, (object) 3);
 
-    public string Metric4Title => string.Format(Strings.Settings_BikeRun_DataTitle, (object) 1);
+    public string Metric4Title => string.Format(LStrings.Settings_BikeRun_DataTitle, (object) 1);
 
-    public string Metric5Title => string.Format(Strings.Settings_BikeRun_DataTitle, (object) 2);
+    public string Metric5Title => string.Format(LStrings.Settings_BikeRun_DataTitle, (object) 2);
 
-    public string Metric6Title => string.Format(Strings.Settings_BikeRun_DataTitle, (object) 3);
+    public string Metric6Title => string.Format(LStrings.Settings_BikeRun_DataTitle, (object) 3);
 
-    public string Metric7Title => string.Format(Strings.Settings_BikeRun_DataTitle, (object) 4);
+    public string Metric7Title => string.Format(LStrings.Settings_BikeRun_DataTitle, (object) 4);
 
     public string SplitMarkerMainTitle => AppResources.SplitMarkerHeader;
 
@@ -72,9 +72,14 @@ namespace DesktopSyncApp
 
     public bool Metric7HasError => this.errors[6];
 
-    protected string GetDistanceUnit(DistanceUnitType unit) => unit == 2 ? Strings.Settings_SplitMarkers_Metric : Strings.Settings_SplitMarkers_Imperial;
+        protected string GetDistanceUnit(DistanceUnitType unit)
+        {
+            return (int)unit == 2 
+                ? LStrings.Settings_SplitMarkers_Metric 
+                : LStrings.Settings_SplitMarkers_Imperial;
+        }
 
-    protected void RaiseMetricErrorsPropertiesChanged()
+        protected void RaiseMetricErrorsPropertiesChanged()
     {
       this.OnPropertyChanged("Metric1HasError", this.PropertyChanged);
       this.OnPropertyChanged("Metric2HasError", this.PropertyChanged);

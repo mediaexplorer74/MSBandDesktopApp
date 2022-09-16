@@ -96,8 +96,10 @@ namespace DesktopSyncApp
       get
       {
         AdminTileSettings adminTileSettings = this.cargoStrap.SettingsMask;
-        if (this.HasSettingsPage)
-          adminTileSettings = (AdminTileSettings) ((AdminTileSettings) ((AdminTileSettings) ((AdminTileSettings) 0 | (this.BadgingChecked ? 2 : 0)) | (this.NotificationsOn ? 1 : 0)) | (this.CustomColor ? 4 : 0));
+                if (this.HasSettingsPage)
+                {
+                    adminTileSettings = (AdminTileSettings)((0 | (int)(this.BadgingChecked ? 2 : 0)) | (this.NotificationsOn ? 1 : 0) | (this.CustomColor ? 4 : 0));
+                }
         return adminTileSettings;
       }
     }

@@ -14,11 +14,20 @@ namespace DesktopSyncApp.BindingConverters
   [ValueConversion(typeof (MassUnitType), typeof (string))]
   public class WeightUnitsConverter : IValueConverter
   {
-    public object Convert(object value, Type targetType, object parameter, CultureInfo culture) => (object) this.Convert((MassUnitType) value);
+        public object Convert(object value, Type targetType,
+            object parameter, CultureInfo culture)
+        {
+            return (object)this.Convert((MassUnitType)value);
+        }
 
-    public string Convert(MassUnitType value) => value == 1 || value != 2 ? Strings.UoM_Profile_Pounds : Strings.UoM_Profile_Kilograms;
+        public string Convert(MassUnitType value)
+        {
+            return (int)value == 1 || (int)value != 2 
+                ? LStrings.UoM_Profile_Pounds 
+                : LStrings.UoM_Profile_Kilograms;
+        }
 
-    public object ConvertBack(
+        public object ConvertBack(
       object value,
       Type targetType,
       object parameter,

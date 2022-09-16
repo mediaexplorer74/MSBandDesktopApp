@@ -25,15 +25,15 @@ namespace DesktopSyncApp.BindingConverters
         case 0:
           return "";
         case 1:
-          return Strings.Status_FirmwareUpdate_Downloading;
+          return LStrings.Status_FirmwareUpdate_Downloading;
         case 2:
-          return Strings.Status_FirmwareUpdate_SyncingLog;
+          return LStrings.Status_FirmwareUpdate_SyncingLog;
         case 3:
-          return Strings.Status_FirmwareUpdate_BootingToUpdate;
+          return LStrings.Status_FirmwareUpdate_BootingToUpdate;
         case 4:
-          return Strings.Status_FirmwareUpdate_Uploading;
+          return LStrings.Status_FirmwareUpdate_Uploading;
         case 5:
-          return Strings.Status_FirmwareUpdate_WaitingForReconnect;
+          return LStrings.Status_FirmwareUpdate_WaitingForReconnect;
         case 6:
           return "";
         default:

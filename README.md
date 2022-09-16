@@ -1,17 +1,19 @@
-# Desktop-sync
+# MSBandDesktopApp
 
-The official Microsoft Band desktop app, decompiled.
+The official Microsoft Band desktop app, decompiled by [Pdawg](https://github.com/Pdawg-bytes) and "refurnished" by [m][e] :)
 
 
 ## My 2 cents
 
-I tried to refactor the decompiled code. The main goal is achieve the state demonstated at screenshot
+I tried to refactor the decompiled code. 
+
+My main goal is achieve the state demonstated at screenshots.. oh... mockups! :)
 
 
 ## "Mockups" (the firm app running, not mine, heh!)
 
-![Mockup 1](Images/mockup1.png)
-![Mockup 2](Images/mockup2.png)
+![Mockup 1](Images/mockup_1.png)
+![Mockup 2](Images/mockup_2.png)
 
 
 ## My Little Progress
@@ -41,6 +43,8 @@ Too hard to refactor at my side... but I still plan to recove this great project
 - https://sec.ch9.ms/ch9/895c/a0c52bca-7cd8-4e4c-b5ca-1563e9c4895c/DevelopingWindowsAppWithMSBands_high.mp4
 - https://web.archive.org/web/20190516134940/http://developer.microsoftband.com/cloudAPI
 - https://visualstudiomagazine.com/articles/2016/03/01/microsoft-band.aspx
+- https://blogs.windows.com/devices/tag/microsoft-band/
+- https://www.youtube.com/watch?v=pOI9uWGMNpI :: Microsoft Band 2 Review - 1,000 Miles Later
 
 
 ## ..

@@ -26,29 +26,35 @@
       </Grid.RowDefinitions>
       <TextBlock Grid.Row="0" Width="Auto" Height="Auto" Margin="10,52,0,0" HorizontalAlignment="Left"
                  VerticalAlignment="Top" AutomationProperties.AutomationId="PageHeader" Padding="0,0,0,0"
-                 Style="{StaticResource Heading}" Text="{x:Static local:Strings.Title_Page_UpsellPage}"
+                 Style="{StaticResource Heading}" Text="{x:Static local:LStrings.Title_Page_UpsellPage}"
                  TextWrapping="Wrap"/>
       <TextBlock Grid.Row="1" Margin="10,40,0,5" VerticalAlignment="Top" FontFamily="Segoe UI Light" FontSize="25"
                  FontWeight="Light" Style="{DynamicResource BaseTextBlock}"
-                 Text="{x:Static local:Strings.Message_Page_NewAppDescription}" TextWrapping="Wrap"/>
+                 Text="{x:Static local:LStrings.Message_Page_NewAppDescription}" TextWrapping="Wrap"/>
       <Button Margin="10,0,0,15" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Top"
               HorizontalContentAlignment="Left" FontSize="15" Padding="1" Style="{DynamicResource NavButton}"
               Command="{Binding UninstallApp}">
         <TextBlock TextWrapping="Wrap">
-          <Run Text="{x:Static local:Strings.Message_Page_UninstallPart1}"/>
+          <Run Text="{x:Static local:LStrings.Message_Page_UninstallPart1}"/>
           <Underline>
             <Bold>
-              <Run Foreground="#FFFFFF" Text="{x:Static local:Strings.Message_Page_UninstallPart2}"/>
+              <Run Foreground="#FFFFFF" Text="{x:Static local:LStrings.Message_Page_UninstallPart2}"/>
             </Bold>
           </Underline>
         </TextBlock>
       </Button>
       <StackPanel Grid.Row="4" Orientation="Horizontal">
-        <local:VariableOpacityButton Width="233" Height="45" Margin="10,0,0,0" Content="{x:Static local:Strings.Title_Button_Download}"
+        <local:VariableOpacityButton Width="233" Height="45" 
+                                     Margin="10,0,0,0" 
+                                     Content="{x:Static local:LStrings.Title_Button_Download}"
                                      IsDefault="true" Command="{Binding LaunchDownloadWeb}"/>
-        <local:VariableOpacityButton Click="Cancel_Button_Click" Width="233" Height="45" Margin="20,0,0,0" HorizontalAlignment="Left"
-                                     VerticalAlignment="Bottom" AutomationProperties.AutomationId="CancelButton"
-                                     Content="{x:Static local:Strings.Title_Button_Cancel}" IsCancel="true"/>
+        <local:VariableOpacityButton Click="Cancel_Button_Click" Width="233" 
+                                     Height="45" Margin="20,0,0,0" 
+                                     HorizontalAlignment="Left"
+                                     VerticalAlignment="Bottom" 
+                                     AutomationProperties.AutomationId="CancelButton"
+                                     Content="{x:Static local:LStrings.Title_Button_Cancel}" 
+                                     IsCancel="true"/>
       </StackPanel>
     </Grid>
   </Grid>

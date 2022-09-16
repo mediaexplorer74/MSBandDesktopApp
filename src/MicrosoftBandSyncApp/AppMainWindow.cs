@@ -59,9 +59,10 @@ namespace DesktopSyncApp
     private DispatcherTimer firmwareCheckTimer;
     private AutoResetEvent loginLogoutCompleteEvent;
     private DispatcherTimer deviceScanDelayTimer;
-    internal AppMainWindow MainWindow;
-    internal AnimatedPageControl MainWindowPageManager;
-    internal AnimatedPageControl SuperModalPageManager;
+    
+    //internal AppMainWindow MainWindow;
+    //internal AnimatedPageControl MainWindowPageManager;
+    //internal AnimatedPageControl SuperModalPageManager;
     
     //private bool _contentLoaded;
 
@@ -123,7 +124,18 @@ namespace DesktopSyncApp
             else
               this.model.UserDeviceStatus = UserDeviceStatus.None;
           }
-          else if (pairDevice || deviceInfo.DeviceProfileStatus.UserLinkStatus == 1 && (deviceInfo.DeviceProfileStatus.DeviceLinkStatus == 1 || deviceInfo.DeviceProfileStatus.DeviceLinkStatus == null && !deviceInfo.IsOOBEComplete))
+          else if 
+          (
+            pairDevice 
+            || 
+            (int)deviceInfo.DeviceProfileStatus.UserLinkStatus == 1
+            && 
+            (
+                (int)deviceInfo.DeviceProfileStatus.DeviceLinkStatus == 1 
+                || deviceInfo.DeviceProfileStatus.DeviceLinkStatus == null 
+                && !deviceInfo.IsOOBEComplete
+            )
+          )
           {
             int num = await this.model.DeviceManager.OpenDevice(deviceInfo, this.model.LoginInfo) ? 1 : 0;
             this.model.LoginInfo.UserProfile.PairedDeviceIDUpdated();
@@ -144,7 +156,7 @@ namespace DesktopSyncApp
         }
         catch (Exception ex)
         {
-          this.model.LogDeviceConnectError(new ErrorInfo(nameof (ConnectToDevice), Strings.Message_DeviceConnectErrorOccurred, ex));
+          this.model.LogDeviceConnectError(new ErrorInfo(nameof (ConnectToDevice), LStrings.Message_DeviceConnectErrorOccurred, ex));
           this.model.UserDeviceStatus = UserDeviceStatus.None;
         }
       }
@@ -212,9 +224,9 @@ namespace DesktopSyncApp
         DeviceProfileStatus profileLinkStatusAsync = await this.model.DeviceManager.CurrentDevice.CargoClient.GetDeviceAndProfileLinkStatusAsync(this.model.LoginInfo.UserProfile.Source);
         kdeviceInfo.DeviceProfileStatus = profileLinkStatusAsync;
         kdeviceInfo = (KDeviceInfo) null;
-        if (this.model.DeviceManager.CurrentDevice.DeviceInfo.DeviceProfileStatus.UserLinkStatus == 1)
+        if ((int)this.model.DeviceManager.CurrentDevice.DeviceInfo.DeviceProfileStatus.UserLinkStatus == 1)
         {
-          if (this.model.DeviceManager.CurrentDevice.DeviceInfo.DeviceProfileStatus.DeviceLinkStatus == 1)
+          if ((int)this.model.DeviceManager.CurrentDevice.DeviceInfo.DeviceProfileStatus.DeviceLinkStatus == 1)
             goto label_7;
         }
         this.model.DeviceManager.CloseDevice();
@@ -337,12 +349,14 @@ label_7:
       this.model.DeviceManager.CurrentDevice.FirmwareStatus = FirmwareStatus.Updating;
       this.model.DeviceManager.CurrentDevice.DeviceInfo.FirmwareCheckStatus = (FirmwareCheckStatus) null;
       this.model.DeviceManager.CurrentDevice.FirmwareUpdateProgress = new FirmwareUpdateProgress();
-      bool TwoUpFix = this.model.DeviceManager.CurrentDevice.DeviceInfo.AppType == 2;
+      bool TwoUpFix = (int)this.model.DeviceManager.CurrentDevice.DeviceInfo.AppType == 2;
       try
       {
         using (new DeviceScanSuppressor(this.model.DeviceManager))
         {
-          int num = await this.model.DeviceManager.CurrentDevice.CargoClient.UpdateFirmwareAsync(info, CancellationToken.None, (IProgress<FirmwareUpdateProgress>) this.model.DeviceManager.CurrentDevice.FirmwareUpdateProgress) ? 1 : 0;
+          int num = 
+                        await this.model.DeviceManager.CurrentDevice.CargoClient.UpdateFirmwareAsync(info, CancellationToken.None,
+                        (IProgress<Microsoft.Band.Admin.FirmwareUpdateProgress>)(IProgress<FirmwareUpdateProgress>) this.model.DeviceManager.CurrentDevice.FirmwareUpdateProgress) ? 1 : 0;
         }
         Telemetry.LogEvent("Utilities/FirmwareUpdate/Send to band", (IDictionary<string, string>) null, (IDictionary<string, double>) null);
       }
@@ -365,12 +379,13 @@ label_7:
         }
       }
       DeviceProfileStatus deviceProfileStatus = (DeviceProfileStatus) null;
-      if (success && !this.model.DeviceManager.CurrentDevice.DeviceInfo.FirmwareCheckStatus.Info.IsFirmwareUpdateAvailable && this.model.DeviceManager.CurrentDevice.DeviceInfo.AppType == 3)
+      if (success && !this.model.DeviceManager.CurrentDevice.DeviceInfo.FirmwareCheckStatus.Info.IsFirmwareUpdateAvailable && 
+                (int)this.model.DeviceManager.CurrentDevice.DeviceInfo.AppType == 3)
       {
         this.model.DeviceManager.CurrentDevice.FirmwareStatus = FirmwareStatus.UpToDate;
         deviceProfileStatus = await this.model.DeviceManager.CurrentDevice.CargoClient.GetDeviceAndProfileLinkStatusAsync(this.model.LoginInfo.UserProfile.Source);
       }
-      if (success && deviceProfileStatus != null && deviceProfileStatus.DeviceLinkStatus == 1 && deviceProfileStatus.UserLinkStatus == 1)
+      if (success && deviceProfileStatus != null && (int)deviceProfileStatus.DeviceLinkStatus == 1 && (int)deviceProfileStatus.UserLinkStatus == 1)
       {
         this.model.DeviceManager.CurrentDevice.CargoClient.UserAgent = KDeviceManager.GetUserAgent(this.model.DeviceManager.CurrentDevice.CargoClient);
         this.model.UserDeviceStatus = UserDeviceStatus.Registered;
@@ -799,7 +814,7 @@ label_9:
       }
       catch (Exception ex)
       {
-        this.model.LogDevicePairingError(new ErrorInfo("ForgetDeviceContinuation", Strings.Message_DeviceUnpairingErrorOccurred, ex));
+        this.model.LogDevicePairingError(new ErrorInfo("ForgetDeviceContinuation", LStrings.Message_DeviceUnpairingErrorOccurred, ex));
         return;
       }
       finally

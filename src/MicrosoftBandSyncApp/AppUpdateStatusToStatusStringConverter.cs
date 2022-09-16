@@ -20,13 +20,13 @@ namespace DesktopSyncApp.BindingConverters
       switch (value)
       {
         case AppUpdateStatus.Unknown:
-          return Strings.Status_AppUpdate_Unknown;
+          return LStrings.Status_AppUpdate_Unknown;
         case AppUpdateStatus.UpToDate:
-          return Strings.Status_AppUpdate_UpToDate;
+          return LStrings.Status_AppUpdate_UpToDate;
         case AppUpdateStatus.Checking:
-          return Strings.Status_AppUpdate_Checking;
+          return LStrings.Status_AppUpdate_Checking;
         case AppUpdateStatus.Available:
-          return Strings.Status_AppUpdate_Available;
+          return LStrings.Status_AppUpdate_Available;
         default:
           return "";
       }

@@ -22,19 +22,19 @@ namespace DesktopSyncApp.BindingConverters
       switch (value.Value.DayOfWeek)
       {
         case DayOfWeek.Sunday:
-          return Strings.DOW_Sunday;
+          return LStrings.DOW_Sunday;
         case DayOfWeek.Tuesday:
-          return Strings.DOW_Tuesday;
+          return LStrings.DOW_Tuesday;
         case DayOfWeek.Wednesday:
-          return Strings.DOW_Wednesday;
+          return LStrings.DOW_Wednesday;
         case DayOfWeek.Thursday:
-          return Strings.DOW_Thursday;
+          return LStrings.DOW_Thursday;
         case DayOfWeek.Friday:
-          return Strings.DOW_Friday;
+          return LStrings.DOW_Friday;
         case DayOfWeek.Saturday:
-          return Strings.DOW_Saturday;
+          return LStrings.DOW_Saturday;
         default:
-          return Strings.DOW_Monday;
+          return LStrings.DOW_Monday;
       }
     }
 

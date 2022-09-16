@@ -19,15 +19,16 @@ using System.Windows.Markup;
 
 namespace DesktopSyncApp
 {
-  public class ProfileControl : SyncAppPageControl, IComponentConnector
+  public partial class ProfileControl : SyncAppPageControl, IComponentConnector
   {
     private bool ChangingBinding;
-    internal Fader spWeightEditStandard;
-    internal Fader spWeightEditMetric;
-    internal Fader spHeightEditStandard;
-    internal Fader spHeightEditMetric;
-    internal Fader btForgetDevice;
-    private bool _contentLoaded;
+    //internal Fader spWeightEditStandard;
+    //internal Fader spWeightEditMetric;
+    //internal Fader spHeightEditStandard;
+    //internal Fader spHeightEditMetric;
+    //internal Fader btForgetDevice;
+    
+        //private bool _contentLoaded;
 
     public ProfileControl(AppMainWindow parent)
       : base(parent, false)
@@ -126,6 +127,7 @@ namespace DesktopSyncApp
 
     private void ChangingDisplayUnits_Button_Click(object sender, RoutedEventArgs e) => this.ChangingBinding = true;
 
+        /*
     [DebuggerNonUserCode]
     [GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
     public void InitializeComponent()
@@ -226,5 +228,6 @@ namespace DesktopSyncApp
           break;
       }
     }
+        */
   }
 }

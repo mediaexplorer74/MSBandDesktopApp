@@ -16,9 +16,9 @@ namespace DesktopSyncApp
 {
   public partial class ThemeColorPickerControl : SyncAppPageControl, IComponentConnector
   {
-    internal PersonalizeDeviceEnvoy DeviceEnvoy;
-    internal PersonalizeDeviceCargo DeviceCargo;
-    internal Button PatternButton;  
+    //internal PersonalizeDeviceEnvoy DeviceEnvoy;
+    //internal PersonalizeDeviceCargo DeviceCargo;
+    //internal Button PatternButton;  
         
     //private bool _contentLoaded;
 
@@ -26,6 +26,7 @@ namespace DesktopSyncApp
       : base(parent, false)
     {
       this.InitializeComponent();
+
       if ((int) this.model.ThemeManager.CurrentBandClass == 2)
       {
         this.PatternButton.Width = 137.0;
@@ -39,20 +40,9 @@ namespace DesktopSyncApp
         this.DeviceCargo.Visibility = Visibility.Visible;
       }
     }
+              
 
-       
-
-        public void Connect(int connectionId, object target)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void InitializeComponent()
-        {
-            throw new NotImplementedException();
-        }
-
-        private async void SaveCustomization_Click(object sender, RoutedEventArgs e)
+    private async void SaveCustomization_Click(object sender, RoutedEventArgs e)
     {
       using (new DisposableAction((Action) (() => this.model.ThemeManager.UpdatingDeviceTheme = true), (Action) (() => this.model.ThemeManager.UpdatingDeviceTheme = false)))
       {

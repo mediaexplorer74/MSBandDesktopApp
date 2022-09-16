@@ -13,9 +13,9 @@ using System.Windows.Markup;
 
 namespace DesktopSyncApp
 {
-  public class PairDeviceConfirmControl : SyncAppPageControl, IComponentConnector
+  public partial class PairDeviceConfirmControl : SyncAppPageControl, IComponentConnector
   {
-    private bool _contentLoaded;
+    //private bool _contentLoaded;
 
     public PairDeviceConfirmControl(AppMainWindow parent)
       : base(parent, false)
@@ -25,6 +25,7 @@ namespace DesktopSyncApp
 
     private void Cancel_Button_Click(object sender, RoutedEventArgs e) => this.pageControl.HideModalPage();
 
+        /*
     [DebuggerNonUserCode]
     [GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
     public void InitializeComponent()
@@ -43,5 +44,6 @@ namespace DesktopSyncApp
     [GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
     [EditorBrowsable(EditorBrowsableState.Never)]
     void IComponentConnector.Connect(int connectionId, object target) => this._contentLoaded = true;
+        */
   }
 }

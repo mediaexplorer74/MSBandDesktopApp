@@ -69,34 +69,34 @@ namespace DesktopSyncApp
       this.savedRunMetrics = metrics.Clone();
       ((ICollection<LabeledItem<RunDisplayMetricType>>) this.metricComboOptions).Clear();
       ((ICollection<LabeledItem<RunDisplayMetricType>>) this.metricComboOptionsWithNone).Clear();
-      if (this.DeviceType == 1)
+      if ((int)this.DeviceType == 1)
       {
-        ((ICollection<LabeledItem<RunDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<RunDisplayMetricType>((RunDisplayMetricType) 0, Strings.Settings_Run_DataPoint3));
-        ((ICollection<LabeledItem<RunDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<RunDisplayMetricType>((RunDisplayMetricType) 2, Strings.Settings_Run_DataPoint8));
-        ((ICollection<LabeledItem<RunDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<RunDisplayMetricType>((RunDisplayMetricType) 1, Strings.Settings_Run_DataPoint5));
-        ((ICollection<LabeledItem<RunDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<RunDisplayMetricType>((RunDisplayMetricType) 4, Strings.Settings_Run_DataPoint7));
-        ((ICollection<LabeledItem<RunDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<RunDisplayMetricType>((RunDisplayMetricType) 3, Strings.Settings_Run_DataPoint1));
+        ((ICollection<LabeledItem<RunDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<RunDisplayMetricType>((RunDisplayMetricType) 0, LStrings.Settings_Run_DataPoint3));
+        ((ICollection<LabeledItem<RunDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<RunDisplayMetricType>((RunDisplayMetricType) 2, LStrings.Settings_Run_DataPoint8));
+        ((ICollection<LabeledItem<RunDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<RunDisplayMetricType>((RunDisplayMetricType) 1, LStrings.Settings_Run_DataPoint5));
+        ((ICollection<LabeledItem<RunDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<RunDisplayMetricType>((RunDisplayMetricType) 4, LStrings.Settings_Run_DataPoint7));
+        ((ICollection<LabeledItem<RunDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<RunDisplayMetricType>((RunDisplayMetricType) 3, LStrings.Settings_Run_DataPoint1));
       }
       else
       {
-        ((ICollection<LabeledItem<RunDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<RunDisplayMetricType>((RunDisplayMetricType) 0, Strings.Settings_Run_DataPoint3));
-        ((ICollection<LabeledItem<RunDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<RunDisplayMetricType>((RunDisplayMetricType) 2, Strings.Settings_Run_DataPoint8));
-        ((ICollection<LabeledItem<RunDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<RunDisplayMetricType>((RunDisplayMetricType) 1, Strings.Settings_Run_DataPoint5));
-        ((ICollection<LabeledItem<RunDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<RunDisplayMetricType>((RunDisplayMetricType) 7, Strings.Settings_Run_DataPoint2));
-        ((ICollection<LabeledItem<RunDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<RunDisplayMetricType>((RunDisplayMetricType) 3, Strings.Settings_Run_DataPoint1));
-        ((ICollection<LabeledItem<RunDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<RunDisplayMetricType>((RunDisplayMetricType) 4, Strings.Settings_Run_DataPoint7));
-        ((ICollection<LabeledItem<RunDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<RunDisplayMetricType>((RunDisplayMetricType) 8, Strings.Settings_Run_DataPoint6));
-        ((ICollection<LabeledItem<RunDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<RunDisplayMetricType>((RunDisplayMetricType) 6, Strings.Settings_Run_DataPoint4));
+        ((ICollection<LabeledItem<RunDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<RunDisplayMetricType>((RunDisplayMetricType) 0, LStrings.Settings_Run_DataPoint3));
+        ((ICollection<LabeledItem<RunDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<RunDisplayMetricType>((RunDisplayMetricType) 2, LStrings.Settings_Run_DataPoint8));
+        ((ICollection<LabeledItem<RunDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<RunDisplayMetricType>((RunDisplayMetricType) 1, LStrings.Settings_Run_DataPoint5));
+        ((ICollection<LabeledItem<RunDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<RunDisplayMetricType>((RunDisplayMetricType) 7, LStrings.Settings_Run_DataPoint2));
+        ((ICollection<LabeledItem<RunDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<RunDisplayMetricType>((RunDisplayMetricType) 3, LStrings.Settings_Run_DataPoint1));
+        ((ICollection<LabeledItem<RunDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<RunDisplayMetricType>((RunDisplayMetricType) 4, LStrings.Settings_Run_DataPoint7));
+        ((ICollection<LabeledItem<RunDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<RunDisplayMetricType>((RunDisplayMetricType) 8, LStrings.Settings_Run_DataPoint6));
+        ((ICollection<LabeledItem<RunDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<RunDisplayMetricType>((RunDisplayMetricType) 6, LStrings.Settings_Run_DataPoint4));
       }
-      ((ICollection<LabeledItem<RunDisplayMetricType>>) this.metricComboOptionsWithNone).Add(new LabeledItem<RunDisplayMetricType>((RunDisplayMetricType) 5, Strings.Settings_Run_DataPoint0));
-      ((ICollection<LabeledItem<RunDisplayMetricType>>) this.metricComboOptionsWithNone).Add(new LabeledItem<RunDisplayMetricType>((RunDisplayMetricType) 0, Strings.Settings_Run_DataPoint3));
-      ((ICollection<LabeledItem<RunDisplayMetricType>>) this.metricComboOptionsWithNone).Add(new LabeledItem<RunDisplayMetricType>((RunDisplayMetricType) 2, Strings.Settings_Run_DataPoint8));
-      ((ICollection<LabeledItem<RunDisplayMetricType>>) this.metricComboOptionsWithNone).Add(new LabeledItem<RunDisplayMetricType>((RunDisplayMetricType) 1, Strings.Settings_Run_DataPoint5));
-      ((ICollection<LabeledItem<RunDisplayMetricType>>) this.metricComboOptionsWithNone).Add(new LabeledItem<RunDisplayMetricType>((RunDisplayMetricType) 7, Strings.Settings_Run_DataPoint2));
-      ((ICollection<LabeledItem<RunDisplayMetricType>>) this.metricComboOptionsWithNone).Add(new LabeledItem<RunDisplayMetricType>((RunDisplayMetricType) 3, Strings.Settings_Run_DataPoint1));
-      ((ICollection<LabeledItem<RunDisplayMetricType>>) this.metricComboOptionsWithNone).Add(new LabeledItem<RunDisplayMetricType>((RunDisplayMetricType) 4, Strings.Settings_Run_DataPoint7));
-      ((ICollection<LabeledItem<RunDisplayMetricType>>) this.metricComboOptionsWithNone).Add(new LabeledItem<RunDisplayMetricType>((RunDisplayMetricType) 8, Strings.Settings_Run_DataPoint6));
-      ((ICollection<LabeledItem<RunDisplayMetricType>>) this.metricComboOptionsWithNone).Add(new LabeledItem<RunDisplayMetricType>((RunDisplayMetricType) 6, Strings.Settings_Run_DataPoint4));
+      ((ICollection<LabeledItem<RunDisplayMetricType>>) this.metricComboOptionsWithNone).Add(new LabeledItem<RunDisplayMetricType>((RunDisplayMetricType) 5, LStrings.Settings_Run_DataPoint0));
+      ((ICollection<LabeledItem<RunDisplayMetricType>>) this.metricComboOptionsWithNone).Add(new LabeledItem<RunDisplayMetricType>((RunDisplayMetricType) 0, LStrings.Settings_Run_DataPoint3));
+      ((ICollection<LabeledItem<RunDisplayMetricType>>) this.metricComboOptionsWithNone).Add(new LabeledItem<RunDisplayMetricType>((RunDisplayMetricType) 2, LStrings.Settings_Run_DataPoint8));
+      ((ICollection<LabeledItem<RunDisplayMetricType>>) this.metricComboOptionsWithNone).Add(new LabeledItem<RunDisplayMetricType>((RunDisplayMetricType) 1, LStrings.Settings_Run_DataPoint5));
+      ((ICollection<LabeledItem<RunDisplayMetricType>>) this.metricComboOptionsWithNone).Add(new LabeledItem<RunDisplayMetricType>((RunDisplayMetricType) 7, LStrings.Settings_Run_DataPoint2));
+      ((ICollection<LabeledItem<RunDisplayMetricType>>) this.metricComboOptionsWithNone).Add(new LabeledItem<RunDisplayMetricType>((RunDisplayMetricType) 3, LStrings.Settings_Run_DataPoint1));
+      ((ICollection<LabeledItem<RunDisplayMetricType>>) this.metricComboOptionsWithNone).Add(new LabeledItem<RunDisplayMetricType>((RunDisplayMetricType) 4, LStrings.Settings_Run_DataPoint7));
+      ((ICollection<LabeledItem<RunDisplayMetricType>>) this.metricComboOptionsWithNone).Add(new LabeledItem<RunDisplayMetricType>((RunDisplayMetricType) 8, LStrings.Settings_Run_DataPoint6));
+      ((ICollection<LabeledItem<RunDisplayMetricType>>) this.metricComboOptionsWithNone).Add(new LabeledItem<RunDisplayMetricType>((RunDisplayMetricType) 6, LStrings.Settings_Run_DataPoint4));
       this.Metric1 = this.FindMetricChoice(metrics.PrimaryMetric);
       this.Metric2 = this.FindMetricChoice(metrics.TopLeftMetric);
       this.Metric3 = this.FindMetricChoice(metrics.TopRightMetric);
@@ -139,7 +139,7 @@ namespace DesktopSyncApp
 
     private void LoadSavedRunMetrics(CargoRunDisplayMetrics loadMetrics)
     {
-      if (this.DeviceType == 1)
+      if ((int)this.DeviceType == 1)
       {
         List<RunDisplayMetricType> displayMetricTypeList1 = new List<RunDisplayMetricType>();
         displayMetricTypeList1.Add(this.Metric1.Value);
@@ -206,11 +206,22 @@ namespace DesktopSyncApp
       CargoRunDisplayMetrics runDisplayMetrics = new CargoRunDisplayMetrics();
       this.LoadSavedRunMetrics(runDisplayMetrics);
       IList<RunDisplayMetricType> runList = this.CreateRunList(runDisplayMetrics);
-      for (int index1 = 0; index1 < ((ICollection<RunDisplayMetricType>) runList).Count - 1; ++index1)
+      
+      for 
+      (
+        int index1 = 0; 
+        index1 < ((ICollection<RunDisplayMetricType>) runList).Count - 1; 
+        ++index1
+      )
       {
-        for (int index2 = index1 + 1; index2 < ((ICollection<RunDisplayMetricType>) runList).Count; ++index2)
+        for 
+        (
+            int index2 = index1 + 1; 
+            index2 < ((ICollection<RunDisplayMetricType>) runList).Count; 
+            ++index2
+        )
         {
-          if (runList[index1] != 5 && runList[index1] == runList[index2])
+          if ((int)runList[index1] != 5 && runList[index1] == runList[index2])
           {
             flag = true;
             this.errors[index1] = true;

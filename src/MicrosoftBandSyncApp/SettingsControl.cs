@@ -14,9 +14,9 @@ using System.Windows.Markup;
 
 namespace DesktopSyncApp
 {
-  public class SettingsControl : SyncAppPageControl, IComponentConnector
+  public partial class SettingsControl : SyncAppPageControl, IComponentConnector
   {
-    private bool _contentLoaded;
+    //private bool _contentLoaded;
 
     public SettingsControl(AppMainWindow parent)
       : base(parent, false)
@@ -26,6 +26,7 @@ namespace DesktopSyncApp
 
     private void Button_Click(object sender, RoutedEventArgs e) => this.pageControl.HideModalPage();
 
+        /*
     [DebuggerNonUserCode]
     [GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
     public void InitializeComponent()
@@ -50,5 +51,6 @@ namespace DesktopSyncApp
       else
         this._contentLoaded = true;
     }
+        */
   }
 }

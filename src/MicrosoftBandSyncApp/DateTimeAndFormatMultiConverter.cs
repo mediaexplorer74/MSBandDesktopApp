@@ -23,7 +23,7 @@ namespace DesktopSyncApp.BindingConverters
       string format = "h:mm";
       if (values[1] is DisplayTimeFormat)
       {
-        switch ((DisplayTimeFormat) values[1] - 1)
+        switch ((int) values[1] - 1)
         {
           case 0:
             format = "HH:mm";

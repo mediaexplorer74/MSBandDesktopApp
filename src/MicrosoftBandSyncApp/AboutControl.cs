@@ -16,8 +16,8 @@ namespace DesktopSyncApp
 {
   public partial class AboutControl : SyncAppPageControl, IComponentConnector
   {
-    /*
-    private bool _contentLoaded;
+    
+    //private bool _contentLoaded;
 
     public AboutControl(AppMainWindow parent)
       : base(parent, false)
@@ -27,6 +27,7 @@ namespace DesktopSyncApp
 
     private void Button_Click_1(object sender, RoutedEventArgs e) => this.pageControl.HideModalPage();
 
+        /*
     [DebuggerNonUserCode]
     [GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
     public void InitializeComponent()

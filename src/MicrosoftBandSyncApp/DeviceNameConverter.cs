@@ -19,7 +19,7 @@ namespace DesktopSyncApp.BindingConverters
     {
       value = value != null ? value.Trim() : "";
       if (value.Length == 0)
-        value = Strings.MissingDeviceName;
+        value = LStrings.MissingDeviceName;
       return value;
     }
 

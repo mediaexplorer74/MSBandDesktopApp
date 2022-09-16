@@ -14,10 +14,10 @@ using System.Windows.Markup;
 
 namespace DesktopSyncApp
 {
-  public class LaunchSoftwareUpdateControl : SyncAppPageControl, IComponentConnector
+  public partial class LaunchSoftwareUpdateControl : SyncAppPageControl, IComponentConnector
   {
-    internal Image Logo;
-    private bool _contentLoaded;
+    //internal Image Logo;
+    //private bool _contentLoaded;
 
     public LaunchSoftwareUpdateControl(AppMainWindow parent)
       : base(parent, false)
@@ -25,10 +25,17 @@ namespace DesktopSyncApp
       this.InitializeComponent();
     }
 
-    private void Confirm_Button_Click(object sender, RoutedEventArgs e) => this.pageControl.HideModalPage();
+        private void Confirm_Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.pageControl.HideModalPage();
+        }
 
-    private void Cancel_Button_Click(object sender, RoutedEventArgs e) => this.pageControl.HideModalPage();
+        private void Cancel_Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.pageControl.HideModalPage();
+        }
 
+        /*
     [DebuggerNonUserCode]
     [GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
     public void InitializeComponent()
@@ -53,5 +60,6 @@ namespace DesktopSyncApp
       else
         this._contentLoaded = true;
     }
-  }
+        */
+    }
 }

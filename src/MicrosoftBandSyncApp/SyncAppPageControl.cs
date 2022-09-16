@@ -9,8 +9,9 @@ using System.Windows.Controls;
 
 namespace DesktopSyncApp
 {
-    // abstract
-    public partial class SyncAppPageControl : UserControl
+
+  // abstract ?
+  public class SyncAppPageControl : UserControl
   {
     protected AppMainWindow parent;
     protected ViewModel model;

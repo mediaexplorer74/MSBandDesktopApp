@@ -22,12 +22,12 @@
     <local:DisplayDeviceEnvoy Margin="36,132,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
                               Visibility="{Binding DeviceManager.CurrentDevice.DeviceBandClassIsEnvoy, Converter={StaticResource BoolToVisibilityConverter}}"/>
     <local:DisplayDeviceCargo Margin="36,152,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
-                              Visibility="{Binding DeviceManager.CurrentDevice.DeviceBandClassIsEnvoy, ConverterParameter={x:Static BindingConverters:BoolToVisibilityConverter+Mapping.TrueHidden}, Converter={StaticResource BoolToVisibilityConverter}}"/>
+                              Visibility="{Binding DeviceManager.CurrentDevice.DeviceBandClassIsEnvoy, ConverterParameter={x:Static BindingConverters:BoolToVisibilityConverter}, Converter={StaticResource BoolToVisibilityConverter}}"/>
     <StackPanel Margin="0,63,40,0" HorizontalAlignment="Right" VerticalAlignment="Top" FlowDirection="RightToLeft"
                 Orientation="Horizontal">
       <Grid Height="25" Margin="0,2,6,0" HorizontalAlignment="Right" VerticalAlignment="top">
         <Image x:Name="imgBatteryEmpty" Source="/Resources/battery-empty.png"
-               Visibility="{Binding BatteryPlugVisible, ConverterParameter={x:Static BindingConverters:BoolToVisibilityConverter+Mapping.TrueHidden}, Converter={StaticResource BoolToVisibilityConverter}}"/>
+               Visibility="{Binding BatteryPlugVisible, ConverterParameter={x:Static BindingConverters:BoolToVisibilityConverter}, Converter={StaticResource BoolToVisibilityConverter}}"/>
         <Image x:Name="imgBatteryCharging" Source="/Resources/battery-charging.png"
                Visibility="{Binding BatteryPlugVisible, Converter={StaticResource BoolToVisibilityConverter}}"/>
       </Grid>
@@ -57,7 +57,7 @@
           <local:VariableOpacityButton Click="Button_Click" Width="20" Height="20" HorizontalContentAlignment="Center"
                                        VerticalContentAlignment="Center" Foreground="White" IsTabStop="false"
                                        Style="{DynamicResource BorderlessVariableOpacityButtonStyle}"
-                                       ToolTip="{x:Static local:Strings.ToolTip_CancelSync}">
+                                       ToolTip="{x:Static local:LStrings.ToolTip_CancelSync}">
             <Image Source="{StaticResource close}" Stretch="None"/>
           </local:VariableOpacityButton>
         </local:Fader>
@@ -81,7 +81,7 @@
         <StackPanel>
           <local:VariableOpacityButton Click="btSyncSensorLogs_Click" Height="40" MinWidth="150" Margin="0,0,0,5"
                                        HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center"
-                                       Content="{x:Static local:Strings.Title_Command_SyncSensorLogs}" FontSize="17" IsTabStop="false"
+                                       Content="{x:Static local:LStrings.Title_Command_SyncSensorLogs}" FontSize="17" IsTabStop="false"
                                        Padding="10,0"/>
           <TextBlock VerticalAlignment="Bottom" FontSize="14" Foreground="{StaticResource TertiaryTextForegroundBrush}"
                      Style="{DynamicResource BaseTextBlock}" TextWrapping="Wrap"
@@ -91,7 +91,7 @@
             <Image Width="20" Margin="0,0,5,0" HorizontalAlignment="Left" VerticalAlignment="Center"
                    Source="/Resources/error.png"/>
             <TextBlock Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="14" Padding="0"
-                       Style="{DynamicResource BaseTextBlock}" Text="{x:Static local:Strings.Message_ErrorOccurred}"
+                       Style="{DynamicResource BaseTextBlock}" Text="{x:Static local:LStrings.Message_ErrorOccurred}"
                        TextWrapping="Wrap" Background="{x:Null}"/>
           </StackPanel>
         </StackPanel>
@@ -101,7 +101,7 @@
         <StackPanel>
           <local:VariableOpacityButton Height="40" MinWidth="200" Margin="0,0,0,5" HorizontalAlignment="Left" VerticalAlignment="Center"
                                        HorizontalContentAlignment="Center" Background="Lavender"
-                                       Content="{x:Static local:Strings.Title_Command_CheckForFirmwareUpdate}" FontSize="17"
+                                       Content="{x:Static local:LStrings.Title_Command_CheckForFirmwareUpdate}" FontSize="17"
                                        IsTabStop="false" Padding="10,0" Command="{Binding CheckForFirmwareUpdate}"/>
           <TextBlock VerticalAlignment="Bottom" FontSize="14" Foreground="{StaticResource TertiaryTextForegroundBrush}"
                      Padding="0" Style="{DynamicResource BaseTextBlock}" TextWrapping="Wrap"
@@ -119,7 +119,7 @@
               <Image Width="20" Margin="0,0,5,0" HorizontalAlignment="Left" VerticalAlignment="Center"
                      Source="/Resources/error.png"/>
               <TextBlock Margin="0" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="14" Padding="0"
-                         Style="{DynamicResource BaseTextBlock}" Text="{x:Static local:Strings.Message_ErrorOccurred}"
+                         Style="{DynamicResource BaseTextBlock}" Text="{x:Static local:LStrings.Message_ErrorOccurred}"
                          TextWrapping="Wrap" Background="{x:Null}"/>
             </StackPanel>
           </Grid>

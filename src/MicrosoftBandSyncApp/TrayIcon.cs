@@ -49,20 +49,20 @@ namespace DesktopSyncApp
       this.syncAnimationTimer.Tick += new EventHandler(this.syncAnimationTimer_Tick);
       this.doubleClickTimer.Tick += new EventHandler(this.doubleClickTimer_Tick);
       this.balloonClickTimer.Tick += new EventHandler(this.balloonClickTimer_Tick);
-      this.icon.Text = Strings.Title_TrayIconToolTip_LoginToStart;
-      this.icon.BalloonTipTitle = Strings.Title_MainWindow;
-      this.icon.BalloonTipText = Strings.Text_TrayIconBalloonTip_LoginToStart;
+      this.icon.Text = LStrings.Title_TrayIconToolTip_LoginToStart;
+      this.icon.BalloonTipTitle = LStrings.Title_MainWindow;
+      this.icon.BalloonTipText = LStrings.Text_TrayIconBalloonTip_LoginToStart;
       this.icon.Visible = true;
       this.icon.ContextMenuStrip = new ContextMenuStrip();
       this.icon.Click += new EventHandler(this.Icon_Click);
       this.icon.DoubleClick += new EventHandler(this.Icon_DoubleClick);
       this.icon.BalloonTipClicked += new EventHandler(this.icon_BalloonTipClicked);
       this.icon.BalloonTipClosed += new EventHandler(this.icon_BalloonTipClosed);
-      ToolStripMenuItem toolStripMenuItem = new ToolStripMenuItem(Strings.Title_Command_Open, (Image) null, new EventHandler(this.ContextMenuItem_Open_Click));
+      ToolStripMenuItem toolStripMenuItem = new ToolStripMenuItem(LStrings.Title_Command_Open, (Image) null, new EventHandler(this.ContextMenuItem_Open_Click));
       toolStripMenuItem.Font = new Font(toolStripMenuItem.Font, toolStripMenuItem.Font.Style | System.Drawing.FontStyle.Bold);
       this.icon.ContextMenuStrip.Items.Add((ToolStripItem) toolStripMenuItem);
       this.icon.ContextMenuStrip.Items.Add("-");
-      this.miClose = new ToolStripMenuItem(Strings.Title_Command_Close, (Image) null, new EventHandler(this.ContextMenuItem_Close_Click));
+      this.miClose = new ToolStripMenuItem(LStrings.Title_Command_Close, (Image) null, new EventHandler(this.ContextMenuItem_Close_Click));
       this.icon.ContextMenuStrip.Items.Add((ToolStripItem) this.miClose);
       this.model.DeviceManager.CurrentDeviceChanged += new PropertyChangedEventHandler(this.DeviceManager_CurrentDeviceChanged);
       this.model.UserDeviceStatusChanged += new PropertyValueChangedEventHandler(this.model_UserDeviceStatusChanged);
@@ -100,8 +100,8 @@ namespace DesktopSyncApp
         case LoginLogoutStatus.LoggedOut:
           this.syncAnimationTimer.Stop();
           this.icon.Icon = Icons.app_icon;
-          this.icon.Text = Strings.Title_TrayIconToolTip_LoginToStart;
-          this.icon.BalloonTipText = Strings.Text_TrayIconBalloonTip_LoginToStart;
+          this.icon.Text = LStrings.Title_TrayIconToolTip_LoginToStart;
+          this.icon.BalloonTipText = LStrings.Text_TrayIconBalloonTip_LoginToStart;
           this.closeWindowWarningShowing = false;
           break;
         case LoginLogoutStatus.LoggedIn:
@@ -119,8 +119,8 @@ namespace DesktopSyncApp
       {
         this.syncAnimationTimer.Stop();
         this.icon.Icon = Icons.error_red;
-        this.icon.Text = Strings.Title_TrayIconToolTip_Error;
-        this.icon.BalloonTipText = Strings.Text_TrayIconBalloonTip_Error;
+        this.icon.Text = LStrings.Title_TrayIconToolTip_Error;
+        this.icon.BalloonTipText = LStrings.Text_TrayIconBalloonTip_Error;
         this.closeWindowWarningShowing = false;
         if (!this.closeWindowWarningShowing && !this.model.IsAppRestored)
           this.icon.ShowBalloonTip(2500);
@@ -136,8 +136,8 @@ namespace DesktopSyncApp
           case UserDeviceStatus.CanRegister:
             this.syncAnimationTimer.Stop();
             this.icon.Icon = Icons.app_icon;
-            this.icon.Text = Strings.Title_TrayIconToolTip_DeviceAbsent;
-            this.icon.BalloonTipText = Strings.Text_TrayIconBalloonTip_DeviceAbsent;
+            this.icon.Text = LStrings.Title_TrayIconToolTip_DeviceAbsent;
+            this.icon.BalloonTipText = LStrings.Text_TrayIconBalloonTip_DeviceAbsent;
             this.closeWindowWarningShowing = false;
             if (!this.closeWindowWarningShowing && !this.model.IsAppRestored)
             {
@@ -148,8 +148,8 @@ namespace DesktopSyncApp
           case UserDeviceStatus.Multiple:
             this.syncAnimationTimer.Stop();
             this.icon.Icon = Icons.app_icon;
-            this.icon.Text = Strings.Title_TrayIconToolTip_MultipleDevices;
-            this.icon.BalloonTipText = Strings.Text_TrayIconBalloonTip_MultipleDevices;
+            this.icon.Text = LStrings.Title_TrayIconToolTip_MultipleDevices;
+            this.icon.BalloonTipText = LStrings.Text_TrayIconBalloonTip_MultipleDevices;
             this.closeWindowWarningShowing = false;
             if (!this.closeWindowWarningShowing && !this.model.IsAppRestored)
             {
@@ -163,8 +163,8 @@ namespace DesktopSyncApp
               this.syncAnimationTimer.Start();
               this.syncAnimationFrame = 0;
               this.icon.Icon = TrayIcon.SyncAnimationFrames[this.syncAnimationFrame];
-              this.icon.Text = Strings.Title_TrayIconToolTip_Syncing;
-              this.icon.BalloonTipText = Strings.Text_TrayIconBalloonTip_Syncing;
+              this.icon.Text = LStrings.Title_TrayIconToolTip_Syncing;
+              this.icon.BalloonTipText = LStrings.Text_TrayIconBalloonTip_Syncing;
               this.closeWindowWarningShowing = false;
               if (!this.closeWindowWarningShowing && !this.model.IsAppRestored)
               {
@@ -175,8 +175,8 @@ namespace DesktopSyncApp
             }
             this.syncAnimationTimer.Stop();
             this.icon.Icon = Icons.app_icon;
-            this.icon.Text = Strings.Title_TrayIconToolTip_DevicePresent;
-            this.icon.BalloonTipText = Strings.Text_TrayIconBalloonTip_DevicePresent;
+            this.icon.Text = LStrings.Title_TrayIconToolTip_DevicePresent;
+            this.icon.BalloonTipText = LStrings.Text_TrayIconBalloonTip_DevicePresent;
             this.closeWindowWarningShowing = false;
             if (!this.closeWindowWarningShowing && !this.model.IsAppRestored && ((UserDeviceStatus) args.OldValue == UserDeviceStatus.None || (UserDeviceStatus) args.OldValue == UserDeviceStatus.Multiple))
             {
@@ -186,8 +186,8 @@ namespace DesktopSyncApp
             break;
           case UserDeviceStatus.RegisteredRequiresFW:
             this.icon.Icon = Icons.app_icon;
-            this.icon.Text = Strings.Title_TrayIconToolTip_FirmwareUpdateRequired;
-            this.icon.BalloonTipText = Strings.Text_TrayIconBalloonTip_FirmwateUpdateRequired;
+            this.icon.Text = LStrings.Title_TrayIconToolTip_FirmwareUpdateRequired;
+            this.icon.BalloonTipText = LStrings.Text_TrayIconBalloonTip_FirmwateUpdateRequired;
             this.closeWindowWarningShowing = false;
             if (!this.closeWindowWarningShowing && !this.model.IsAppRestored)
             {
@@ -199,8 +199,8 @@ namespace DesktopSyncApp
             this.syncAnimationTimer.Start();
             this.syncAnimationFrame = 0;
             this.icon.Icon = TrayIcon.SyncAnimationFrames[this.syncAnimationFrame];
-            this.icon.Text = Strings.Title_TrayIconToolTip_UpdatingFirmware;
-            this.icon.BalloonTipText = Strings.Text_TrayIconBalloonTip_UpdatingFirmware;
+            this.icon.Text = LStrings.Title_TrayIconToolTip_UpdatingFirmware;
+            this.icon.BalloonTipText = LStrings.Text_TrayIconBalloonTip_UpdatingFirmware;
             this.closeWindowWarningShowing = false;
             if (!this.closeWindowWarningShowing && !this.model.IsAppRestored)
               this.icon.ShowBalloonTip(2500);
@@ -218,7 +218,7 @@ namespace DesktopSyncApp
       if (!this.closeWindowWarningShowing)
       {
         this.previousBalloonTip = this.icon.BalloonTipText;
-        this.icon.BalloonTipText = Strings.Text_TrayIconBalloonTip_CloseWindowWarning;
+        this.icon.BalloonTipText = LStrings.Text_TrayIconBalloonTip_CloseWindowWarning;
         this.closeWindowWarningShowing = true;
       }
       this.icon.ShowBalloonTip(5000);
@@ -236,8 +236,8 @@ namespace DesktopSyncApp
       }
       else
       {
-        this.icon.Text = Strings.Title_TrayIconToolTip_DevicePresent;
-        this.icon.BalloonTipText = Strings.Text_TrayIconBalloonTip_DevicePresent;
+        this.icon.Text = LStrings.Title_TrayIconToolTip_DevicePresent;
+        this.icon.BalloonTipText = LStrings.Text_TrayIconBalloonTip_DevicePresent;
       }
     }
 

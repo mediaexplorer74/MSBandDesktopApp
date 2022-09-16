@@ -16,18 +16,18 @@ using System.Windows.Markup;
 
 namespace DesktopSyncApp
 {
-  public class MessagingSettings : SyncAppPageControl, IComponentConnector
+  public partial class MessagingSettings : SyncAppPageControl, IComponentConnector
   {
     private Guid tileId;
-    internal TextBlock Title;
-    internal TextBlock NotificationsText;
-    internal CheckBox NotificationsOn;
-    internal TextBlock QuickResponse;
-    internal TextBox Reply1;
-    internal TextBox Reply2;
-    internal TextBox Reply3;
-    internal TextBox Reply4;
-    private bool _contentLoaded;
+    //internal TextBlock Title;
+    //internal TextBlock NotificationsText;
+    //internal CheckBox NotificationsOn;
+    //internal TextBlock QuickResponse;
+    //internal TextBox Reply1;
+    //internal TextBox Reply2;
+    //internal TextBox Reply3;
+    //internal TextBox Reply4;
+    //private bool _contentLoaded;
 
     public MessagingSettings(AppMainWindow main, SyncAppPageControl parent, Guid id)
       : base(main, parent, true)
@@ -50,6 +50,7 @@ namespace DesktopSyncApp
       ((TileManagementControl) this.container).ShowSettingsPage((SyncAppPageControl) null);
     }
 
+        /*
     [DebuggerNonUserCode]
     [GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
     public void InitializeComponent()
@@ -106,5 +107,6 @@ namespace DesktopSyncApp
           break;
       }
     }
+        */
   }
 }

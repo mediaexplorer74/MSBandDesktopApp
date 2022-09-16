@@ -9,15 +9,15 @@
   <Grid>
     <TextBlock Margin="117,53,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
                AutomationProperties.AutomationId="PageHeader" Style="{DynamicResource Heading}"
-               Text="{x:Static local:Strings.Title_Page_Settings}" Background="{x:Null}"/>
+               Text="{x:Static local:LStrings.Title_Page_Settings}" Background="{x:Null}"/>
     <CheckBox Height="60" Margin="88,221,130,0" VerticalAlignment="Top" VerticalContentAlignment="Center"
               AutomationProperties.AutomationId="AutoStartCheckbox"
-              Content="{x:Static local:Strings.Title_Setting_AutoStart}" IsTabStop="false" Padding="0"
+              Content="{x:Static local:LStrings.Title_Setting_AutoStart}" IsTabStop="false" Padding="0"
               Style="{StaticResource CheckBox}" BorderBrush="{x:Null}"
               IsChecked="{Binding DynamicSettings.StartOnLogin, FallbackValue=true}"/>
     <CheckBox Height="65" Margin="88,140,130,0" VerticalAlignment="Top" VerticalContentAlignment="Center"
               AutomationProperties.AutomationId="AutoSyncCheckbox"
-              Content="{x:Static local:Strings.Title_Setting_AutoSync}" IsTabStop="false"
+              Content="{x:Static local:LStrings.Title_Setting_AutoSync}" IsTabStop="false"
               Style="{StaticResource CheckBox}" BorderBrush="{x:Null}"
               IsChecked="{Binding DynamicSettings.AutoSync, FallbackValue=false}"/>
     <Button Margin="40,53,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"

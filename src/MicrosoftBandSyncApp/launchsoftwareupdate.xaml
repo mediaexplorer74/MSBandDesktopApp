@@ -18,18 +18,18 @@
     <Grid Column="1">
       <TextBlock Width="Auto" Height="Auto" Margin="40,52,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
                  AutomationProperties.AutomationId="PageHeader" Padding="0,0,0,0" Style="{StaticResource Heading}"
-                 Text="{x:Static local:Strings.Title_Page_About2}"/>
+                 Text="{x:Static local:LStrings.Title_Page_About2}"/>
       <TextBlock Margin="40,114,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
                  AutomationProperties.AutomationId="SubHeadingMessage" FontFamily="Segoe UI Semibold" FontSize="15"
                  Foreground="{StaticResource TertiaryTextForegroundBrush}" Style="{StaticResource SubHeading}"
-                 Text="{x:Static local:Strings.Message_Page_InstallSoftware}" TextWrapping="Wrap"/>
+                 Text="{x:Static local:LStrings.Message_Page_InstallSoftware}" TextWrapping="Wrap"/>
       <local:VariableOpacityButton Click="Confirm_Button_Click" Width="233" Height="45" Margin="40,198,0,0" HorizontalAlignment="Left"
                                    VerticalAlignment="Top" AutomationProperties.AutomationId="ConfirmButton"
-                                   Content="{x:Static local:Strings.Title_Button_Confirm}" IsDefault="true"
+                                   Content="{x:Static local:LStrings.Title_Button_Confirm}" IsDefault="true"
                                    Command="{Binding LaunchAppUpdate}"/>
       <local:VariableOpacityButton Click="Cancel_Button_Click" Width="233" Height="45" Margin="293,198,0,0" HorizontalAlignment="Left"
                                    VerticalAlignment="Top" AutomationProperties.AutomationId="CancelButton"
-                                   Content="{x:Static local:Strings.Title_Button_Cancel}" IsCancel="true"/>
+                                   Content="{x:Static local:LStrings.Title_Button_Cancel}" IsCancel="true"/>
       <Rectangle Margin="0,129,0,0" VerticalAlignment="Top" IsHitTestVisible="true" Stroke="Red"
                  Visibility="{x:Static local:ViewModel.FallbackVisibility}"/>
       <Rectangle Margin="40,0,0,3" HorizontalAlignment="Left" IsHitTestVisible="true" Stroke="Red"

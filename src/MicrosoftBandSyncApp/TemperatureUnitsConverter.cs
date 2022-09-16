@@ -14,11 +14,19 @@ namespace DesktopSyncApp.BindingConverters
   [ValueConversion(typeof (TemperatureUnitType), typeof (string))]
   public class TemperatureUnitsConverter : IValueConverter
   {
-    public object Convert(object value, Type targetType, object parameter, CultureInfo culture) => (object) this.Convert((TemperatureUnitType) value);
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            return (object)this.Convert((TemperatureUnitType)value);
+        }
 
-    public string Convert(TemperatureUnitType value) => value == 1 || value != 2 ? Strings.Label_UoM_Fahrenheit : Strings.Label_UoM_Celsius;
+        public string Convert(TemperatureUnitType value)
+        {
+            return (int)value == 1 || (int)value != 2 
+                ? LStrings.Label_UoM_Fahrenheit 
+                : LStrings.Label_UoM_Celsius;
+        }
 
-    public object ConvertBack(
+        public object ConvertBack(
       object value,
       Type targetType,
       object parameter,

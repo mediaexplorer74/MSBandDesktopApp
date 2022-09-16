@@ -15,11 +15,11 @@ using System.Windows.Markup;
 
 namespace DesktopSyncApp
 {
-  public class MainWindowControl : SyncAppPageControl, IComponentConnector
+  public partial class MainWindowControl : SyncAppPageControl, IComponentConnector
   {
-    internal Image Logo;
-    internal AnimatedPageControl SubPageManager;
-    private bool _contentLoaded;
+    //internal Image Logo;
+    //internal AnimatedPageControl SubPageManager;
+    //private bool _contentLoaded;
 
     public MainWindowControl(AppMainWindow parent)
       : base(parent, true)
@@ -30,7 +30,7 @@ namespace DesktopSyncApp
     private void Button_Click(object sender, RoutedEventArgs e)
     {
     }
-
+        /*
     [DebuggerNonUserCode]
     [GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
     public void InitializeComponent()
@@ -66,5 +66,6 @@ namespace DesktopSyncApp
           break;
       }
     }
+        */
   }
 }

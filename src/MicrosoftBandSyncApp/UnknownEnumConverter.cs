@@ -25,11 +25,11 @@ namespace DesktopSyncApp
 
     public UnknownEnumConverter(JsonConverter delegateEnumConverter) => this.delegateEnumConverter = delegateEnumConverter;
 
-    public virtual bool CanConvert(Type objectType) => this.delegateEnumConverter.CanConvert(objectType);
+    public override bool CanConvert(Type objectType) => this.delegateEnumConverter.CanConvert(objectType);
 
-    public virtual void WriteJson(JsonWriter writer, object value, JsonSerializer serializer) => this.delegateEnumConverter.WriteJson(writer, value, serializer);
+    public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer) => this.delegateEnumConverter.WriteJson(writer, value, serializer);
 
-    public virtual object ReadJson(
+    public override object ReadJson(
       JsonReader reader,
       Type objectType,
       object existingValue,
@@ -46,13 +46,13 @@ namespace DesktopSyncApp
       }
       catch (Exception ex)
       {
-        if (reader.TokenType != 9)
+        if ((int)reader.TokenType != 9)
         {
-          if (reader.TokenType != 7)
+          if ((int)reader.TokenType != 7)
           {
-            if (reader.TokenType != 11)
+            if ((int)reader.TokenType != 11)
             {
-              if (reader.TokenType != 8)
+              if ((int)reader.TokenType != 8)
                 throw;
             }
           }
@@ -66,7 +66,8 @@ namespace DesktopSyncApp
       {
         int num;
         string str1;
-        if (!(reader is JsonTextReader jsonTextReader1))
+        JsonTextReader jsonTextReader1 = null;
+        if (!(reader is JsonTextReader))
         {
           str1 = "?";
         }

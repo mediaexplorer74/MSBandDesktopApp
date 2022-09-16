@@ -89,7 +89,7 @@
     <Compile Include="SelectableTile.cs" />
     <Compile Include="SelectableThemeItem.cs" />
     <Compile Include="StartStripManager.cs" />
-    <Compile Include="ThemeItemCollection`1.cs" />
+    <Compile Include="ThemeItemCollection1.cs" />
     <Compile Include="ThemeComponent.cs" />
     <Compile Include="DeviceThemeManager.cs" />
     <Compile Include="ThemePattern.cs" />
@@ -186,62 +186,62 @@
     <Compile Include="WebUtil.cs" />
     <Compile Include="Globals.cs" />
     <Compile Include="Properties\MonthNames.cs" />
-    <Compile Include="BindingConverters\DateTimeAndFormatMultiConverter.cs" />
-    <Compile Include="BindingConverters\DateTimeToDOWConverter.cs" />
-    <Compile Include="BindingConverters\CantPairReasonMessageConverter.cs" />
-    <Compile Include="BindingConverters\AppUpdateStatusToVisibilityConverter.cs" />
-    <Compile Include="BindingConverters\AppUpdateStatusToStatusStringConverter.cs" />
-    <Compile Include="BindingConverters\AppUpdateStatusToAppUpdateCommandTextConverter.cs" />
-    <Compile Include="BindingConverters\FirmwareUpdatStateConverter.cs" />
-    <Compile Include="BindingConverters\DeviceFaceInfoVisibleMultiConverter.cs" />
-    <Compile Include="BindingConverters\BirthDateConverter.cs" />
-    <Compile Include="BindingConverters\HeightUnitsConverter.cs" />
-    <Compile Include="BindingConverters\WeightUnitsConverter.cs" />
-    <Compile Include="BindingConverters\TemperatureUnitsConverter.cs" />
-    <Compile Include="BindingConverters\DisplayUnitsToHeightLowValueVisibiliyConverter.cs" />
-    <Compile Include="BindingConverters\GenderConverter.cs" />
-    <Compile Include="BindingConverters\DeviceNameConverter.cs" />
-    <Compile Include="BindingConverters\UserNameMultiConverter.cs" />
-    <Compile Include="BindingConverters\DisplayUnitsToBoolConverter.cs" />
-    <Compile Include="BindingConverters\HeightFeetHighComboBoxIndexConverter.cs" />
-    <Compile Include="BindingConverters\WeightEditVisibilityMultiConverter.cs" />
-    <Compile Include="BindingConverters\HeightEditVisibilityMultiConverter.cs" />
-    <Compile Include="BindingConverters\GenderComboBoxIndexConverter.cs" />
-    <Compile Include="BindingConverters\MonthComboBoxIndexConverter.cs" />
-    <Compile Include="BindingConverters\DistanceUnitsComboBoxIndexConverter.cs" />
-    <Compile Include="BindingConverters\MassUnitsComboBoxIndexConverter.cs" />
-    <Compile Include="BindingConverters\TemperatureUnitsComboBoxIndexConverter.cs" />
-    <Compile Include="BindingConverters\ForgetDeviceVisibilityMultiConverter.cs" />
-    <Compile Include="BindingConverters\NullableIntToStringConverter.cs" />
-    <Compile Include="BindingConverters\CookedLimitedStringConverter.cs" />
-    <Compile Include="BindingConverters\CancelButtonVisibilityConverter.cs" />
-    <Compile Include="BindingConverters\EntryValueErrorToLabelForegroundColorConverter.cs" />
-    <Compile Include="BindingConverters\EntryValueErrorToTextBoxBorderColorConverter.cs" />
-    <Compile Include="BindingConverters\SyncFirmwareVisibleMultiConverter.cs" />
-    <Compile Include="BindingConverters\ProgressConverter.cs" />
-    <Compile Include="BindingConverters\FirmwareStatusToVisibilityConverter.cs" />
-    <Compile Include="BindingConverters\FirmwareStatusToStatusStringConverter.cs" />
-    <Compile Include="BindingConverters\BoolToVisibilityConverter.cs" />
-    <Compile Include="BindingConverters\NullToVisibilityConverter.cs" />
-    <Compile Include="BindingConverters\StringToVisibilityConverter.cs" />
-    <Compile Include="BindingConverters\StringTrimmedToVisibilityConverter.cs" />
-    <Compile Include="BindingConverters\StringToBoolConverter.cs" />
-    <Compile Include="BindingConverters\StringTrimmedToBoolConverter.cs" />
-    <Compile Include="BindingConverters\BoolNotConverter.cs" />
-    <Compile Include="BindingConverters\NullToBoolConverter.cs" />
-    <Compile Include="BindingConverters\CollectionPopulatedToBoolConverter.cs" />
-    <Compile Include="BindingConverters\CollectionPopulatedToVisibilityConverter.cs" />
-    <Compile Include="BindingConverters\EqualityToVisibilityConverter.cs" />
-    <Compile Include="BindingConverters\RunMetricComboBoxIndexConverter.cs" />
-    <Compile Include="BindingConverters\BikeMetricComboBoxIndexConverter.cs" />
-    <Compile Include="BindingConverters\BikeSplitComboBoxIndexConverter.cs" />
-    <Compile Include="BindingConverters\DeviceStatusToVisibilityConverter.cs" />
-    <Compile Include="BindingConverters\RelativeSyncTimeConverter.cs" />
-    <Compile Include="BindingConverters\RelativeFWCheckTimeConverter.cs" />
-    <Compile Include="BindingConverters\SyncingToSyncCommandTitleConverter.cs" />
-    <Compile Include="BindingConverters\LoginLogoutStatusToVisibilityConverter.cs" />
-    <Compile Include="BindingConverters\LoginLogoutStatusToBoolConverter.cs" />
-    <Compile Include="BindingConverters\VersionConverter.cs" />
+    <Compile Include="DateTimeAndFormatMultiConverter.cs" />
+    <Compile Include="DateTimeToDOWConverter.cs" />
+    <Compile Include="CantPairReasonMessageConverter.cs" />
+    <Compile Include="AppUpdateStatusToVisibilityConverter.cs" />
+    <Compile Include="AppUpdateStatusToStatusStringConverter.cs" />
+    <Compile Include="AppUpdateStatusToAppUpdateCommandTextConverter.cs" />
+    <Compile Include="FirmwareUpdatStateConverter.cs" />
+    <Compile Include="DeviceFaceInfoVisibleMultiConverter.cs" />
+    <Compile Include="BirthDateConverter.cs" />
+    <Compile Include="HeightUnitsConverter.cs" />
+    <Compile Include="WeightUnitsConverter.cs" />
+    <Compile Include="TemperatureUnitsConverter.cs" />
+    <Compile Include="DisplayUnitsToHeightLowValueVisibiliyConverter.cs" />
+    <Compile Include="GenderConverter.cs" />
+    <Compile Include="DeviceNameConverter.cs" />
+    <Compile Include="UserNameMultiConverter.cs" />
+    <Compile Include="DisplayUnitsToBoolConverter.cs" />
+    <Compile Include="HeightFeetHighComboBoxIndexConverter.cs" />
+    <Compile Include="WeightEditVisibilityMultiConverter.cs" />
+    <Compile Include="HeightEditVisibilityMultiConverter.cs" />
+    <Compile Include="GenderComboBoxIndexConverter.cs" />
+    <Compile Include="MonthComboBoxIndexConverter.cs" />
+    <Compile Include="DistanceUnitsComboBoxIndexConverter.cs" />
+    <Compile Include="MassUnitsComboBoxIndexConverter.cs" />
+    <Compile Include="TemperatureUnitsComboBoxIndexConverter.cs" />
+    <Compile Include="ForgetDeviceVisibilityMultiConverter.cs" />
+    <Compile Include="NullableIntToStringConverter.cs" />
+    <Compile Include="CookedLimitedStringConverter.cs" />
+    <Compile Include="CancelButtonVisibilityConverter.cs" />
+    <Compile Include="EntryValueErrorToLabelForegroundColorConverter.cs" />
+    <Compile Include="EntryValueErrorToTextBoxBorderColorConverter.cs" />
+    <Compile Include="SyncFirmwareVisibleMultiConverter.cs" />
+    <Compile Include="ProgressConverter.cs" />
+    <Compile Include="FirmwareStatusToVisibilityConverter.cs" />
+    <Compile Include="FirmwareStatusToStatusStringConverter.cs" />
+    <Compile Include="BoolToVisibilityConverter.cs" />
+    <Compile Include="NullToVisibilityConverter.cs" />
+    <Compile Include="StringToVisibilityConverter.cs" />
+    <Compile Include="StringTrimmedToVisibilityConverter.cs" />
+    <Compile Include="StringToBoolConverter.cs" />
+    <Compile Include="StringTrimmedToBoolConverter.cs" />
+    <Compile Include="BoolNotConverter.cs" />
+    <Compile Include="NullToBoolConverter.cs" />
+    <Compile Include="CollectionPopulatedToBoolConverter.cs" />
+    <Compile Include="CollectionPopulatedToVisibilityConverter.cs" />
+    <Compile Include="EqualityToVisibilityConverter.cs" />
+    <Compile Include="RunMetricComboBoxIndexConverter.cs" />
+    <Compile Include="BikeMetricComboBoxIndexConverter.cs" />
+    <Compile Include="BikeSplitComboBoxIndexConverter.cs" />
+    <Compile Include="DeviceStatusToVisibilityConverter.cs" />
+    <Compile Include="RelativeSyncTimeConverter.cs" />
+    <Compile Include="RelativeFWCheckTimeConverter.cs" />
+    <Compile Include="SyncingToSyncCommandTitleConverter.cs" />
+    <Compile Include="LoginLogoutStatusToVisibilityConverter.cs" />
+    <Compile Include="LoginLogoutStatusToBoolConverter.cs" />
+    <Compile Include="VersionConverter.cs" />
     <Compile Include="LoginDialog.xaml.cs">
       <DependentUpon>logindialog.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -679,23 +679,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="bindingconverters\bindingconverters.xaml">
+    <Page Include="bindingconverters.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="controls\busyspinner.xaml">
+    <Page Include="busyspinner.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="controls\displaydevicecargo.xaml">
+    <Page Include="displaydevicecargo.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="controls\displaydeviceenvoy.xaml">
+    <Page Include="DisplayDeviceEnvoy.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="controls\displaytile.xaml">
+    <Page Include="displaytile.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -703,15 +703,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="controls\personalizedevicecargo.xaml">
+    <Page Include="personalizedevicecargo.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="controls\personalizedeviceenvoy.xaml">
+    <Page Include="personalizedeviceenvoy.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="controls\variableopacitybutton.xaml">
+    <Page Include="VariableOpacityButton.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -861,6 +861,10 @@
       <Project>{75f73245-cfe9-4922-b0d9-44b9a9aa2345}</Project>
       <Name>Microsoft.Health.Cloud.Client</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BindingConverters\" />
+    <Folder Include="controls\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

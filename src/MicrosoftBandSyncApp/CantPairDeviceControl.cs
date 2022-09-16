@@ -13,9 +13,9 @@ using System.Windows.Markup;
 
 namespace DesktopSyncApp
 {
-  public class CantPairDeviceControl : SyncAppPageControl, IComponentConnector
+  public partial class CantPairDeviceControl : SyncAppPageControl, IComponentConnector
   {
-    private bool _contentLoaded;
+    //private bool _contentLoaded;
 
     public CantPairDeviceControl(AppMainWindow parent)
       : base(parent, false)
@@ -23,6 +23,7 @@ namespace DesktopSyncApp
       this.InitializeComponent();
     }
 
+    /*
     [DebuggerNonUserCode]
     [GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
     public void InitializeComponent()
@@ -33,6 +34,7 @@ namespace DesktopSyncApp
       Application.LoadComponent((object) this, new Uri("/Microsoft Band Sync;component/pagecontrols/cantpairdevicecontrol.xaml", UriKind.Relative));
     }
 
+    
     [DebuggerNonUserCode]
     [GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
     internal Delegate _CreateDelegate(Type delegateType, string handler) => Delegate.CreateDelegate(delegateType, (object) this, handler);
@@ -41,5 +43,6 @@ namespace DesktopSyncApp
     [GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
     [EditorBrowsable(EditorBrowsableState.Never)]
     void IComponentConnector.Connect(int connectionId, object target) => this._contentLoaded = true;
+    */
   }
 }

@@ -181,7 +181,7 @@ namespace DesktopSyncApp
                 failures.AppendFormat("{0}Firmware Version", failures.Length > 0 ? (object) ", " : (object) "");
                 throw;
               }
-              if (client.DeviceTransportApp == 3)
+              if ((int)client.DeviceTransportApp == 3)
               {
                 try
                 {
@@ -223,13 +223,23 @@ namespace DesktopSyncApp
           KDeviceInfo kdeviceInfo1 = keyValuePair.Value;
           bool flag3 = false;
           KDeviceInfo kdeviceInfo2;
-          if (this.presentDevices.TryGetValue(kdeviceInfo1.UniqueID, out kdeviceInfo2))
-          {
-            if (kdeviceInfo1.DeviceInfo.Name != kdeviceInfo2.DeviceInfo.Name || FirmwareVersion.op_Inequality(kdeviceInfo1.Versions.UpdaterVersion, kdeviceInfo2.Versions.UpdaterVersion) || FirmwareVersion.op_Inequality(kdeviceInfo1.Versions.ApplicationVersion, kdeviceInfo2.Versions.ApplicationVersion) || kdeviceInfo1.AppType != kdeviceInfo2.AppType)
-              flag3 = true;
-          }
-          else
-            flag3 = true;
+
+            if (this.presentDevices.TryGetValue(kdeviceInfo1.UniqueID, out kdeviceInfo2))
+            {
+                //TODO
+                //if (kdeviceInfo1.DeviceInfo.Name != kdeviceInfo2.DeviceInfo.Name 
+                //                || FirmwareVersion.Inequality(kdeviceInfo1.Versions.UpdaterVersion, kdeviceInfo2.Versions.UpdaterVersion) 
+                //                || FirmwareVersion.op_Inequality(kdeviceInfo1.Versions.ApplicationVersion, kdeviceInfo2.Versions.ApplicationVersion) 
+                //                || kdeviceInfo1.AppType != kdeviceInfo2.AppType)
+                //{
+                flag3 = true;
+                //}
+            }
+            else
+            {
+                flag3 = true;
+            }
+
           if (flag3)
             this.presentDevices[kdeviceInfo1.UniqueID] = kdeviceInfo1;
           flag1 |= flag3;
@@ -311,7 +321,7 @@ namespace DesktopSyncApp
           kdeviceInfo = (KDeviceInfo) null;
         }
         deviceInfo.Versions = client.FirmwareVersions;
-        if (deviceInfo.FirmwareCheckStatus == null | force || deviceInfo.AppType == 2 && !deviceInfo.FirmwareCheckStatus.Info.IsFirmwareUpdateAvailable)
+        if (deviceInfo.FirmwareCheckStatus == null | force || (int)deviceInfo.AppType == 2 && !deviceInfo.FirmwareCheckStatus.Info.IsFirmwareUpdateAvailable)
         {
           IFirmwareUpdateInfo fwInfo = (IFirmwareUpdateInfo) null;
           try
@@ -338,7 +348,7 @@ namespace DesktopSyncApp
             deviceInfo.FirmwareCheckStatus = new FirmwareCheckStatus(fwInfo, DateTime.UtcNow);
           fwInfo = (IFirmwareUpdateInfo) null;
         }
-        if (deviceInfo.AppType == 3)
+        if ((int)deviceInfo.AppType == 3)
         {
           if (deviceInfo.CanReportOOBEComplete | force)
           {
@@ -390,10 +400,14 @@ namespace DesktopSyncApp
         ICargoClient client = await this.OpenDevice(deviceInfo.DeviceInfo, loginInfo.ServiceInfo);
         try
         {
-          if (deviceInfo.AppType == 3 && (deviceInfo.DeviceProfileStatus.UserLinkStatus != 1 || deviceInfo.DeviceProfileStatus.DeviceLinkStatus != 1))
+          if ((int)deviceInfo.AppType == 3 
+              && 
+             ((int)deviceInfo.DeviceProfileStatus.UserLinkStatus != 1 
+             ||
+             (int)deviceInfo.DeviceProfileStatus.DeviceLinkStatus != 1))
           {
             this.model.ThemeManager.SetBandClass(client.ConnectedBandConstants.BandClass);
-            if (client.ConnectedBandConstants.BandClass == 2)
+            if ((int)client.ConnectedBandConstants.BandClass == 2)
             {
               await client.NavigateToScreenAsync((CargoScreen) 12);
               await this.SetDefaultTiles(client, loginInfo.ServiceInfo);
@@ -487,10 +501,16 @@ namespace DesktopSyncApp
       }
       await client.SetStartStripAsync(new StartStrip((IEnumerable<AdminBandTile>) defaults));
       if (((IEnumerable<AdminBandTile>) defaults).Any<AdminBandTile>((Func<AdminBandTile, bool>) (d => d.Id == new Guid("b4edbc35-027b-4d10-a797-1099cd2ad98a"))))
-        await client.SetSmsResponsesAsync(Strings.DefaultMessageCannedResponses1, Strings.DefaultMessageCannedResponses2, string.Empty, string.Empty);
+        await client.SetSmsResponsesAsync(LStrings.DefaultMessageCannedResponses1, LStrings.DefaultMessageCannedResponses2, string.Empty, string.Empty);
       if (!((IEnumerable<AdminBandTile>) defaults).Any<AdminBandTile>((Func<AdminBandTile, bool>) (d => d.Id == new Guid("22b1c099-f2be-4bac-8ed8-2d6b0b3c25d1"))))
         return;
-      await client.SetPhoneCallResponsesAsync(Strings.DefaultPhoneCannedResponses1, Strings.DefaultPhoneCannedResponses2, Strings.DefaultPhoneCannedResponses3, string.Empty);
+      await client.SetPhoneCallResponsesAsync
+          (
+              LStrings.DefaultPhoneCannedResponses1, 
+              LStrings.DefaultPhoneCannedResponses2, 
+              LStrings.DefaultPhoneCannedResponses3, 
+              string.Empty
+          );
     }
 
     private WorkoutActivity ConvertToWorkoutActivity(ExerciseTag exerciseTag) => new WorkoutActivity(exerciseTag.ExerciseTypeId, exerciseTag.Text)

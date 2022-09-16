@@ -16,7 +16,7 @@ namespace DesktopSyncApp.BindingConverters
   {
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture) => (object) this.Convert((MassUnitType) value);
 
-    public int Convert(MassUnitType value) => value == 1 || value != 2 ? 0 : 1;
+    public int Convert(MassUnitType value) => (int)value == 1 || (int)value != 2 ? 0 : 1;
 
     public object ConvertBack(
       object value,

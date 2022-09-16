@@ -11,9 +11,9 @@ namespace DesktopSyncApp
 {
   internal class SecondsToTimeSpanConverter : JsonConverter
   {
-    public virtual bool CanConvert(Type objectType) => objectType == typeof (TimeSpan);
+    public override bool CanConvert(Type objectType) => objectType == typeof (TimeSpan);
 
-    public virtual object ReadJson(
+    public override object ReadJson(
       JsonReader reader,
       Type objectType,
       object existingValue,
@@ -22,7 +22,7 @@ namespace DesktopSyncApp
       return (object) TimeSpan.FromSeconds(Convert.ToDouble(reader.Value));
     }
 
-    public virtual void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+    public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
     {
       TimeSpan timeSpan = (TimeSpan) value;
       writer.WriteValue((int) timeSpan.TotalSeconds);

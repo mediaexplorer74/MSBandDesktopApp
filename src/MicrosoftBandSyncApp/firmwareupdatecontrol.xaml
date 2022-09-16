@@ -10,19 +10,19 @@
   <Grid MinWidth="550">
     <TextBlock Margin="40,56,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
                AutomationProperties.AutomationId="SoftwareUpdatePageHeader" Style="{StaticResource Heading}"
-               Text="{x:Static local:Strings.Title_Page_FirmwareUpdateReady}"/>
+               Text="{x:Static local:LStrings.Title_Page_FirmwareUpdateReady}"/>
     <TextBlock x:Name="lblSoftwareUpdateMessage" Margin="40,129,0,0" HorizontalAlignment="Left"
                VerticalAlignment="Top" AutomationProperties.AutomationId="lblSoftwareUpdateMessage" FontSize="16"
                RenderTransformOrigin="0.5,0.462" Style="{StaticResource SubHeading}"
-               Text="{x:Static local:Strings.Message_Page_FirmwareUpdateReady}" Background="{x:Null}"/>
+               Text="{x:Static local:LStrings.Message_Page_FirmwareUpdateReady}" Background="{x:Null}"/>
     <local:VariableOpacityButton Height="40" Margin="40,225,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
                                  AutomationProperties.AutomationId="UpdateNowButton"
-                                 Content="{x:Static local:Strings.Title_Command_UpdateFirmware}" FontFamily="Segoe UI Light"
+                                 Content="{x:Static local:LStrings.Title_Command_UpdateFirmware}" FontFamily="Segoe UI Light"
                                  FontSize="20" Foreground="White" Padding="25,0" Command="{Binding PushFirmwareToDevice}"/>
     <StackPanel Margin="40,159,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Horizontal">
       <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top"
                  AutomationProperties.AutomationId="lblCurrentVersion" FontSize="15" Padding="0,0,5,0"
-                 Style="{DynamicResource BaseTextBlock}" Text="{x:Static local:Strings.Title_CurrentFWVersion}"/>
+                 Style="{DynamicResource BaseTextBlock}" Text="{x:Static local:LStrings.Title_CurrentFWVersion}"/>
       <TextBlock Margin="0" HorizontalAlignment="Left" VerticalAlignment="Top"
                  AutomationProperties.AutomationId="lblCurrentFwVersionValue" FontSize="15" Padding="0"
                  Style="{DynamicResource BaseTextBlock}" Background="{x:Null}"
@@ -31,7 +31,7 @@
     <StackPanel Margin="40,181,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Horizontal">
       <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top"
                  AutomationProperties.AutomationId="lblNewVersion" FontSize="15" Padding="0,0,5,0"
-                 Style="{DynamicResource BaseTextBlock}" Text="{x:Static local:Strings.Title_NewFWVersion}"/>
+                 Style="{DynamicResource BaseTextBlock}" Text="{x:Static local:LStrings.Title_NewFWVersion}"/>
       <TextBlock AutomationProperties.AutomationId="lblNewFwVersionValue" FontSize="15"
                  Style="{DynamicResource BaseTextBlock}"
                  Text="{Binding DeviceManager.CurrentDevice.DeviceInfo.FirmwareCheckStatus.Info.FirmwareVersion, Converter={StaticResource VersionConverter}, FallbackValue=?.?.?.?}"/>

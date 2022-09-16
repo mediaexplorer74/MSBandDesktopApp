@@ -14,10 +14,10 @@
                                    FontFamily="Sugoe UI Light" IsTabStop="false" MouseDownOpacity="0.5" Padding="4,0,6,0"
                                    Style="{DynamicResource BorderlessVariableOpacityButtonStyle}"/>
       <TextBlock Name="Title" Margin="41,11,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="28"
-                 Style="{StaticResource BaseTextBlock}" Text="{x:Static local:Strings.Settings_Email_Title}"/>
+                 Style="{StaticResource BaseTextBlock}" Text="{x:Static local:LStrings.Settings_Email_Title}"/>
       <TextBlock Name="NotificationsText" Margin="41,73,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
                  FontSize="15" Style="{StaticResource BaseTextBlock}"
-                 Text="{x:Static local:Strings.Settings_Email_SubHeading1}" TextWrapping="Wrap"/>
+                 Text="{x:Static local:LStrings.Settings_Email_SubHeading1}" TextWrapping="Wrap"/>
       <CheckBox Name="NotificationsOn" Width="415" Margin="41,150,0,0" HorizontalAlignment="Left"
                 VerticalAlignment="Top" FontFamily="Segoe UI Light" FontSize="30" IsTabStop="false"
                 Style="{StaticResource CheckBoxNoContent}" BorderBrush="{x:Null}"/>

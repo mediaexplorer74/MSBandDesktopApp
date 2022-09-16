@@ -124,7 +124,9 @@ namespace DesktopSyncApp
       get
       {
         DistanceUnitType heightDisplayUnits = this.HeightDisplayUnits;
-        return heightDisplayUnits == 1 || heightDisplayUnits != 2 ? UnitConversion.MMToFeetPortion((int) this.Height) : UnitConversion.MMToCM((int) this.Height);
+        return (int)heightDisplayUnits == 1 || (int)heightDisplayUnits != 2 
+                    ? UnitConversion.MMToFeetPortion((int) this.Height) 
+                    : UnitConversion.MMToCM((int) this.Height);
       }
     }
 
@@ -133,7 +135,7 @@ namespace DesktopSyncApp
       get
       {
         DistanceUnitType heightDisplayUnits = this.HeightDisplayUnits;
-        if (heightDisplayUnits != 1 && heightDisplayUnits == 2)
+        if ((int)heightDisplayUnits != 1 && (int)heightDisplayUnits == 2)
           return 0;
         int feet;
         int inches;
@@ -162,7 +164,10 @@ namespace DesktopSyncApp
       get
       {
         MassUnitType weightDisplayUnits = this.WeightDisplayUnits;
-        return weightDisplayUnits == 1 || weightDisplayUnits != 2 ? Math2.Between<uint>((uint) UnitConversion.GramsToPounds((int) this.Weight), 78U, 551U) : (uint) UnitConversion.GramsToKilograms((int) this.Weight);
+        return (int)weightDisplayUnits == 1 
+                    || (int)weightDisplayUnits != 2 
+                    ? Math2.Between<uint>((uint) UnitConversion.GramsToPounds((int) this.Weight), 78U, 551U) 
+                    : (uint) UnitConversion.GramsToKilograms((int) this.Weight);
       }
     }
 

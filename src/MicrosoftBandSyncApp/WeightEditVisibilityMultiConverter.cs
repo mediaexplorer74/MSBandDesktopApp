@@ -18,9 +18,13 @@ namespace DesktopSyncApp.BindingConverters
 
     public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture) => values[0] is bool && (bool) values[0] && values[1] is MassUnitType ? (object) this.Convert((MassUnitType) values[1], (MassUnitType) parameter) : (object) Visibility.Hidden;
 
-    public Visibility Convert(MassUnitType displayUnits, MassUnitType param) => displayUnits == 1 || displayUnits != 2 ? (param != 1 ? Visibility.Hidden : Visibility.Visible) : (param != 2 ? Visibility.Hidden : Visibility.Visible);
+        public Visibility Convert(MassUnitType displayUnits, MassUnitType param)
+        {
+            return (int)displayUnits == 1 
+                || (int)displayUnits != 2 ? ((int)param != 1 ? Visibility.Hidden : Visibility.Visible) : ((int)param != 2 ? Visibility.Hidden : Visibility.Visible);
+        }
 
-    public object[] ConvertBack(
+        public object[] ConvertBack(
       object value,
       Type[] targetTypes,
       object parameter,

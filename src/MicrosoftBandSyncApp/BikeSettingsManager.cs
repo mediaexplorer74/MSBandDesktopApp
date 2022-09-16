@@ -90,34 +90,34 @@ namespace DesktopSyncApp
       ((ICollection<LabeledItem<BikeDisplayMetricType>>) this.metricComboOptions).Clear();
       ((ICollection<LabeledItem<BikeDisplayMetricType>>) this.metricComboOptionsWithNone).Clear();
       ((ICollection<LabeledItem<int>>) this.splitComboOptions).Clear();
-      if (this.DeviceType == 1)
+      if ((int)this.DeviceType == 1)
       {
-        ((ICollection<LabeledItem<BikeDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<BikeDisplayMetricType>((BikeDisplayMetricType) 1, Strings.Settings_Bike_DataPoint3));
-        ((ICollection<LabeledItem<BikeDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<BikeDisplayMetricType>((BikeDisplayMetricType) 3, Strings.Settings_Bike_DataPoint8));
-        ((ICollection<LabeledItem<BikeDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<BikeDisplayMetricType>((BikeDisplayMetricType) 2, Strings.Settings_Bike_DataPoint5));
-        ((ICollection<LabeledItem<BikeDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<BikeDisplayMetricType>((BikeDisplayMetricType) 5, Strings.Settings_Bike_DataPoint7));
-        ((ICollection<LabeledItem<BikeDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<BikeDisplayMetricType>((BikeDisplayMetricType) 4, Strings.Settings_Bike_DataPoint1));
+        ((ICollection<LabeledItem<BikeDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<BikeDisplayMetricType>((BikeDisplayMetricType) 1, LStrings.Settings_Bike_DataPoint3));
+        ((ICollection<LabeledItem<BikeDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<BikeDisplayMetricType>((BikeDisplayMetricType) 3, LStrings.Settings_Bike_DataPoint8));
+        ((ICollection<LabeledItem<BikeDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<BikeDisplayMetricType>((BikeDisplayMetricType) 2, LStrings.Settings_Bike_DataPoint5));
+        ((ICollection<LabeledItem<BikeDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<BikeDisplayMetricType>((BikeDisplayMetricType) 5, LStrings.Settings_Bike_DataPoint7));
+        ((ICollection<LabeledItem<BikeDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<BikeDisplayMetricType>((BikeDisplayMetricType) 4, LStrings.Settings_Bike_DataPoint1));
       }
       else
       {
-        ((ICollection<LabeledItem<BikeDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<BikeDisplayMetricType>((BikeDisplayMetricType) 1, Strings.Settings_Bike_DataPoint3));
-        ((ICollection<LabeledItem<BikeDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<BikeDisplayMetricType>((BikeDisplayMetricType) 3, Strings.Settings_Bike_DataPoint8));
-        ((ICollection<LabeledItem<BikeDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<BikeDisplayMetricType>((BikeDisplayMetricType) 2, Strings.Settings_Bike_DataPoint5));
-        ((ICollection<LabeledItem<BikeDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<BikeDisplayMetricType>((BikeDisplayMetricType) 7, Strings.Settings_Bike_DataPoint2));
-        ((ICollection<LabeledItem<BikeDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<BikeDisplayMetricType>((BikeDisplayMetricType) 4, Strings.Settings_Bike_DataPoint1));
-        ((ICollection<LabeledItem<BikeDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<BikeDisplayMetricType>((BikeDisplayMetricType) 5, Strings.Settings_Bike_DataPoint7));
-        ((ICollection<LabeledItem<BikeDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<BikeDisplayMetricType>((BikeDisplayMetricType) 8, Strings.Settings_Bike_DataPoint6));
-        ((ICollection<LabeledItem<BikeDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<BikeDisplayMetricType>((BikeDisplayMetricType) 6, Strings.Settings_Bike_DataPoint4));
+        ((ICollection<LabeledItem<BikeDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<BikeDisplayMetricType>((BikeDisplayMetricType) 1, LStrings.Settings_Bike_DataPoint3));
+        ((ICollection<LabeledItem<BikeDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<BikeDisplayMetricType>((BikeDisplayMetricType) 3, LStrings.Settings_Bike_DataPoint8));
+        ((ICollection<LabeledItem<BikeDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<BikeDisplayMetricType>((BikeDisplayMetricType) 2, LStrings.Settings_Bike_DataPoint5));
+        ((ICollection<LabeledItem<BikeDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<BikeDisplayMetricType>((BikeDisplayMetricType) 7, LStrings.Settings_Bike_DataPoint2));
+        ((ICollection<LabeledItem<BikeDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<BikeDisplayMetricType>((BikeDisplayMetricType) 4, LStrings.Settings_Bike_DataPoint1));
+        ((ICollection<LabeledItem<BikeDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<BikeDisplayMetricType>((BikeDisplayMetricType) 5, LStrings.Settings_Bike_DataPoint7));
+        ((ICollection<LabeledItem<BikeDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<BikeDisplayMetricType>((BikeDisplayMetricType) 8, LStrings.Settings_Bike_DataPoint6));
+        ((ICollection<LabeledItem<BikeDisplayMetricType>>) this.metricComboOptions).Add(new LabeledItem<BikeDisplayMetricType>((BikeDisplayMetricType) 6, LStrings.Settings_Bike_DataPoint4));
       }
-      ((ICollection<LabeledItem<BikeDisplayMetricType>>) this.metricComboOptionsWithNone).Add(new LabeledItem<BikeDisplayMetricType>((BikeDisplayMetricType) 0, Strings.Settings_Bike_DataPoint0));
-      ((ICollection<LabeledItem<BikeDisplayMetricType>>) this.metricComboOptionsWithNone).Add(new LabeledItem<BikeDisplayMetricType>((BikeDisplayMetricType) 1, Strings.Settings_Bike_DataPoint3));
-      ((ICollection<LabeledItem<BikeDisplayMetricType>>) this.metricComboOptionsWithNone).Add(new LabeledItem<BikeDisplayMetricType>((BikeDisplayMetricType) 3, Strings.Settings_Bike_DataPoint8));
-      ((ICollection<LabeledItem<BikeDisplayMetricType>>) this.metricComboOptionsWithNone).Add(new LabeledItem<BikeDisplayMetricType>((BikeDisplayMetricType) 2, Strings.Settings_Bike_DataPoint5));
-      ((ICollection<LabeledItem<BikeDisplayMetricType>>) this.metricComboOptionsWithNone).Add(new LabeledItem<BikeDisplayMetricType>((BikeDisplayMetricType) 7, Strings.Settings_Bike_DataPoint2));
-      ((ICollection<LabeledItem<BikeDisplayMetricType>>) this.metricComboOptionsWithNone).Add(new LabeledItem<BikeDisplayMetricType>((BikeDisplayMetricType) 4, Strings.Settings_Bike_DataPoint1));
-      ((ICollection<LabeledItem<BikeDisplayMetricType>>) this.metricComboOptionsWithNone).Add(new LabeledItem<BikeDisplayMetricType>((BikeDisplayMetricType) 5, Strings.Settings_Bike_DataPoint7));
-      ((ICollection<LabeledItem<BikeDisplayMetricType>>) this.metricComboOptionsWithNone).Add(new LabeledItem<BikeDisplayMetricType>((BikeDisplayMetricType) 8, Strings.Settings_Bike_DataPoint6));
-      ((ICollection<LabeledItem<BikeDisplayMetricType>>) this.metricComboOptionsWithNone).Add(new LabeledItem<BikeDisplayMetricType>((BikeDisplayMetricType) 6, Strings.Settings_Bike_DataPoint4));
+      ((ICollection<LabeledItem<BikeDisplayMetricType>>) this.metricComboOptionsWithNone).Add(new LabeledItem<BikeDisplayMetricType>((BikeDisplayMetricType) 0, LStrings.Settings_Bike_DataPoint0));
+      ((ICollection<LabeledItem<BikeDisplayMetricType>>) this.metricComboOptionsWithNone).Add(new LabeledItem<BikeDisplayMetricType>((BikeDisplayMetricType) 1, LStrings.Settings_Bike_DataPoint3));
+      ((ICollection<LabeledItem<BikeDisplayMetricType>>) this.metricComboOptionsWithNone).Add(new LabeledItem<BikeDisplayMetricType>((BikeDisplayMetricType) 3, LStrings.Settings_Bike_DataPoint8));
+      ((ICollection<LabeledItem<BikeDisplayMetricType>>) this.metricComboOptionsWithNone).Add(new LabeledItem<BikeDisplayMetricType>((BikeDisplayMetricType) 2, LStrings.Settings_Bike_DataPoint5));
+      ((ICollection<LabeledItem<BikeDisplayMetricType>>) this.metricComboOptionsWithNone).Add(new LabeledItem<BikeDisplayMetricType>((BikeDisplayMetricType) 7, LStrings.Settings_Bike_DataPoint2));
+      ((ICollection<LabeledItem<BikeDisplayMetricType>>) this.metricComboOptionsWithNone).Add(new LabeledItem<BikeDisplayMetricType>((BikeDisplayMetricType) 4, LStrings.Settings_Bike_DataPoint1));
+      ((ICollection<LabeledItem<BikeDisplayMetricType>>) this.metricComboOptionsWithNone).Add(new LabeledItem<BikeDisplayMetricType>((BikeDisplayMetricType) 5, LStrings.Settings_Bike_DataPoint7));
+      ((ICollection<LabeledItem<BikeDisplayMetricType>>) this.metricComboOptionsWithNone).Add(new LabeledItem<BikeDisplayMetricType>((BikeDisplayMetricType) 8, LStrings.Settings_Bike_DataPoint6));
+      ((ICollection<LabeledItem<BikeDisplayMetricType>>) this.metricComboOptionsWithNone).Add(new LabeledItem<BikeDisplayMetricType>((BikeDisplayMetricType) 6, LStrings.Settings_Bike_DataPoint4));
       int[] numArray = new int[10]
       {
         1,
@@ -182,7 +182,7 @@ namespace DesktopSyncApp
 
     private void LoadSavedBikeMetrics(CargoBikeDisplayMetrics loadMetrics)
     {
-      if (this.DeviceType == 1)
+      if ((int)this.DeviceType == 1)
       {
         List<BikeDisplayMetricType> displayMetricTypeList1 = new List<BikeDisplayMetricType>();
         displayMetricTypeList1.Add(this.Metric1.Value);

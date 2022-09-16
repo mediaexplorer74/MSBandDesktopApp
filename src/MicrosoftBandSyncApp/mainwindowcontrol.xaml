@@ -12,7 +12,7 @@
              VerticalAlignment="Top" Source="/Resources/device-64x64.png" Stretch="None"/>
       <Button Width="140" Margin="30,0,0,35" HorizontalAlignment="Left" VerticalAlignment="Bottom"
               HorizontalContentAlignment="Left" AutomationProperties.AutomationId="SignoutButton"
-              Content="{x:Static local:Strings.Title_Command_Logout}" FontFamily="Segoe UI" IsTabStop="false"
+              Content="{x:Static local:LStrings.Title_Command_Logout}" FontFamily="Segoe UI" IsTabStop="false"
               Style="{StaticResource LogoutButton}" Background="{x:Null}" BorderBrush="{x:Null}"
               Command="{Binding LogoutCommand}"
               Visibility="{Binding LoginInfo, Converter={StaticResource NullToVisibilityConverter}}"/>
@@ -33,30 +33,30 @@
     <StackPanel Margin="30,123,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
       <Button Width="202" Height="33" HorizontalContentAlignment="Left"
               AutomationProperties.AutomationId="SettingsButton"
-              Content="{x:Static local:Strings.Title_NavButton_Settings}" IsTabStop="false"
+              Content="{x:Static local:LStrings.Title_NavButton_Settings}" IsTabStop="false"
               Style="{StaticResource NavButton}" Command="{Binding ShowSettingsCommand}"/>
       <Button Width="202" Height="33" HorizontalContentAlignment="Left"
               AutomationProperties.AutomationId="AboutButton"
-              Content="{x:Static local:Strings.Title_NavButton_About}" IsTabStop="false"
+              Content="{x:Static local:LStrings.Title_NavButton_About}" IsTabStop="false"
               Style="{StaticResource NavButton}" Command="{Binding ShowAboutCommand}"/>
       <Button Width="202" Height="33" HorizontalContentAlignment="Left"
               AutomationProperties.AutomationId="DashboardButton"
-              Content="{x:Static local:Strings.Title_NavButton_Dashboard}" IsTabStop="false"
+              Content="{x:Static local:LStrings.Title_NavButton_Dashboard}" IsTabStop="false"
               Style="{StaticResource NavButton}" Command="{Binding LaunchDashboardCommand}"
               Visibility="{Binding LoginInfo, Converter={StaticResource NullToVisibilityConverter}}"/>
       <Button Width="202" Height="33" HorizontalContentAlignment="Left"
               AutomationProperties.AutomationId="MyProfileButton"
-              Content="{x:Static local:Strings.Title_NavButton_Profile}" IsTabStop="false"
+              Content="{x:Static local:LStrings.Title_NavButton_Profile}" IsTabStop="false"
               Style="{StaticResource NavButton}" Command="{Binding ShowProfileCommand}"
               Visibility="{Binding LoginInfo, Converter={StaticResource NullToVisibilityConverter}}"/>
       <Button Width="202" Height="33" HorizontalContentAlignment="Left"
               AutomationProperties.AutomationId="ManageTilesButton"
-              Content="{x:Static local:Strings.Title_NavButton_ManageTiles}" IsTabStop="false"
+              Content="{x:Static local:LStrings.Title_NavButton_ManageTiles}" IsTabStop="false"
               Style="{StaticResource NavButton}" Command="{Binding ShowTileManagementCommand}"
               Visibility="{Binding UserDeviceStatus, Converter={StaticResource DeviceStatusToVisibilityConverter}}"/>
       <Button Width="202" Height="33" HorizontalContentAlignment="Left"
               AutomationProperties.AutomationId="PersonalizeBandButton"
-              Content="{x:Static local:Strings.Title_NavButton_PersonalizeBand}" IsTabStop="false"
+              Content="{x:Static local:LStrings.Title_NavButton_PersonalizeBand}" IsTabStop="false"
               Style="{StaticResource NavButton}" Command="{Binding ShowBandCustomizationCommand}"
               Visibility="{Binding UserDeviceStatus, Converter={StaticResource DeviceStatusToVisibilityConverter}}"/>
     </StackPanel>

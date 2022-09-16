@@ -15,7 +15,7 @@
                  FontFamily="Segoe UI Light" FontSize="20" Style="{DynamicResource BaseTextBlock}"
                  Text="{x:Static local:Strings.Message_Page_PairDevice_01}" TextWrapping="Wrap"/>
       <TextBlock VerticalAlignment="Top" AutomationProperties.AutomationId="PairDeviceWarningMessage"
-                 Style="{DynamicResource SubHeading}" Text="{x:Static local:Strings.Message_Page_PairDevice_02}"
+                 Style="{DynamicResource SubHeading}" Text="{x:Static local:LStrings.Message_Page_PairDevice_02}"
                  TextWrapping="Wrap"/>
     </StackPanel>
     <StackPanel Margin="40,0,0,80" HorizontalAlignment="Left" VerticalAlignment="Bottom" Orientation="Horizontal">

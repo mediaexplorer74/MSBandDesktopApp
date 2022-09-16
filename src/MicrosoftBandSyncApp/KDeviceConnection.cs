@@ -273,7 +273,7 @@ namespace DesktopSyncApp
       }
     }
 
-    public bool DeviceBandClassIsEnvoy => this.deviceBandClass == 2;
+    public bool DeviceBandClassIsEnvoy => (int)this.deviceBandClass == 2;
 
     public ImageSource MeTileImage
     {

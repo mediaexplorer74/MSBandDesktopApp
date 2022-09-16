@@ -14,12 +14,16 @@ using System.Windows.Markup;
 
 namespace DesktopSyncApp
 {
-  public class DisplayDeviceEnvoy : UserControl, IComponentConnector
+  public partial class DisplayDeviceEnvoy : UserControl, IComponentConnector
   {
-    private bool _contentLoaded;
+    //private bool _contentLoaded;
 
-    public DisplayDeviceEnvoy() => this.InitializeComponent();
+    public DisplayDeviceEnvoy()
+    {
+        this.InitializeComponent();
+    }
 
+    /*
     [DebuggerNonUserCode]
     [GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
     public void InitializeComponent()
@@ -38,5 +42,6 @@ namespace DesktopSyncApp
     [GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
     [EditorBrowsable(EditorBrowsableState.Never)]
     void IComponentConnector.Connect(int connectionId, object target) => this._contentLoaded = true;
+   */
   }
 }

@@ -9,10 +9,10 @@
   <Grid Background="#000000" Opacity=".9">
     <Grid Margin="201,151,201,151" Background="{StaticResource BackgroundBrushDark}">
       <TextBlock Name="Title" Margin="50,46,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="28"
-                 Style="{StaticResource Heading}" Text="{x:Static local:Strings.Title_ErrorMessage}"/>
+                 Style="{StaticResource Heading}" Text="{x:Static local:LStrings.Title_ErrorMessage}"/>
       <TextBlock Name="ErrorMessageText" Margin="50,89,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
                  Foreground="#A7A7AA" Style="{StaticResource SubHeading}"
-                 Text="{x:Static local:Strings.Message_Error_ConnectReconnect}" TextWrapping="Wrap"/>
+                 Text="{x:Static local:LStrings.Message_Error_ConnectReconnect}" TextWrapping="Wrap"/>
       <Rectangle Height="1" Margin="0,106,0,0" VerticalAlignment="top" IsHitTestVisible="true" Stroke="Red"
                  Visibility="{x:Static local:ViewModel.FallbackVisibility}"/>
       <Rectangle Margin="50,0,0,0" HorizontalAlignment="Left" IsHitTestVisible="true" Stroke="Red"

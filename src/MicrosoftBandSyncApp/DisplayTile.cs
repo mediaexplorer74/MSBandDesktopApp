@@ -16,12 +16,12 @@ using System.Windows.Media.Imaging;
 
 namespace DesktopSyncApp
 {
-  public class DisplayTile : UserControl, IComponentConnector
+  public partial class DisplayTile : UserControl, IComponentConnector
   {
-    internal Grid OuterGrid;
-    internal Grid OpacityGrid;
-    internal Image TileIcon;
-    private bool _contentLoaded;
+    //internal Grid OuterGrid;
+    //internal Grid OpacityGrid;
+    //internal Image TileIcon;
+    //private bool _contentLoaded;
 
     public DisplayTile(BitmapImage bi, Color background)
     {
@@ -37,6 +37,7 @@ namespace DesktopSyncApp
       this.OuterGrid.Background = (Brush) new SolidColorBrush(background);
     }
 
+        /*
     [DebuggerNonUserCode]
     [GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
     public void InitializeComponent()
@@ -68,5 +69,6 @@ namespace DesktopSyncApp
           break;
       }
     }
+        */
   }
 }

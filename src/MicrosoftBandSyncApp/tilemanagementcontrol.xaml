@@ -11,19 +11,19 @@
     <Grid IsEnabled="{Binding StrapManager.UpdatingStartStrip, Converter={StaticResource BoolNotConverter}}">
       <TextBlock Margin="74,48,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
                  AutomationProperties.AutomationId="PageHeader" FontSize="36" Style="{DynamicResource Heading}"
-                 Text="{x:Static local:Strings.Title_Page_TileManagement}"/>
+                 Text="{x:Static local:LStrings.Title_Page_TileManagement}"/>
       <TextBlock Margin="76,106,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
                  AutomationProperties.AutomationId="DragTileSubheading" FontSize="15"
-                 Style="{DynamicResource SubHeading}" Text="{x:Static local:Strings.Title_Tiles_DragIcon}"/>
+                 Style="{DynamicResource SubHeading}" Text="{x:Static local:LStrings.Title_Tiles_DragIcon}"/>
       <TextBlock Margin="76,128,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
                  AutomationProperties.AutomationId="SubheadingLabel" FontSize="15"
-                 Style="{DynamicResource SubHeading}" Text="{x:Static local:Strings.Title_Tiles_ClickIcon}"/>
+                 Style="{DynamicResource SubHeading}" Text="{x:Static local:LStrings.Title_Tiles_ClickIcon}"/>
       <local:VariableOpacityButton Click="SaveOrder_Click" Width="145" Height="40" Margin="77,0,0,40" HorizontalAlignment="Left"
                                    VerticalAlignment="Bottom" AutomationProperties.AutomationId="SaveButton"
-                                   Content="{x:Static local:Strings.Title_Button_Save}" IsEnabled="{Binding StrapManager.NeedToSave}"/>
+                                   Content="{x:Static local:LStrings.Title_Button_Save}" IsEnabled="{Binding StrapManager.NeedToSave}"/>
       <local:VariableOpacityButton Width="145" Height="40" Margin="262,0,0,40" HorizontalAlignment="Left" VerticalAlignment="Bottom"
                                    AutomationProperties.AutomationId="CancelButton"
-                                   Content="{x:Static local:Strings.Title_Button_Cancel}" Command="{Binding ShowSyncCommand}"/>
+                                   Content="{x:Static local:LStrings.Title_Button_Cancel}" Command="{Binding ShowSyncCommand}"/>
       <ListView Name="Tiles" Height="100" Margin="41,201,41,0" VerticalAlignment="Top"
                 HorizontalContentAlignment="Center" AllowDrop="true" BorderThickness="0"
                 ScrollViewer.CanContentScroll="true" ScrollViewer.HorizontalScrollBarVisibility="Auto"
@@ -67,7 +67,7 @@
     <Grid Background="{StaticResource PrimaryDarkBrush}" Opacity="0.9"
           Visibility="{Binding StrapManager.UpdatingStartStrip, Converter={StaticResource BoolToVisibilityConverter}, FallbackValue=Hidden}"/>
     <TextBlock Margin="324,213,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="40"
-               Foreground="White" Text="{x:Static local:Strings.Status_Updating}"
+               Foreground="White" Text="{x:Static local:LStrings.Status_Updating}"
                Visibility="{Binding StrapManager.UpdatingStartStrip, Converter={StaticResource BoolToVisibilityConverter}, FallbackValue=Hidden}"/>
     <Rectangle Margin="0,203,0,0" VerticalAlignment="Top" IsHitTestVisible="true" Stroke="Red"
                Visibility="{x:Static local:ViewModel.FallbackVisibility}"/>

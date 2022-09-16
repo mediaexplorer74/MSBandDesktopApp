@@ -24,7 +24,8 @@ namespace DesktopSyncApp
     private static double decRatio = 0.5;
     private LinkedList<SyncAppPageControl> pageStack = new LinkedList<SyncAppPageControl>();
     private LinkedList<SyncAppPageControl> modalPageStack = new LinkedList<SyncAppPageControl>();
-    private bool _contentLoaded;
+    
+    //private bool _contentLoaded;
 
     public AnimatedPageControl() => this.InitializeComponent();
 
@@ -198,20 +199,23 @@ namespace DesktopSyncApp
           syncAppPageControl2.RenderTransform = (Transform) new TranslateTransform();
         syncAppPageControl2.IsEnabled = true;
       }
-      if (animate)
-      {
-        TranslateTransform translateTransform = new TranslateTransform();
-        syncAppPageControl1.RenderTransform = (Transform) translateTransform;
-        DoubleAnimation doubleAnimation = new DoubleAnimation();
-        doubleAnimation.From = new double?(0.0);
-        doubleAnimation.To = new double?(-this.ActualWidth);
-        doubleAnimation.Duration = (Duration) AnimatedPageControl.slideDuration;
-        doubleAnimation.AccelerationRatio = AnimatedPageControl.accRatio;
-        doubleAnimation.DecelerationRatio = AnimatedPageControl.decRatio;
-        translateTransform.BeginAnimation(TranslateTransform.XProperty, (AnimationTimeline) doubleAnimation);
-      }
-      else
-        syncAppPageControl1.RenderTransform = (Transform) new TranslateTransform(-this.ActualWidth, 0.0);
+            if (animate)
+            {
+                TranslateTransform translateTransform = new TranslateTransform();
+                syncAppPageControl1.RenderTransform = (Transform)translateTransform;
+                DoubleAnimation doubleAnimation = new DoubleAnimation();
+                doubleAnimation.From = new double?(0.0);
+                doubleAnimation.To = new double?(-this.ActualWidth);
+                doubleAnimation.Duration = (Duration)AnimatedPageControl.slideDuration;
+                doubleAnimation.AccelerationRatio = AnimatedPageControl.accRatio;
+                doubleAnimation.DecelerationRatio = AnimatedPageControl.decRatio;
+                translateTransform.BeginAnimation(TranslateTransform.XProperty, (AnimationTimeline)doubleAnimation);
+            }
+            else
+            {
+                syncAppPageControl1.RenderTransform = (Transform)new TranslateTransform(-this.ActualWidth, 0.0);
+            }
+
       syncAppPageControl1.pageControl = (AnimatedPageControl) null;
       syncAppPageControl1.OnHide();
       syncAppPageControl1.IsEnabled = false;

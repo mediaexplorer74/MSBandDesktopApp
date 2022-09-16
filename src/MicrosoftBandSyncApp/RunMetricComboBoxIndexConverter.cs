@@ -18,7 +18,7 @@ namespace DesktopSyncApp.BindingConverters
 
     public int Convert(RunDisplayMetricType value, BandClass deviceType)
     {
-      if (deviceType == 1)
+      if ((int)deviceType == 1)
       {
         switch ((int) value)
         {

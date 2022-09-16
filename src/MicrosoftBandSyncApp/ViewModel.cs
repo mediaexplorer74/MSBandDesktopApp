@@ -22,7 +22,7 @@ using System.Windows.Threading;
 
 namespace DesktopSyncApp
 {
-  public class ViewModel : INotifyPropertyChanged
+  public partial class ViewModel : INotifyPropertyChanged
   {
     public static Visibility FallbackVisibility;
     private Command minimizeAppCommand;

@@ -13,9 +13,9 @@ using System.Windows.Markup;
 
 namespace DesktopSyncApp
 {
-  public class PairDeviceControl : SyncAppPageControl, IComponentConnector
+  public partial class PairDeviceControl : SyncAppPageControl, IComponentConnector
   {
-    private bool _contentLoaded;
+    //private bool _contentLoaded;
 
     public PairDeviceControl(AppMainWindow parent)
       : base(parent, false)
@@ -23,6 +23,7 @@ namespace DesktopSyncApp
       this.InitializeComponent();
     }
 
+        /*
     [DebuggerNonUserCode]
     [GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
     public void InitializeComponent()
@@ -41,5 +42,6 @@ namespace DesktopSyncApp
     [GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
     [EditorBrowsable(EditorBrowsableState.Never)]
     void IComponentConnector.Connect(int connectionId, object target) => this._contentLoaded = true;
+        */
   }
 }

@@ -29,7 +29,7 @@ namespace DesktopSyncApp
 
     public void SetBandClass(BandClass bandClass)
     {
-      if (bandClass == 2)
+      if ((int)bandClass == 2)
         this.InitializeForEnvoy();
       else
         this.InitializeForCargo();
@@ -44,9 +44,9 @@ namespace DesktopSyncApp
       get
       {
         BandClass currentBandClass = this.currentBandClass;
-        if (currentBandClass == 1)
+        if ((int)currentBandClass == 1)
           return 1;
-        if (currentBandClass == 2)
+        if ((int)currentBandClass == 2)
           return 13;
         throw new InvalidOperationException("Internal error: Unknown band class");
       }
@@ -57,9 +57,9 @@ namespace DesktopSyncApp
       get
       {
         BandClass currentBandClass = this.currentBandClass;
-        if (currentBandClass == 1)
+        if ((int)currentBandClass == 1)
           return 4;
-        if (currentBandClass == 2)
+        if ((int)currentBandClass == 2)
           return 1;
         throw new InvalidOperationException("Internal error: Unknown band class");
       }

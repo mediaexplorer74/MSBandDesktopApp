@@ -19,8 +19,10 @@ namespace DesktopSyncApp.BindingConverters
     public string Convert(DistanceUnitType value, HeightUnitsConverter.UnitType type)
     {
       if (type != HeightUnitsConverter.UnitType.HeightHigh && type == HeightUnitsConverter.UnitType.HeightLow)
-        return Strings.UoM_Profile_Inches;
-      return value == 1 || value != 2 ? Strings.UoM_Profile_Feet : Strings.UoM_Profile_Centimeters;
+        return LStrings.UoM_Profile_Inches;
+      return (int)value == 1 || (int)value != 2 
+                ? LStrings.UoM_Profile_Feet 
+                : LStrings.UoM_Profile_Centimeters;
     }
 
     public object ConvertBack(

@@ -8,15 +8,16 @@
                           Width="579" Height="443" Background="{StaticResource PrimaryBrush}" Grid.IsSharedSizeScope="true">
   <Grid Background="{x:Null}">
     <TextBlock Margin="44,50,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
-               AutomationProperties.AutomationId="HelloThereText" Style="{DynamicResource Heading}"
-               Text="{x:Static local:Strings.Title_Page_LogIn}"/>
+               AutomationProperties.AutomationId="HelloThereText" 
+               Style="{DynamicResource Heading}"
+               Text="{x:Static local:LStrings.Title_Page_LogIn}"/>
     <TextBlock Margin="40,155,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
                AutomationProperties.AutomationId="SignInText" FontFamily="Segoe UI Light" FontSize="28"
-               Style="{DynamicResource BaseTextBlock}" Text="{x:Static local:Strings.Title_PleaseLogIn_1}"/>
+               Style="{DynamicResource BaseTextBlock}" Text="{x:Static local:LStrings.Title_PleaseLogIn_1}"/>
     <TextBlock Margin="40,283,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
                AutomationProperties.AutomationId="ConnectingToYourAccountText"
                Style="{DynamicResource SubHeading}"
-               Text="{x:Static local:Strings.SubHead_Page_LoginLogoutStatusMessage_Login}" Background="{x:Null}"
+               Text="{x:Static local:LStrings.SubHead_Page_LoginLogoutStatusMessage_Login}" Background="{x:Null}"
                Visibility="{Binding LoginBusy, Converter={StaticResource BoolToVisibilityConverter}}"/>
     <StackPanel Margin="30,305,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Horizontal"
                 Visibility="{Binding LastLoginError, Converter={StaticResource NullToVisibilityConverter}}">
@@ -24,12 +25,12 @@
              AutomationProperties.AutomationId="ErrorImage" Source="/Resources/error.png"/>
       <TextBlock Margin="0,0,11,0" HorizontalAlignment="Left" VerticalAlignment="Center"
                  AutomationProperties.AutomationId="SignInErrorText" FontSize="25" Padding="0"
-                 Style="{DynamicResource BaseTextBlock}" Text="{x:Static local:Strings.Message_LoginErrorOccurred}"
+                 Style="{DynamicResource BaseTextBlock}" Text="{x:Static local:LStrings.Message_LoginErrorOccurred}"
                  Background="{x:Null}"/>
     </StackPanel>
     <Button Width="315" Margin="40,197,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
             AutomationProperties.AutomationId="SignInToMicrosoftAccountButton"
-            Content="{x:Static local:Strings.Title_Button_MicrosoftAccount}" FontFamily="Segoe UI Light"
+            Content="{x:Static local:LStrings.Title_Button_MicrosoftAccount}" FontFamily="Segoe UI Light"
             FontSize="28" Foreground="White" IsTabStop="false" Style="{DynamicResource ForwardTextButton}"/>
     <local:BusySpinner Width="30" Height="30" Margin="393,200,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
                        Visibility="{Binding LoginBusy, Converter={StaticResource BoolToVisibilityConverter}}"/>

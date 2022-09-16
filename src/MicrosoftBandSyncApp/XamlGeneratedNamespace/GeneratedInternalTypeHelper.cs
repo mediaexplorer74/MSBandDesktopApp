@@ -14,6 +14,7 @@ using System.Windows.Markup;
 
 namespace XamlGeneratedNamespace
 {
+    /*
   [DebuggerNonUserCode]
   [GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
   [EditorBrowsable(EditorBrowsableState.Never)]
@@ -51,5 +52,7 @@ namespace XamlGeneratedNamespace
     }
 
     protected override void AddEventHandler(EventInfo eventInfo, object target, Delegate handler) => eventInfo.AddEventHandler(target, handler);
+    
   }
+    */
 }

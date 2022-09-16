@@ -16,14 +16,15 @@ using System.Windows.Media.Animation;
 
 namespace DesktopSyncApp
 {
-  public class BusySpinner : UserControl, IComponentConnector
+  public partial class BusySpinner : UserControl, IComponentConnector
   {
-    internal RotateTransform RotationTransform_01;
-    internal RotateTransform RotationTransform_02;
-    internal RotateTransform RotationTransform_03;
-    internal RotateTransform RotationTransform_04;
-    internal RotateTransform RotationTransform_05;
-    private bool _contentLoaded;
+    //internal RotateTransform RotationTransform_01;
+    //internal RotateTransform RotationTransform_02;
+    //internal RotateTransform RotationTransform_03;
+    //internal RotateTransform RotationTransform_04;
+    //internal RotateTransform RotationTransform_05;
+    
+        //private bool _contentLoaded;
 
     public BusySpinner() => this.InitializeComponent();
 
@@ -40,6 +41,7 @@ namespace DesktopSyncApp
         busySpinner.StopAnimation();
     }
 
+    /*
     [DebuggerNonUserCode]
     [GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
     public void InitializeComponent()
@@ -80,5 +82,6 @@ namespace DesktopSyncApp
           break;
       }
     }
+        */
   }
 }

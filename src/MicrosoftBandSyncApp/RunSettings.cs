@@ -15,36 +15,37 @@ using System.Windows.Markup;
 
 namespace DesktopSyncApp
 {
-  public class RunSettings : SyncAppPageControl, IComponentConnector
+  public partial class RunSettings : SyncAppPageControl, IComponentConnector
   {
     private RunSettingsManager manager;
-    internal TextBlock Title;
-    internal TextBlock NotificationsText;
-    internal TextBlock NotificationsText1;
-    internal TextBlock MainDataGrouping;
-    internal TextBlock Metric1Title;
-    internal TextBlock Metric2Title;
-    internal TextBlock Metric3Title;
-    internal ComboBox Metric1Data;
-    internal ComboBox Metric2Data;
-    internal ComboBox Metric3Data;
-    internal TextBlock Metric1Error;
-    internal TextBlock Metric2Error;
-    internal TextBlock Metric3Error;
-    internal TextBlock DrawerDataGrouping;
-    internal TextBlock Metric4Title;
-    internal TextBlock Metric5Title;
-    internal TextBlock Metric6Title;
-    internal TextBlock Metric7Title;
-    internal ComboBox Metric4Data;
-    internal ComboBox Metric5Data;
-    internal ComboBox Metric6Data;
-    internal ComboBox Metric7Data;
-    internal TextBlock Metric4Error;
-    internal TextBlock Metric5Error;
-    internal TextBlock Metric6Error;
-    internal TextBlock Metric7Error;
-    private bool _contentLoaded;
+    //internal TextBlock Title;
+    //internal TextBlock NotificationsText;
+    //internal TextBlock NotificationsText1;
+    //internal TextBlock MainDataGrouping;
+    //internal TextBlock Metric1Title;
+    //internal TextBlock Metric2Title;
+    //internal TextBlock Metric3Title;
+    //internal ComboBox Metric1Data;
+    //internal ComboBox Metric2Data;
+    //internal ComboBox Metric3Data;
+    //internal TextBlock Metric1Error;
+    //internal TextBlock Metric2Error;
+    //internal TextBlock Metric3Error;
+    //internal TextBlock DrawerDataGrouping;
+    //internal TextBlock Metric4Title;
+    //internal TextBlock Metric5Title;
+    //internal TextBlock Metric6Title;
+    //internal TextBlock Metric7Title;
+    //internal ComboBox Metric4Data;
+    //internal ComboBox Metric5Data;
+    //internal ComboBox Metric6Data;
+    //internal ComboBox Metric7Data;
+    //internal TextBlock Metric4Error;
+    //internal TextBlock Metric5Error;
+    //internal TextBlock Metric6Error;
+    //internal TextBlock Metric7Error;
+    
+    //private bool _contentLoaded;
 
     public RunSettings(AppMainWindow main, SyncAppPageControl parent, RunSettingsManager manager)
       : base(main, parent, true)
@@ -68,6 +69,7 @@ namespace DesktopSyncApp
       ((TileManagementControl) this.container).ShowSettingsPage((SyncAppPageControl) null);
     }
 
+        /*
     [DebuggerNonUserCode]
     [GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
     public void InitializeComponent()
@@ -174,5 +176,6 @@ namespace DesktopSyncApp
           break;
       }
     }
+        */
   }
 }

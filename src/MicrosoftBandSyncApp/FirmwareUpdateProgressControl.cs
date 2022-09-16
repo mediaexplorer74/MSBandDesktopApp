@@ -14,10 +14,10 @@ using System.Windows.Markup;
 
 namespace DesktopSyncApp
 {
-  public class FirmwareUpdateProgressControl : SyncAppPageControl, IComponentConnector
+  public partial class FirmwareUpdateProgressControl : SyncAppPageControl, IComponentConnector
   {
-    internal TextBlock lblProfileFullName;
-    private bool _contentLoaded;
+    //internal TextBlock lblProfileFullName;
+    //private bool _contentLoaded;
 
     public FirmwareUpdateProgressControl(AppMainWindow parent)
       : base(parent, false)
@@ -25,6 +25,7 @@ namespace DesktopSyncApp
       this.InitializeComponent();
     }
 
+        /*
     [DebuggerNonUserCode]
     [GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
     public void InitializeComponent()
@@ -49,5 +50,6 @@ namespace DesktopSyncApp
       else
         this._contentLoaded = true;
     }
+        */
   }
 }

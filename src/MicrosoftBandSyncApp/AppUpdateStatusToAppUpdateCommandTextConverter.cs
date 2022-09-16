@@ -13,11 +13,20 @@ namespace DesktopSyncApp.BindingConverters
   [ValueConversion(typeof (AppUpdateStatus), typeof (string))]
   public class AppUpdateStatusToAppUpdateCommandTextConverter : IValueConverter
   {
-    public object Convert(object value, Type targetType, object parameter, CultureInfo culture) => (object) this.Convert((AppUpdateStatus) value);
+        public object Convert(object value, Type targetType, 
+            object parameter, CultureInfo culture)
+        {
+            return (object)this.Convert((AppUpdateStatus)value);
+        }
 
-    public string Convert(AppUpdateStatus value) => value == AppUpdateStatus.Available ? Strings.Title_Command_LaunchAppUpdate : Strings.Title_Command_CheckForAppUpdate;
+        public string Convert(AppUpdateStatus value)
+        {
+            return value == AppUpdateStatus.Available 
+                ? LStrings.Title_Command_LaunchAppUpdate 
+                : LStrings.Title_Command_CheckForAppUpdate;
+        }
 
-    public object ConvertBack(
+        public object ConvertBack(
       object value,
       Type targetType,
       object parameter,

@@ -10,11 +10,11 @@
   <Grid MinWidth="550">
     <TextBlock Margin="40,56,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
                AutomationProperties.AutomationId="FirmwareUpdatingPageHeader" Style="{StaticResource Heading}"
-               Text="{x:Static local:Strings.Title_Page_FirmwareUpdating}"/>
+               Text="{x:Static local:LStrings.Title_Page_FirmwareUpdating}"/>
     <TextBlock x:Name="lblProfileFullName" Margin="40,129,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
                AutomationProperties.AutomationId="FirmwareUpdateProgressMessage" FontSize="16"
                RenderTransformOrigin="0.5,0.462" Style="{StaticResource SubHeading}"
-               Text="{x:Static local:Strings.Message_Page_FirmwareUpdating}" Background="{x:Null}"/>
+               Text="{x:Static local:LStrings.Message_Page_FirmwareUpdating}" Background="{x:Null}"/>
     <TextBlock Margin="40,0,0,108" HorizontalAlignment="Left" VerticalAlignment="Bottom"
                AutomationProperties.AutomationId="lblCurrentUpdateState" Style="{DynamicResource SubHeading}"
                TextWrapping="Wrap"

@@ -14,11 +14,18 @@ namespace DesktopSyncApp.BindingConverters
   [ValueConversion(typeof (TemperatureUnitType), typeof (int))]
   public class TemperatureUnitsComboBoxIndexConverter : IValueConverter
   {
-    public object Convert(object value, Type targetType, object parameter, CultureInfo culture) => (object) this.Convert((TemperatureUnitType) value);
+        public object Convert(object value, Type targetType, 
+            object parameter, CultureInfo culture)
+        {
+            return (object)this.Convert((TemperatureUnitType)value);
+        }
 
-    public int Convert(TemperatureUnitType value) => value == 1 || value != 2 ? 0 : 1;
+        public int Convert(TemperatureUnitType value)
+        {
+            return (int)value == 1 || (int)value != 2 ? 0 : 1;
+        }
 
-    public object ConvertBack(
+        public object ConvertBack(
       object value,
       Type targetType,
       object parameter,

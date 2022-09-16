@@ -20,8 +20,8 @@ namespace DesktopSyncApp
     private SecurityInfo securityInfo;
     private LoginDialog.Mode mode;
     private Exception error;
-    internal WebBrowser brLogin;
-    private bool _contentLoaded;
+    //internal WebBrowser brLogin;
+    //private bool _contentLoaded;
 
     public event PropertyChangedEventHandler PropertyChanged;
 
@@ -42,9 +42,9 @@ namespace DesktopSyncApp
       }
     }
 
-    public bool ShowLogin(SecurityInfo securityInfo) => this.ShowDialog(securityInfo, LoginDialog.Mode.LogoutLogin, Strings.Title_LoginDialog_Login);
+    public bool ShowLogin(SecurityInfo securityInfo) => this.ShowDialog(securityInfo, LoginDialog.Mode.LogoutLogin, LStrings.Title_LoginDialog_Login);
 
-    public bool ShowLogout(SecurityInfo securityInfo) => this.ShowDialog(securityInfo, LoginDialog.Mode.Logout, Strings.Title_LoginDialog_Logout);
+    public bool ShowLogout(SecurityInfo securityInfo) => this.ShowDialog(securityInfo, LoginDialog.Mode.Logout, LStrings.Title_LoginDialog_Logout);
 
     private bool ShowDialog(SecurityInfo securityInfo, LoginDialog.Mode mode, string title)
     {
@@ -111,6 +111,7 @@ namespace DesktopSyncApp
 
     private void CloseButtonClick(object sender, RoutedEventArgs e) => this.Close();
 
+        /*
     [DebuggerNonUserCode]
     [GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
     public void InitializeComponent()
@@ -139,6 +140,7 @@ namespace DesktopSyncApp
       else
         this._contentLoaded = true;
     }
+    */
 
     private enum Mode
     {

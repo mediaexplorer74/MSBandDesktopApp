@@ -9,7 +9,7 @@
   <Grid>
     <TextBlock Margin="40,56,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
                AutomationProperties.AutomationId="PageHeader" Style="{DynamicResource Heading}"
-               Text="{x:Static local:Strings.Title_Page_CantPair}" TextWrapping="Wrap"/>
+               Text="{x:Static local:LStrings.Title_Page_CantPair}" TextWrapping="Wrap"/>
     <TextBlock Margin="40,153,200,0" VerticalAlignment="Top"
                AutomationProperties.AutomationId="UnableToRegisterBandMessage" FontFamily="Segoe UI" FontSize="16"
                Style="{DynamicResource SubHeading}" TextWrapping="Wrap"

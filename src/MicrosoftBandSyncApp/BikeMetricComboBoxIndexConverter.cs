@@ -18,9 +18,9 @@ namespace DesktopSyncApp.BindingConverters
 
     public int Convert(BikeDisplayMetricType value, BandClass deviceType)
     {
-      if (deviceType == 1)
+      if ((int)deviceType == 1)
       {
-        switch (value - 1)
+        switch ((int)value - 1)
         {
           case 1:
             return 2;
@@ -36,7 +36,7 @@ namespace DesktopSyncApp.BindingConverters
       }
       else
       {
-        switch (value - 1)
+        switch ((int)value - 1)
         {
           case 1:
             return 2;
@@ -69,7 +69,7 @@ namespace DesktopSyncApp.BindingConverters
 
     public BikeDisplayMetricType ConvertBack(int value, BandClass deviceType)
     {
-      if (deviceType == 1)
+      if ((int)deviceType == 1)
       {
         switch (value)
         {

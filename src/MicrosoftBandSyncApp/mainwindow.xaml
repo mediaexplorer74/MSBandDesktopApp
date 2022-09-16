@@ -9,7 +9,7 @@
         Loaded="MainWindow_Loaded" 
         MouseDown="MainWindow_MouseDown" 
         x:Name="MainWindow"
-        Title="{x:Static local:Strings.Title_MainWindow}" 
+        Title="{x:Static local:LStrings.Title_MainWindow}" 
         Width="830" Height="480"
         Background="{StaticResource PrimaryMediumBrush}" 
         FontFamily="Segoe UI Light" 

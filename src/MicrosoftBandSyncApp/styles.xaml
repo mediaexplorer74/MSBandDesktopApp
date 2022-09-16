@@ -437,7 +437,7 @@
     </Grid>
   </ControlTemplate>
   <Style x:Key="CheckBox" TargetType="{x:Type CheckBox}">
-    <Setter Property="ContentControl.Content" Value="{x:Static local:Strings.Label_CheckBox_Checked}"/>
+    <Setter Property="ContentControl.Content" Value="{x:Static local:LStrings.Label_CheckBox_Checked}"/>
     <Setter Property="Control.FontFamily" Value="Segoe UI Semibold"/>
     <Setter Property="Control.FontSize" Value="15"/>
     <Setter Property="Control.Foreground" Value="{StaticResource WhiteTextBrush}"/>
@@ -489,7 +489,8 @@
     </Setter>
   </Style>
   <Style x:Key="CheckBoxNoContent" TargetType="{x:Type CheckBox}">
-    <Setter Property="ContentControl.Content" Value="{x:Static local:LStrings.Label_CheckBox_Checked}"/>
+    <Setter Property="ContentControl.Content" 
+            Value="{x:Static local:LStrings.Label_CheckBox_Checked}"/>
     <Setter Property="Control.FontFamily" Value="Segoe UI Semibold"/>
     <Setter Property="Control.FontSize" Value="15"/>
     <Setter Property="Control.Foreground" Value="{StaticResource WhiteTextBrush}"/>

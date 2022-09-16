@@ -49,8 +49,8 @@ namespace DesktopSyncApp
 
     public override void Report(FirmwareUpdateProgress progress)
     {
-      this.LatestProgressPercentage = new double?(progress.PercentageCompletion);
-      this.LatestState = new FirmwareUpdateState?(progress.State);
+            this.LatestProgressPercentage = new double?(0);// progress.PercentageCompletion);
+            this.LatestState = new FirmwareUpdateState?(0);// progress.State);
     }
 
     private void HandleStateChange(FirmwareUpdateState state)

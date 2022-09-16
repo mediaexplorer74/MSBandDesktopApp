@@ -25,7 +25,7 @@ using System.Windows.Threading;
 
 namespace DesktopSyncApp
 {
-  public class TileManagementControl : SyncAppPageControl, IComponentConnector
+  public partial class TileManagementControl : SyncAppPageControl, IComponentConnector
   {
     private ScrollViewer TilesScroller;
     private ScrollBar TilesScrollBar;
@@ -38,9 +38,10 @@ namespace DesktopSyncApp
     private bool Dragging;
     private SelectableTile BlankTile;
     private BandClass deviceType;
-    internal ListView Tiles;
-    internal AnimatedPageControl SettingPageManager;
-    private bool _contentLoaded;
+    //internal ListView Tiles;
+    //internal AnimatedPageControl SettingPageManager;
+    
+        //private bool _contentLoaded;
 
     private ObservableCollection<SelectableTile> stripManager => (ObservableCollection<SelectableTile>) this.Tiles.ItemsSource;
 
@@ -71,28 +72,28 @@ namespace DesktopSyncApp
         {
           string[] phoneCallResponses = this.parent.Model.DeviceManager.CurrentDevice.CargoClient.GetPhoneCallResponses();
           tile.SetReplies(phoneCallResponses);
-          tile.SettingsPage = (SyncAppPageControl) this.SetMessageSettingsPage(tile, Strings.Settings_Calls_Title, Strings.Settings_Calls_SubHeading1, Strings.Settings_Calls_SubHeading2);
+          tile.SettingsPage = (SyncAppPageControl) this.SetMessageSettingsPage(tile, LStrings.Settings_Calls_Title, LStrings.Settings_Calls_SubHeading1, LStrings.Settings_Calls_SubHeading2);
         }
         else if (lower == "b4edbc35-027b-4d10-a797-1099cd2ad98a".ToLower())
         {
           string[] smsResponses = this.parent.Model.DeviceManager.CurrentDevice.CargoClient.GetSmsResponses();
           tile.SetReplies(smsResponses);
-          tile.SettingsPage = (SyncAppPageControl) this.SetMessageSettingsPage(tile, Strings.Settings_SMS_Title, Strings.Settings_SMS_SubHeading1, Strings.Settings_SMS_SubHeading2);
+          tile.SettingsPage = (SyncAppPageControl) this.SetMessageSettingsPage(tile, LStrings.Settings_SMS_Title, LStrings.Settings_SMS_SubHeading1, LStrings.Settings_SMS_SubHeading2);
         }
         else if (lower == "ec149021-ce45-40e9-aeee-08f86e4746a7".ToLower())
-          tile.SettingsPage = (SyncAppPageControl) this.SetNotificationSettingsPage(tile, Strings.Settings_Calendar_Title, Strings.Settings_Calendar_SubHeading1);
+          tile.SettingsPage = (SyncAppPageControl) this.SetNotificationSettingsPage(tile, LStrings.Settings_Calendar_Title, LStrings.Settings_Calendar_SubHeading1);
         else if (lower == "d7fb5ff5-906a-4f2c-8269-dde6a75138c4".ToLower())
-          tile.SettingsPage = (SyncAppPageControl) this.SetNotificationSettingsPage(tile, Strings.Settings_Cortana_Title, Strings.Settings_Cortana_SubHeading1);
+          tile.SettingsPage = (SyncAppPageControl) this.SetNotificationSettingsPage(tile, LStrings.Settings_Cortana_Title, LStrings.Settings_Cortana_SubHeading1);
         else if (lower == "823ba55a-7c98-4261-ad5e-929031289c6e".ToLower())
-          tile.SettingsPage = (SyncAppPageControl) this.SetNotificationSettingsPage(tile, Strings.Settings_Email_Title, Strings.Settings_Email_SubHeading1);
+          tile.SettingsPage = (SyncAppPageControl) this.SetNotificationSettingsPage(tile, LStrings.Settings_Email_Title, LStrings.Settings_Email_SubHeading1);
         else if (lower == "fd06b486-bbda-4da5-9014-124936386237".ToLower())
-          tile.SettingsPage = (SyncAppPageControl) this.SetNotificationSettingsPage(tile, Strings.Settings_Facebook_Title, Strings.Settings_Facebook_SubHeading1);
+          tile.SettingsPage = (SyncAppPageControl) this.SetNotificationSettingsPage(tile, LStrings.Settings_Facebook_Title, LStrings.Settings_Facebook_SubHeading1);
         else if (lower == "76b08699-2f2e-9041-96c2-1f4bfc7eab10".ToLower())
-          tile.SettingsPage = (SyncAppPageControl) this.SetNotificationSettingsPage(tile, Strings.Settings_FacebookMessenger_Title, Strings.Settings_FacebookMessenger_SubHeading1);
+          tile.SettingsPage = (SyncAppPageControl) this.SetNotificationSettingsPage(tile, LStrings.Settings_FacebookMessenger_Title, LStrings.Settings_FacebookMessenger_SubHeading1);
         else if (lower == "4076b009-0455-4af7-a705-6d4acd45a556".ToLower())
-          tile.SettingsPage = (SyncAppPageControl) this.SetNotificationSettingsPage(tile, Strings.Settings_NotificationCenter_Title, Strings.Settings_NotificationCenter_SubHeading1);
+          tile.SettingsPage = (SyncAppPageControl) this.SetNotificationSettingsPage(tile, LStrings.Settings_NotificationCenter_Title, LStrings.Settings_NotificationCenter_SubHeading1);
         else if (lower == "2e76a806-f509-4110-9c03-43dd2359d2ad".ToLower())
-          tile.SettingsPage = (SyncAppPageControl) this.SetNotificationSettingsPage(tile, Strings.Settings_Twitter_Title, Strings.Settings_Twitter_SubHeading1);
+          tile.SettingsPage = (SyncAppPageControl) this.SetNotificationSettingsPage(tile, LStrings.Settings_Twitter_Title, LStrings.Settings_Twitter_SubHeading1);
         else if (lower == "96430fcb-0060-41cb-9de2-e00cac97f85d".ToLower())
           tile.SettingsPage = (SyncAppPageControl) this.SetBikeSettingsPage(tile, this.parent.Model.DeviceManager.CurrentDevice.DeviceBandClass, this.parent.Model.DeviceManager.CurrentDevice.CargoClient.GetBikeDisplayMetrics(), this.parent.Model.DeviceManager.CurrentDevice.CargoClient.GetBikeSplitMultiplier());
         else if (lower == "65bd93db-4293-46af-9a28-bdd6513b4677".ToLower())
@@ -413,6 +414,7 @@ namespace DesktopSyncApp
       }
     }
 
+        /*
     [DebuggerNonUserCode]
     [GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
     public void InitializeComponent()
@@ -453,6 +455,7 @@ namespace DesktopSyncApp
         this.Tiles.Loaded += new RoutedEventHandler(this.TilesScroller_Loaded);
       }
     }
+        */
 
     private enum ScrollDirection
     {

@@ -14,9 +14,9 @@ using System.Windows.Markup;
 
 namespace DesktopSyncApp
 {
-  public class LoginControl : SyncAppPageControl, IComponentConnector
+  public partial class LoginControl : SyncAppPageControl, IComponentConnector
   {
-    private bool _contentLoaded;
+    //private bool _contentLoaded;
 
     public LoginControl(AppMainWindow parent)
       : base(parent, true)
@@ -26,6 +26,7 @@ namespace DesktopSyncApp
 
     private void btLogin_Click(object sender, RoutedEventArgs e) => this.parent.AuthenticateSafe(LoginContext.UserInitiated);
 
+        /*
     [DebuggerNonUserCode]
     [GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
     public void InitializeComponent()
@@ -50,5 +51,6 @@ namespace DesktopSyncApp
       else
         this._contentLoaded = true;
     }
+        */
   }
 }

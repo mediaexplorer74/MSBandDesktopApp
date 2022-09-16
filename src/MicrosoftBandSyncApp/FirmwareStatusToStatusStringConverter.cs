@@ -20,18 +20,18 @@ namespace DesktopSyncApp.BindingConverters
       switch (value)
       {
         case FirmwareStatus.Unknown:
-          return Strings.Status_FW_Unknown;
+          return LStrings.Status_FW_Unknown;
         case FirmwareStatus.UpToDate:
-          return Strings.Status_FW_UpToDate;
+          return LStrings.Status_FW_UpToDate;
         case FirmwareStatus.Checking:
         case FirmwareStatus.ReChecking:
-          return Strings.Status_FW_Checking;
+          return LStrings.Status_FW_Checking;
         case FirmwareStatus.Available:
-          return Strings.Status_FW_Available;
+          return LStrings.Status_FW_Available;
         case FirmwareStatus.Downloading:
-          return Strings.Status_FW_Downloading;
+          return LStrings.Status_FW_Downloading;
         case FirmwareStatus.ReadyToUpdate:
-          return Strings.Status_FW_ReadyToUpdate;
+          return LStrings.Status_FW_ReadyToUpdate;
         default:
           return "";
       }

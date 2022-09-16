@@ -14,11 +14,11 @@ using System.Windows.Markup;
 
 namespace DesktopSyncApp
 {
-  public class ErrorMessageControl : SyncAppPageControl, IComponentConnector
+  public partial class ErrorMessageControl : SyncAppPageControl, IComponentConnector
   {
-    internal TextBlock Title;
-    internal TextBlock ErrorMessageText;
-    private bool _contentLoaded;
+    //internal TextBlock Title;
+    //internal TextBlock ErrorMessageText;
+    //private bool _contentLoaded;
 
     public ErrorMessageControl(AppMainWindow main)
       : base(main, false)
@@ -26,6 +26,7 @@ namespace DesktopSyncApp
       this.InitializeComponent();
     }
 
+        /*
     [DebuggerNonUserCode]
     [GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
     public void InitializeComponent()
@@ -51,5 +52,6 @@ namespace DesktopSyncApp
       else
         this.Title = (TextBlock) target;
     }
+        */
   }
 }
