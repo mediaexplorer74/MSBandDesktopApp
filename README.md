@@ -10,8 +10,8 @@ I tried to refactor the decompiled code. The main goal is achieve the state demo
 
 ## Screenshots (the firm app running, not mine, heh!)
 
-![Screenshot 1](/Images/shot1.png)
-![Screenshot 2](/Images/shot2.png)
+![Screenshot 1](Images/shot1.png)
+![Screenshot 2](Images/shot2.png)
 
 
 ## My Little Progress
