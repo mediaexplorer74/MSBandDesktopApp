@@ -8,10 +8,10 @@ The official Microsoft Band desktop app, decompiled.
 I tried to refactor the decompiled code. The main goal is achieve the state demonstated at screenshot
 
 
-## Screenshots (the firm app running, not mine, heh!)
+## "Mockups" (the firm app running, not mine, heh!)
 
-![Screenshot 1](Images/shot1.png)
-![Screenshot 2](Images/shot2.png)
+![Mockup 1](Images/mockup1.png)
+![Mockup 2](Images/mockup2.png)
 
 
 ## My Little Progress
