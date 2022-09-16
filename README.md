@@ -10,8 +10,8 @@ I tried to refactor the decompiled code. The main goal is achieve the state demo
 
 ## "Mockups" (the firm app running, not mine, heh!)
 
-![Mockup 1](Images/mockup_1.png)
-![Mockup 2](Images/mockup_2.png)
+![Mockup 1](Images/mockup1.png)
+![Mockup 2](Images/mockup2.png)
 
 
 ## My Little Progress
