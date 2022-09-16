@@ -1,0 +1,28 @@
+<local:SyncAppPageControl x:Class="DesktopSyncApp.CantPairDeviceControl"
+                          xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                          xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                          xmlns:System="clr-namespace:System;assembly=mscorlib"
+                          xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                          xmlns:local="clr-namespace:DesktopSyncApp"
+                          xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                          Width="798" Height="465" Background="{StaticResource PrimaryBrush}" ClipToBounds="true">
+  <Grid>
+    <TextBlock Margin="40,56,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
+               AutomationProperties.AutomationId="PageHeader" Style="{DynamicResource Heading}"
+               Text="{x:Static local:Strings.Title_Page_CantPair}" TextWrapping="Wrap"/>
+    <TextBlock Margin="40,153,200,0" VerticalAlignment="Top"
+               AutomationProperties.AutomationId="UnableToRegisterBandMessage" FontFamily="Segoe UI" FontSize="16"
+               Style="{DynamicResource SubHeading}" TextWrapping="Wrap"
+               Text="{Binding UserDeviceStatus, Converter={StaticResource CantPairReasonMessageConverter}, FallbackValue='Unable to Register your Band'}"/>
+    <Image Margin="0,0,70,0" HorizontalAlignment="Right" VerticalAlignment="Bottom"
+           AutomationProperties.AutomationId="NotConnectedBandImage" Source="/Resources/usb-cord-x.png"
+           Stretch="None"/>
+    <local:BusySpinner Width="40" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center"
+                       AutomationProperties.AutomationId="BusySpinner"
+                       Visibility="{Binding AquiringDevice, Converter={StaticResource BoolToVisibilityConverter}}"/>
+    <Rectangle Margin="0,190,0,0" VerticalAlignment="Top" IsHitTestVisible="true" Stroke="Red"
+               Visibility="{x:Static local:ViewModel.FallbackVisibility}"/>
+    <Rectangle Margin="200,0,0,3" HorizontalAlignment="Left" IsHitTestVisible="true" Stroke="Red"
+               Visibility="{x:Static local:ViewModel.FallbackVisibility}"/>
+  </Grid>
+</local:SyncAppPageControl>

@@ -1,0 +1,54 @@
+<UserControl x:Class="DesktopSyncApp.PersonalizeDeviceCargo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:DesktopSyncApp"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006">
+  <Grid>
+    <Image HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Resources/device-face-cargo.png"
+           Stretch="None"/>
+    <StackPanel Margin="79,35,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Horizontal">
+      <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Horizontal">
+        <Grid>
+          <Border Width="170" Height="56">
+            <Border.Background>
+              <SolidColorBrush Color="{Binding ThemeManager.ColorSets.SelectedItem.Colors.Base, FallbackValue={StaticResource ThemeColorDefault}}"/>
+            </Border.Background>
+          </Border>
+          <Image Width="170" Height="56" HorizontalAlignment="Left" VerticalAlignment="Top" ClipToBounds="true"
+                 Stretch="UniformToFill" Source="{Binding ThemeManager.Patterns.SelectedItem.Image}"/>
+        </Grid>
+        <Border Width="1" Background="Black"/>
+        <Border Width="5">
+          <Border.Background>
+            <SolidColorBrush Color="{Binding ThemeManager.ColorSets.SelectedItem.Colors.Base, FallbackValue={StaticResource ThemeColorDefault}}"/>
+          </Border.Background>
+        </Border>
+      </StackPanel>
+    </StackPanel>
+    <StackPanel Margin="89,42,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
+      <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" IsHitTestVisible="false"
+                  Orientation="Horizontal">
+        <TextBlock Margin="0,0,5,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="35"
+                   IsHitTestVisible="false" Style="{DynamicResource BaseTextBlock}">
+          <TextBlock.Text>
+            <MultiBinding Converter="{StaticResource DateTimeAndFormatMultiConverter}" FallbackValue="0:00"
+                          TargetNullValue="0:00">
+              <Binding Path="DeviceManager.CurrentDevice.CalculatedCurrentLocalDeviceTime"/>
+              <Binding Path="DeviceManager.CurrentDevice.UserProfile.DeviceSettings.LocaleSettings.TimeFormat"/>
+            </MultiBinding>
+          </TextBlock.Text>
+        </TextBlock>
+        <StackPanel Margin="0,8,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" IsHitTestVisible="false">
+          <TextBlock Margin="0,0,0,-12" HorizontalAlignment="Left" VerticalAlignment="Top" IsHitTestVisible="false"
+                     Style="{DynamicResource BaseTextBlock}" TextAlignment="Center" TextWrapping="Wrap"
+                     Text="{Binding DeviceManager.CurrentDevice.CalculatedCurrentLocalDeviceTime, Converter={StaticResource DateTimeToDOWConverter}, FallbackValue=DOW}"/>
+          <TextBlock Margin="0,8,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="13"
+                     IsHitTestVisible="false" Style="{DynamicResource BaseTextBlock}" TextAlignment="Center"
+                     TextWrapping="Wrap"
+                     Text="{Binding DeviceManager.CurrentDevice.CalculatedCurrentLocalDeviceTime, FallbackValue=15}"/>
+        </StackPanel>
+      </StackPanel>
+    </StackPanel>
+  </Grid>
+</UserControl>

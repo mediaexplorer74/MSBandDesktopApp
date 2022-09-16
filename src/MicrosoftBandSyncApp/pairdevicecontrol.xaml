@@ -1,0 +1,36 @@
+<local:SyncAppPageControl x:Class="DesktopSyncApp.PairDeviceControl"
+                          xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                          xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                          xmlns:System="clr-namespace:System;assembly=mscorlib"
+                          xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                          xmlns:local="clr-namespace:DesktopSyncApp"
+                          xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                          Width="666" Height="474.25" Background="{StaticResource PrimaryBrush}" ClipToBounds="true">
+  <Grid>
+    <TextBlock Margin="40,50,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
+               AutomationProperties.AutomationId="PageHeader" Style="{DynamicResource Heading}"
+               Text="{x:Static local:Strings.Title_Page_PairDevice}"/>
+    <StackPanel Width="550" Margin="40, 120, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top">
+      <TextBlock Margin="0,0,0,20" VerticalAlignment="Top" AutomationProperties.AutomationId="PairDeviceMessage"
+                 FontFamily="Segoe UI Light" FontSize="20" Style="{DynamicResource BaseTextBlock}"
+                 Text="{x:Static local:Strings.Message_Page_PairDevice_01}" TextWrapping="Wrap"/>
+      <TextBlock VerticalAlignment="Top" AutomationProperties.AutomationId="PairDeviceWarningMessage"
+                 Style="{DynamicResource SubHeading}" Text="{x:Static local:Strings.Message_Page_PairDevice_02}"
+                 TextWrapping="Wrap"/>
+    </StackPanel>
+    <StackPanel Margin="40,0,0,80" HorizontalAlignment="Left" VerticalAlignment="Bottom" Orientation="Horizontal">
+      <local:VariableOpacityButton Height="40" HorizontalAlignment="Left" VerticalAlignment="Bottom"
+                                   AutomationProperties.AutomationId="MakeThisMyBandButton"
+                                   Content="{x:Static local:Strings.Title_Button_PairNow}" FontSize="15" Padding="25,0"
+                                   Command="{Binding PairDeviceConfirmCommand}"/>
+      <local:VariableOpacityButton Height="40" Margin="40,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom"
+                                   AutomationProperties.AutomationId="SignInAsAnotherUserButton"
+                                   Content="{x:Static local:Strings.Title_Button_Logout}" FontSize="15" Padding="25,0"
+                                   Command="{Binding LogoutCommand}"/>
+    </StackPanel>
+    <Rectangle Margin="0,280,0,0" VerticalAlignment="Top" IsHitTestVisible="true" Stroke="Red"
+               Visibility="{x:Static local:ViewModel.FallbackVisibility}"/>
+    <Rectangle Margin="200,0,0,3" HorizontalAlignment="Left" IsHitTestVisible="true" Stroke="Red"
+               Visibility="{x:Static local:ViewModel.FallbackVisibility}"/>
+  </Grid>
+</local:SyncAppPageControl>

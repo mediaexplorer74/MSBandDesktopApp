@@ -1,0 +1,12 @@
+<UserControl x:Class="DesktopSyncApp.DisplayTile"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             Width="85" Height="85">
+  <Grid Name="OuterGrid" Background="Black">
+    <Grid Name="OpacityGrid" Background="Gray" Opacity=".5"/>
+    <Image x:Name="TileIcon" Width="41" Height="40" Margin="18,20,18,17" HorizontalAlignment="Stretch"
+           VerticalAlignment="Stretch" IsHitTestVisible="false"/>
+  </Grid>
+</UserControl>

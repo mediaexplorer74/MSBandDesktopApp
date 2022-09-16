@@ -1,0 +1,44 @@
+<local:SyncAppPageControl x:Class="DesktopSyncApp.FirmwareUpdateControl"
+                          xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                          xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                          xmlns:BindingConverters="clr-namespace:DesktopSyncApp.BindingConverters"
+                          xmlns:System="clr-namespace:System;assembly=mscorlib"
+                          xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                          xmlns:local="clr-namespace:DesktopSyncApp"
+                          xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                          Width="698" Height="442" Background="{StaticResource PrimaryBrush}">
+  <Grid MinWidth="550">
+    <TextBlock Margin="40,56,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
+               AutomationProperties.AutomationId="SoftwareUpdatePageHeader" Style="{StaticResource Heading}"
+               Text="{x:Static local:Strings.Title_Page_FirmwareUpdateReady}"/>
+    <TextBlock x:Name="lblSoftwareUpdateMessage" Margin="40,129,0,0" HorizontalAlignment="Left"
+               VerticalAlignment="Top" AutomationProperties.AutomationId="lblSoftwareUpdateMessage" FontSize="16"
+               RenderTransformOrigin="0.5,0.462" Style="{StaticResource SubHeading}"
+               Text="{x:Static local:Strings.Message_Page_FirmwareUpdateReady}" Background="{x:Null}"/>
+    <local:VariableOpacityButton Height="40" Margin="40,225,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
+                                 AutomationProperties.AutomationId="UpdateNowButton"
+                                 Content="{x:Static local:Strings.Title_Command_UpdateFirmware}" FontFamily="Segoe UI Light"
+                                 FontSize="20" Foreground="White" Padding="25,0" Command="{Binding PushFirmwareToDevice}"/>
+    <StackPanel Margin="40,159,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Horizontal">
+      <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top"
+                 AutomationProperties.AutomationId="lblCurrentVersion" FontSize="15" Padding="0,0,5,0"
+                 Style="{DynamicResource BaseTextBlock}" Text="{x:Static local:Strings.Title_CurrentFWVersion}"/>
+      <TextBlock Margin="0" HorizontalAlignment="Left" VerticalAlignment="Top"
+                 AutomationProperties.AutomationId="lblCurrentFwVersionValue" FontSize="15" Padding="0"
+                 Style="{DynamicResource BaseTextBlock}" Background="{x:Null}"
+                 Text="{Binding DeviceManager.CurrentDevice.DeviceInfo.Versions, Converter={StaticResource VersionConverter}, FallbackValue=?.?.?.?}"/>
+    </StackPanel>
+    <StackPanel Margin="40,181,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Horizontal">
+      <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top"
+                 AutomationProperties.AutomationId="lblNewVersion" FontSize="15" Padding="0,0,5,0"
+                 Style="{DynamicResource BaseTextBlock}" Text="{x:Static local:Strings.Title_NewFWVersion}"/>
+      <TextBlock AutomationProperties.AutomationId="lblNewFwVersionValue" FontSize="15"
+                 Style="{DynamicResource BaseTextBlock}"
+                 Text="{Binding DeviceManager.CurrentDevice.DeviceInfo.FirmwareCheckStatus.Info.FirmwareVersion, Converter={StaticResource VersionConverter}, FallbackValue=?.?.?.?}"/>
+    </StackPanel>
+    <Rectangle Margin="0,190,0,0" VerticalAlignment="Top" IsHitTestVisible="true" Stroke="Red"
+               Visibility="{x:Static local:ViewModel.FallbackVisibility}"/>
+    <Rectangle Margin="200,0,0,3" HorizontalAlignment="Left" IsHitTestVisible="true" Stroke="Red"
+               Visibility="{x:Static local:ViewModel.FallbackVisibility}"/>
+  </Grid>
+</local:SyncAppPageControl>

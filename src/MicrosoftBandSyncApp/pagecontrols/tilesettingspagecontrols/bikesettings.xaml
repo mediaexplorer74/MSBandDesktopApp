@@ -1,0 +1,162 @@
+<local:SyncAppPageControl x:Class="DesktopSyncApp.BikeSettings"
+                          xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                          xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                          xmlns:BindingConverters="clr-namespace:DesktopSyncApp.BindingConverters"
+                          xmlns:System="clr-namespace:System;assembly=mscorlib"
+                          xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                          xmlns:local="clr-namespace:DesktopSyncApp"
+                          xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006">
+  <Grid>
+    <Grid Background="#000000" Opacity=".9"/>
+    <Grid Width="684" Height="393" Margin="73,44,73,43" Background="{StaticResource BackgroundBrushDark}">
+      <TextBlock Name="Title" Margin="32,16,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="28"
+                 Style="{StaticResource BaseTextBlock}" Text="{x:Static local:Strings.Settings_Bike_Title}"/>
+      <TextBlock Name="NotificationsText" Width="330" Margin="33,68,0,0" HorizontalAlignment="Left"
+                 VerticalAlignment="Top" FontSize="15" Style="{StaticResource BaseTextBlock}"
+                 Text="{x:Static local:Strings.Settings_Bike_SubHeading1}" TextWrapping="Wrap"/>
+      <TextBlock Name="NotificationsText1" Width="330" Margin="33,142,0,0" HorizontalAlignment="Left"
+                 VerticalAlignment="Top" FontSize="15" Style="{StaticResource BaseTextBlock}"
+                 Text="{x:Static local:Strings.Settings_Bike_SubHeading2}" TextWrapping="Wrap"/>
+      <Rectangle Width="310" Margin="33,229,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Stroke="#A7A7AA"/>
+      <TextBlock Width="330" Margin="33,233,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15"
+                 Style="{StaticResource BaseTextBlock}"
+                 Text="{x:Static local:Strings.Settings_Bike_SplitMarkerHeader}"/>
+      <TextBlock Width="330" Margin="33,257,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15"
+                 Foreground="#A7A7AA" Style="{StaticResource BaseTextBlock}"
+                 Text="{x:Static local:Strings.Settings_Bike_SplitMarkerSubHeader}"/>
+      <ComboBox Name="SplitMarkers" Width="277" Height="23" Margin="33,283,0,0" HorizontalAlignment="Left"
+                VerticalAlignment="Top" VerticalContentAlignment="Stretch"
+                Background="{StaticResource BackgroundBrushDark}" DisplayMemberPath="Label" FontFamily="Segoe UI"
+                FontSize="15" Foreground="White" Template="{DynamicResource ComboBoxTemplate}"
+                ItemsSource="{Binding SplitComboOptions}" SelectedItem="{Binding MetricSplit, Mode=TwoWay}"/>
+      <ScrollViewer Width="314" Margin="370,60,0,85" HorizontalAlignment="Left">
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+          </Grid.RowDefinitions>
+          <Grid Row="0">
+            <TextBlock Name="MainDataGrouping" Width="270" Height="21" Margin="11,0,0,0" HorizontalAlignment="Left"
+                       VerticalAlignment="Top" FontSize="15" Style="{StaticResource BaseTextBlock}"
+                       Text="{x:Static local:Strings.Settings_Bike_MainDataGrouping}" TextWrapping="Wrap"/>
+            <TextBlock Name="Metric1Title" Width="270" Margin="11,26,0,0" HorizontalAlignment="Left"
+                       VerticalAlignment="Top" FontSize="15" Foreground="#A7A7AA" Style="{StaticResource BaseTextBlock}"
+                       TextWrapping="Wrap" Text="{Binding Metric1Title}"/>
+            <TextBlock Name="Metric2Title" Width="270" Margin="11,94,0,0" HorizontalAlignment="Left"
+                       VerticalAlignment="Top" FontSize="15" Foreground="#A7A7AA" Style="{StaticResource BaseTextBlock}"
+                       TextWrapping="Wrap" Text="{Binding Metric2Title}"/>
+            <TextBlock Name="Metric3Title" Width="270" Margin="11,162,0,0" HorizontalAlignment="Left"
+                       VerticalAlignment="Top" FontSize="15" Foreground="#A7A7AA" Style="{StaticResource BaseTextBlock}"
+                       TextWrapping="Wrap" Text="{Binding Metric3Title}"/>
+            <ComboBox Name="Metric1Data" Width="277" Height="23" Margin="11,47,0,0" HorizontalAlignment="Left"
+                      VerticalAlignment="Top" VerticalContentAlignment="Stretch"
+                      Background="{StaticResource BackgroundBrushDark}" DisplayMemberPath="Label" FontFamily="Segoe UI"
+                      FontSize="15" Foreground="White" Template="{DynamicResource ComboBoxTemplate}"
+                      ItemsSource="{Binding MetricComboOptions}" SelectedItem="{Binding Metric1, Mode=TwoWay}"/>
+            <ComboBox Name="Metric2Data" Width="277" Height="23" Margin="11,115,0,0" HorizontalAlignment="Left"
+                      VerticalAlignment="Top" VerticalContentAlignment="Stretch"
+                      Background="{StaticResource BackgroundBrushDark}" DisplayMemberPath="Label" FontFamily="Segoe UI"
+                      FontSize="15" Foreground="White" Template="{DynamicResource ComboBoxTemplate}"
+                      ItemsSource="{Binding MetricComboOptions}" SelectedItem="{Binding Metric2, Mode=TwoWay}"/>
+            <ComboBox Name="Metric3Data" Width="277" Height="23" Margin="11,183,0,0" HorizontalAlignment="Left"
+                      VerticalAlignment="Top" VerticalContentAlignment="Stretch"
+                      Background="{StaticResource BackgroundBrushDark}" DisplayMemberPath="Label" FontFamily="Segoe UI"
+                      FontSize="15" Foreground="White" Template="{DynamicResource ComboBoxTemplate}"
+                      ItemsSource="{Binding MetricComboOptions}" SelectedItem="{Binding Metric3, Mode=TwoWay}"/>
+            <TextBlock Name="Metric1Error" Width="250" Margin="11,70,0,0" HorizontalAlignment="Left"
+                       VerticalAlignment="Top" FontSize="15" Foreground="Red" Style="{StaticResource BaseTextBlock}"
+                       Text="{x:Static local:Strings.Settings_Metrics_SelectionError}"
+                       Visibility="{Binding Metric1HasError, Converter={StaticResource BoolToVisibilityConverter}, FallbackValue=Visible}"/>
+            <TextBlock Name="Metric2Error" Width="250" Margin="11,138,0,0" HorizontalAlignment="Left"
+                       VerticalAlignment="Top" FontSize="15" Foreground="Red" Style="{StaticResource BaseTextBlock}"
+                       Text="{x:Static local:Strings.Settings_Metrics_SelectionError}"
+                       Visibility="{Binding Metric2HasError, Converter={StaticResource BoolToVisibilityConverter}, FallbackValue=Visible}"/>
+            <TextBlock Name="Metric3Error" Width="250" Margin="11,206,0,0" HorizontalAlignment="Left"
+                       VerticalAlignment="Top" FontSize="15" Foreground="Red" Style="{StaticResource BaseTextBlock}"
+                       Text="{x:Static local:Strings.Settings_Metrics_SelectionError}"
+                       Visibility="{Binding Metric3HasError, Converter={StaticResource BoolToVisibilityConverter}, FallbackValue=Visible}"/>
+          </Grid>
+          <Grid Margin="0,10,0,0" Row="1"
+                Visibility="{Binding DeviceIsEnvoy, Converter={StaticResource BoolToVisibilityConverter}, ConverterParameter={x:Static BindingConverters:BoolToVisibilityConverter+Mapping.FalseCollapsed}, FallbackValue=Visible}">
+            <TextBlock Name="DrawerDataGrouping" Width="270" Height="21" Margin="11,0,0,0" HorizontalAlignment="Left"
+                       VerticalAlignment="Top" FontSize="15" Style="{StaticResource BaseTextBlock}"
+                       Text="{x:Static local:Strings.Settings_Bike_SecondaryDataGrouping}" TextWrapping="Wrap"/>
+            <TextBlock Name="Metric4Title" Width="270" Margin="11,26,0,0" HorizontalAlignment="Left"
+                       VerticalAlignment="Top" FontSize="15" Foreground="#A7A7AA" Style="{StaticResource BaseTextBlock}"
+                       TextWrapping="Wrap" Text="{Binding Metric4Title}"/>
+            <TextBlock Name="Metric5Title" Width="270" Margin="11,95,0,0" HorizontalAlignment="Left"
+                       VerticalAlignment="Top" FontSize="15" Foreground="#A7A7AA" Style="{StaticResource BaseTextBlock}"
+                       TextWrapping="Wrap" Text="{Binding Metric5Title}"/>
+            <TextBlock Name="Metric6Title" Width="270" Margin="11,162,0,0" HorizontalAlignment="Left"
+                       VerticalAlignment="Top" FontSize="15" Foreground="#A7A7AA" Style="{StaticResource BaseTextBlock}"
+                       TextWrapping="Wrap" Text="{Binding Metric6Title}"/>
+            <TextBlock Name="Metric7Title" Width="270" Margin="11,227,0,0" HorizontalAlignment="Left"
+                       VerticalAlignment="Top" FontSize="15" Foreground="#A7A7AA" Style="{StaticResource BaseTextBlock}"
+                       TextWrapping="Wrap" Text="{Binding Metric7Title}"/>
+            <ComboBox Name="Metric4Data" Width="277" Height="23" Margin="11,47,0,0" HorizontalAlignment="Left"
+                      VerticalAlignment="Top" VerticalContentAlignment="Stretch"
+                      Background="{StaticResource BackgroundBrushDark}" DisplayMemberPath="Label" FontFamily="Segoe UI"
+                      FontSize="15" Foreground="White" Template="{DynamicResource ComboBoxTemplate}"
+                      ItemsSource="{Binding MetricComboOptions}" SelectedItem="{Binding Metric4, Mode=TwoWay}"/>
+            <ComboBox Name="Metric5Data" Width="277" Height="23" Margin="11,115,0,0" HorizontalAlignment="Left"
+                      VerticalAlignment="Top" VerticalContentAlignment="Stretch"
+                      Background="{StaticResource BackgroundBrushDark}" DisplayMemberPath="Label" FontFamily="Segoe UI"
+                      FontSize="15" Foreground="White" Template="{DynamicResource ComboBoxTemplate}"
+                      ItemsSource="{Binding MetricComboOptionsWithNone}" SelectedItem="{Binding Metric5, Mode=TwoWay}"/>
+            <ComboBox Name="Metric6Data" Width="277" Height="23" Margin="11,183,0,0" HorizontalAlignment="Left"
+                      VerticalAlignment="Top" VerticalContentAlignment="Stretch"
+                      Background="{StaticResource BackgroundBrushDark}" DisplayMemberPath="Label" FontFamily="Segoe UI"
+                      FontSize="15" Foreground="White" Template="{DynamicResource ComboBoxTemplate}"
+                      ItemsSource="{Binding MetricComboOptionsWithNone}" SelectedItem="{Binding Metric6, Mode=TwoWay}"/>
+            <ComboBox Name="Metric7Data" Width="277" Height="23" Margin="11,251,0,0" HorizontalAlignment="Left"
+                      VerticalAlignment="Top" VerticalContentAlignment="Stretch"
+                      Background="{StaticResource BackgroundBrushDark}" DisplayMemberPath="Label" FontFamily="Segoe UI"
+                      FontSize="15" Foreground="White" Template="{DynamicResource ComboBoxTemplate}"
+                      ItemsSource="{Binding MetricComboOptionsWithNone}" SelectedItem="{Binding Metric7, Mode=TwoWay}"/>
+            <TextBlock Name="Metric4Error" Width="250" Margin="11,70,0,0" HorizontalAlignment="Left"
+                       VerticalAlignment="Top" FontSize="15" Foreground="Red" Style="{StaticResource BaseTextBlock}"
+                       Text="{x:Static local:Strings.Settings_Metrics_SelectionError}"
+                       Visibility="{Binding Metric4HasError, Converter={StaticResource BoolToVisibilityConverter}, FallbackValue=Visible}"/>
+            <TextBlock Name="Metric5Error" Width="250" Margin="11,138,0,0" HorizontalAlignment="Left"
+                       VerticalAlignment="Top" FontSize="15" Foreground="Red" Style="{StaticResource BaseTextBlock}"
+                       Text="{x:Static local:Strings.Settings_Metrics_SelectionError}"
+                       Visibility="{Binding Metric5HasError, Converter={StaticResource BoolToVisibilityConverter}, FallbackValue=Visible}"/>
+            <TextBlock Name="Metric6Error" Width="250" Margin="11,206,0,0" HorizontalAlignment="Left"
+                       VerticalAlignment="Top" FontSize="15" Foreground="Red" Style="{StaticResource BaseTextBlock}"
+                       Text="{x:Static local:Strings.Settings_Metrics_SelectionError}"
+                       Visibility="{Binding Metric6HasError, Converter={StaticResource BoolToVisibilityConverter}, FallbackValue=Visible}"/>
+            <TextBlock Name="Metric7Error" Width="250" Margin="11,271,0,0" HorizontalAlignment="Left"
+                       VerticalAlignment="Top" FontSize="15" Foreground="Red" Style="{StaticResource BaseTextBlock}"
+                       Text="{x:Static local:Strings.Settings_Metrics_SelectionError}"
+                       Visibility="{Binding Metric7HasError, Converter={StaticResource BoolToVisibilityConverter}, FallbackValue=Visible}"/>
+          </Grid>
+        </Grid>
+      </ScrollViewer>
+      <Grid Width="150" Margin="0,0,0,13" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+        <Grid Height="52" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+          <Button Click="Save_Click" Height="29" HorizontalAlignment="Center" VerticalAlignment="Top"
+                  HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" IsTabStop="false"
+                  Style="{StaticResource SaveCheckButton}"/>
+          <TextBlock Margin="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontFamily="Segoe UI Light"
+                     FontSize="15" Foreground="#A7A7AA" Style="{StaticResource BaseTextBlock}"
+                     Text="{x:Static local:Strings.Title_Button_CheckMark}"/>
+        </Grid>
+        <Grid Height="52" Margin="0,0,0,0" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+          <Button Click="Cancel_Click" Height="29" HorizontalAlignment="Center" VerticalAlignment="Top"
+                  IsTabStop="false" Style="{StaticResource CancelXButton}"/>
+          <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" FontFamily="Segoe UI Light" FontSize="15"
+                     Foreground="#A7A7AA" Style="{StaticResource BaseTextBlock}"
+                     Text="{x:Static local:Strings.Title_Button_X_Cancel}"/>
+        </Grid>
+      </Grid>
+      <Rectangle Height="1" Margin="0,105,0,0" VerticalAlignment="top" IsHitTestVisible="true" Stroke="Red"
+                 Visibility="{x:Static local:ViewModel.FallbackVisibility}"/>
+      <Rectangle Height="1" Margin="0,307,0,0" VerticalAlignment="top" IsHitTestVisible="true" Stroke="Red"
+                 Visibility="{x:Static local:ViewModel.FallbackVisibility}"/>
+    </Grid>
+    <Rectangle Margin="365,0,0,0" HorizontalAlignment="Left" IsHitTestVisible="true" Stroke="Red"
+               Visibility="{x:Static local:ViewModel.FallbackVisibility}"/>
+    <Rectangle Margin="444,0,0,0" HorizontalAlignment="Left" IsHitTestVisible="true" Stroke="Red"
+               Visibility="{x:Static local:ViewModel.FallbackVisibility}"/>
+  </Grid>
+</local:SyncAppPageControl>

@@ -1,0 +1,93 @@
+<Controls:UserControl x:Class="DesktopSyncApp.BusySpinner"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:Controls="clr-namespace:System.Windows.Controls;assembly=PresentationFramework"
+                      xmlns:System="clr-namespace:System;assembly=mscorlib"
+                      xmlns:Windows="clr-namespace:System.Windows;assembly=PresentationCore"
+                      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                      xmlns:local="clr-namespace:DesktopSyncApp"
+                      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                      IsVisibleChanged="UserControl_IsVisibleChanged" Width="200" Height="200">
+  <FrameworkElement.Resources>
+    <Storyboard x:Key="BallAnimation01" RepeatBehavior="Forever">
+      <Storyboard BeginTime="-0:0:0.0" RepeatBehavior="Forever" TargetName="RotationTransform_01">
+        <DoubleAnimation BeginTime="0:0:0" Duration="0:0:1.0" From="110" Storyboard.TargetProperty="Angle" To="220"/>
+        <Storyboard BeginTime="0:0:1.0" Duration="0:0:0.7">
+          <DoubleAnimation AccelerationRatio=".5" BeginTime="-0:0:0.04" DecelerationRatio=".5" Duration="0:0:0.78" From="220"
+                           Storyboard.TargetProperty="Angle" To="470"/>
+        </Storyboard>
+      </Storyboard>
+      <Storyboard BeginTime="-0:0:0.2" RepeatBehavior="Forever" TargetName="RotationTransform_02">
+        <DoubleAnimation BeginTime="0:0:0" Duration="0:0:1.0" From="110" Storyboard.TargetProperty="Angle" To="220"/>
+        <Storyboard BeginTime="0:0:1.0" Duration="0:0:0.7">
+          <DoubleAnimation AccelerationRatio=".5" BeginTime="-0:0:0.04" DecelerationRatio=".5" Duration="0:0:0.78" From="220"
+                           Storyboard.TargetProperty="Angle" To="470"/>
+        </Storyboard>
+      </Storyboard>
+      <Storyboard BeginTime="-0:0:0.4" RepeatBehavior="Forever" TargetName="RotationTransform_03">
+        <DoubleAnimation BeginTime="0:0:0" Duration="0:0:1.0" From="110" Storyboard.TargetProperty="Angle" To="220"/>
+        <Storyboard BeginTime="0:0:1.0" Duration="0:0:0.7">
+          <DoubleAnimation AccelerationRatio=".5" BeginTime="-0:0:0.04" DecelerationRatio=".5" Duration="0:0:0.78" From="220"
+                           Storyboard.TargetProperty="Angle" To="470"/>
+        </Storyboard>
+      </Storyboard>
+      <Storyboard BeginTime="-0:0:0.6" RepeatBehavior="Forever" TargetName="RotationTransform_04">
+        <DoubleAnimation BeginTime="0:0:0" Duration="0:0:1.0" From="110" Storyboard.TargetProperty="Angle" To="220"/>
+        <Storyboard BeginTime="0:0:1.0" Duration="0:0:0.7">
+          <DoubleAnimation AccelerationRatio=".5" BeginTime="-0:0:0.04" DecelerationRatio=".5" Duration="0:0:0.78" From="220"
+                           Storyboard.TargetProperty="Angle" To="470"/>
+        </Storyboard>
+      </Storyboard>
+      <Storyboard BeginTime="-0:0:0.8" RepeatBehavior="Forever" TargetName="RotationTransform_05">
+        <DoubleAnimation BeginTime="0:0:0" Duration="0:0:1.0" From="110" Storyboard.TargetProperty="Angle" To="220"/>
+        <Storyboard BeginTime="0:0:1.0" Duration="0:0:0.7">
+          <DoubleAnimation AccelerationRatio=".5" BeginTime="-0:0:0.04" DecelerationRatio=".5" Duration="0:0:0.78" From="220"
+                           Storyboard.TargetProperty="Angle" To="470"/>
+        </Storyboard>
+      </Storyboard>
+    </Storyboard>
+  </FrameworkElement.Resources>
+  <Controls:Viewbox>
+    <Controls:Grid Width="50" Height="50">
+      <FrameworkElement.Resources>
+        <System:Double x:Key="BallDiameter">7</System:Double>
+      </FrameworkElement.Resources>
+      <Controls:Grid RenderTransformOrigin="0.5,0.5">
+        <Windows:UIElement.RenderTransform>
+          <RotateTransform x:Name="RotationTransform_01"/>
+        </Windows:UIElement.RenderTransform>
+        <Ellipse Width="{StaticResource BallDiameter}" Height="{StaticResource BallDiameter}"
+                 HorizontalAlignment="Center" VerticalAlignment="Bottom" Fill="White"/>
+      </Controls:Grid>
+      <Controls:Grid RenderTransformOrigin="0.5,0.5">
+        <Windows:UIElement.RenderTransform>
+          <RotateTransform x:Name="RotationTransform_02"/>
+        </Windows:UIElement.RenderTransform>
+        <Ellipse Width="{StaticResource BallDiameter}" Height="{StaticResource BallDiameter}"
+                 HorizontalAlignment="Center" VerticalAlignment="Bottom" Fill="White"/>
+      </Controls:Grid>
+      <Controls:Grid RenderTransformOrigin="0.5,0.5"
+                     Tag="{Binding Parent.RenderTransformOrigin, RelativeSource={RelativeSource Self}}">
+        <Windows:UIElement.RenderTransform>
+          <RotateTransform x:Name="RotationTransform_03"/>
+        </Windows:UIElement.RenderTransform>
+        <Ellipse Width="{StaticResource BallDiameter}" Height="{StaticResource BallDiameter}"
+                 HorizontalAlignment="Center" VerticalAlignment="Bottom" Fill="White"/>
+      </Controls:Grid>
+      <Controls:Grid RenderTransformOrigin="0.5,0.5">
+        <Windows:UIElement.RenderTransform>
+          <RotateTransform x:Name="RotationTransform_04"/>
+        </Windows:UIElement.RenderTransform>
+        <Ellipse Width="{StaticResource BallDiameter}" Height="{StaticResource BallDiameter}"
+                 HorizontalAlignment="Center" VerticalAlignment="Bottom" Fill="White"/>
+      </Controls:Grid>
+      <Controls:Grid RenderTransformOrigin="0.5,0.5">
+        <Windows:UIElement.RenderTransform>
+          <RotateTransform x:Name="RotationTransform_05"/>
+        </Windows:UIElement.RenderTransform>
+        <Ellipse Width="{StaticResource BallDiameter}" Height="{StaticResource BallDiameter}"
+                 HorizontalAlignment="Center" VerticalAlignment="Bottom" Fill="White"/>
+      </Controls:Grid>
+    </Controls:Grid>
+  </Controls:Viewbox>
+</Controls:UserControl>

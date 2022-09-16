@@ -1,0 +1,47 @@
+<local:SyncAppPageControl x:Class="DesktopSyncApp.ForgetDeviceConfirmControl"
+                          xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                          xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                          xmlns:System="clr-namespace:System;assembly=mscorlib"
+                          xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                          xmlns:local="clr-namespace:DesktopSyncApp"
+                          xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                          Width="703" Height="478" Background="{StaticResource PrimaryBrush}">
+  <Grid IsEnabled="{Binding LoginInfo.UserProfile.UpdatingDevicePairing, Converter={StaticResource BoolNotConverter}}">
+    <TextBlock Width="Auto" Height="Auto" Margin="40,52,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
+               AutomationProperties.AutomationId="PageHeader" Padding="0,0,0,0" Style="{StaticResource Heading}"
+               Text="{x:Static local:Strings.Title_Page_ForgetDeviceConfirm}" TextWrapping="Wrap"/>
+    <StackPanel Width="600" Margin="40,140, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top">
+      <TextBlock Margin="0,0,0,10" VerticalAlignment="Top"
+                 AutomationProperties.AutomationId="ForgetDeviceConfirmMessage" FontFamily="Segoe UI Light"
+                 FontSize="25" FontWeight="Light" Style="{DynamicResource BaseTextBlock}"
+                 Text="{x:Static local:Strings.Message_Page_ForgetDeviceConfirm_01}" TextWrapping="Wrap"/>
+      <TextBlock VerticalAlignment="Top" AutomationProperties.AutomationId="ForgetDeviceConfirmWarningMessage"
+                 FontFamily="Segoe UI Semibold" FontSize="15"
+                 Foreground="{StaticResource TertiaryTextForegroundBrush}" Style="{StaticResource SubHeading}"
+                 Text="{x:Static local:Strings.Message_Page_ForgetDeviceConfirm_02}" TextWrapping="Wrap"/>
+    </StackPanel>
+    <local:VariableOpacityButton Width="233" Height="45" Margin="40,0,0,40" HorizontalAlignment="Left" VerticalAlignment="Bottom"
+                                 AutomationProperties.AutomationId="ConfirmButton"
+                                 Content="{x:Static local:Strings.Title_Button_Confirm}" IsDefault="true"
+                                 Command="{Binding ForgetDeviceCommand}"/>
+    <local:VariableOpacityButton Click="Cancel_Button_Click" Width="233" Height="45" Margin="293,0,0,40" HorizontalAlignment="Left"
+                                 VerticalAlignment="Bottom" AutomationProperties.AutomationId="CancelButton"
+                                 Content="{x:Static local:Strings.Title_Button_Cancel}" IsCancel="true"/>
+    <Rectangle Margin="0,242,0,0" VerticalAlignment="Top" IsHitTestVisible="true" Stroke="Red"
+               Visibility="{x:Static local:ViewModel.FallbackVisibility}"/>
+    <Rectangle Margin="40,0,0,3" HorizontalAlignment="Left" IsHitTestVisible="true" Stroke="Red"
+               Visibility="{x:Static local:ViewModel.FallbackVisibility}"/>
+    <StackPanel Margin="40,0,0,143" HorizontalAlignment="Left" VerticalAlignment="Bottom" Orientation="Horizontal"
+                Visibility="{Binding LoginInfo.UserProfile.LastDevicePairingError, Converter={StaticResource NullToVisibilityConverter}}">
+      <Image Width="20" Margin="0,0,5,0" HorizontalAlignment="Left" VerticalAlignment="Center"
+             AutomationProperties.AutomationId="ErrorImage" Source="/Resources/error.png"/>
+      <TextBlock Margin="0,0,11,0" HorizontalAlignment="Left" VerticalAlignment="Bottom"
+                 AutomationProperties.AutomationId="ErrorMessage" FontSize="15" Padding="0"
+                 Style="{DynamicResource BaseTextBlock}"
+                 Text="{Binding LoginInfo.UserProfile.LastDevicePairingError.Description, FallbackValue='An error occurred'}"/>
+    </StackPanel>
+    <local:BusySpinner Width="34" Height="34" Margin="0,0,0,135" HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                       AutomationProperties.AutomationId="BusySpinner"
+                       Visibility="{Binding LoginInfo.UserProfile.UpdatingDevicePairing, Converter={StaticResource BoolToVisibilityConverter}, FallbackValue={x:Static local:ViewModel.FallbackVisibility}}"/>
+  </Grid>
+</local:SyncAppPageControl>

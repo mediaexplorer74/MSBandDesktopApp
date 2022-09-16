@@ -1,0 +1,24 @@
+<Application x:Class="DesktopSyncApp.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:Admin="clr-namespace:Microsoft.Band.Admin;assembly=Microsoft.Band.Admin"
+             xmlns:System="clr-namespace:System;assembly=mscorlib">
+  <Application.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Styles.xaml"/>
+        <ResourceDictionary Source="BindingConverters/BindingConverters.xaml"/>
+        <ResourceDictionary Source="ResourceLinks/Images.xaml"/>
+        <ResourceDictionary Source="ResourceLinks/MeTileImages.xaml"/>
+        <ResourceDictionary Source="ResourceLinks/StartStripImages.xaml"/>
+        <ResourceDictionary Source="ResourceLinks/ThemeColors.xaml"/>
+      </ResourceDictionary.MergedDictionaries>
+      <System:Boolean x:Key="True">True</System:Boolean>
+      <System:Boolean x:Key="False">False</System:Boolean>
+      <!--Admin:MassUnitType x:Key="MassUnit_Imperial">Imperial</Admin:MassUnitType>
+      <Admin:MassUnitType x:Key="MassUnit_Metric">Metric</Admin:MassUnitType>
+      <Admin:DistanceUnitType x:Key="DistanceUnit_Imperial">Imperial</Admin:DistanceUnitType>
+      <Admin:DistanceUnitType x:Key="DistanceUnit_Metric">Metric</Admin:DistanceUnitType-->
+    </ResourceDictionary>
+  </Application.Resources>
+</Application>

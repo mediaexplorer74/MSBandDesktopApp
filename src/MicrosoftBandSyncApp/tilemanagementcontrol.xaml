@@ -1,0 +1,81 @@
+<local:SyncAppPageControl x:Class="DesktopSyncApp.TileManagementControl"
+                          xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                          xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                          xmlns:BindingConverters="clr-namespace:DesktopSyncApp.BindingConverters"
+                          xmlns:System="clr-namespace:System;assembly=mscorlib"
+                          xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                          xmlns:local="clr-namespace:DesktopSyncApp"
+                          xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                          Width="830" Height="480" Background="{StaticResource BackgroundBrushDark}" Padding="0">
+  <Grid>
+    <Grid IsEnabled="{Binding StrapManager.UpdatingStartStrip, Converter={StaticResource BoolNotConverter}}">
+      <TextBlock Margin="74,48,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
+                 AutomationProperties.AutomationId="PageHeader" FontSize="36" Style="{DynamicResource Heading}"
+                 Text="{x:Static local:Strings.Title_Page_TileManagement}"/>
+      <TextBlock Margin="76,106,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
+                 AutomationProperties.AutomationId="DragTileSubheading" FontSize="15"
+                 Style="{DynamicResource SubHeading}" Text="{x:Static local:Strings.Title_Tiles_DragIcon}"/>
+      <TextBlock Margin="76,128,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
+                 AutomationProperties.AutomationId="SubheadingLabel" FontSize="15"
+                 Style="{DynamicResource SubHeading}" Text="{x:Static local:Strings.Title_Tiles_ClickIcon}"/>
+      <local:VariableOpacityButton Click="SaveOrder_Click" Width="145" Height="40" Margin="77,0,0,40" HorizontalAlignment="Left"
+                                   VerticalAlignment="Bottom" AutomationProperties.AutomationId="SaveButton"
+                                   Content="{x:Static local:Strings.Title_Button_Save}" IsEnabled="{Binding StrapManager.NeedToSave}"/>
+      <local:VariableOpacityButton Width="145" Height="40" Margin="262,0,0,40" HorizontalAlignment="Left" VerticalAlignment="Bottom"
+                                   AutomationProperties.AutomationId="CancelButton"
+                                   Content="{x:Static local:Strings.Title_Button_Cancel}" Command="{Binding ShowSyncCommand}"/>
+      <ListView Name="Tiles" Height="100" Margin="41,201,41,0" VerticalAlignment="Top"
+                HorizontalContentAlignment="Center" AllowDrop="true" BorderThickness="0"
+                ScrollViewer.CanContentScroll="true" ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                ScrollViewer.VerticalScrollBarVisibility="Disabled" SelectionMode="Single"
+                Style="{StaticResource ManageTiles}" ItemsSource="{Binding StrapManager.DisplayStrip}">
+        <FrameworkElement.Resources>
+          <Style TargetType="{x:Type GridViewColumnHeader}">
+            <Setter Property="UIElement.Visibility" Value="Collapsed"/>
+          </Style>
+        </FrameworkElement.Resources>
+        <ItemsControl.ItemsPanel>
+          <ItemsPanelTemplate>
+            <StackPanel VerticalAlignment="Top" Orientation="Horizontal"/>
+          </ItemsPanelTemplate>
+        </ItemsControl.ItemsPanel>
+        <ItemsControl.ItemTemplate>
+          <DataTemplate>
+            <StackPanel Margin="-4,0" HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Vertical">
+              <Grid Width="70" Height="77">
+                <Grid HorizontalAlignment="Left" VerticalAlignment="Top">
+                  <Panel.Background>
+                    <SolidColorBrush Color="{Binding TileBackground}"/>
+                  </Panel.Background>
+                  <Image Width="34" Height="33" Margin="18,20,18,17" HorizontalAlignment="Stretch"
+                         VerticalAlignment="Stretch" Source="{Binding Image}"/>
+                </Grid>
+                <Border Width="20" Height="16" HorizontalAlignment="Right" VerticalAlignment="Bottom"
+                        Background="{StaticResource BackgroundBrushDark}" BorderBrush="White" BorderThickness="1"
+                        Visibility="{Binding HasSettingsPage, Converter={StaticResource BoolToVisibilityConverter}}">
+                  <TextBlock Margin="1,0,0,0" HorizontalAlignment="Right" FontFamily="Segoe UI Symbol" FontSize="10"
+                             Foreground="White" Text=""/>
+                </Border>
+              </Grid>
+            </StackPanel>
+          </DataTemplate>
+        </ItemsControl.ItemTemplate>
+      </ListView>
+    </Grid>
+    <local:AnimatedPageControl x:Name="SettingPageManager" Margin="0" ClipToBounds="true" Visibility="Hidden"
+                               Background="{x:Null}"/>
+    <Grid Background="{StaticResource PrimaryDarkBrush}" Opacity="0.9"
+          Visibility="{Binding StrapManager.UpdatingStartStrip, Converter={StaticResource BoolToVisibilityConverter}, FallbackValue=Hidden}"/>
+    <TextBlock Margin="324,213,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="40"
+               Foreground="White" Text="{x:Static local:Strings.Status_Updating}"
+               Visibility="{Binding StrapManager.UpdatingStartStrip, Converter={StaticResource BoolToVisibilityConverter}, FallbackValue=Hidden}"/>
+    <Rectangle Margin="0,203,0,0" VerticalAlignment="Top" IsHitTestVisible="true" Stroke="Red"
+               Visibility="{x:Static local:ViewModel.FallbackVisibility}"/>
+    <Rectangle Margin="41,0,0,3" HorizontalAlignment="Left" IsHitTestVisible="true" Stroke="Red"
+               Visibility="{x:Static local:ViewModel.FallbackVisibility}"/>
+    <Rectangle Margin="0,0,0,222" VerticalAlignment="bottom" IsHitTestVisible="true" Stroke="Red"
+               Visibility="{x:Static local:ViewModel.FallbackVisibility}"/>
+    <Rectangle Margin="325,0,0,3" HorizontalAlignment="Left" IsHitTestVisible="true" Stroke="Red"
+               Visibility="{x:Static local:ViewModel.FallbackVisibility}"/>
+  </Grid>
+</local:SyncAppPageControl>

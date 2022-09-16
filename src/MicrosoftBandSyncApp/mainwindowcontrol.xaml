@@ -1,0 +1,64 @@
+<local:SyncAppPageControl x:Class="DesktopSyncApp.MainWindowControl"
+                          xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                          xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                          xmlns:System="clr-namespace:System;assembly=mscorlib"
+                          xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                          xmlns:local="clr-namespace:DesktopSyncApp"
+                          xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                          Width="830" Height="480" Background="{StaticResource PrimaryMediumBrush}">
+  <Grid>
+    <Grid Width="242" HorizontalAlignment="Left" Background="{x:Null}">
+      <Image x:Name="Logo" Width="64" Height="64" Margin="30,30,0,0" HorizontalAlignment="Left"
+             VerticalAlignment="Top" Source="/Resources/device-64x64.png" Stretch="None"/>
+      <Button Width="140" Margin="30,0,0,35" HorizontalAlignment="Left" VerticalAlignment="Bottom"
+              HorizontalContentAlignment="Left" AutomationProperties.AutomationId="SignoutButton"
+              Content="{x:Static local:Strings.Title_Command_Logout}" FontFamily="Segoe UI" IsTabStop="false"
+              Style="{StaticResource LogoutButton}" Background="{x:Null}" BorderBrush="{x:Null}"
+              Command="{Binding LogoutCommand}"
+              Visibility="{Binding LoginInfo, Converter={StaticResource NullToVisibilityConverter}}"/>
+      <Button Click="Button_Click" Width="60" Margin="30,0,0,58" HorizontalAlignment="Left"
+              VerticalAlignment="Bottom" HorizontalContentAlignment="Left"
+              AutomationProperties.AutomationId="DebugButton" BorderThickness="0,0,0,2" Content="Debug"
+              Foreground="{StaticResource SecondaryTextBrush}" IsTabStop="false"
+              Style="{StaticResource TextButton}" Background="{x:Null}" BorderBrush="{x:Null}"
+              Command="{Binding ShowDebugCommand}"
+              Visibility="{Binding DebugPageEnabled, Converter={StaticResource BoolToVisibilityConverter}}"/>
+    </Grid>
+    <local:AnimatedPageControl x:Name="SubPageManager" Width="595" Margin="0,0,0,0" HorizontalAlignment="Right"
+                               ClipToBounds="true" Background="{x:Null}"/>
+    <Rectangle Margin="0,440,0,0" VerticalAlignment="Top" IsHitTestVisible="true" Stroke="Red"
+               Visibility="{x:Static local:ViewModel.FallbackVisibility}"/>
+    <Rectangle Margin="30,0,0,3" HorizontalAlignment="Left" IsHitTestVisible="true" Stroke="Red"
+               Visibility="{x:Static local:ViewModel.FallbackVisibility}"/>
+    <StackPanel Margin="30,123,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
+      <Button Width="202" Height="33" HorizontalContentAlignment="Left"
+              AutomationProperties.AutomationId="SettingsButton"
+              Content="{x:Static local:Strings.Title_NavButton_Settings}" IsTabStop="false"
+              Style="{StaticResource NavButton}" Command="{Binding ShowSettingsCommand}"/>
+      <Button Width="202" Height="33" HorizontalContentAlignment="Left"
+              AutomationProperties.AutomationId="AboutButton"
+              Content="{x:Static local:Strings.Title_NavButton_About}" IsTabStop="false"
+              Style="{StaticResource NavButton}" Command="{Binding ShowAboutCommand}"/>
+      <Button Width="202" Height="33" HorizontalContentAlignment="Left"
+              AutomationProperties.AutomationId="DashboardButton"
+              Content="{x:Static local:Strings.Title_NavButton_Dashboard}" IsTabStop="false"
+              Style="{StaticResource NavButton}" Command="{Binding LaunchDashboardCommand}"
+              Visibility="{Binding LoginInfo, Converter={StaticResource NullToVisibilityConverter}}"/>
+      <Button Width="202" Height="33" HorizontalContentAlignment="Left"
+              AutomationProperties.AutomationId="MyProfileButton"
+              Content="{x:Static local:Strings.Title_NavButton_Profile}" IsTabStop="false"
+              Style="{StaticResource NavButton}" Command="{Binding ShowProfileCommand}"
+              Visibility="{Binding LoginInfo, Converter={StaticResource NullToVisibilityConverter}}"/>
+      <Button Width="202" Height="33" HorizontalContentAlignment="Left"
+              AutomationProperties.AutomationId="ManageTilesButton"
+              Content="{x:Static local:Strings.Title_NavButton_ManageTiles}" IsTabStop="false"
+              Style="{StaticResource NavButton}" Command="{Binding ShowTileManagementCommand}"
+              Visibility="{Binding UserDeviceStatus, Converter={StaticResource DeviceStatusToVisibilityConverter}}"/>
+      <Button Width="202" Height="33" HorizontalContentAlignment="Left"
+              AutomationProperties.AutomationId="PersonalizeBandButton"
+              Content="{x:Static local:Strings.Title_NavButton_PersonalizeBand}" IsTabStop="false"
+              Style="{StaticResource NavButton}" Command="{Binding ShowBandCustomizationCommand}"
+              Visibility="{Binding UserDeviceStatus, Converter={StaticResource DeviceStatusToVisibilityConverter}}"/>
+    </StackPanel>
+  </Grid>
+</local:SyncAppPageControl>
