@@ -17,11 +17,17 @@
     <TextBlock Margin="40,97,80,0" VerticalAlignment="Top" AutomationProperties.AutomationId="PageTitle2"
                Style="{DynamicResource Heading}" Text="{x:Static local:LStrings.Title_Page_Disconnected_2}"
                Background="{x:Null}"/>
-    <TextBlock x:Name="lblProfileFullName" Margin="40,174,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
-               AutomationProperties.AutomationId="SubHeadingLabel" FontSize="16" RenderTransformOrigin="0.5,0.462"
+    <TextBlock x:Name="lblProfileFullName" 
+               Margin="40,174,0,0" 
+               HorizontalAlignment="Left" VerticalAlignment="Top"
+               AutomationProperties.AutomationId="SubHeadingLabel" 
+               FontSize="16" 
+               RenderTransformOrigin="0.5,0.462"
                Style="{DynamicResource SubHeading}"
-               Text="{x:Static local:LStrings.SubHead_Page_Disconnected_Disconnected}" Background="{x:Null}"
-               Visibility="{Binding AquiringDevice, Converter={StaticResource BoolToVisibilityConverter}, ConverterParameter={x:Static BindingConverters:BoolToVisibilityConverter}}"/>
+               Text="{x:Static local:LStrings.SubHead_Page_Disconnected_Disconnected}" 
+               Background="{x:Null}"
+               Visibility="{Binding AquiringDevice, Converter={StaticResource BoolToVisibilityConverter}, 
+               ConverterParameter={x:Static BindingConverters:BoolToVisibilityConverter}}"/>
     <TextBlock Margin="40,174,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
                AutomationProperties.AutomationId="ConnectingText" FontSize="16" RenderTransformOrigin="0.5,0.462"
                Style="{DynamicResource SubHeading}"

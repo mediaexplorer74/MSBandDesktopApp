@@ -17,7 +17,7 @@
           IsEnabled="{Binding LoginInfo.UpdatingUserProfile, Converter={StaticResource BoolNotConverter}}">
       <TextBlock Margin="117,53,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
                  AutomationProperties.AutomationId="PageHeader" Style="{StaticResource Heading}"
-                 Text="{x:Static local:Strings.Title_Page_Profile}"/>
+                 Text="{x:Static local:LStrings.Title_Page_Profile}"/>
       <Grid Margin="119,125,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" ClipToBounds="true"
             RenderTransformOrigin="0.5,0.5">
         <local:Fader FadedVisibility="{Binding LoginInfo.UserProfileEdit.Editing, ConverterParameter={x:Static BindingConverters:BoolToVisibilityConverter+Mapping.TrueHidden}, Converter={StaticResource BoolToVisibilityConverter}}">

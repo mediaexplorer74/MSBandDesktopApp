@@ -31,7 +31,7 @@ My main goal is achieve the state demonstated at screenshots.. oh... mockups! :)
 
 The code structure of MicrosotBandDesktopApp is huge.
 
-Too hard to refactor at my side... but I still plan to recove this great project. ^ ^
+Too hard to refactor at my side... but I still plan to recover this great project. ^ ^
 
 
 
