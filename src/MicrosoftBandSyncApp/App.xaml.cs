@@ -1,4 +1,4 @@
-﻿// Decompiled with JetBrains decompiler
+﻿// App.xaml.cs
 // Type: DesktopSyncApp.App
 // Assembly: Microsoft Band Sync, Version=1.3.20517.1, Culture=neutral, PublicKeyToken=null
 // MVID: 85967930-2DEF-43AB-AC73-6FA058C5AE66
@@ -18,20 +18,19 @@ using System.Windows.Threading;
 
 namespace DesktopSyncApp
 {
-  public  partial class App : Application, IDisposable
+  public  partial class App : Application
   {
     private Mutex singletonMutex;
     private ViewModel model;
 
-        //private bool _contentLoaded;
 
-        public static App Current
+    public static App Current
+    {
+        get
         {
-            get
-            {
-                return Application.Current as App;
-            }
+            return Application.Current as App;
         }
+    }
 
         public AppMainWindow MainWindow
     {
@@ -53,10 +52,16 @@ namespace DesktopSyncApp
       else
       {
         this.ForegroundTaskScheduler = TaskScheduler.FromCurrentSynchronizationContext();
+
         this.ShutdownMode = ShutdownMode.OnExplicitShutdown;
-        this.DispatcherUnhandledException += new DispatcherUnhandledExceptionEventHandler(this.App_DispatcherUnhandledException);
-        AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(this.CurrentDomain_UnhandledException);
+
+        this.DispatcherUnhandledException += new DispatcherUnhandledExceptionEventHandler(
+            this.App_DispatcherUnhandledException);
+
+        AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(
+            this.CurrentDomain_UnhandledException);
         base.OnStartup(e);
+
         DynamicSettings dynamicSettings = new DynamicSettings();
         this.model = new ViewModel(this, dynamicSettings, this.ParseCommandLine(e.Args));
         this.VerifyWebBrowserControlIE8Compatibility();
@@ -69,7 +74,9 @@ namespace DesktopSyncApp
 
     private void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
     {
-      ErrorInfo error = new ErrorInfo(nameof (CurrentDomain_UnhandledException), "Unhandled domain error", e.ExceptionObject as Exception);
+      ErrorInfo error = new ErrorInfo(nameof (CurrentDomain_UnhandledException),
+          "Unhandled domain error", e.ExceptionObject as Exception);
+
       this.model.LogError(error);
       DesktopTelemetry.LogError(error);
       this.model.TelemetryListener.Flush();
@@ -82,15 +89,22 @@ namespace DesktopSyncApp
     )
     {
       e.Handled = true;
-      ErrorInfo error = new ErrorInfo(nameof (App_DispatcherUnhandledException), "Unhandled dispatcher error", e.Exception);
+      ErrorInfo error = new ErrorInfo(nameof (App_DispatcherUnhandledException),
+          "Unhandled dispatcher error", e.Exception);
       this.model.LogError(error);
       DesktopTelemetry.LogError(error);
       this.model.TelemetryListener.Flush();
     }
 
-    private void Application_Exit(object sender, ExitEventArgs e) => this.ApplicationCleanup();
+    private void Application_Exit(object sender, ExitEventArgs e)
+    {
+        this.ApplicationCleanup();
+    }
 
-    private void Application_SessionEnding(object sender, SessionEndingCancelEventArgs e) => this.ApplicationCleanup();
+    private void Application_SessionEnding(object sender, SessionEndingCancelEventArgs e)
+    {
+        this.ApplicationCleanup();
+    }
 
     private void ApplicationCleanup()
     {
@@ -117,7 +131,8 @@ namespace DesktopSyncApp
     {
       try
       {
-        using (RegistryKey subKey = Registry.CurrentUser.CreateSubKey("Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_BROWSER_EMULATION"))
+        using (RegistryKey subKey = Registry.CurrentUser.CreateSubKey(
+            "Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_BROWSER_EMULATION"))
           subKey.SetValue(Globals.ApplicationFileName, (object) 8000U, RegistryValueKind.DWord);
       }
       catch
@@ -129,10 +144,12 @@ namespace DesktopSyncApp
     {
       try
       {
-        using (RegistryKey registryKey = Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\Windows\\CurrentVersion\\Run", true))
+        using (RegistryKey registryKey = Registry.CurrentUser.OpenSubKey(
+            "Software\\Microsoft\\Windows\\CurrentVersion\\Run", true))
         {
           if (this.model.DynamicSettings.StartOnLogin)
-            registryKey.SetValue(Globals.ApplicationName, (object) string.Format("\"{0}\" --hidden", (object) Globals.ApplicationFilePath));
+            registryKey.SetValue(Globals.ApplicationName, 
+                (object) string.Format("\"{0}\" --hidden", (object) Globals.ApplicationFilePath));
           else
             registryKey.DeleteValue(Globals.ApplicationName, false);
         }
@@ -150,12 +167,16 @@ namespace DesktopSyncApp
       {
         try
         {
-          using (NamedPipeServerStream pipeServerStream = new NamedPipeServerStream(string.Format("\\\\.\\Pipe\\MicrosoftBandSyncIPC_{0:0000000000}", (object) Process.GetCurrentProcess().SessionId)))
+          using (NamedPipeServerStream pipeServerStream = new NamedPipeServerStream(
+              string.Format("\\\\.\\Pipe\\MicrosoftBandSyncIPC_{0:0000000000}", 
+              (object) Process.GetCurrentProcess().SessionId)))
           {
             pipeServerStream.WaitForConnection();
-            using (StreamWriter streamWriter = new StreamWriter((Stream) pipeServerStream, Encoding.UTF8, 32, true))
+            using (StreamWriter streamWriter = new StreamWriter((Stream) pipeServerStream,
+                Encoding.UTF8, 32, true))
             {
-              using (StreamReader streamReader = new StreamReader((Stream) pipeServerStream, Encoding.UTF8, false, 32, true))
+              using (StreamReader streamReader = new StreamReader((Stream) pipeServerStream, 
+                  Encoding.UTF8, false, 32, true))
               {
                 bool flag = true;
                 while (flag)
@@ -167,7 +188,9 @@ namespace DesktopSyncApp
                       streamWriter.Flush();
                       continue;
                     case "SHOW":
-                      Task.Factory.StartNew((Action) (() => this.ShowAppTaskHandler()), CancellationToken.None, TaskCreationOptions.None, this.ForegroundTaskScheduler);
+                      Task.Factory.StartNew((Action) (() => this.ShowAppTaskHandler()), 
+                          CancellationToken.None, TaskCreationOptions.None, 
+                          this.ForegroundTaskScheduler);
                       continue;
                     case null:
                       flag = false;
@@ -191,14 +214,18 @@ namespace DesktopSyncApp
 
     private void ShowRunningApp()
     {
-      using (NamedPipeClientStream pipeClientStream = new NamedPipeClientStream(string.Format("\\\\.\\Pipe\\MicrosoftBandSyncIPC_{0:0000000000}", (object) Process.GetCurrentProcess().SessionId)))
+      using (NamedPipeClientStream pipeClientStream = new NamedPipeClientStream(
+          string.Format("\\\\.\\Pipe\\MicrosoftBandSyncIPC_{0:0000000000}", 
+          (object) Process.GetCurrentProcess().SessionId)))
       {
         try
         {
           pipeClientStream.Connect(500);
-          using (StreamWriter streamWriter = new StreamWriter((Stream) pipeClientStream, Encoding.UTF8, 32, true))
+          using (StreamWriter streamWriter = new StreamWriter((Stream) pipeClientStream,
+              Encoding.UTF8, 32, true))
           {
-            using (StreamReader streamReader = new StreamReader((Stream) pipeClientStream, Encoding.UTF8, false, 32, true))
+            using (StreamReader streamReader = new StreamReader((Stream) pipeClientStream, 
+                Encoding.UTF8, false, 32, true))
             {
               streamWriter.WriteLine("GET_PROCESS_ID");
               streamWriter.Flush();
@@ -218,24 +245,7 @@ namespace DesktopSyncApp
         }
       }
     }
-
-    //[DebuggerNonUserCode]
-    //[GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
-    /*
-    public void InitializeComponent()
-    {
-      if (this._contentLoaded)
-        return;
-      this._contentLoaded = true;
-      this.Exit += new ExitEventHandler(this.Application_Exit);
-      this.SessionEnding += new SessionEndingCancelEventHandler(this.Application_SessionEnding);
-      Application.LoadComponent((object) this, new Uri("/Microsoft Band Sync;component/app.xaml", UriKind.Relative));
-    }
-    */
-
-    //[STAThread]
-    //[DebuggerNonUserCode]
-    //[GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
+          
     
     public static void Main()
     {

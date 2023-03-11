@@ -1,0 +1,134 @@
+<local:SyncAppPageControl x:Class="DesktopSyncApp.SyncControl"
+                   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                   xmlns:BindingConverters="clr-namespace:DesktopSyncApp.BindingConverters"
+                   xmlns:System="clr-namespace:System;assembly=mscorlib"
+                   xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                   xmlns:local="clr-namespace:DesktopSyncApp"
+                   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                   Width="595" Height="480" Background="{StaticResource PrimaryBrush}">
+    <Grid MinWidth="550">
+        <FrameworkElement.Style>
+            <Style TargetType="{x:Type Grid}">
+                <Setter Property="Panel.Background" Value="{x:Null}"/>
+            </Style>
+        </FrameworkElement.Style>
+        <TextBlock x:Name="lblDeviceName" MinWidth="100" Margin="38,56,179,0" VerticalAlignment="Top"
+               Padding="0,0,10,0" Style="{DynamicResource Heading}" TextTrimming="CharacterEllipsis"
+               Text="{Binding LoginInfo.UserProfile.DeviceName, Converter={StaticResource DeviceNameConverter}, FallbackValue='Device Name'}"/>
+        <TextBlock x:Name="lblProfileFullName" Margin="40,102,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
+               FontSize="16" RenderTransformOrigin="0.5,0.462" Style="{DynamicResource SubHeading}"
+               Text="{x:Static local:Strings.SubHead_Page_Sync}" Background="{x:Null}"/>
+        <local:DisplayDeviceEnvoy Margin="36,132,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
+                              Visibility="{Binding DeviceManager.CurrentDevice.DeviceBandClassIsEnvoy, Converter={StaticResource BoolToVisibilityConverter}}"/>
+        <local:DisplayDeviceCargo Margin="36,152,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
+                              Visibility="{Binding DeviceManager.CurrentDevice.DeviceBandClassIsEnvoy, ConverterParameter={x:Static BindingConverters:BoolToVisibilityConverter+Mapping.TrueHidden}, Converter={StaticResource BoolToVisibilityConverter}}"/>
+        <StackPanel Margin="0,63,40,0" HorizontalAlignment="Right" VerticalAlignment="Top" FlowDirection="RightToLeft"
+                Orientation="Horizontal">
+            <Grid Height="25" Margin="0,2,6,0" HorizontalAlignment="Right" VerticalAlignment="top">
+                <Image x:Name="imgBatteryEmpty" Source="/Resources/battery-empty.png"
+               Visibility="{Binding BatteryPlugVisible, ConverterParameter={x:Static BindingConverters:BoolToVisibilityConverter+Mapping.TrueHidden}, Converter={StaticResource BoolToVisibilityConverter}}"/>
+                <Image x:Name="imgBatteryCharging" Source="/Resources/battery-charging.png"
+               Visibility="{Binding BatteryPlugVisible, Converter={StaticResource BoolToVisibilityConverter}}"/>
+            </Grid>
+            <local:Fader HorizontalAlignment="Right" VerticalAlignment="Bottom"
+                   FadedVisibility="{Binding DeviceManager.CurrentDevice.BatteryPercentCharge, Converter={StaticResource NullToVisibilityConverter}}">
+                <StackPanel Margin="0" FlowDirection="RightToLeft" Orientation="Horizontal">
+                    <TextBlock Margin="0" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Segoe UI"
+                     FontSize="24" Style="{DynamicResource BaseTextBlock}" Text="%"/>
+                    <TextBlock Margin="3,0,0,0" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Segoe UI"
+                     FontSize="24" Style="{DynamicResource BaseTextBlock}" TextAlignment="Right" TextWrapping="NoWrap"
+                     Text="{Binding DeviceManager.CurrentDevice.BatteryPercentCharge, FallbackValue=50}"/>
+                </StackPanel>
+            </local:Fader>
+        </StackPanel>
+        <local:Fader Height="80" Margin="40,0,40,46" VerticalAlignment="Bottom"
+                 FadedVisibility="{Binding DeviceManager.CurrentDevice.Syncing, Converter={StaticResource BoolToVisibilityConverter}, FallbackValue={x:Static local:ViewModel.FallbackVisibility}}">
+            <Grid>
+                <TextBlock Margin="0" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Segoe UI" FontSize="15"
+                   Foreground="{StaticResource TertiaryTextForegroundBrush}" RenderTransformOrigin="0.5,0.462"
+                   Text="{x:Static local:Strings.Text_TrayIconBalloonTip_Syncing}" Background="{x:Null}"/>
+                <ProgressBar Height="15" Margin="0,29,35,0" VerticalAlignment="Top" BorderBrush="{StaticResource WhiteBrush}"
+                     BorderThickness="2" Foreground="{StaticResource WhiteBrush}" UseLayoutRounding="true"
+                     Background="{x:Null}"
+                     Value="{Binding DeviceManager.CurrentDevice.SyncProgress.LatestProgressPercentage, Converter={StaticResource ProgressConverter}, FallbackValue=50}"/>
+                <local:Fader Margin="0,26,0,0" HorizontalAlignment="Right" VerticalAlignment="Top" FadeinTime="0"
+                     FadedVisibility="{Binding DeviceManager.CurrentDevice.SyncCancel, Converter={StaticResource NullToVisibilityConverter}}">
+                    <local:VariableOpacityButton Click="Button_Click" Width="20" Height="20" HorizontalContentAlignment="Center"
+                                       VerticalContentAlignment="Center" Foreground="White" IsTabStop="false"
+                                       Style="{DynamicResource BorderlessVariableOpacityButtonStyle}"
+                                       ToolTip="{x:Static local:Strings.ToolTip_CancelSync}">
+                        <Image Source="{StaticResource close}" Stretch="None"/>
+                    </local:VariableOpacityButton>
+                </local:Fader>
+                <TextBlock Margin="0" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontFamily="Segoe UI"
+                   Foreground="{StaticResource TertiaryTextForegroundBrush}" Style="{StaticResource SubHeading}"
+                   Text="{Binding DeviceManager.CurrentDevice.SyncProgress.LatestProgressPercentage, Converter={StaticResource ProgressConverter}, FallbackValue=50}"/>
+            </Grid>
+        </local:Fader>
+        <Slider Height="84" Margin="0,46,7,0" HorizontalAlignment="Right" VerticalAlignment="Top" IsTabStop="false"
+            LargeChange="10" Maximum="100" Orientation="Vertical" SmallChange="1"
+            Visibility="{Binding DebugEnabled, Converter={StaticResource BoolToVisibilityConverter}}"
+            Value="{Binding DeviceManager.CurrentDevice.BatteryPercentCharge, FallbackValue=60}"/>
+        <Grid Width="530" Margin="42,360,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <local:Fader Width="250" Margin="0" HorizontalAlignment="Left">
+                <local:Fader.FadedVisibility>
+                    <MultiBinding Converter="{StaticResource SyncFirmwareVisibleMultiConverter}">
+                        <Binding Path="DeviceManager.CurrentDevice.Syncing"/>
+                        <Binding Path="DeviceManager.CurrentDevice.FirmwareStatus"/>
+                    </MultiBinding>
+                </local:Fader.FadedVisibility>
+                <StackPanel>
+                    <local:VariableOpacityButton Click="btSyncSensorLogs_Click" Height="40" MinWidth="150" Margin="0,0,0,5"
+                                       HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center"
+                                       Content="{x:Static local:Strings.Title_Command_SyncSensorLogs}" FontSize="17" IsTabStop="false"
+                                       Padding="10,0"/>
+                    <TextBlock VerticalAlignment="Bottom" FontSize="14" Foreground="{StaticResource TertiaryTextForegroundBrush}"
+                     Style="{DynamicResource BaseTextBlock}" TextWrapping="Wrap"
+                     Text="{Binding DeviceManager.CurrentDevice.LastLogSyncRelativeTime, Converter={StaticResource RelativeSyncTimeConverter}, FallbackValue='Last Sync'}"/>
+                    <StackPanel VerticalAlignment="Bottom" Orientation="Horizontal"
+                      Visibility="{Binding DeviceManager.CurrentDevice.LastSyncError, Converter={StaticResource NullToVisibilityConverter}, FallbackValue={x:Static local:ViewModel.FallbackVisibility}}">
+                        <Image Width="20" Margin="0,0,5,0" HorizontalAlignment="Left" VerticalAlignment="Center"
+                   Source="/Resources/error.png"/>
+                        <TextBlock Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="14" Padding="0"
+                       Style="{DynamicResource BaseTextBlock}" Text="{x:Static local:Strings.Message_ErrorOccurred}"
+                       TextWrapping="Wrap" Background="{x:Null}"/>
+                    </StackPanel>
+                </StackPanel>
+            </local:Fader>
+            <local:Fader Width="270" Margin="260,0,0,0" HorizontalAlignment="Left"
+                   FadedVisibility="{Binding DeviceManager.CurrentDevice.Syncing, ConverterParameter={x:Static BindingConverters:BoolToVisibilityConverter+Mapping.TrueHidden}, Converter={StaticResource BoolToVisibilityConverter}}">
+                <StackPanel>
+                    <local:VariableOpacityButton Height="40" MinWidth="200" Margin="0,0,0,5" HorizontalAlignment="Left" VerticalAlignment="Center"
+                                       HorizontalContentAlignment="Center" Background="Lavender"
+                                       Content="{x:Static local:Strings.Title_Command_CheckForFirmwareUpdate}" FontSize="17"
+                                       IsTabStop="false" Padding="10,0" Command="{Binding CheckForFirmwareUpdate}"/>
+                    <TextBlock VerticalAlignment="Bottom" FontSize="14" Foreground="{StaticResource TertiaryTextForegroundBrush}"
+                     Padding="0" Style="{DynamicResource BaseTextBlock}" TextWrapping="Wrap"
+                     Text="{Binding DeviceManager.CurrentDevice.DeviceInfo.LastFirmwareCheckRelativeTime, Converter={StaticResource RelativeFWCheckTimeConverter}, FallbackValue=Never}"/>
+                    <Grid>
+                        <StackPanel Orientation="Horizontal"
+                        Visibility="{Binding DeviceManager.CurrentDevice.FirmwareStatus, Converter={StaticResource FirmwareStatusToVisibilityConverter}}">
+                            <local:BusySpinner Width="20" Height="20" Margin="0,0,10,0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <TextBlock Margin="0" VerticalAlignment="Center" FontFamily="Segoe UI Light" Padding="0"
+                         Style="{DynamicResource BaseTextBlock}"
+                         Text="{Binding DeviceManager.CurrentDevice.FirmwareStatus, Converter={StaticResource FirmwareStatusToStatusStringConverter}, FallbackValue='doing nothing'}"/>
+                        </StackPanel>
+                        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Bottom" Orientation="Horizontal"
+                        Visibility="{Binding DeviceManager.CurrentDevice.LastFWCheckError, Converter={StaticResource NullToVisibilityConverter}, FallbackValue={x:Static local:ViewModel.FallbackVisibility}}">
+                            <Image Width="20" Margin="0,0,5,0" HorizontalAlignment="Left" VerticalAlignment="Center"
+                     Source="/Resources/error.png"/>
+                            <TextBlock Margin="0" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="14" Padding="0"
+                         Style="{DynamicResource BaseTextBlock}" Text="{x:Static local:Strings.Message_ErrorOccurred}"
+                         TextWrapping="Wrap" Background="{x:Null}"/>
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+            </local:Fader>
+        </Grid>
+        <Rectangle Height="1" Margin="1,90,-1,0" VerticalAlignment="Top" IsHitTestVisible="true" Stroke="Red"
+               Visibility="{x:Static local:ViewModel.FallbackVisibility}"/>
+        <Rectangle Margin="40,0,0,3" HorizontalAlignment="Left" IsHitTestVisible="true" Stroke="Red"
+               Visibility="{x:Static local:ViewModel.FallbackVisibility}"/>
+    </Grid>
+</local:SyncAppPageControl>

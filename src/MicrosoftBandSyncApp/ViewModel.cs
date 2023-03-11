@@ -113,25 +113,37 @@ namespace DesktopSyncApp
       this.heartBeat01Sec = new HeartBeatService();
       this.heartBeat05Sec = new HeartBeatService();
       this.heartBeat10Min = new HeartBeatService();
-      this.heartBeatTimer01Sec = new DispatcherTimer(new TimeSpan(0, 0, 1), DispatcherPriority.Normal, new EventHandler(this.heartBeatTimer01Sec_Tick), DesktopSyncApp.App.Current.Dispatcher);
+      this.heartBeatTimer01Sec = new DispatcherTimer(new TimeSpan(0, 0, 1), 
+          DispatcherPriority.Normal, new EventHandler(this.heartBeatTimer01Sec_Tick), 
+          DesktopSyncApp.App.Current.Dispatcher);
       this.heartBeatTimer01Sec.Start();
-      this.heartBeatTimer05Sec = new DispatcherTimer(new TimeSpan(0, 0, 5), DispatcherPriority.Normal, new EventHandler(this.heartBeatTimer05Sec_Tick), DesktopSyncApp.App.Current.Dispatcher);
+      this.heartBeatTimer05Sec = new DispatcherTimer(new TimeSpan(0, 0, 5), 
+          DispatcherPriority.Normal, new EventHandler(this.heartBeatTimer05Sec_Tick), 
+          DesktopSyncApp.App.Current.Dispatcher);
       this.heartBeatTimer05Sec.Start();
-      this.heartBeatTimer10Min = new DispatcherTimer(new TimeSpan(0, 10, 0), DispatcherPriority.Normal, new EventHandler(this.heartBeatTimer10Min_Tick), DesktopSyncApp.App.Current.Dispatcher);
+      this.heartBeatTimer10Min = new DispatcherTimer(new TimeSpan(0, 10, 0), 
+          DispatcherPriority.Normal, new EventHandler(this.heartBeatTimer10Min_Tick), 
+          DesktopSyncApp.App.Current.Dispatcher);
       this.heartBeatTimer10Min.Start();
       this.heartBeat01Sec.Beat += new HeartBeatHandler(this.heartBeat01Sec_Beat);
       this.appUpdateCheckTimer = new DispatcherTimer();
       this.appUpdateCheckTimer.Interval = TimeSpan.FromSeconds(10.0);
       this.appUpdateCheckTimer.Tick += new EventHandler(this.appUpdateCheckTimer_Tick);
       this.appUpdateCheckTimer.Start();
-      this.dynamicGlobalizationConfig = new DynamicGlobalizationConfiguration(RegionInfo.CurrentRegion.TwoLetterISORegionName);
-      this.insightsListener = new ApplicationInsightsTelemetryListener(DesktopTelemetry.GetInstrumentationKey());
+
+      this.dynamicGlobalizationConfig = new DynamicGlobalizationConfiguration(
+          RegionInfo.CurrentRegion.TwoLetterISORegionName);
+
+      this.insightsListener = new ApplicationInsightsTelemetryListener(
+          DesktopTelemetry.GetInstrumentationKey());
       Telemetry.AddListener((ITelemetryListener) this.insightsListener);
     }
 
-    public ApplicationInsightsTelemetryListener TelemetryListener => this.insightsListener;
+    public ApplicationInsightsTelemetryListener TelemetryListener 
+            => this.insightsListener;
 
-    public DynamicGlobalizationConfiguration DynamicGlobalizationConfig => this.dynamicGlobalizationConfig;
+    public DynamicGlobalizationConfiguration DynamicGlobalizationConfig 
+            => this.dynamicGlobalizationConfig;
 
     public void SaveInsightsData()
     {
@@ -170,7 +182,9 @@ namespace DesktopSyncApp
         if (appVisibility == value)
           return;
         this.appVisibility = value;
-        this.OnPropertyChanged(nameof (AppVisibility), this.PropertyChanged, this.AppVisibilityChanged, (object) appVisibility, (object) value);
+
+        this.OnPropertyChanged(nameof (AppVisibility), this.PropertyChanged, 
+            this.AppVisibilityChanged, (object) appVisibility, (object) value);
       }
     }
 
@@ -186,63 +200,96 @@ namespace DesktopSyncApp
       }
     }
 
-    public bool IsAppRestored => this.appVisibility == Visibility.Visible && this.appState == WindowState.Normal;
+    public bool IsAppRestored => this.appVisibility == Visibility.Visible 
+            && this.appState == WindowState.Normal;
 
-    public Command MinimizeAppCommand => this.minimizeAppCommand ?? (this.minimizeAppCommand = new Command());
+    public Command MinimizeAppCommand => this.minimizeAppCommand
+            ?? (this.minimizeAppCommand = new Command());
 
-    public Command HideAppCommand => this.hideAppCommand ?? (this.hideAppCommand = new Command());
+    public Command HideAppCommand => this.hideAppCommand 
+            ?? (this.hideAppCommand = new Command());
 
-    public Command ShowAppCommand => this.showAppCommand ?? (this.showAppCommand = new Command(new ExecuteHandler(this.ShowAppCommandExecute)));
+    public Command ShowAppCommand => this.showAppCommand 
+            ?? (this.showAppCommand = new Command(new ExecuteHandler(this.ShowAppCommandExecute)));
 
-    public Command ShowSettingsCommand => this.showSettingsCommand ?? (this.showSettingsCommand = new Command(new ExecuteHandler(this.ShowAppCommandExecute)));
+    public Command ShowSettingsCommand => this.showSettingsCommand 
+            ?? (this.showSettingsCommand = new Command(new ExecuteHandler(this.ShowAppCommandExecute)));
 
-    public Command ShowAboutCommand => this.showAboutCommand ?? (this.showAboutCommand = new Command(new ExecuteHandler(this.ShowAppCommandExecute)));
+    public Command ShowAboutCommand => this.showAboutCommand 
+            ?? (this.showAboutCommand = new Command(new ExecuteHandler(this.ShowAppCommandExecute)));
 
-    public Command ShowProfileCommand => this.showProfileCommand ?? (this.showProfileCommand = new Command(new ExecuteHandler(this.ShowAppCommandExecute)));
+    public Command ShowProfileCommand => this.showProfileCommand 
+            ?? (this.showProfileCommand = new Command(new ExecuteHandler(this.ShowAppCommandExecute)));
 
-    public Command ShowSyncCommand => this.showSyncCommand ?? (this.showSyncCommand = new Command(new ExecuteHandler(this.ShowAppCommandExecute)));
+    public Command ShowSyncCommand => this.showSyncCommand 
+            ?? (this.showSyncCommand = new Command(new ExecuteHandler(this.ShowAppCommandExecute)));
 
-    public Command ShowBandCustomizationCommand => this.showBandCustomizationCommand ?? (this.showBandCustomizationCommand = new Command(new ExecuteHandler(this.ShowAppCommandExecute)));
+    public Command ShowBandCustomizationCommand 
+            => this.showBandCustomizationCommand 
+            ?? (this.showBandCustomizationCommand = new Command(
+                new ExecuteHandler(this.ShowAppCommandExecute)));
 
-    public Command ShowTileManagementCommand => this.showTileManagementCommand ?? (this.showTileManagementCommand = new Command(new ExecuteHandler(this.ShowAppCommandExecute)));
+    public Command ShowTileManagementCommand => 
+            this.showTileManagementCommand 
+            ?? (this.showTileManagementCommand = new Command(
+                new ExecuteHandler(this.ShowAppCommandExecute)));
 
-    public Command CloseAppCommand => this.closeAppCommand ?? (this.closeAppCommand = new Command());
+    public Command CloseAppCommand => this.closeAppCommand 
+            ?? (this.closeAppCommand = new Command());
 
-    public Command LogoutConfirmCommand => this.logoutConfirmCommand ?? (this.logoutConfirmCommand = new Command());
+    public Command LogoutConfirmCommand => this.logoutConfirmCommand 
+            ?? (this.logoutConfirmCommand = new Command());
 
-    public Command LogoutCommand => this.logoutCommand ?? (this.logoutCommand = new Command());
+    public Command LogoutCommand => this.logoutCommand 
+            ?? (this.logoutCommand = new Command());
 
-    public Command PairDeviceConfirmCommand => this.pairDeviceConfirmCommand ?? (this.pairDeviceConfirmCommand = new Command());
+    public Command PairDeviceConfirmCommand => this.pairDeviceConfirmCommand 
+            ?? (this.pairDeviceConfirmCommand = new Command());
 
-    public Command PairDeviceCommand => this.pairDeviceCommand ?? (this.pairDeviceCommand = new Command());
+    public Command PairDeviceCommand => this.pairDeviceCommand 
+            ?? (this.pairDeviceCommand = new Command());
 
-    public Command ForgetDeviceConfirmCommand => this.forgetDeviceConfirmCommand ?? (this.forgetDeviceConfirmCommand = new Command());
+    public Command ForgetDeviceConfirmCommand => this.forgetDeviceConfirmCommand 
+            ?? (this.forgetDeviceConfirmCommand = new Command());
 
-    public Command ForgetDeviceCommand => this.forgetDeviceCommand ?? (this.forgetDeviceCommand = new Command());
+    public Command ForgetDeviceCommand => this.forgetDeviceCommand 
+            ?? (this.forgetDeviceCommand = new Command());
 
-    public Command CheckForFirmwareUpdate => this.checkForFirmwareUpdate ?? (this.checkForFirmwareUpdate = new Command());
+    public Command CheckForFirmwareUpdate => this.checkForFirmwareUpdate 
+            ?? (this.checkForFirmwareUpdate = new Command());
 
-    public Command PushFirmwareToDevice => this.pushFirmwareToDevice ?? (this.pushFirmwareToDevice = new Command());
+    public Command PushFirmwareToDevice => this.pushFirmwareToDevice 
+            ?? (this.pushFirmwareToDevice = new Command());
 
-    public Command CheckOrOfferAppUpdate => this.checkOrOfferAppUpdate ?? (this.checkOrOfferAppUpdate = new Command(new ExecuteHandler(this.CheckOrOfferAppUpdate_OnExecute)));
+    public Command CheckOrOfferAppUpdate => this.checkOrOfferAppUpdate 
+            ?? (this.checkOrOfferAppUpdate = new Command(new ExecuteHandler(this.CheckOrOfferAppUpdate_OnExecute)));
 
-    public Command LaunchAppUpdate => this.launchAppUpdate ?? (this.launchAppUpdate = new Command(new ExecuteHandler(this.LaunchAppUpdate_OnExecute)));
+    public Command LaunchAppUpdate => this.launchAppUpdate 
+            ?? (this.launchAppUpdate = new Command(new ExecuteHandler(this.LaunchAppUpdate_OnExecute)));
 
-    public Command LaunchDownloadWeb => this.launchDownloadWeb ?? (this.launchDownloadWeb = new Command(new ExecuteHandler(this.LaunchDownloadWeb_OnExecute)));
+    public Command LaunchDownloadWeb => this.launchDownloadWeb 
+            ?? (this.launchDownloadWeb = new Command(new ExecuteHandler(this.LaunchDownloadWeb_OnExecute)));
 
-    public Command LaunchTermsOfUseWeb => this.launchTermsOfUseWeb ?? (this.launchTermsOfUseWeb = new Command(new ExecuteHandler(this.LaunchTermsOfUseWeb_OnExecute)));
+    public Command LaunchTermsOfUseWeb => this.launchTermsOfUseWeb 
+            ?? (this.launchTermsOfUseWeb = new Command(new ExecuteHandler(this.LaunchTermsOfUseWeb_OnExecute)));
 
-    public Command LaunchPrivacyPolicyWeb => this.launchPrivacyPolicyWeb ?? (this.launchPrivacyPolicyWeb = new Command(new ExecuteHandler(this.LaunchPrivacyPolicyWeb_OnExecute)));
+    public Command LaunchPrivacyPolicyWeb => this.launchPrivacyPolicyWeb 
+            ?? (this.launchPrivacyPolicyWeb = new Command(new ExecuteHandler(this.LaunchPrivacyPolicyWeb_OnExecute)));
 
-    public Command LaunchSupportWeb => this.launchSupportWeb ?? (this.launchSupportWeb = new Command(new ExecuteHandler(this.LaunchSupportWeb_OnExecute)));
+    public Command LaunchSupportWeb => this.launchSupportWeb 
+            ?? (this.launchSupportWeb = new Command(new ExecuteHandler(this.LaunchSupportWeb_OnExecute)));
 
-    public Command LaunchThirdPartyNoticesWeb => this.launchThirdPartyNoticesWeb ?? (this.launchThirdPartyNoticesWeb = new Command(new ExecuteHandler(this.LaunchThirdPartyNoticesWeb_OnExecute)));
+    public Command LaunchThirdPartyNoticesWeb => this.launchThirdPartyNoticesWeb 
+            ?? (this.launchThirdPartyNoticesWeb = new Command(new ExecuteHandler(this.LaunchThirdPartyNoticesWeb_OnExecute)));
 
-    public Command UninstallApp => this.uninstallApp ?? (this.uninstallApp = new Command(new ExecuteHandler(this.UninstallApp_OnExecute)));
+    public Command UninstallApp => this.uninstallApp 
+            ?? (this.uninstallApp = new Command(new ExecuteHandler(this.UninstallApp_OnExecute)));
 
-    public Command BeginEditUserProfile => this.beginEditUserProfile ?? (this.beginEditUserProfile = new Command(new ExecuteHandler(this.BeginEditUserProfile_OnExecute)));
+    public Command BeginEditUserProfile => this.beginEditUserProfile 
+            ?? (this.beginEditUserProfile = new Command(new ExecuteHandler(this.BeginEditUserProfile_OnExecute)));
 
-    public Command EndEditUserProfile => this.endEditUserProfile ?? (this.endEditUserProfile = new Command(new ExecuteHandler(this.EndEditUserProfile_OnExecute)));
+    public Command EndEditUserProfile => this.endEditUserProfile 
+            ?? (this.endEditUserProfile = new Command(new ExecuteHandler(this.EndEditUserProfile_OnExecute)));
 
     public SecurityInfo SecurityInfo
     {
@@ -265,7 +312,8 @@ namespace DesktopSyncApp
         if (loginInfo == null && value == null)
           return;
         this.loginInfo = value;
-        this.OnPropertyChanged(nameof (LoginInfo), this.PropertyChanged, this.LoginInfoChanged, (object) loginInfo, (object) value);
+        this.OnPropertyChanged(nameof (LoginInfo), this.PropertyChanged, 
+            this.LoginInfoChanged, (object) loginInfo, (object) value);
         this.OnPropertyChanged("DeviceCloudSyncEnabled", this.PropertyChanged);
         this.OnPropertyChanged("DeviceCloudSyncDisabled", this.PropertyChanged);
       }
@@ -307,7 +355,8 @@ namespace DesktopSyncApp
         if (loginLogoutStatus == value)
           return;
         this.loginLogoutStatus = value;
-        this.OnPropertyChanged(nameof (LoginLogoutStatus), this.PropertyChanged, this.LoginLogoutStatusChanged, (object) loginLogoutStatus, (object) value);
+        this.OnPropertyChanged(nameof (LoginLogoutStatus), this.PropertyChanged, 
+            this.LoginLogoutStatusChanged, (object) loginLogoutStatus, (object) value);
         this.OnPropertyChanged("LoginBusy", this.PropertyChanged);
       }
     }
@@ -323,7 +372,8 @@ namespace DesktopSyncApp
         if (userDeviceStatus == value)
           return;
         this.userDeviceStatus = value;
-        this.OnPropertyChanged(nameof (UserDeviceStatus), this.PropertyChanged, this.UserDeviceStatusChanged, (object) userDeviceStatus, (object) value);
+        this.OnPropertyChanged(nameof (UserDeviceStatus), this.PropertyChanged, 
+            this.UserDeviceStatusChanged, (object) userDeviceStatus, (object) value);
       }
     }
 

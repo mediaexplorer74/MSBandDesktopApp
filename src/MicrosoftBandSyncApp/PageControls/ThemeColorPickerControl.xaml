@@ -1,0 +1,118 @@
+<local:SyncAppPageControl x:Class="DesktopSyncApp.ThemeColorPickerControl"
+                          xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                          xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                          xmlns:BindingConverters="clr-namespace:DesktopSyncApp.BindingConverters"
+                          xmlns:System="clr-namespace:System;assembly=mscorlib"
+                          xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                          xmlns:local="clr-namespace:DesktopSyncApp"
+                          xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+                          d:DataContext="{d:DesignInstance Type=local:ViewModel}"
+                          Width="830" Height="480" Background="{StaticResource BackgroundBrushDark}">
+  <Grid IsEnabled="{Binding ThemeManager.UpdatingDeviceTheme, Converter={StaticResource BoolNotConverter}}">
+    <TextBlock Margin="74,48,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
+               AutomationProperties.AutomationId="PageHeader" FontSize="36" Style="{DynamicResource Heading}"
+               Text="{x:Static local:LStrings.Title_Page_PersonalizeBand}"/>
+    <local:PersonalizeDeviceEnvoy x:Name="DeviceEnvoy" Margin="47,196,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+    <local:PersonalizeDeviceCargo x:Name="DeviceCargo" Margin="74,196,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+    <Grid Width="331" Margin="76,114,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
+      <StackPanel>
+        <TextBlock Margin="0,0,0,3" AutomationProperties.AutomationId="ColorLabel" FontSize="15"
+                   Foreground="{StaticResource SecondaryTextBrush}" Style="{DynamicResource BaseTextBlock}"
+                   Text="{x:Static local:LStrings.Label_Color}"/>
+        <Button HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Stretch"
+                VerticalContentAlignment="Stretch" AutomationProperties.AutomationId="ColorButton"
+                Template="{DynamicResource BlankButtonTemplate}" Width="{Binding Width, ElementName=PatternButton}"
+                Height="{Binding Height, ElementName=PatternButton}" Command="{Binding ThemeManager.ShowColorSets}">
+          <Border BorderBrush="White" BorderThickness="1">
+            <Border.Background>
+              <SolidColorBrush Color="{Binding ThemeManager.ColorSets.SelectedItem.Colors.Base, FallbackValue=Blue}"/>
+            </Border.Background>
+            <Grid Width="7" HorizontalAlignment="Right">
+              <Panel.Background>
+                <SolidColorBrush Color="{Binding ThemeManager.ColorSets.SelectedItem.Colors.Highlight, FallbackValue=Red}"/>
+              </Panel.Background>
+            </Grid>
+          </Border>
+        </Button>
+      </StackPanel>
+      <StackPanel HorizontalAlignment="Right">
+        <TextBlock Margin="0,0,0,3" AutomationProperties.AutomationId="WallpaperLabel" FontSize="15"
+                   Foreground="{StaticResource SecondaryTextBrush}" Style="{DynamicResource BaseTextBlock}"
+                   Text="{x:Static local:LStrings.Label_Wallpaper}"/>
+        <Button x:Name="PatternButton" Width="145" Height="52" HorizontalAlignment="Left" VerticalAlignment="Top"
+                HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"
+                AutomationProperties.AutomationId="PatternButton" Template="{DynamicResource BlankButtonTemplate}"
+                Command="{Binding ThemeManager.ShowPatterns}">
+          <Border BorderBrush="White" BorderThickness="1">
+            <Image Source="{Binding ThemeManager.Patterns.SelectedItem.Image, FallbackValue={StaticResource cargo-electric-honeycomb}}"/>
+          </Border>
+        </Button>
+      </StackPanel>
+    </Grid>
+    <ItemsControl Width="341" MinWidth="100" MinHeight="100" Margin="0,55,10,0" HorizontalAlignment="Right"
+                  VerticalAlignment="Top" HorizontalContentAlignment="Right"
+                  AutomationProperties.AutomationId="ColorThemeItems" ItemsSource="{Binding ThemeManager.ColorSets}"
+                  Visibility="{Binding ThemeManager.CurrentThemeComponent, Converter={StaticResource EqualityToVisibleConverter}, ConverterParameter={x:Static local:ThemeComponent.ColorSet}}">
+      <ItemsControl.ItemsPanel>
+        <ItemsPanelTemplate>
+          <WrapPanel Orientation="Horizontal"/>
+        </ItemsPanelTemplate>
+      </ItemsControl.ItemsPanel>
+      <ItemsControl.ItemTemplate>
+        <DataTemplate>
+          <RadioButton Width="62" Height="62" Margin="13,0,0,13" HorizontalAlignment="Left" VerticalAlignment="Top"
+                       HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"
+                       Template="{DynamicResource DeviceThemeColorPickerRadioButtonTemplate}"
+                       IsChecked="{Binding IsSelected}">
+            <Border BorderThickness="0,0,6,0">
+              <Border.BorderBrush>
+                <SolidColorBrush Color="{Binding Colors.Highlight}"/>
+              </Border.BorderBrush>
+              <Border.Background>
+                <SolidColorBrush Color="{Binding Colors.Base}"/>
+              </Border.Background>
+            </Border>
+          </RadioButton>
+        </DataTemplate>
+      </ItemsControl.ItemTemplate>
+    </ItemsControl>
+    <ItemsControl Width="341" MinWidth="100" MinHeight="100" Margin="0,55,10,0" HorizontalAlignment="Right"
+                  VerticalAlignment="Top" HorizontalContentAlignment="Right"
+                  AutomationProperties.AutomationId="PatternThemeItems" ItemsSource="{Binding ThemeManager.Patterns}"
+                  Visibility="{Binding ThemeManager.CurrentThemeComponent, Converter={StaticResource EqualityToVisibleConverter}, ConverterParameter={x:Static local:ThemeComponent.Pattern}}">
+      <ItemsControl.ItemsPanel>
+        <ItemsPanelTemplate>
+          <WrapPanel Orientation="Horizontal"/>
+        </ItemsPanelTemplate>
+      </ItemsControl.ItemsPanel>
+      <ItemsControl.ItemTemplate>
+        <DataTemplate>
+          <RadioButton Width="140" Margin="13,0,0,13" HorizontalAlignment="Left" VerticalAlignment="Top"
+                       HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"
+                       Template="{DynamicResource DeviceThemeColorPickerRadioButtonTemplate}"
+                       IsChecked="{Binding IsSelected}">
+            <Border>
+              <Image Source="{Binding Image}"/>
+            </Border>
+          </RadioButton>
+        </DataTemplate>
+      </ItemsControl.ItemTemplate>
+    </ItemsControl>
+    <local:VariableOpacityButton Click="SaveCustomization_Click" Width="143" Height="40" Margin="77,0,0,40"
+                                 HorizontalAlignment="Left" VerticalAlignment="Bottom"
+                                 AutomationProperties.AutomationId="SaveButton" Content="{x:Static local:LStrings.Title_Button_Save}"
+                                 IsEnabled="{Binding ThemeManager.NeedToSave}"/>
+    <local:VariableOpacityButton Width="145" Height="40" Margin="263,0,0,40" HorizontalAlignment="Left" VerticalAlignment="Bottom"
+                                 AutomationProperties.AutomationId="CancelButton"
+                                 Content="{x:Static local:LStrings.Title_Button_Cancel}" Command="{Binding ShowSyncCommand}"/>
+    <Grid Background="{StaticResource PrimaryDarkBrush}" Opacity="0.9"
+          Visibility="{Binding ThemeManager.UpdatingDeviceTheme, Converter={StaticResource BoolToVisibilityConverter}, FallbackValue=Hidden}"/>
+    <TextBlock Margin="324,213,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="40"
+               Foreground="White" Text="{x:Static local:LStrings.Status_Updating}"
+               Visibility="{Binding ThemeManager.UpdatingDeviceTheme, Converter={StaticResource BoolToVisibilityConverter}, FallbackValue=Hidden}"/>
+    <Rectangle Margin="0,55,0,0" VerticalAlignment="Top" IsHitTestVisible="true" Stroke="Red"
+               Visibility="{x:Static local:ViewModel.FallbackVisibility}"/>
+    <Rectangle Margin="0,0,337,3" HorizontalAlignment="Right" IsHitTestVisible="true" Stroke="Red"
+               Visibility="{x:Static local:ViewModel.FallbackVisibility}"/>
+  </Grid>
+</local:SyncAppPageControl>

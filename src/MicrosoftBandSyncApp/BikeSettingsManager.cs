@@ -1,4 +1,4 @@
-﻿// Decompiled with JetBrains decompiler
+﻿// BikeSettingsManager.cs
 // Type: DesktopSyncApp.BikeSettingsManager
 // Assembly: Microsoft Band Sync, Version=1.3.20517.1, Culture=neutral, PublicKeyToken=null
 // MVID: 85967930-2DEF-43AB-AC73-6FA058C5AE66
@@ -17,14 +17,26 @@ namespace DesktopSyncApp
   public class BikeSettingsManager : BikeRunBaseManager
   {
     private StartStripManager parent;
+
     private CargoBikeDisplayMetrics originalBikeMetrics;
+
     private CargoBikeDisplayMetrics savedBikeMetrics;
+
     public IList<BikeDisplayMetricType> metricChoices;
+
     public IList<BikeDisplayMetricType> metricChoicesWithNone;
-    private IList<LabeledItem<BikeDisplayMetricType>> metricComboOptions = (IList<LabeledItem<BikeDisplayMetricType>>) new List<LabeledItem<BikeDisplayMetricType>>();
-    private IList<LabeledItem<BikeDisplayMetricType>> metricComboOptionsWithNone = (IList<LabeledItem<BikeDisplayMetricType>>) new List<LabeledItem<BikeDisplayMetricType>>();
-    private IList<LabeledItem<int>> splitComboOptions = (IList<LabeledItem<int>>) new List<LabeledItem<int>>();
+
+    private IList<LabeledItem<BikeDisplayMetricType>> metricComboOptions 
+            = (IList<LabeledItem<BikeDisplayMetricType>>) new List<LabeledItem<BikeDisplayMetricType>>();
+
+    private IList<LabeledItem<BikeDisplayMetricType>> metricComboOptionsWithNone
+            = (IList<LabeledItem<BikeDisplayMetricType>>) new List<LabeledItem<BikeDisplayMetricType>>();
+
+    private IList<LabeledItem<int>> splitComboOptions = (IList<LabeledItem<int>>) 
+            new List<LabeledItem<int>>();
+
     private int originalSplit;
+
     private int savedSplit;
 
     public new event PropertyChangedEventHandler PropertyChanged;
@@ -57,9 +69,11 @@ namespace DesktopSyncApp
 
     public LabeledItem<int> MetricSplit { get; set; }
 
-    public IList<LabeledItem<BikeDisplayMetricType>> MetricComboOptions => this.metricComboOptions;
+    public IList<LabeledItem<BikeDisplayMetricType>> MetricComboOptions 
+            => this.metricComboOptions;
 
-    public IList<LabeledItem<BikeDisplayMetricType>> MetricComboOptionsWithNone => this.metricComboOptionsWithNone;
+    public IList<LabeledItem<BikeDisplayMetricType>> MetricComboOptionsWithNone 
+            => this.metricComboOptionsWithNone;
 
     public IList<LabeledItem<int>> SplitComboOptions => this.splitComboOptions;
 

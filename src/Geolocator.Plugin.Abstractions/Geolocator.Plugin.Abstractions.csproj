@@ -44,7 +44,7 @@
     <Compile Include="GeolocationException.cs" />
     <Compile Include="PositionErrorEventArgs.cs" />
     <Compile Include="GeolocationError.cs" />
-    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

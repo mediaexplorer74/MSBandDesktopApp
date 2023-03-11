@@ -144,7 +144,7 @@
     <Compile Include="WeakSubscription\MvxNotifyCollectionChangedEventSubscription.cs" />
     <Compile Include="WeakSubscription\MvxValueEventSubscription`1.cs" />
     <Compile Include="WeakSubscription\MvxWeakSubscriptionExtensionMethods.cs" />
-    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

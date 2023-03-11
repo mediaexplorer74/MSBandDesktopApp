@@ -1,4 +1,4 @@
-﻿// Decompiled with JetBrains decompiler
+﻿// AppMainWindow.cs
 // Type: DesktopSyncApp.AppMainWindow
 // Assembly: Microsoft Band Sync, Version=1.3.20517.1, Culture=neutral, PublicKeyToken=null
 // MVID: 85967930-2DEF-43AB-AC73-6FA058C5AE66
@@ -27,11 +27,7 @@ using System.Windows.Threading;
 namespace DesktopSyncApp
 {
     // sealed ?
-  public sealed partial class AppMainWindow : 
-    Window,
-    INotifyPropertyChanged,
-    IDisposable,
-    IComponentConnector
+  public sealed partial class AppMainWindow: Window, INotifyPropertyChanged
   {
     private ViewModel model;
     private TrayIcon trayIcon;
@@ -60,11 +56,6 @@ namespace DesktopSyncApp
     private AutoResetEvent loginLogoutCompleteEvent;
     private DispatcherTimer deviceScanDelayTimer;
     
-    //internal AppMainWindow MainWindow;
-    //internal AnimatedPageControl MainWindowPageManager;
-    //internal AnimatedPageControl SuperModalPageManager;
-    
-    //private bool _contentLoaded;
 
     public void WM_DEVICECHANGE()
     {
@@ -83,7 +74,9 @@ namespace DesktopSyncApp
 
     private async void DeviceManager_DevicesChanged(object sender, PropertyChangedEventArgs e)
     {
-      if (this.model.DeviceManager.CurrentDevice != null || this.model.LoginLogoutStatus != LoginLogoutStatus.LoggedIn || !this.model.LoginInfo.UserProfile.HasCompletedOOBE)
+      if (this.model.DeviceManager.CurrentDevice != null 
+                || this.model.LoginLogoutStatus != LoginLogoutStatus.LoggedIn 
+                || !this.model.LoginInfo.UserProfile.HasCompletedOOBE)
         return;
       await this.ConnectToCorrectDevice(false);
     }
@@ -93,7 +86,9 @@ namespace DesktopSyncApp
       if (this.model.DeviceManager.Count == 1)
         await this.ConnectToDevice(this.model.DeviceManager.GetSingleDevice(), pairDevice);
       else
-        this.model.UserDeviceStatus = this.model.DeviceManager.Count <= 1 ? UserDeviceStatus.None : UserDeviceStatus.Multiple;
+        this.model.UserDeviceStatus = this.model.DeviceManager.Count <= 1 
+                    ? UserDeviceStatus.None 
+                    : UserDeviceStatus.Multiple;
     }
 
     private void DeviceManager_CurrentDeviceChanged(object sender, PropertyChangedEventArgs e)
@@ -106,19 +101,25 @@ namespace DesktopSyncApp
     public async Task ConnectToDevice(KDeviceInfo deviceInfo, bool pairDevice)
     {
       this.model.DeviceManager.LastDeviceConnectError = (ErrorInfo) null;
-      using (new DisposableAction((Action) (() => this.model.AquiringDevice = true), (Action) (() => this.model.AquiringDevice = false)))
+      using (new DisposableAction((Action) (() => this.model.AquiringDevice = true), 
+          (Action) (() => this.model.AquiringDevice = false)))
       {
         try
         {
           await this.model.RefreshUserProfile(false);
-          await this.model.DeviceManager.UpdateDeviceInfo(deviceInfo, this.model.LoginInfo, false, false);
+
+          await this.model.DeviceManager.UpdateDeviceInfo(deviceInfo,
+              this.model.LoginInfo, false, false);
           if ((int)deviceInfo.AppType != 2 && (int)deviceInfo.AppType != 3)
             this.model.UserDeviceStatus = UserDeviceStatus.None;
           else if ((int)deviceInfo.AppType == 2)
           {
-            if (deviceInfo.FirmwareCheckStatus != null && deviceInfo.FirmwareCheckStatus.Info.IsFirmwareUpdateAvailable)
+            if (deviceInfo.FirmwareCheckStatus != null 
+                            && deviceInfo.FirmwareCheckStatus.Info.IsFirmwareUpdateAvailable)
             {
-              int num = await this.model.DeviceManager.OpenDevice(deviceInfo, this.model.LoginInfo) ? 1 : 0;
+              int num = await this.model.DeviceManager.OpenDevice(deviceInfo, this.model.LoginInfo) 
+                                ? 1 : 0;
+
               this.model.UserDeviceStatus = UserDeviceStatus.RegisteredRequiresFW;
             }
             else
@@ -137,26 +138,35 @@ namespace DesktopSyncApp
             )
           )
           {
-            int num = await this.model.DeviceManager.OpenDevice(deviceInfo, this.model.LoginInfo) ? 1 : 0;
+            int num = await this.model.DeviceManager.OpenDevice(deviceInfo, this.model.LoginInfo) 
+                            ? 1 : 0;
             this.model.LoginInfo.UserProfile.PairedDeviceIDUpdated();
-            if (deviceInfo.FirmwareCheckStatus != null && deviceInfo.FirmwareCheckStatus.Info.IsFirmwareUpdateAvailable)
+
+            if (deviceInfo.FirmwareCheckStatus != null 
+                            && deviceInfo.FirmwareCheckStatus.Info.IsFirmwareUpdateAvailable)
             {
               this.model.UserDeviceStatus = UserDeviceStatus.RegisteredRequiresFW;
             }
             else
             {
               this.model.UserDeviceStatus = UserDeviceStatus.Registered;
-              this.model.DeviceManager.CurrentDevice.FirmwareStatusChanged += new PropertyChangedEventHandler(this.CurrentDevice_FirmwareStatusChanged);
+              this.model.DeviceManager.CurrentDevice.FirmwareStatusChanged 
+                                += new PropertyChangedEventHandler(
+                                    this.CurrentDevice_FirmwareStatusChanged);
+
               this.SetFirmwareUpdateTimer();
               this.DoDeviceConnectedTasks(!deviceInfo.IsOOBEComplete);
             }
           }
           else
-            this.model.UserDeviceStatus = deviceInfo.DeviceProfileStatus.UserLinkStatus != null ? (!deviceInfo.IsOOBEComplete ? UserDeviceStatus.CantRegisterUnregister : UserDeviceStatus.CantRegisterUnregisterReset) : (!deviceInfo.IsOOBEComplete ? UserDeviceStatus.CanRegister : UserDeviceStatus.CantRegisterReset);
+            this.model.UserDeviceStatus = deviceInfo.DeviceProfileStatus.UserLinkStatus != null
+            ? (!deviceInfo.IsOOBEComplete ? UserDeviceStatus.CantRegisterUnregister : UserDeviceStatus.CantRegisterUnregisterReset ) 
+            : (!deviceInfo.IsOOBEComplete ? UserDeviceStatus.CanRegister : UserDeviceStatus.CantRegisterReset);
         }
         catch (Exception ex)
         {
-          this.model.LogDeviceConnectError(new ErrorInfo(nameof (ConnectToDevice), LStrings.Message_DeviceConnectErrorOccurred, ex));
+          this.model.LogDeviceConnectError(new ErrorInfo(nameof (ConnectToDevice), 
+              LStrings.Message_DeviceConnectErrorOccurred, ex));
           this.model.UserDeviceStatus = UserDeviceStatus.None;
         }
       }
@@ -177,7 +187,8 @@ namespace DesktopSyncApp
       }
       catch (Exception ex)
       {
-        this.model.LogError(new ErrorInfo("BatteryStreamSubscribeContinuation", "Sensor log sync task failed", ex));
+        this.model.LogError(new ErrorInfo("BatteryStreamSubscribeContinuation", 
+            "Sensor log sync task failed", ex));
       }
     }
 
@@ -202,7 +213,12 @@ namespace DesktopSyncApp
           if (!this.model.DeviceManager.CurrentDevice.DeviceInfo.IsOOBEComplete)
           {
             KDeviceInfo kdeviceInfo = this.model.DeviceManager.CurrentDevice.DeviceInfo;
-            int num = await this.model.DeviceManager.CurrentDevice.CargoClient.GetDeviceOobeCompletedAsync() ? 1 : 0;
+
+            int num =  await this.model.DeviceManager.CurrentDevice
+                            .CargoClient.GetDeviceOobeCompletedAsync() 
+                            ? 1 
+                            : 0;
+
             kdeviceInfo.IsOOBEComplete = num != 0;
             kdeviceInfo = (KDeviceInfo) null;
           }
@@ -221,9 +237,12 @@ namespace DesktopSyncApp
       {
         await this.model.RefreshUserProfile(false);
         KDeviceInfo kdeviceInfo = this.model.DeviceManager.CurrentDevice.DeviceInfo;
-        DeviceProfileStatus profileLinkStatusAsync = await this.model.DeviceManager.CurrentDevice.CargoClient.GetDeviceAndProfileLinkStatusAsync(this.model.LoginInfo.UserProfile.Source);
+        DeviceProfileStatus profileLinkStatusAsync = 
+                    await this.model.DeviceManager.CurrentDevice.CargoClient.GetDeviceAndProfileLinkStatusAsync(this.model.LoginInfo.UserProfile.Source);
         kdeviceInfo.DeviceProfileStatus = profileLinkStatusAsync;
+
         kdeviceInfo = (KDeviceInfo) null;
+
         if ((int)this.model.DeviceManager.CurrentDevice.DeviceInfo.DeviceProfileStatus.UserLinkStatus == 1)
         {
           if ((int)this.model.DeviceManager.CurrentDevice.DeviceInfo.DeviceProfileStatus.DeviceLinkStatus == 1)
@@ -305,7 +324,8 @@ label_7:
       {
         this.model.DeviceManager.CurrentDevice.FirmwareStatus ^= FirmwareStatus.Checking;
         this.model.DeviceManager.CurrentDevice.CheckingFirmware = false;
-        this.model.LogFWCheckError(new ErrorInfo("GetCloudFirmwareStatusContinuation", "Firmware version info task failed", ex));
+        this.model.LogFWCheckError(new ErrorInfo("GetCloudFirmwareStatusContinuation", 
+            "Firmware version info task failed", ex));
         this.SetFirmwareUpdateTimer();
         return;
       }
@@ -330,7 +350,10 @@ label_7:
         {
           this.model.DeviceManager.CurrentDevice.FirmwareStatus = FirmwareStatus.Unknown;
           this.model.DeviceManager.CurrentDevice.CheckingFirmware = false;
-          this.model.LogFWCheckError(new ErrorInfo("GetCloudFirmwareStatusContinuation", "Firmware download task failed", ex));
+
+          this.model.LogFWCheckError(new ErrorInfo("GetCloudFirmwareStatusContinuation", 
+              "Firmware download task failed", ex));
+
           this.SetFirmwareUpdateTimer();
           stateTimedEvent.Cancel();
           return;
@@ -343,7 +366,9 @@ label_7:
 
     public async Task PushFirmwareUpdate()
     {
-      IFirmwareUpdateInfo info = this.model.DeviceManager.CurrentDevice.DeviceInfo.FirmwareCheckStatus.Info;
+      IFirmwareUpdateInfo info = 
+                this.model.DeviceManager.CurrentDevice.DeviceInfo.FirmwareCheckStatus.Info;
+
       bool success = true;
       this.model.UserDeviceStatus = UserDeviceStatus.RegisteredFWUpdating;
       this.model.DeviceManager.CurrentDevice.FirmwareStatus = FirmwareStatus.Updating;
@@ -363,31 +388,40 @@ label_7:
       catch (Exception ex)
       {
         success = false;
-        this.model.LogError(new ErrorInfo("PushLatestFirmwareContinuation", "Firmware update task failed", ex));
+        this.model.LogError(new ErrorInfo("PushLatestFirmwareContinuation", 
+            "Firmware update task failed", 
+            ex));
         this.model.DeviceManager.CurrentDevice.FirmwareStatus = FirmwareStatus.Unknown;
       }
       if (success)
       {
         try
         {
-          await this.model.DeviceManager.UpdateDeviceInfo(this.model.DeviceManager.CurrentDevice.DeviceInfo, this.model.LoginInfo, true, true);
+          await this.model.DeviceManager.UpdateDeviceInfo(
+              this.model.DeviceManager.CurrentDevice.DeviceInfo, this.model.LoginInfo, true, true);
         }
         catch (Exception ex)
         {
           success = false;
-          this.model.LogError(new ErrorInfo("PushLatestFirmwareContinuation", "Firmware update task failed", ex));
+          this.model.LogError(new ErrorInfo("PushLatestFirmwareContinuation", 
+              "Firmware update task failed", ex));
         }
       }
       DeviceProfileStatus deviceProfileStatus = (DeviceProfileStatus) null;
-      if (success && !this.model.DeviceManager.CurrentDevice.DeviceInfo.FirmwareCheckStatus.Info.IsFirmwareUpdateAvailable && 
+      if (success 
+                && !this.model.DeviceManager.CurrentDevice.DeviceInfo.FirmwareCheckStatus.Info.IsFirmwareUpdateAvailable && 
                 (int)this.model.DeviceManager.CurrentDevice.DeviceInfo.AppType == 3)
       {
         this.model.DeviceManager.CurrentDevice.FirmwareStatus = FirmwareStatus.UpToDate;
         deviceProfileStatus = await this.model.DeviceManager.CurrentDevice.CargoClient.GetDeviceAndProfileLinkStatusAsync(this.model.LoginInfo.UserProfile.Source);
       }
-      if (success && deviceProfileStatus != null && (int)deviceProfileStatus.DeviceLinkStatus == 1 && (int)deviceProfileStatus.UserLinkStatus == 1)
+      if (success && deviceProfileStatus != null && 
+                (int)deviceProfileStatus.DeviceLinkStatus == 1
+                && (int)deviceProfileStatus.UserLinkStatus == 1)
       {
-        this.model.DeviceManager.CurrentDevice.CargoClient.UserAgent = KDeviceManager.GetUserAgent(this.model.DeviceManager.CurrentDevice.CargoClient);
+        this.model.DeviceManager.CurrentDevice.CargoClient.UserAgent
+                    = KDeviceManager.GetUserAgent(this.model.DeviceManager.CurrentDevice.CargoClient);
+
         this.model.UserDeviceStatus = UserDeviceStatus.Registered;
         this.SetFirmwareUpdateTimer();
         this.DoDeviceConnectedTasks(true);
@@ -400,7 +434,9 @@ label_7:
       }
       if (!success)
         return;
-      Telemetry.LogEvent("Utilities/FirmwareUpdate/Apply Update", (IDictionary<string, string>) new Dictionary<string, string>()
+
+      Telemetry.LogEvent("Utilities/FirmwareUpdate/Apply Update",
+          (IDictionary<string, string>) new Dictionary<string, string>()
       {
         {
           "2UP",
@@ -455,7 +491,9 @@ label_7:
       this.model.LoginContext = loginContext;
       this.model.LastLoginError = (ErrorInfo) null;
       DateTime utcNow = DateTime.UtcNow;
-      if (this.model.SecurityInfo.AccessToken != null && this.model.SecurityInfo.RefreshToken != null && this.model.SecurityInfo.KATToken != null)
+      if (this.model.SecurityInfo.AccessToken != null 
+                && this.model.SecurityInfo.RefreshToken != null 
+                && this.model.SecurityInfo.KATToken != null)
       {
         DateTime? nullable = this.model.SecurityInfo.RefreshTokenExpires;
         DateTime dateTime1 = utcNow.AddHours(1.0);
@@ -491,7 +529,9 @@ label_9:
         if (this.model.LoginInfo.UserProfile.HasCompletedOOBE)
           this.model.AppVisibility = Visibility.Collapsed;
       }
-      await this.model.DynamicGlobalizationConfig.UpdateDynamicConfiguration(this.model.LoginInfo.ServiceInfo);
+      await this.model.DynamicGlobalizationConfig.UpdateDynamicConfiguration(
+          this.model.LoginInfo.ServiceInfo);
+
       return true;
     }
 
@@ -522,7 +562,8 @@ label_9:
       bool userIsNew = false;
       using (WebClient client = new WebClient())
       {
-        Uri uri = new Uri(string.Format("https://{0}/api/v1/user", (object) this.model.SecurityInfo.SecurityEnvironment));
+        Uri uri = new Uri(string.Format("https://{0}/api/v1/user",
+            (object) this.model.SecurityInfo.SecurityEnvironment));
         client.Headers.Add("User-Agent", Globals.DefaultUserAgent);
         client.Headers.Add("Authorization", this.model.SecurityInfo.AccessToken);
         try
@@ -570,14 +611,16 @@ label_9:
           UserAgent = Globals.DefaultUserAgent
         }
       };
-      using (ICargoClient cargoClient = await BandAdminClientManager.Instance.ConnectAsync(loginInfo1.ServiceInfo))
+      using (ICargoClient cargoClient = 
+                await BandAdminClientManager.Instance.ConnectAsync(loginInfo1.ServiceInfo))
       {
         LoginInfo loginInfo2 = loginInfo1;
         IUserProfile userProfileAsync = await cargoClient.GetUserProfileAsync();
         ViewModel model = this.model;
         loginInfo2.UserProfile = new UserProfileSurrogate(userProfileAsync, model);
         loginInfo2 = (LoginInfo) null;
-        loginInfo1.UserProfileEdit = new UserProfileEdit(loginInfo1.UserProfile, false, this.model.DynamicGlobalizationConfig.CurrentDynamicGlobalizationConfig.Oobe);
+        loginInfo1.UserProfileEdit = new UserProfileEdit(loginInfo1.UserProfile, false,
+            this.model.DynamicGlobalizationConfig.CurrentDynamicGlobalizationConfig.Oobe);
       }
       this.model.LoginInfo = loginInfo1;
     }
@@ -613,11 +656,14 @@ label_9:
     {
       try
       {
-        using (RegistryKey registryKey = Registry.CurrentUser.OpenSubKey(Globals.RegistrySoftwareAppRootPath))
-          this.model.SecurityInfo = SecurityInfo.DeserializeJsonObject(Convert.FromBase64String(registryKey.GetValue("SecurityInfo") as string));
+        using (RegistryKey registryKey = Registry.CurrentUser.OpenSubKey(
+            Globals.RegistrySoftwareAppRootPath))
+          this.model.SecurityInfo = SecurityInfo.DeserializeJsonObject(
+              Convert.FromBase64String(registryKey.GetValue("SecurityInfo") as string));
       }
       catch
       {
+                //
       }
     }
 
@@ -625,8 +671,10 @@ label_9:
     {
       try
       {
-        using (RegistryKey subKey = Registry.CurrentUser.CreateSubKey(Globals.RegistrySoftwareAppRootPath))
-          subKey.SetValue("SecurityInfo", (object) Convert.ToBase64String(this.model.SecurityInfo.SerializeJsonObject(), Base64FormattingOptions.InsertLineBreaks));
+        using (RegistryKey subKey = Registry.CurrentUser.CreateSubKey(
+            Globals.RegistrySoftwareAppRootPath))
+          subKey.SetValue("SecurityInfo", (object) Convert.ToBase64String(
+              this.model.SecurityInfo.SerializeJsonObject(), Base64FormattingOptions.InsertLineBreaks));
       }
       catch
       {
@@ -637,12 +685,14 @@ label_9:
     {
       try
       {
-        using (RegistryKey registryKey = Registry.CurrentUser.OpenSubKey(Globals.RegistrySoftwareAppRootPath, true))
+        using (RegistryKey registryKey = Registry.CurrentUser.OpenSubKey(
+            Globals.RegistrySoftwareAppRootPath, true))
           registryKey.DeleteValue("SecurityInfo", false);
       }
       catch (Exception ex)
       {
-        this.model.LogError(new ErrorInfo(nameof (DeletePersistedLoginInformation), "Failed to delete login information from registry", ex));
+        this.model.LogError(new ErrorInfo(nameof (DeletePersistedLoginInformation), 
+            "Failed to delete login information from registry", ex));
       }
     }
 
@@ -814,7 +864,8 @@ label_9:
       }
       catch (Exception ex)
       {
-        this.model.LogDevicePairingError(new ErrorInfo("ForgetDeviceContinuation", LStrings.Message_DeviceUnpairingErrorOccurred, ex));
+        this.model.LogDevicePairingError(new ErrorInfo("ForgetDeviceContinuation", 
+            LStrings.Message_DeviceUnpairingErrorOccurred, ex));
         return;
       }
       finally
@@ -826,9 +877,11 @@ label_9:
       await this.ConnectToCorrectDevice(false);
     }
 
-    public async void CheckForFirmwareUpdate(object parameter, EventArgs e) => await this.CheckForFirmwareUpdate();
+    public async void CheckForFirmwareUpdate(object parameter, EventArgs e) 
+            => await this.CheckForFirmwareUpdate();
 
-    public async void PushFirmwareUpdate(object parameter, EventArgs e) => await this.PushFirmwareUpdate();
+    public async void PushFirmwareUpdate(object parameter, EventArgs e) 
+            => await this.PushFirmwareUpdate();
 
     public void Dispose()
     {
@@ -842,14 +895,24 @@ label_9:
       this.firmwareCheckTimer.Stop();
       if (this.model.DeviceManager.CurrentDevice == null)
         return;
-      if (this.model.DeviceManager.CurrentDevice.DeviceInfo.FirmwareCheckStatus == null || this.model.DeviceManager.CurrentDevice.DeviceInfo.FirmwareCheckStatus.Info.IsFirmwareUpdateAvailable)
+      if (this.model.DeviceManager.CurrentDevice.DeviceInfo.FirmwareCheckStatus == null 
+                || this.model.DeviceManager.CurrentDevice
+                   .DeviceInfo.FirmwareCheckStatus.Info.IsFirmwareUpdateAvailable)
       {
         this.firmwareCheckTimer.Interval = new TimeSpan(0, 1, 0);
       }
       else
       {
         DateTime utcNow = DateTime.UtcNow;
-        this.firmwareCheckTimer.Interval = !(utcNow < this.model.DeviceManager.CurrentDevice.DeviceInfo.FirmwareCheckStatus.LastChecked) ? (!(utcNow - this.model.DeviceManager.CurrentDevice.DeviceInfo.FirmwareCheckStatus.LastChecked > Globals.FWCheckUpdateSchedule) ? Globals.FWCheckUpdateSchedule - (utcNow - this.model.DeviceManager.CurrentDevice.DeviceInfo.FirmwareCheckStatus.LastChecked) : new TimeSpan(0, 0, 10)) : new TimeSpan(1, 0, 0);
+        this.firmwareCheckTimer.Interval = 
+                    !(utcNow < this.model.DeviceManager.CurrentDevice
+                    .DeviceInfo.FirmwareCheckStatus.LastChecked)
+                    ? (!(utcNow - this.model.DeviceManager.CurrentDevice
+                    .DeviceInfo.FirmwareCheckStatus.LastChecked > Globals.FWCheckUpdateSchedule) 
+                    ? Globals.FWCheckUpdateSchedule - 
+                    (utcNow - this.model.DeviceManager.CurrentDevice.DeviceInfo
+                    .FirmwareCheckStatus.LastChecked) : new TimeSpan(0, 0, 10)) 
+                    : new TimeSpan(1, 0, 0);
       }
       this.firmwareCheckTimer.Start();
     }
@@ -857,9 +920,14 @@ label_9:
     private async void firmwareCheckTimer_Tick(object sender, EventArgs e)
     {
       this.firmwareCheckTimer.Stop();
-      if (this.model.DeviceManager.CurrentDevice == null || this.model.DeviceManager.CurrentDevice.FirmwareStatus == FirmwareStatus.Updating)
+      if (this.model.DeviceManager.CurrentDevice == null 
+                || this.model.DeviceManager.CurrentDevice.FirmwareStatus == FirmwareStatus.Updating)
         return;
-      if (this.model.DeviceManager.CurrentDevice.DeviceInfo.FirmwareCheckStatus == null || this.model.DeviceManager.CurrentDevice.DeviceInfo.FirmwareCheckStatus.Info.IsFirmwareUpdateAvailable || DateTime.UtcNow - this.model.DeviceManager.CurrentDevice.DeviceInfo.FirmwareCheckStatus.LastChecked > Globals.FWCheckUpdateMinimum)
+      if (this.model.DeviceManager.CurrentDevice.DeviceInfo.FirmwareCheckStatus == null 
+                || this.model.DeviceManager.CurrentDevice.DeviceInfo
+                .FirmwareCheckStatus.Info.IsFirmwareUpdateAvailable 
+                || DateTime.UtcNow - this.model.DeviceManager.CurrentDevice
+                .DeviceInfo.FirmwareCheckStatus.LastChecked > Globals.FWCheckUpdateMinimum)
       {
         if (this.model.DeviceManager.CurrentDevice.Syncing)
           this.SetFirmwareUpdateTimer();
@@ -886,7 +954,10 @@ label_9:
 
     public ViewModel Model => this.model;
 
-    public void SaveSettings() => this.model.DynamicSettings.MainWindowPosition = new Point?(new Point(this.Left, this.Top));
+    public void SaveSettings()
+    {
+        this.model.DynamicSettings.MainWindowPosition = new Point?(new Point(this.Left, this.Top));
+    }
 
     private void SetStartupScreenPosition()
     {
@@ -924,7 +995,10 @@ label_9:
     public void ShowProfile()
     {
       Telemetry.LogPageView("Settings/User/Profile");
-      this.MainWindowPageManager.ShowPage((SyncAppPageControl) this.profilePage, direction: PageSlideDirection.Right);
+
+      this.MainWindowPageManager.ShowPage(
+          (SyncAppPageControl) this.profilePage, direction: PageSlideDirection.Right);
+
       this.model.RefreshUserProfile(false);
     }
 
@@ -958,18 +1032,22 @@ label_9:
     {
       try
       {
-        this.model.StrapManager.CurrentStartStrip = this.model.DeviceManager.CurrentDevice.CargoClient.GetStartStrip();
-        this.model.StrapManager.TileBackground = this.model.DeviceManager.CurrentDevice.Theme.Base;
+        this.model.StrapManager.CurrentStartStrip =
+                    this.model.DeviceManager.CurrentDevice.CargoClient.GetStartStrip();
+        this.model.StrapManager.TileBackground 
+                    = this.model.DeviceManager.CurrentDevice.Theme.Base;
       }
       catch (Exception ex)
       {
         this.MainWindowPageManager.ShowModalPage((SyncAppPageControl) this.errorMessagePage, false);
-        this.model.LogError(new ErrorInfo(nameof (ShowTileManagement), "Unable to get Device Theme/StartStrip", ex));
+        this.model.LogError(new ErrorInfo(nameof (ShowTileManagement), 
+            "Unable to get Device Theme/StartStrip", ex));
         return;
       }
       this.tileManagementPage.SetPages();
       Telemetry.LogPageView("Settings/Band/Manage Tiles");
-      this.MainWindowPageManager.ShowPage((SyncAppPageControl) this.tileManagementPage, direction: PageSlideDirection.Right);
+      this.MainWindowPageManager.ShowPage((SyncAppPageControl) this.tileManagementPage, 
+          direction: PageSlideDirection.Right);
     }
 
     public void ShowUpsellPage()
@@ -990,7 +1068,8 @@ label_9:
     {
       if ((bool) args.NewValue)
       {
-        if (this.model.DeviceManager.CurrentDevice == null || this.model.LoginInfo == null || this.model.DeviceManager.CurrentDevice.Syncing)
+        if (this.model.DeviceManager.CurrentDevice == null 
+                    || this.model.LoginInfo == null || this.model.DeviceManager.CurrentDevice.Syncing)
           return;
         await this.SyncDeviceToCloud();
       }
@@ -1095,10 +1174,15 @@ label_9:
         case UserDeviceStatus.CantRegisterUnregister:
         case UserDeviceStatus.CantRegisterUnregisterReset:
           if (newValue == UserDeviceStatus.None)
-            this.mainWindowPage.SubPageManager.ShowPage((SyncAppPageControl) this.disconnectedPage, false);
+            this.mainWindowPage.SubPageManager.ShowPage(
+                (SyncAppPageControl) this.disconnectedPage, false);
           else
-            this.mainWindowPage.SubPageManager.ShowPage((SyncAppPageControl) this.cantPairDevicePage, this.MainWindowPageManager.TopPage == this.mainWindowPage, PageSlideDirection.Right);
-          if (this.MainWindowPageManager.TopPage != this.themeColorPickerPage && this.MainWindowPageManager.TopPage != this.tileManagementPage)
+            this.mainWindowPage.SubPageManager.ShowPage(
+                (SyncAppPageControl) this.cantPairDevicePage, 
+                this.MainWindowPageManager.TopPage == this.mainWindowPage, PageSlideDirection.Right);
+
+          if (this.MainWindowPageManager.TopPage != this.themeColorPickerPage
+                        && this.MainWindowPageManager.TopPage != this.tileManagementPage)
             break;
           this.MainWindowPageManager.ShowPage((SyncAppPageControl) this.mainWindowPage);
           break;
@@ -1106,7 +1190,8 @@ label_9:
           this.MainWindowPageManager.ShowPage((SyncAppPageControl) this.pairDevicePage);
           break;
         case UserDeviceStatus.Registered:
-          this.mainWindowPage.SubPageManager.ShowPage((SyncAppPageControl) this.syncPage, this.MainWindowPageManager.TopPage == this.mainWindowPage);
+          this.mainWindowPage.SubPageManager.ShowPage((SyncAppPageControl) this.syncPage,
+              this.MainWindowPageManager.TopPage == this.mainWindowPage);
           break;
         case UserDeviceStatus.RegisteredRequiresFW:
           this.MainWindowPageManager.ShowPage((SyncAppPageControl) this.firmwareUpdatePage);
@@ -1138,48 +1223,6 @@ label_9:
       return str1.Equals("10") && str2.Equals("0");
     }
 
-    /*
-    [DebuggerNonUserCode]
-    [GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
-    public void InitializeComponent()
-    {
-      if (this._contentLoaded)
-        return;
-      this._contentLoaded = true;
-      Application.LoadComponent((object) this, new Uri("/Microsoft Band Sync;component/mainwindow.xaml", UriKind.Relative));
-    }
-
-    [DebuggerNonUserCode]
-    [GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
-    internal Delegate _CreateDelegate(Type delegateType, string handler) => Delegate.CreateDelegate(delegateType, (object) this, handler);
-
-    [DebuggerNonUserCode]
-    [GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
-    [EditorBrowsable(EditorBrowsableState.Never)]
-    void IComponentConnector.Connect(int connectionId, object target)
-    {
-      switch (connectionId)
-      {
-        case 1:
-          this.MainWindow = (AppMainWindow) target;
-          this.MainWindow.Closed += new EventHandler(this.MainWindow_Closed);
-          this.MainWindow.Closing += new CancelEventHandler(this.MainWindow_Closing_HideInstead);
-          this.MainWindow.KeyDown += new KeyEventHandler(this.MainWindow_KeyDown);
-          this.MainWindow.Loaded += new RoutedEventHandler(this.MainWindow_Loaded);
-          this.MainWindow.MouseDown += new MouseButtonEventHandler(this.MainWindow_MouseDown);
-          break;
-        case 2:
-          this.MainWindowPageManager = (AnimatedPageControl) target;
-          break;
-        case 3:
-          this.SuperModalPageManager = (AnimatedPageControl) target;
-          break;
-        default:
-          this._contentLoaded = true;
-          break;
-      }
-    }
-    */
     private enum ProfileSyncType
     {
       None,

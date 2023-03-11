@@ -13,9 +13,9 @@ using System.Runtime.CompilerServices;
 
 namespace DesktopSyncApp
 {
-  //[GeneratedCode("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
-  //[DebuggerNonUserCode]
-  //[CompilerGenerated]
+  [GeneratedCode("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+  [DebuggerNonUserCode]
+  [CompilerGenerated]
   public class LStrings
   {
     private static ResourceManager resourceMan;
@@ -32,7 +32,8 @@ namespace DesktopSyncApp
       get
       {
         if (LStrings.resourceMan == null)
-          LStrings.resourceMan = new ResourceManager("DesktopSyncApp.ResourceLinks.LStrings", typeof (LStrings).Assembly);
+          LStrings.resourceMan = new ResourceManager("DesktopSyncApp.ResourceLinks.LStrings", 
+              typeof (LStrings).Assembly);
         return LStrings.resourceMan;
       }
     }
@@ -44,43 +45,91 @@ namespace DesktopSyncApp
       set => LStrings.resourceCulture = value;
     }
 
-    public static string DefaultMessageCannedResponses1 => LStrings.ResourceManager.GetString(nameof (DefaultMessageCannedResponses1), LStrings.resourceCulture);
+        public static string DefaultMessageCannedResponses1
+        {
+            get
+            {
+                return LStrings.ResourceManager.GetString(nameof(DefaultMessageCannedResponses1), LStrings.resourceCulture);
+            }
+        }
 
-    public static string DefaultMessageCannedResponses2 => LStrings.ResourceManager.GetString(nameof (DefaultMessageCannedResponses2), LStrings.resourceCulture);
+        public static string DefaultMessageCannedResponses2
+        {
+            get
+            {
+                return LStrings.ResourceManager.GetString(nameof(DefaultMessageCannedResponses2), LStrings.resourceCulture);
+            }
+        }
 
-    public static string DefaultPhoneCannedResponses1 => LStrings.ResourceManager.GetString(nameof (DefaultPhoneCannedResponses1), LStrings.resourceCulture);
+        public static string DefaultPhoneCannedResponses1
+        {
+            get
+            {
+                return LStrings.ResourceManager.GetString(nameof(DefaultPhoneCannedResponses1), LStrings.resourceCulture);
+            }
+        }
 
-    public static string DefaultPhoneCannedResponses2 => LStrings.ResourceManager.GetString(nameof (DefaultPhoneCannedResponses2), LStrings.resourceCulture);
+        public static string DefaultPhoneCannedResponses2
+        {
+            get
+            {
+                return LStrings.ResourceManager.GetString(nameof(DefaultPhoneCannedResponses2), LStrings.resourceCulture);
+            }
+        }
 
-    public static string DefaultPhoneCannedResponses3 => LStrings.ResourceManager.GetString(nameof (DefaultPhoneCannedResponses3), LStrings.resourceCulture);
+        public static string DefaultPhoneCannedResponses3 => LStrings.ResourceManager.GetString(nameof (DefaultPhoneCannedResponses3), LStrings.resourceCulture);
 
-    public static string DOW_Friday => LStrings.ResourceManager.GetString(nameof (DOW_Friday), LStrings.resourceCulture);
+        public static string DOW_Friday
+        {
+            get
+            {
+                return LStrings.ResourceManager.GetString(nameof(DOW_Friday), LStrings.resourceCulture);
+            }
+        }
 
-    public static string DOW_Monday => LStrings.ResourceManager.GetString(nameof (DOW_Monday), LStrings.resourceCulture);
+        public static string DOW_Monday
+        {
+            get
+            {
+                return LStrings.ResourceManager.GetString(nameof(DOW_Monday), LStrings.resourceCulture);
+            }
+        }
 
-    public static string DOW_Saturday => LStrings.ResourceManager.GetString(nameof (DOW_Saturday), LStrings.resourceCulture);
+        public static string DOW_Saturday => LStrings.ResourceManager.GetString(nameof (DOW_Saturday), 
+            LStrings.resourceCulture);
 
-    public static string DOW_Sunday => LStrings.ResourceManager.GetString(nameof (DOW_Sunday), LStrings.resourceCulture);
+    public static string DOW_Sunday => LStrings.ResourceManager.GetString(nameof (DOW_Sunday), 
+        LStrings.resourceCulture);
 
-    public static string DOW_Thursday => LStrings.ResourceManager.GetString(nameof (DOW_Thursday), LStrings.resourceCulture);
+    public static string DOW_Thursday => LStrings.ResourceManager.GetString(nameof (DOW_Thursday), 
+        LStrings.resourceCulture);
 
-    public static string DOW_Tuesday => LStrings.ResourceManager.GetString(nameof (DOW_Tuesday), LStrings.resourceCulture);
+    public static string DOW_Tuesday => LStrings.ResourceManager.GetString(nameof (DOW_Tuesday), 
+        LStrings.resourceCulture);
 
-    public static string DOW_Wednesday => LStrings.ResourceManager.GetString(nameof (DOW_Wednesday), LStrings.resourceCulture);
+    public static string DOW_Wednesday => LStrings.ResourceManager.GetString(nameof (DOW_Wednesday), 
+        LStrings.resourceCulture);
 
-    public static string FirmwareVersionDebugAbbr => LStrings.ResourceManager.GetString(nameof (FirmwareVersionDebugAbbr), LStrings.resourceCulture);
+    public static string FirmwareVersionDebugAbbr => 
+            LStrings.ResourceManager.GetString(nameof (FirmwareVersionDebugAbbr), LStrings.resourceCulture);
 
-    public static string FirmwareVersionReleaseAbbr => LStrings.ResourceManager.GetString(nameof (FirmwareVersionReleaseAbbr), LStrings.resourceCulture);
+    public static string FirmwareVersionReleaseAbbr => 
+            LStrings.ResourceManager.GetString(nameof (FirmwareVersionReleaseAbbr), LStrings.resourceCulture);
 
-    public static string Format_AppVersion => LStrings.ResourceManager.GetString(nameof (Format_AppVersion), LStrings.resourceCulture);
+    public static string Format_AppVersion => 
+            LStrings.ResourceManager.GetString(nameof (Format_AppVersion), LStrings.resourceCulture);
 
-    public static string Format_FirmwareVersion => LStrings.ResourceManager.GetString(nameof (Format_FirmwareVersion), LStrings.resourceCulture);
+    public static string Format_FirmwareVersion => 
+            LStrings.ResourceManager.GetString(nameof (Format_FirmwareVersion), LStrings.resourceCulture);
 
-    public static string Format_FirmwareVersionShort => LStrings.ResourceManager.GetString(nameof (Format_FirmwareVersionShort), LStrings.resourceCulture);
+    public static string Format_FirmwareVersionShort => 
+            LStrings.ResourceManager.GetString(nameof (Format_FirmwareVersionShort), LStrings.resourceCulture);
 
-    public static string Format_LastSync_Long => LStrings.ResourceManager.GetString(nameof (Format_LastSync_Long), LStrings.resourceCulture);
+    public static string Format_LastSync_Long => 
+            LStrings.ResourceManager.GetString(nameof (Format_LastSync_Long), LStrings.resourceCulture);
 
-    public static string Format_LastSync_Short => LStrings.ResourceManager.GetString(nameof (Format_LastSync_Short), LStrings.resourceCulture);
+    public static string Format_LastSync_Short => 
+            LStrings.ResourceManager.GetString(nameof (Format_LastSync_Short), LStrings.resourceCulture);
 
     public static string Label_AppVersion => LStrings.ResourceManager.GetString(nameof (Label_AppVersion), LStrings.resourceCulture);
 

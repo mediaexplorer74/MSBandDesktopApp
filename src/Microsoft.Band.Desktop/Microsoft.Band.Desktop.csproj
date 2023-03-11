@@ -71,7 +71,7 @@
     <Compile Include="Desktop\USBD_TRANSFER_DIRECTION.cs" />
     <Compile Include="Desktop\WinUsbImports.cs" />
     <Compile Include="Desktop\WinUsbStream.cs" />
-    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Microsoft.Band\Microsoft.Band.csproj">

@@ -134,7 +134,7 @@
     <Compile Include="Views\IMvxViewFinder.cs" />
     <Compile Include="Views\IMvxViewsContainer.cs" />
     <Compile Include="Views\MvxViewsContainer.cs" />
-    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Cirrious.CrossCore\Cirrious.CrossCore.csproj">

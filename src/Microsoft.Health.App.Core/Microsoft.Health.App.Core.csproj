@@ -313,25 +313,6 @@
     <Compile Include="Health\App\Core\ViewModels\WeightTracking\WeightThreeMonthViewModel.cs" />
     <Compile Include="Health\App\Core\ViewModels\WeightTracking\WeightTileViewModel.cs" />
     <Compile Include="Health\App\Core\ViewModels\WeightTracking\WeightViewModelBase.cs" />
-    <Compile Include="Health\App\Core\ViewModels\Debug\StringConfigurationValueViewModel.cs" />
-    <Compile Include="Health\App\Core\ViewModels\Debug\BooleanConfigurationValueViewModel.cs" />
-    <Compile Include="Health\App\Core\ViewModels\Debug\ConfigurationValueCategoryViewModel.cs" />
-    <Compile Include="Health\App\Core\ViewModels\Debug\ConfigurationValueOption.cs" />
-    <Compile Include="Health\App\Core\ViewModels\Debug\ConfigurationValueViewModel.cs" />
-    <Compile Include="Health\App\Core\ViewModels\Debug\IntegerConfigurationValueViewModel.cs" />
-    <Compile Include="Health\App\Core\ViewModels\Debug\MultipleSelectionConfigurationValueViewModel.cs" />
-    <Compile Include="Health\App\Core\ViewModels\Debug\PostInstallDebugViewModel.cs" />
-    <Compile Include="Health\App\Core\ViewModels\Debug\CacheItemsViewModel.cs" />
-    <Compile Include="Health\App\Core\ViewModels\Debug\CacheItemViewModel.cs" />
-    <Compile Include="Health\App\Core\ViewModels\Debug\DebugSettingsPageViewModelBase.cs" />
-    <Compile Include="Health\App\Core\ViewModels\Debug\DebugSettingsTimeRegionPageViewModel.cs" />
-    <Compile Include="Health\App\Core\ViewModels\Debug\DebugSettingsConfigurationPageViewModel.cs" />
-    <Compile Include="Health\App\Core\ViewModels\Debug\DebugSettingsAccountsPageViewModel.cs" />
-    <Compile Include="Health\App\Core\ViewModels\Debug\DebugSettingsDevicesPageViewModel.cs" />
-    <Compile Include="Health\App\Core\ViewModels\Debug\DebugSettingsNetworkPageViewModel.cs" />
-    <Compile Include="Health\App\Core\ViewModels\Debug\DebugSettingsSyncHistoryPageViewModel.cs" />
-    <Compile Include="Health\App\Core\ViewModels\Debug\DebugSettingsSystemPageViewModel.cs" />
-    <Compile Include="Health\App\Core\ViewModels\Debug\DebugViewModel.cs" />
     <Compile Include="Health\App\Core\ViewModels\TileSettings\AppNotificationViewModel.cs" />
     <Compile Include="Health\App\Core\ViewModels\TileSettings\CustomTagViewModel.cs" />
     <Compile Include="Health\App\Core\ViewModels\TileSettings\EditExerciseTagsViewModel.cs" />
@@ -1215,7 +1196,7 @@
     <Compile Include="Health\App\Core\Authentication\MissingCredentialsException.cs" />
     <Compile Include="Health\App\Core\Authentication\OAuthMsaTokenStore.cs" />
     <Compile Include="Health\App\Core\Authentication\StoredMsaToken.cs" />
-    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQLite.cs" />
     <Compile Include="SQLiteAsync.cs" />
   </ItemGroup>

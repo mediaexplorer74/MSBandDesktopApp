@@ -40,7 +40,7 @@
     <StackPanel Margin="70,70,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Horizontal"
                 Visibility="{Binding Error, Converter={StaticResource NullToVisibilityConverter}, ConverterParameter={x:Static BindingConverters:NullToVisibilityConverter}}">
       <TextBlock FontSize="30" Padding="0,0,20,0" Style="{DynamicResource Heading}"
-                 Text="{x:Static local:LStrings.Message_LoginDialog_Working}"/>
+                 Text="Message_LoginDialog_Working"/>
       <local:BusySpinner Width="35" Height="35" Margin="0,0,0,0" Padding="0,0,3,0"/>
     </StackPanel>
     <StackPanel Margin="20,143,20,0" VerticalAlignment="Top" Orientation="Vertical"
@@ -48,7 +48,7 @@
       <Image Margin="0,3,10,10" HorizontalAlignment="Left" VerticalAlignment="Center"
              Source="/Resources/error.png" Stretch="None"/>
       <TextBlock Margin="0" VerticalAlignment="Top" FontSize="20" Style="{DynamicResource BaseTextBlock}"
-                 Text="{x:Static local:LStrings.Message_WebErrorOccurred}" TextWrapping="Wrap"/>
+                 Text="Message_WebErrorOccurred" TextWrapping="Wrap"/>
     </StackPanel>
     <WebBrowser Navigated="brLogin_Navigated" Navigating="brLogin_Navigating" x:Name="brLogin" Grid.ColumnSpan="2"
                 Visibility="Hidden"/>

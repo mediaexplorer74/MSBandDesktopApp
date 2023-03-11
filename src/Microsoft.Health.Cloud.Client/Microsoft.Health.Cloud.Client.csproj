@@ -317,7 +317,7 @@
     <Compile Include="Authentication\SimpleMsaTokenProvider.cs" />
     <Compile Include="Authentication\SimpleWebToken.cs" />
     <Compile Include="Authentication\TokenTypes.cs" />
-    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

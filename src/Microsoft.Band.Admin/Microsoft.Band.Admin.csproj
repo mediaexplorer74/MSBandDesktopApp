@@ -234,7 +234,7 @@
     <Compile Include="Activities\ActivityEventContext.cs" />
     <Compile Include="Activities\BandActivityEventBase.cs" />
     <Compile Include="Activities\BandActivityStartedEvent.cs" />
-    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Microsoft.Band\Microsoft.Band.csproj">

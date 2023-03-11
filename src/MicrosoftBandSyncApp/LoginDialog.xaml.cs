@@ -1,4 +1,4 @@
-﻿// Decompiled with JetBrains decompiler
+﻿// LoginDialog.cs
 // Type: DesktopSyncApp.LoginDialog
 // Assembly: Microsoft Band Sync, Version=1.3.20517.1, Culture=neutral, PublicKeyToken=null
 // MVID: 85967930-2DEF-43AB-AC73-6FA058C5AE66
@@ -15,14 +15,12 @@ using System.Windows.Navigation;
 
 namespace DesktopSyncApp
 {
-  public partial class LoginDialog : Window, INotifyPropertyChanged, IComponentConnector
+  public partial class LoginDialog : Window, INotifyPropertyChanged 
   {
     private SecurityInfo securityInfo;
     private LoginDialog.Mode mode;
     private Exception error;
-    //internal WebBrowser brLogin;
-    //private bool _contentLoaded;
-
+ 
     public event PropertyChangedEventHandler PropertyChanged;
 
     public LoginDialog(Window owner, ViewModel model)
@@ -42,11 +40,18 @@ namespace DesktopSyncApp
       }
     }
 
-    public bool ShowLogin(SecurityInfo securityInfo) => this.ShowDialog(securityInfo, LoginDialog.Mode.LogoutLogin, LStrings.Title_LoginDialog_Login);
+    public bool ShowLogin(SecurityInfo securityInfo)
+    {
+        return this.ShowDialog(securityInfo, LoginDialog.Mode.LogoutLogin, 
+            LStrings.Title_LoginDialog_Login);
+    }
 
-    public bool ShowLogout(SecurityInfo securityInfo) => this.ShowDialog(securityInfo, LoginDialog.Mode.Logout, LStrings.Title_LoginDialog_Logout);
+    public bool ShowLogout(SecurityInfo securityInfo)
+    {
+        return this.ShowDialog(securityInfo, LoginDialog.Mode.Logout, LStrings.Title_LoginDialog_Logout);
+    }
 
-    private bool ShowDialog(SecurityInfo securityInfo, LoginDialog.Mode mode, string title)
+        private bool ShowDialog(SecurityInfo securityInfo, LoginDialog.Mode mode, string title)
     {
       this.securityInfo = securityInfo;
       this.mode = mode;
@@ -58,7 +63,8 @@ namespace DesktopSyncApp
 
     private void brLogin_Navigating(object sender, NavigatingCancelEventArgs args)
     {
-      if (!(args.Uri != (Uri) null) || !(args.Uri.GetLeftPart(UriPartial.Path) == "https://login.live.com/oauth20_desktop.srf"))
+      if (!(args.Uri != (Uri) null) 
+                || !(args.Uri.GetLeftPart(UriPartial.Path) == "https://login.live.com/oauth20_desktop.srf"))
         return;
       args.Cancel = true;
       switch (this.mode)
@@ -111,36 +117,7 @@ namespace DesktopSyncApp
 
     private void CloseButtonClick(object sender, RoutedEventArgs e) => this.Close();
 
-        /*
-    [DebuggerNonUserCode]
-    [GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
-    public void InitializeComponent()
-    {
-      if (this._contentLoaded)
-        return;
-      this._contentLoaded = true;
-      Application.LoadComponent((object) this, new Uri("/Microsoft Band Sync;component/logindialog.xaml", UriKind.Relative));
-    }
-
-    [DebuggerNonUserCode]
-    [GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
-    internal Delegate _CreateDelegate(Type delegateType, string handler) => Delegate.CreateDelegate(delegateType, (object) this, handler);
-
-    [DebuggerNonUserCode]
-    [GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
-    [EditorBrowsable(EditorBrowsableState.Never)]
-    void IComponentConnector.Connect(int connectionId, object target)
-    {
-      if (connectionId == 1)
-      {
-        this.brLogin = (WebBrowser) target;
-        this.brLogin.Navigated += new NavigatedEventHandler(this.brLogin_Navigated);
-        this.brLogin.Navigating += new NavigatingCancelEventHandler(this.brLogin_Navigating);
-      }
-      else
-        this._contentLoaded = true;
-    }
-    */
+      
 
     private enum Mode
     {

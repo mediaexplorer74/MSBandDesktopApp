@@ -130,7 +130,7 @@
     <Compile Include="Desktop\WebTileManagerFactory.cs" />
     <Compile Include="Desktop\XmlNamespaceHelper.cs" />
     <Compile Include="Desktop\WebTiles\ImageProvider.cs" />
-    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Desktop\SR.resx" />
