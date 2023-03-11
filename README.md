@@ -18,13 +18,13 @@ My main goal is achieve the state demonstated at screenshots.. oh... mockups! :)
 
 ## My Little Progress
 
+- MicrosoftBandSyncApp (DesktopSyncApp) +- (20 %)
 - Microsoft.Band +
 - Microsoft.Band.Desktop +
 - Microsoft.Band.Admin +
 - Microsoft.Band.Admin.Desktop +
 - Microsoft.Health.App.Core +
 - Microsoft.Health.Cloud.Client +
-- MicrosoftBandSyncApp +- (15 %)
 
 
 ## Bugs / Problems
